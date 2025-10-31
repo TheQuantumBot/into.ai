@@ -56,12 +56,13 @@ export default function Conversation_card() {
         {/* Chart */}
         <div className="h-24">
           <ResponsiveContainer width="100%" height="100%">
-            <LineChart data={data}>
+            <LineChart data={data}    >
               <XAxis
                 dataKey="name"
                 axisLine={false}
                 tickLine={false}
                 tick={{ fontSize: 12, fill: "#6B7280" }}
+                interval="preserveStartEnd"
               />
               <Tooltip
                 contentStyle={{
