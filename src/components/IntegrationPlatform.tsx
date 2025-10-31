@@ -30,44 +30,51 @@ const IntegrationPlatform = () => {
 
             {/* Outer Circle */}
             <div className="absolute inset-0 flex items-center justify-center">
-             <div className="w-full h-full rounded-full border-2 border-gray-200"></div>
-
+              <div className="w-full h-full rounded-full border-2 border-gray-200"></div>
             </div>
 
-            {/* Icons Around the Circle */}
-            <div className="absolute -top-10 left-1/2 transform -translate-x-1/2">
-              <div className="bg-white p-5 rounded-full shadow-sm">
-                <Image src="/linkedin.svg" alt="LinkedIn" width={35} height={35} />
+            {/* Icons Around the Circle - Rotating Container */}
+            <div className="absolute inset-0 animate-spin-slow">
+              {/* LinkedIn */}
+              <div className="absolute -top-10 left-1/2 transform -translate-x-1/2">
+                <div className="bg-white p-5 rounded-full shadow-sm">
+                  <Image src="/linkedin.svg" alt="LinkedIn" width={35} height={35} />
+                </div>
               </div>
-            </div>
 
-            <div className="absolute top-1/4 right-0 transform -translate-y-1/2">
-              <div className="bg-white p-5 rounded-full shadow-sm">
-                <Image src="/slack.svg" alt="Slack" width={35} height={35} />
+              {/* Slack */}
+              <div className="absolute top-1/4 right-0 transform -translate-y-1/2">
+                <div className="bg-white p-5 rounded-full shadow-sm">
+                  <Image src="/slack.svg" alt="Slack" width={35} height={35} />
+                </div>
               </div>
-            </div>
 
-            <div className="absolute bottom-1/4 right-0 transform translate-y-1/2">
-              <div className="bg-white p-5 rounded-full shadow-sm">
-                <Image src="/meta.svg" alt="Meta" width={35} height={35} />
+              {/* Meta */}
+              <div className="absolute bottom-1/4 right-0 transform translate-y-1/2">
+                <div className="bg-white p-5 rounded-full shadow-sm">
+                  <Image src="/meta.svg" alt="Meta" width={35} height={35} />
+                </div>
               </div>
-            </div>
 
-            <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2">
-              <div className="bg-white p-5 rounded-full shadow-sm">
-                <Image src="/instagram.svg" alt="Instagram" width={35} height={35} />
+              {/* Instagram */}
+              <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2">
+                <div className="bg-white p-5 rounded-full shadow-sm">
+                  <Image src="/instagram.svg" alt="Instagram" width={35} height={35} />
+                </div>
               </div>
-            </div>
 
-            <div className="absolute bottom-1/4 left-0 transform translate-y-1/2">
-              <div className="bg-white p-5 rounded-full shadow-sm">
-                <Image src="/messenger.svg" alt="Messenger" width={35} height={35} />
+              {/* Messenger */}
+              <div className="absolute bottom-1/4 left-0 transform translate-y-1/2">
+                <div className="bg-white p-5 rounded-full shadow-sm">
+                  <Image src="/messenger.svg" alt="Messenger" width={35} height={35} />
+                </div>
               </div>
-            </div>
 
-            <div className="absolute top-1/4 left-0 transform -translate-y-1/2">
-              <div className="bg-white p-5 rounded-full shadow-sm">
-                <Image src="/whatsapp.svg" alt="WhatsApp" width={35} height={35} />
+              {/* WhatsApp */}
+              <div className="absolute top-1/4 left-0 transform -translate-y-1/2">
+                <div className="bg-white p-5 rounded-full shadow-sm">
+                  <Image src="/whatsapp.svg" alt="WhatsApp" width={35} height={35} />
+                </div>
               </div>
             </div>
           </div>

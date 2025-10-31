@@ -52,3 +52,13 @@ body {
 .animate-scroll {
   animation: scroll 30s linear infinite;
 }
+
+@keyframes orbit-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.orbit-rotate {
+  animation: orbit-spin 20s linear infinite;
+}
+

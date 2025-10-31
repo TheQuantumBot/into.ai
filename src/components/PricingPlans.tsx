@@ -22,7 +22,7 @@ const PricingPlans: React.FC<PricingPlansProps> = ({ text }) => {
 
         </Hero>
         <div className="w-full flex justify-center">
-          <div className="w-full md:w-3/5">
+          <div className="w-full md:w-3/5 [@media(max-width:768px)]:w-0">
             <PricingCard />
           </div>
         </div>
