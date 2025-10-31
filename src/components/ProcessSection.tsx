@@ -31,7 +31,7 @@ const ProcessSection: React.FC<ProcessSectionProps> = ({ text }) => {
             <ProcessCard
               step="01"
               title="Launch campaigns"
-              description="Deploy targeted campaigns across LinkedIn, Meta & WhatsApp. Our platform optimizes targeting for maximum lead quality."
+              description="Deploy targeted campaigns across LinkedIn, Meta & WhatsApp, Our platform Optimizes targeting for maximum lead quality."
               gradient="linear-gradient(87deg, #ffffff 0%, #D4549F 12%, #F15A22 100%)"
             />
             <ProcessCard

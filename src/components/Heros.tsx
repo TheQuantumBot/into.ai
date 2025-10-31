@@ -25,7 +25,7 @@ export default function Heros({
 
           {/* Render Description if provided */}
           {description && (
-            <Body className="mt-7 font-inter-tight font-medium text-[18px] leading-[24px] text-center align-middle text-[#888d96da]">
+            <Body className="mt-7 font-inter-tight font-medium text-[18px] leading-[24px] text-center align-middle !text-[#888d96da]">
               {description}
             </Body>
           )}

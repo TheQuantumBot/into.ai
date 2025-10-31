@@ -7,6 +7,27 @@ import Button from "./Button";
 export default function PlanPricing() {
   const [isYearly, setIsYearly] = useState(false);
 
+  const showTooltip = [
+    "5,000 credits/month",
+    "2 products maximum",
+    "Standard support",
+    "20,000 credits/month",
+    "12 campaigns maximum",
+    "9 products maximum",
+    "Unlimited user seats",
+    "Premium support",
+    "Advanced analytics",
+    "35,000 credits/month",
+    "Unlimited campaigns",
+    "Unlimited products",
+    "Bidirectional CRM integration",
+    "Unlimited user seats",
+    "Priority support",
+    "Advanced performance reports",
+    "Multi-step automations",
+    "Unlimited prompts",
+  ];
+
   const plans = [
     {
       name: "Basic",
@@ -145,6 +166,10 @@ export default function PlanPricing() {
         "2 products maximum",
         "Unlimited Prompts",
         "Full AI conversation management",
+        "Intelligent Lead Scoring",
+        "AI-powered LinkedIn post comments",
+        "1 user seat",
+        "Standard support",
       ],
     },
     {
@@ -283,7 +308,10 @@ export default function PlanPricing() {
         "Up to 3 LinkedIn accounts",
         "12 campaigns maximum",
         "9 products maximum",
-        "API access (limited)",
+        "API access (3 credits/request, limited to 1,000 requests/month)",
+        "Unlimited user seats",
+        "Premium support",
+        "Advanced analytics",
       ],
     },
     {
@@ -518,7 +546,7 @@ export default function PlanPricing() {
         </div>
       ),
       description:
-        "Complete solution for businesses wanting to maximize their prospecting results and integrate Kakiyo with their ecosystem.",
+        "Complete solution for businesses wanting to maximize prospecting results.",
       monthlyPrice: 319,
       yearlyPrice: 255,
       features: [
@@ -527,7 +555,13 @@ export default function PlanPricing() {
         "Up to 5 LinkedIn accounts",
         "Unlimited campaigns",
         "Unlimited products",
-        "Optimized API access",
+        "Optimized API access (1 credit/request, unlimited)",
+        "Bidirectional CRM integration",
+        "Unlimited user seats",
+        "Priority support",
+        "Advanced performance reports",
+        "Multi-step automations",
+        "Unlimited prompts",
       ],
     },
   ];
@@ -604,8 +638,8 @@ export default function PlanPricing() {
               <div
                 className={`bg-white rounded-2xl shadow-md ${
                   plan.borderColor || "border-gray-200"
-                } flex flex-col items-center justify-between z-10 relative`}
-                style={{ width: "345px", height: "400px", overflow: "hidden" }}
+                } flex flex-col items-center justify-between z-10 relative lg:w-[345px] md:w-[290px]`}
+                style={{ height: "400px", overflow: "hidden" }}
               >
                 <div className="p-8 flex flex-col justify-between h-full w-full">
                   {plan.icon}
@@ -636,9 +670,8 @@ export default function PlanPricing() {
 
               {plan.name === "Pro" ? (
                 <div
-                  className="rounded-2xl p-1 -mt-16 relative z-0 flex justify-center"
+                  className="rounded-2xl p-1 -mt-16 relative z-0 flex justify-center lg:w-[345px] md:w-[290px]"
                   style={{
-                    width: "345px",
                     height: "600px",
                     background:
                       "linear-gradient(90deg, #35A1DA -207.85%, #D4549F -28.59%, #F15A22 136.87%)",
@@ -654,7 +687,7 @@ export default function PlanPricing() {
                           <Check className="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" />
                           <div className="text-sm text-gray-700 flex-1">
                             {feature}
-                            {feature === "5,000 credits/month" && (
+                            {showTooltip.includes(feature) && (
                               <div className="relative ml-1 inline-block group">
                                 <div className="mt-1">
                                   <svg
@@ -685,9 +718,8 @@ export default function PlanPricing() {
                 </div>
               ) : (
                 <div
-                  className={`rounded-2xl shadow-sm p-6 -mt-16 relative z-0 border-2 ${plan.borderColor}`}
+                  className={`rounded-2xl shadow-sm p-6 -mt-16 relative z-0 border-2 lg:w-[345px] md:w-[290px] ${plan.borderColor}`}
                   style={{
-                    width: "345px",
                     height: "600px",
                     overflowY: "auto",
                     backgroundColor: plan.bgColor || "#E8E4E2", // dynamic background
@@ -699,7 +731,7 @@ export default function PlanPricing() {
                         <Check className="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" />
                         <span className="text-sm text-gray-700 flex-1">
                           {feature}
-                          {feature === "5,000 credits/month" && (
+                          {showTooltip.includes(feature) && (
                             <span className="relative ml-1 inline-block group">
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
