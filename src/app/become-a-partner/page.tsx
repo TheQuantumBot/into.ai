@@ -6,6 +6,7 @@ import Header from "@/components/header";
 import Rewarding from "@/components/Rewarding";
 import PartnerNetwork from "@/components/partnerNetwork";
 import HeroBox from "@/components/HeroBox";
+import WhatYouGet from "@/components/WhatYouGet";
 
 export default function BecameAPartnerPage() {
   return (
@@ -32,6 +33,7 @@ export default function BecameAPartnerPage() {
           </div>
         </div>
       </div>
+      <WhatYouGet />
       <WhoCanBecomePartner />
       <BecameAPartner_sales />
       <Footer />
