@@ -20,7 +20,7 @@ export default function CtaCard() {
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6">
+          <div className="flex flex-row  justify-center items-center gap-4 mt-6">
             <ButtonPrimary>Watch a Demo</ButtonPrimary>
             <Button>Start Free Trial</Button>
           </div>
