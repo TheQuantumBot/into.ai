@@ -1,19 +1,19 @@
-import Button from '@/components/Button';
-import ButtonPrimary from '@/components/Button-primary';
+import Button from "@/components/Button";
+import ButtonPrimary from "@/components/Button-primary";
 import Header from "@/components/header";
-import Conversation_card from '@/components/Conversation_card';
-import Leads_card from '@/components/Leads_card';
-import Campaign_Card from '@/components/Campaign_Card';
-import Hero from '@/components/Hero';
-import Kpicard from '@/components/Kpicard';
+import Conversation_card from "@/components/Conversation_card";
+import Leads_card from "@/components/Leads_card";
+import Campaign_Card from "@/components/Campaign_Card";
+import Hero from "@/components/Hero";
+import Kpicard from "@/components/Kpicard";
 import Badge from "@/components/Badge";
-import Ourfeature from '@/components/OurFeature';
+import Ourfeature from "@/components/OurFeature";
 import MultiCampaignCard from "@/components/MultiCampaignCard";
-import ProcessSection from '@/components/ProcessSection';
-import IntegrationPlatform from '@/components/IntegrationPlatform';
-import Testimonial from '@/components/Testimonial';
-import CtaCard from '@/components/CtaCard';
-import Footer from '@/components/Footer';
+import ProcessSection from "@/components/ProcessSection";
+import IntegrationPlatform from "@/components/IntegrationPlatform";
+import Testimonial from "@/components/Testimonial";
+import CtaCard from "@/components/CtaCard";
+import Footer from "@/components/Footer";
 
 export default function HomePage() {
   return (
@@ -34,7 +34,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-white opacity-50 z-10 pointer-events-none h-[110%] sm:h-full"></div>
 
         {/* Noise Texture */}
-      <div className="absolute inset-0 z-10 opacity-70 mix-blend-overlay pointer-events-none">
+        <div className="absolute inset-0 z-10 opacity-70 mix-blend-overlay pointer-events-none">
           <img
             src="/Noise.png"
             alt="Noise texture"
@@ -52,9 +52,9 @@ export default function HomePage() {
           {/* Hero Section */}
           <div className="flex-1 flex items-center justify-center px-6 sm:px-8 lg:px-12 pt-12 sm:pt-8 md:pt-4 lg:pt-0 relative z-30 mt-8 sm:mt-12 md:mt-0">
             <Hero
-              title={`Turn Every <span class="gradient-text">Lead</span> into 
-          <span class="gradient-text">Revenue</span> with 
-          <span class="gradient-text">AI</span>`}
+              title={`Turn Every <span class="gradient-text">Lead</span><br/>into 
+    <span class="gradient-text">Revenue</span> with 
+    <span class="gradient-text">AI</span>`}
               description="Launch campaigns across LinkedIn, Meta & WhatsApp. Our AI engages leads 24/7, qualifying prospects and turning conversations into sales."
               primaryButtonText="Watch Demo"
               secondaryButtonText="Start Free Trial"
@@ -63,11 +63,10 @@ export default function HomePage() {
 
           {/* Floating Cards - Hidden on mobile and tablet */}
           {/* Conversation Card */}
-          <div className="hidden xl:block absolute top-[250px] left-[100px] rotate-[10deg]">
+          <div className="hidden md:block  md:w-[230px] md:h-[220px] absolute top-[250px] left-[100px] md:top-[91px] md:left-[101px] rotate-[10deg]">
             <Conversation_card />
             <div className="w-16 h-16 relative">
               <div className="absolute bottom-[30px] left-[260px] w-16 h-16 border-[2px] border-[#EFEFEF] rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center shadow-[0_8px_30px_rgba(255,102,0,0.3)] -rotate-[10deg]">
-                {/* Orange Icon */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="26"
@@ -93,12 +92,12 @@ export default function HomePage() {
           </div>
 
           {/* Campaign Card */}
-          <div className="hidden xl:block absolute top-[210px] right-[100px] rotate-0">
+          <div className="hidden md:block absolute  top-[134px] right-[152px] lg:top-[134px] lg:right-[152px] rotate-0">
             <Campaign_Card />
           </div>
 
           {/* Leads Card */}
-          <div className="hidden xl:block absolute top-[450px] right-[100px] -rotate-[10deg]">
+          <div className="hidden md:block absolute top-[300px] right-[25px] lg:top-[450px] lg:right-[100px] -rotate-[10deg]">
             <Leads_card />
             <div className="w-16 h-16 relative">
               <div className="absolute -top-[250px] left-[240px] w-16 h-16 border-[2px] border-[#EFEFEF] rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center shadow-[0_8px_30px_rgba(255,102,0,0.3)] rotate-[10deg]">
@@ -132,23 +131,23 @@ export default function HomePage() {
       <div className="flex items-center justify-center bg-[#F6F5F4] z-30 py-8 sm:py-10 px-4 pt-24 sm:pt-10">
         <Ourfeature text="Our Features" />
       </div>
-      
+
       <div className="flex items-center justify-center bg-[#F6F5F4] z-30 py-8 sm:py-10 px-4">
         <ProcessSection text="Process" />
       </div>
-      
-      <div className='w-full px-4 sm:px-6 lg:px-8'>
+
+      <div className="w-full px-4 sm:px-6 lg:px-8">
         <IntegrationPlatform />
       </div>
 
       <div className="flex items-center justify-center bg-[#F6F5F4] z-30 py-8 sm:py-10 px-4">
         <Testimonial text="Testimonial" />
       </div>
-      
+
       <div className="flex items-center justify-center bg-[#F6F5F4] z-30 py-8 sm:py-10 px-4">
         <CtaCard />
       </div>
-      
+
       <div className="w-full flex items-center justify-center bg-[#F6F5F4] z-30">
         <Footer />
       </div>
