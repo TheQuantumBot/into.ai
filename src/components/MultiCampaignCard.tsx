@@ -69,7 +69,7 @@ export default function MultiCampaignCard() {
           <div className="font-inter-tight font-normal text-[32px] leading-[40px] align-middle">
             92%
           </div>
-          <div className="font-inter-tight text-lg opacity-90 font-normal tracking-[0.5px]">
+          <div className="font-inter-tight text-l opacity-90">
             Conversation Rate
           </div>
         </div>
@@ -87,7 +87,7 @@ export default function MultiCampaignCard() {
       </div>
 
       {/* Vertical Divider */}
-      <div className="absolute top-[280px] right-[112px] w-[2px] h-[100px] bg-gray-200"></div>
+      <div className="absolute top-[276px] right-[112px] w-[2px] h-[100px] bg-gray-200"></div>
 
       {/* Avatar Group */}
       <div className="absolute bottom-[45px] right-[45px] flex -space-x-4">
