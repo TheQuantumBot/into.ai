@@ -22,21 +22,14 @@ export default function BecameAPartnerPage() {
       <div className="relative z-10 min-h-screen flex flex-col">
         <Header />
         <HeroBox />
+        <Rewarding />
         <PartnerNetwork />
-
-        <div className="flex-1 flex flex-col items-center justify-center pt-[150px]">
-          <div>
-            <Rewarding />
-          </div>
-          <div className="w-full">
-            <BecameAPartnerFaq />
-          </div>
-        </div>
+        <WhoCanBecomePartner />
+        <WhatYouGet />
+        <BecameAPartnerFaq />
+        <BecameAPartner_sales />
+        <Footer />
       </div>
-      <WhatYouGet />
-      <WhoCanBecomePartner />
-      <BecameAPartner_sales />
-      <Footer />
     </main>
   );
 }

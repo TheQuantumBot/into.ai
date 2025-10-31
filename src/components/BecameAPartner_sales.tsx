@@ -24,8 +24,7 @@ export default function BecameAPartner_sales() {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6">
-            <ButtonPrimary>Watch a Demo</ButtonPrimary>
-            <Button>Start Free Trial</Button>
+            <Button>Start Earning</Button>
           </div>
 
           {/* Features row */}
