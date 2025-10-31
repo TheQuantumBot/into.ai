@@ -39,9 +39,9 @@ const Rewarding = () => {
                 <Badge text="How Its Work" />
             </div>
 
-            <div className="px-4 sm:px-6 lg:px-8">
+            <div className="px-4 sm:px-6 lg:px-8 leading-[76px]">
                 <Hero
-                    title={`<span class="text-black text-[60px]">Simple, Transparent, Rewarding</span> <span class="gradient-text text-[60px]">4 Steps to Start</span>`}
+                    title={`<span class="text-black text-[60px]">Simple, Transparent, Rewarding -</span> <span class="gradient-text text-[60px]">4 Steps to Start</span>`}
                     description={
                         "Everything is automated: onboarding, tracking, and payout system."
                     }
