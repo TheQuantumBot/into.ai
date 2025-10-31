@@ -32,14 +32,14 @@ export default function Hero({
 
           {/* Buttons */}
           {(primaryButtonText || secondaryButtonText) && (
-            <div className="flex items-center justify-center my-4">
+            <div className="flex items-center justify-center my-4 gap-4">
               {primaryButtonText && (
-                <div className="mx-2">
+                <div>
                   <ButtonPrimary>{primaryButtonText}</ButtonPrimary>
                 </div>
               )}
               {secondaryButtonText && (
-                <div className="mx-2">
+                <div>
                   <Button>{secondaryButtonText}</Button>
                 </div>
               )}
