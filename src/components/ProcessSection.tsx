@@ -10,7 +10,7 @@ interface ProcessSectionProps {
 
 const ProcessSection: React.FC<ProcessSectionProps> = ({ text }) => {
   return (
-    <div className="w-full flex flex-col items-center justify-center px-6 py-3 text-black text-lg font-medium space-y-6">
+    <div className="w-full flex flex-col items-center justify-center px-6 py-3 text-black text-lg font-medium space-y-[10px]">
       {/* Section Badge */}
       <div>
         <Badge text="Process" />
@@ -19,9 +19,10 @@ const ProcessSection: React.FC<ProcessSectionProps> = ({ text }) => {
       {/* Hero Section */}
       <div className="w-full items-center justify-center">
         <Hero
-          title={`How INTO AI <span class="gradient-text">Transforms Your Sales</span>`}
+          title={`<span class="[@media(max-width:375px)]:text-[34px]">How INTO AI</span> <br /> <span class="gradient-text  test-[60px] [@media(max-width:375px)]:text-[28px] [@media(max-width:375px)]:font-[600] [@media(max-width:375px)]:leading-[34px] [@media(max-width:1024px)]:leading-[52px]  [@media(max-width:1024px)]:text-[42px]" >Transforms Yours Sales</span>`}
+
           description={
-            "INTO AI automates sales and delivers real-time insights - helping you close deals faster."
+            `INTO AI automates sales and delivers real-time insights - helping you close deals faster.`
           }
         />
 
