@@ -4,7 +4,7 @@ import Badge from "./Badge";
 
 const IntegrationPlatform = () => {
   return (
-   <div className="w-full flex justify-center items-center py-12 lg:py-[130px] px-6">
+    <div className="w-full flex justify-center items-center py-12 lg:py-[130px] px-6">
       <div className="flex flex-col lg:flex-row items-center justify-between w-full gap-10">
 
         {/* Badge - Shows first on mobile, hidden on desktop */}
@@ -30,7 +30,7 @@ const IntegrationPlatform = () => {
 
             {/* Outer Circle */}
             <div className="absolute inset-0 flex items-center justify-center">
-             <div className="w-full h-full rounded-full border-2 border-gray-200"></div>
+              <div className="w-full h-full rounded-full border-2 border-gray-200"></div>
 
             </div>
 
@@ -80,10 +80,11 @@ const IntegrationPlatform = () => {
             <div className="hidden lg:flex lg:justify-start flex justify-center">
               <Badge text="Powerful Integration" />
             </div>
-            
+
             {/* Title */}
-            <h2 className="text-4xl lg:text-6xl font-bold leading-[110%] text-center lg:text-left">
-              <span className="gradient-text">Integrate</span> with your Favorite Platform
+            <h2 className="text-4xl lg:text-6xl font-bold  leading-[110%] text-center lg:text-left [@media(max-width:375px)]:text-[24px]  [@media(max-width:375px)]:font-[600] [@media(max-width:375px)]:leading-[34px] ">
+              <span className="gradient-text">Integrate</span> <span className="text-black"> with your </span>
+              <br></br> <span className="text-black">Favorite Platform</span>
             </h2>
 
             {/* Description */}
@@ -106,17 +107,17 @@ const IntegrationPlatform = () => {
                   <div className="flex-shrink-0 w-8 h-8 p-[2px] flex items-center justify-center rounded-[10px] shadow-md 
       bg-[linear-gradient(90deg,#35A1DA_0.24%,#847BBD_25.46%,#E8584B_50.67%,#584F9E_75.88%,#CE4C9B_101.09%)]">
                     <div className="bg-black rounded-[10px] w-full h-full flex items-center justify-center">
-                     
-                         <Image
+
+                      <Image
                         src="/check.svg"
                         alt="check"
                         width={12}
                         height={12}
                         className="object-contain"
                       />
-                       
 
-                     
+
+
                     </div>
                   </div>
 

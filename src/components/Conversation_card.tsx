@@ -2,17 +2,17 @@
 
 import React, { useState } from "react";
 import {
-  LineChart,
-  Line,
+  AreaChart,
+  Area,
   XAxis,
   ResponsiveContainer,
   Tooltip,
+  YAxis,
 } from "recharts";
-import { ArrowUpRight } from "lucide-react";
 
 const data = [
-  { name: "Jun 17", value: 40 },
-  { name: "Jun 18", value: 32 },
+  { name: "Jun 17", value: 500 },
+  { name: "Jun 18", value: 320 },
   { name: "Jun 19", value: 48 },
   { name: "Jun 20", value: 60 },
 ];
@@ -21,8 +21,8 @@ export default function Conversation_card() {
   const [activeTab, setActiveTab] = useState("Month");
 
   return (
-    <div className="bg-white/40 rounded-[24px] p-2 ">
-      <div className="w-[320px] bg-white rounded-[24px] p-4" >
+    <div className="bg-white/40 rounded-[24px] p-2">
+      <div className="w-[320px] bg-white rounded-[24px] p-4 shadow-sm">
         {/* Header */}
         <div className="flex items-center justify-between mb-2">
           <p className="text-sm font-medium text-gray-700">Conversation Rate</p>
@@ -43,10 +43,11 @@ export default function Conversation_card() {
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-3 py-1 text-sm rounded-md border transition ${activeTab === tab
-                ? "bg-orange-500 text-white border-orange-500"
-                : "bg-gray-100 text-gray-600 border-gray-200 hover:bg-gray-200"
-                }`}
+              className={`px-3 py-1 text-sm rounded-md border transition ${
+                activeTab === tab
+                  ? "bg-orange-500 text-white border-orange-500"
+                  : "bg-gray-100 text-gray-600 border-gray-200 hover:bg-gray-200"
+              }`}
             >
               {tab}
             </button>
@@ -56,7 +57,17 @@ export default function Conversation_card() {
         {/* Chart */}
         <div className="h-24">
           <ResponsiveContainer width="100%" height="100%">
-            <LineChart data={data}    >
+            <AreaChart
+              data={data}
+              margin={{ top: 10, right: 10, left: 0, bottom: 0 }}
+            >
+              <defs>
+                <linearGradient id="mountainColor" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor="#9CA3AF" stopOpacity={0.35} />
+                  <stop offset="100%" stopColor="#9CA3AF" stopOpacity={0} />
+                </linearGradient>
+              </defs>
+
               <XAxis
                 dataKey="name"
                 axisLine={false}
@@ -64,6 +75,9 @@ export default function Conversation_card() {
                 tick={{ fontSize: 12, fill: "#6B7280" }}
                 interval="preserveStartEnd"
               />
+
+              <YAxis hide domain={[20, 80]} /> {/* makes peaks higher visually */}
+
               <Tooltip
                 contentStyle={{
                   backgroundColor: "white",
@@ -72,14 +86,16 @@ export default function Conversation_card() {
                   fontSize: "12px",
                 }}
               />
-              <Line
+
+              <Area
                 type="monotone"
                 dataKey="value"
                 stroke="#9CA3AF"
                 strokeWidth={2}
-                dot={false}
+                fill="url(#mountainColor)"
+                fillOpacity={1}
               />
-            </LineChart>
+            </AreaChart>
           </ResponsiveContainer>
         </div>
       </div>
