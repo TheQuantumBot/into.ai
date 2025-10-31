@@ -19,6 +19,1254 @@ const cards = [
     img: "/rewardingImage3.svg",
     title: "Promote & connect us with leads",
   },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
+  {
+    img: "/rewardingImage1.svg",
+    title: "Apply - Get approved in under 24 hours",
+  },
+  {
+    img: "/rewardingImage2.svg",
+    title: "Receive your partner code & toolkit",
+  },
+  {
+    img: "/rewardingImage3.svg",
+    title: "Promote & connect us with leads",
+  },
 ];
 
 const Rewarding = () => {
@@ -45,7 +1293,7 @@ const Rewarding = () => {
           }
         />
       </div>
-      <div className="overflow-hidden w-[320px] sm:w-[960px]">
+      <div className="overflow-hidden">
         <RewardingCard rewardContent={cards} current={current} />
       </div>
     </div>
