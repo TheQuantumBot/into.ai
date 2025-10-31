@@ -10,12 +10,24 @@ import {
   YAxis,
 } from "recharts";
 
+
 const data = [
-  { name: "Jun 17", value: 500 },
-  { name: "Jun 18", value: 320 },
-  { name: "Jun 19", value: 48 },
-  { name: "Jun 20", value: 60 },
+  { name: "Jun 17", value: 450 },
+  { name: "", value: 300 },
+  { name: "", value: 520 },
+  { name: "", value: 620 },
+  { name: "Jun 18", value: 680 },
+  { name: "", value: 320 },
+  { name: "", value: 480 },
+  { name: "", value: 500 },
+  { name: "Jun 19", value: 580 },
+  { name: "", value: 380 },
+  { name: "", value: 460 },
+  { name: "", value: 560 },
+  { name: "Jun 20", value: 550 },
 ];
+
+
 
 export default function Conversation_card() {
   const [activeTab, setActiveTab] = useState("Month");
@@ -43,11 +55,10 @@ export default function Conversation_card() {
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-3 py-1 text-sm rounded-md border transition ${
-                activeTab === tab
-                  ? "bg-orange-500 text-white border-orange-500"
-                  : "bg-gray-100 text-gray-600 border-gray-200 hover:bg-gray-200"
-              }`}
+              className={`px-3 py-1 text-sm rounded-md border transition ${activeTab === tab
+                ? "bg-orange-500 text-white border-orange-500"
+                : "bg-gray-100 text-gray-600 border-gray-200 hover:bg-gray-200"
+                }`}
             >
               {tab}
             </button>
@@ -63,7 +74,7 @@ export default function Conversation_card() {
             >
               <defs>
                 <linearGradient id="mountainColor" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#9CA3AF" stopOpacity={0.35} />
+                  <stop offset="0%" stopColor="#9CA3AF" stopOpacity={0.2} />
                   <stop offset="100%" stopColor="#9CA3AF" stopOpacity={0} />
                 </linearGradient>
               </defs>
@@ -76,7 +87,8 @@ export default function Conversation_card() {
                 interval="preserveStartEnd"
               />
 
-              <YAxis hide domain={[20, 80]} /> {/* makes peaks higher visually */}
+              <YAxis hide domain={[100, 500]} />
+
 
               <Tooltip
                 contentStyle={{
@@ -94,6 +106,7 @@ export default function Conversation_card() {
                 strokeWidth={2}
                 fill="url(#mountainColor)"
                 fillOpacity={1}
+                dot={false}
               />
             </AreaChart>
           </ResponsiveContainer>
