@@ -2,6 +2,7 @@ import React from "react";
 import Badge from "@/components/Badge";
 import Hero from "./Hero";
 import TestimonialCard from "./TestimonialCard";
+import Heros from "./Heros";
 
 interface TestimonialProps {
   text: string;
@@ -66,7 +67,7 @@ const Testimonial: React.FC<TestimonialProps> = ({ text }) => {
       </div>
 
       <div className="px-4 sm:px-6 lg:px-8">
-        <Hero
+        <Heros
           title={`<span class="gradient-text">Trusted by </span> Sales Teams Worldwide`}
           description={
             "Sales teams across the globe rely on powerful AI solutions to drive growth, build trust, and achieve lasting success."
