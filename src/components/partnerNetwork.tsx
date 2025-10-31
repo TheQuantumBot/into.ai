@@ -736,11 +736,18 @@ export default function PartnerNetwork() {
         <Badge text="Why Join" />
 
         {/* Hero Section */}
-        <Hero
-          title={`The <span class="gradient-text">Into AI </span> Partner Network?`}
-          description={`This isn’t a typical referral program. It’s a partnership built for long term earning and shared success. As a Channel Partner, you get`}
-        />
+        <h2 className="text-4xl sm:text-5xl font-bold mb-3 text-gray-900">
+          The{" "}
+          <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+            Into AI
+          </span>{" "}
+          Partner Network?
+        </h2>
 
+        <p className="text-gray-500 max-w-2xl mx-auto mb-14 leading-relaxed">
+          This isn’t a typical referral program. It’s a partnership built for
+          long-term earning and shared success. As a Channel Partner, you get:
+        </p>
         {/* Grid Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 ">
           {features.map((item, index) => (
