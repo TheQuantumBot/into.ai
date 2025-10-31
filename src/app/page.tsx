@@ -52,9 +52,9 @@ export default function HomePage() {
           {/* Hero Section */}
           <div className="flex-1 flex items-center justify-center px-6 sm:px-8 lg:px-12 pt-12 sm:pt-8 md:pt-4 lg:pt-0 relative z-30 mt-8 sm:mt-12 md:mt-0">
             <Hero
-              title={`Turn Every <span class='gradient-text'>Lead</span><br /> 
+              title={`<span class="text-[#111111] "> Turn Every </span> <span class='gradient-text'>Lead</span><br /> 
                 <span class="flex flex-wrap items-center justify-center gap-[10px]">
-into <span class='gradient-text'>Revenue</span> with 
+<span class="text-[#111111] ">into </span> <span class='gradient-text'>Revenue</span> <span class="text-[#111111] ">with </span> 
 
 <span class='relative font-semibold  text-[#FFFFFF] flex items-center justify-center h-[50px] w-[50px] md:h-[60px] text-[26px] md:text-[30px] md:w-[60px] lg:text-[40px] lg:h-[70px] lg:w-[70px] rounded-xl shadow-md bg-[linear-gradient(95.7deg,_#35A1DA_-101.6%,_#857BBD_-31.24%,_#E8584B_39.11%,_#584F9E_109.47%,_#CE4C9B_179.82%)]'
       style='
