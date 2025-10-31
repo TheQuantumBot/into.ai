@@ -55,7 +55,7 @@ export default function HomePage() {
               title={`Turn Every <span class="gradient-text">Lead</span> into 
           <span class="gradient-text">Revenue</span> with 
           <span class="gradient-text">AI</span>`}
-              description="Launch campaigns across LinkedIn, Meta & WhatsApp. Our AI engages leads 24/7, qualifying prospects and turning conversations into sales."
+              description="Lunch campaigns across LinkedIn, Meta & WhatsApp. Our Ai Agent engages every Lead 24/7, qualifying prospects and turning conversations into customers while you sleep."
               primaryButtonText="Watch Demo"
               secondaryButtonText="Start Free Trial"
             />
