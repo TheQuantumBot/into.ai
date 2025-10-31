@@ -28,7 +28,7 @@ export default function Hero({
 
           {/* Render Description if provided */}
           {description && (
-            <Body className="mt-4 max-w-2xl mx-auto">{description}</Body>
+            <Body className="mt-4 max-w-[43rem] mx-auto !text-[#808080]  md:text-sm [@media(max-width:375px)]:text-[16px] [@media(max-width:375px)]:font-[500] [@media(max-width:375px)]:leading-[24px]  ">{description}</Body>
           )}
 
           {/* Buttons */}
