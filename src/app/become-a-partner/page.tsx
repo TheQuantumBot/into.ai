@@ -2,6 +2,7 @@ import BecameAPartnerFaq from "@/components/BecameAPartnerFaq";
 import Footer from "@/components/Footer";
 import Header from "@/components/header";
 import Rewarding from "@/components/Rewarding";
+import PartnerNetwork from "@/components/partnerNetwork";
 
 export default function BecameAPartnerPage() {
   return (
@@ -16,6 +17,7 @@ export default function BecameAPartnerPage() {
       {/* Content */}
       <div className="relative z-10 min-h-screen flex flex-col">
         <Header />
+        <PartnerNetwork />
 
         <div className="flex-1 flex flex-col items-center justify-center pt-[150px]">
           <div>
