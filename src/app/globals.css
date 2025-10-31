@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body, #__next {
+html,
+body,
+#__next {
   height: 100%;
 }
 :root {
@@ -10,39 +12,50 @@ html, body, #__next {
   --foreground: #171717;
 }
 
-
- 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
- 
- 
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
 }
- 
+
 body {
-   @apply bg-white text-gray-900 antialiased;
+  @apply bg-white text-gray-900 antialiased;
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
- 
-.gradient-text{background-image:linear-gradient(90deg, #35A1DA 0.24%, #847BBD 25.46%, #E8584B 50.67%, #584F9E 75.88%, #CE4C9B 101.09%);-webkit-background-clip:text;background-clip:text;color:transparent}
-.glass{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);background:var(--card);border:1px solid var(--border)}
- 
 
-
+.gradient-text {
+  background-image: linear-gradient(
+    90deg,
+    #35a1da 0.24%,
+    #847bbd 25.46%,
+    #e8584b 50.67%,
+    #584f9e 75.88%,
+    #ce4c9b 101.09%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.glass {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: var(--card);
+  border: 1px solid var(--border);
+}
 
 @keyframes scroll {
   0% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
   100% {
     transform: translateX(-50%);
@@ -50,5 +63,6 @@ body {
 }
 
 .animate-scroll {
-  animation: scroll 30s linear infinite;
+  display: flex;
+  animation: scroll 2.5s linear infinite;
 }
