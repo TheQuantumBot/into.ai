@@ -1,3 +1,4 @@
+import BecameAPartner_sales from "@/components/BecameAPartner_sales";
 import BecameAPartnerFaq from "@/components/BecameAPartnerFaq";
 import Footer from "@/components/Footer";
 import Header from "@/components/header";
@@ -22,7 +23,7 @@ export default function BecameAPartnerPage() {
           </div>
         </div>
       </div>
-
+      <BecameAPartner_sales />
       <Footer />
     </main>
   );
