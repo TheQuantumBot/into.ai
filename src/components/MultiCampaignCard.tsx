@@ -1,12 +1,9 @@
 import Image from "next/image";
 import React from "react";
 
-
-
 export default function MultiCampaignCard() {
   return (
     <div className="w-full bg-white rounded-3xl shadow-lg p-8 mx-auto relative overflow-hidden min-h-[465px]">
-
       {/* Flow Section */}
       <div className="w-full relative h-40 mt-[10px]">
         <div className="absolute top-[52px] left-[80px] w-[75%] h-[2px] bg-gray-200"></div>
@@ -92,9 +89,8 @@ export default function MultiCampaignCard() {
         </h2>
         <p className="text-gray-500 text-lg leading-relaxed">
           Run targeted campaign across LinkedIn, Meta, WhatsApp, and more
-          <span className="block">
-            from one unified dashboard
-          </span>        </p>
+          <span className="block">from one unified dashboard</span>{" "}
+        </p>
       </div>
 
       {/* Vertical Divider */}

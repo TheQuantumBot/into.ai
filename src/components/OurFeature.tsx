@@ -5,6 +5,7 @@ import MultiCampaignCard from "./MultiCampaignCard";
 import WhatsAppAgentCard from "./WhatsAppAgentCard";
 import LeadIntelligencecard from "./LeadIntelligencecard";
 import ROIOptimization from "./ROIOptimization";
+import Heros from "./Heros";
 
 interface OurfeatureProps {
   text: string;
@@ -18,9 +19,9 @@ const Ourfeature: React.FC<OurfeatureProps> = ({ text }) => {
 
       {/* Hero */}
       <div className="w-full flex flex-col items-center justify-center">
-        <Hero
+        <Heros
           title={`Everything you need to <span class="gradient-text">Scale Your Sales</span>`}
-          description="From campaign launch to customer conversion, our AI-powered platform handles every step of your sales funnel."
+          description="From campaign launch to customer conversion, Our Ai-powered platform handles every steps of your sales funnel."
         />
       </div>
 

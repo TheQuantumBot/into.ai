@@ -33,16 +33,19 @@ const ProcessSection: React.FC<ProcessSectionProps> = ({ text }) => {
               step="01"
               title="Launch campaigns"
               description="Deploy targeted campaigns across LinkedIn, Meta & WhatsApp, Our platform Optimizes targeting for maximum lead quality."
+              gradient="linear-gradient(87deg, #ffffff 0%, #D4549F 12%, #F15A22 100%)"
             />
             <ProcessCard
               step="02"
               title="Ai Engages Leads"
               description="Our WhatsApp AI bot immediately engages every lead, qualifying prospects and nurturing them through personalized conversations."
+              gradient="linear-gradient(87deg, #ffffff 0%, #8A43E1 12%, #8A43E1 100%)"
             />
             <ProcessCard
               step="03"
               title="Convert & Analyze"
               description="Track lead sentiment, conversion rates & ROI in real-time. Get actionable insights to optimize your sales process."
+              gradient="linear-gradient(87deg, #ffffff 0%, #54ACD4 12%, #54ACD4 100%)"
             />
           </div>
         </div>

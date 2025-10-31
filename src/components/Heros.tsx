@@ -10,7 +10,7 @@ interface HeroProps {
   secondaryButtonText?: string;
 }
 
-export default function Hero({
+export default function Heros({
   title,
   description,
   primaryButtonText,
@@ -25,7 +25,9 @@ export default function Hero({
 
           {/* Render Description if provided */}
           {description && (
-            <Body className="mt-4 max-w-[43rem] mx-auto !text-[#808080] font-inter-tight font-medium text-[18px] leading-[24px] text-center align-middle   md:text-sm [@media(max-width:375px)]:text-[16px] [@media(max-width:375px)]:font-[500] [@media(max-width:375px)]:leading-[24px]  ">{description}</Body>
+            <Body className="mt-7 font-inter-tight font-medium text-[18px] leading-[24px] text-center align-middle !text-[#888d96da]">
+              {description}
+            </Body>
           )}
 
           {/* Buttons */}
