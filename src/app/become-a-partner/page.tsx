@@ -1,4 +1,6 @@
+import BecameAPartner_sales from "@/components/BecameAPartner_sales";
 import BecameAPartnerFaq from "@/components/BecameAPartnerFaq";
+import WhoCanBecomePartner from "@/components/BecomePartner";
 import Footer from "@/components/Footer";
 import Header from "@/components/header";
 import Rewarding from "@/components/Rewarding";
@@ -30,7 +32,8 @@ export default function BecameAPartnerPage() {
           </div>
         </div>
       </div>
-
+      <WhoCanBecomePartner />
+      <BecameAPartner_sales />
       <Footer />
     </main>
   );
