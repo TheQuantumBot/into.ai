@@ -1,5 +1,5 @@
 import React from "react";
-import { H1, Body, } from "@/components/Typography";
+import { H1, Body } from "@/components/Typography";
 import Button from "./Button";
 import ButtonPrimary from "./Button-primary";
 
@@ -19,16 +19,15 @@ export default function Hero({
   return (
     <section className="relative overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-4 pb-8">
-        <div className="text-center max-w-3xl mx-auto">
-          
+        <div className="text-center max-w-[40rem] mx-auto">
           {/* Render Title if provided */}
-          {title && (
-            <H1 dangerouslySetInnerHTML={{ __html: title }} />
-          )}
+          {title && <H1 dangerouslySetInnerHTML={{ __html: title }} />}
 
           {/* Render Description if provided */}
           {description && (
-            <Body className="mt-4 max-w-2xl mx-auto">{description}</Body>
+            <Body className="mt-4 font-inter-tight font-medium text-[18px] leading-[24px] text-center align-middle text-[#4C4C4C]">
+              {description}
+            </Body>
           )}
 
           {/* Buttons */}

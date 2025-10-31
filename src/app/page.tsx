@@ -1,19 +1,19 @@
-import Button from '@/components/Button';
-import ButtonPrimary from '@/components/Button-primary';
+import Button from "@/components/Button";
+import ButtonPrimary from "@/components/Button-primary";
 import Header from "@/components/header";
-import Conversation_card from '@/components/Conversation_card';
-import Leads_card from '@/components/Leads_card';
-import Campaign_Card from '@/components/Campaign_Card';
-import Hero from '@/components/Hero';
-import Kpicard from '@/components/Kpicard';
+import Conversation_card from "@/components/Conversation_card";
+import Leads_card from "@/components/Leads_card";
+import Campaign_Card from "@/components/Campaign_Card";
+import Hero from "@/components/Hero";
+import Kpicard from "@/components/Kpicard";
 import Badge from "@/components/Badge";
-import Ourfeature from '@/components/OurFeature';
+import Ourfeature from "@/components/OurFeature";
 import MultiCampaignCard from "@/components/MultiCampaignCard";
-import ProcessSection from '@/components/ProcessSection';
-import IntegrationPlatform from '@/components/IntegrationPlatform';
-import Testimonial from '@/components/Testimonial';
-import CtaCard from '@/components/CtaCard';
-import Footer from '@/components/Footer';
+import ProcessSection from "@/components/ProcessSection";
+import IntegrationPlatform from "@/components/IntegrationPlatform";
+import Testimonial from "@/components/Testimonial";
+import CtaCard from "@/components/CtaCard";
+import Footer from "@/components/Footer";
 
 export default function HomePage() {
   return (
@@ -34,7 +34,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-white opacity-50 z-10 pointer-events-none h-[110%] sm:h-full"></div>
 
         {/* Noise Texture */}
-      <div className="absolute inset-0 z-10 opacity-70 mix-blend-overlay pointer-events-none">
+        <div className="absolute inset-0 z-10 opacity-70 mix-blend-overlay pointer-events-none">
           <img
             src="/Noise.png"
             alt="Noise texture"
@@ -132,23 +132,23 @@ export default function HomePage() {
       <div className="flex items-center justify-center bg-[#F6F5F4] z-30 py-8 sm:py-10 px-4 pt-24 sm:pt-10">
         <Ourfeature text="Our Features" />
       </div>
-      
+
       <div className="flex items-center justify-center bg-[#F6F5F4] z-30 py-8 sm:py-10 px-4">
         <ProcessSection text="Process" />
       </div>
-      
-      <div className='w-full px-4 sm:px-6 lg:px-8'>
+
+      <div className="w-full px-4 sm:px-6 lg:px-8">
         <IntegrationPlatform />
       </div>
 
       <div className="flex items-center justify-center bg-[#F6F5F4] z-30 py-8 sm:py-10 px-4">
         <Testimonial text="Testimonial" />
       </div>
-      
+
       <div className="flex items-center justify-center bg-[#F6F5F4] z-30 py-8 sm:py-10 px-4">
         <CtaCard />
       </div>
-      
+
       <div className="w-full flex items-center justify-center bg-[#F6F5F4] z-30">
         <Footer />
       </div>
