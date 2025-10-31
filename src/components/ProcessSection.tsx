@@ -3,6 +3,7 @@ import Badge from "@/components/Badge";
 import Hero from "./Hero";
 import ProcessCard from "./ProcessCard";
 import IntegrationPlatform from "./IntegrationPlatform";
+import Heros from "./Heros";
 
 interface ProcessSectionProps {
   text: string;
@@ -18,12 +19,9 @@ const ProcessSection: React.FC<ProcessSectionProps> = ({ text }) => {
 
       {/* Hero Section */}
       <div className="w-full items-center justify-center">
-        <Hero
+        <Heros
           title={`<span class="[@media(max-width:375px)]:text-[34px]">How INTO AI</span> <br /> <span class="gradient-text  test-[60px] [@media(max-width:375px)]:text-[28px] [@media(max-width:375px)]:font-[600] [@media(max-width:375px)]:leading-[34px] [@media(max-width:1024px)]:leading-[52px]  [@media(max-width:1024px)]:text-[42px]" >Transforms Yours Sales</span>`}
-
-          description={
-            `INTO AI automates sales and delivers real-time insights - helping you close deals faster.`
-          }
+          description={`INTO AI automates sales and delivers real-time insights - helping you close deals faster.`}
         />
 
         {/* Cards Wrapper */}

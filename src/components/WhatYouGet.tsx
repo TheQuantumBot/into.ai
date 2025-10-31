@@ -1,14 +1,14 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
 import Badge from "./Badge";
 
-const IntegrationPlatform = () => {
+const WhatYouGet = () => {
   return (
     <div className="w-full flex justify-center items-center py-12 lg:py-[130px] px-6">
       <div className="flex flex-col lg:flex-row items-center justify-between w-full gap-10">
         {/* Badge - Shows first on mobile, hidden on desktop */}
         <div className="w-full flex justify-center lg:hidden mb-8">
-          <Badge text="Powerful Integration" />
+          <Badge text="What You Get" />
         </div>
 
         {/* ===== LEFT SIDE - Circle Section ===== */}
@@ -16,12 +16,12 @@ const IntegrationPlatform = () => {
           <div className="relative w-[300px] h-[300px] lg:w-[400px] lg:h-[400px]">
             {/* Center Circle */}
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-24 h-24 bg-white rounded-xl shadow-lg flex items-center justify-center z-10">
+              <div className="rounded-xl flex items-center justify-center z-10">
                 <Image
-                  src="/IntoAI.svg"
+                  src="/girlsImage.png"
                   alt="Into.AI"
-                  width={80}
-                  height={80}
+                  width={300}
+                  height={300}
                   className="object-contain"
                 />
               </div>
@@ -33,39 +33,34 @@ const IntegrationPlatform = () => {
             </div>
 
             {/* Icons Around the Circle - Rotating Container */}
-            <div className="absolute inset-0 animate-spin-slow">
+            <div className="absolute inset-0 flex items-center justify-center">
               {/* LinkedIn */}
-              <div className="absolute -top-10 left-1/2 transform -translate-x-1/2">
-                <div className="bg-white p-5 rounded-full shadow-sm">
-                  <Image
-                    src="/linkedin.svg"
-                    alt="LinkedIn"
-                    width={35}
-                    height={35}
-                  />
+              <div className="absolute top-4 left-24 transform -translate-x-1/2">
+                <div className="bg-white p-3 rounded-full shadow-sm">
+                  <Image src="/Group.svg" alt="Group" width={35} height={35} />
                 </div>
               </div>
 
               {/* Slack */}
               <div className="absolute top-1/4 right-0 transform -translate-y-1/2">
-                <div className="bg-white p-5 rounded-full shadow-sm">
-                  <Image src="/slack.svg" alt="Slack" width={35} height={35} />
+                <div className="bg-white p-3 rounded-full shadow-sm">
+                  <Image src="/Mail.svg" alt="Mail" width={35} height={35} />
                 </div>
               </div>
 
               {/* Meta */}
               <div className="absolute bottom-1/4 right-0 transform translate-y-1/2">
-                <div className="bg-white p-5 rounded-full shadow-sm">
-                  <Image src="/meta.svg" alt="Meta" width={35} height={35} />
+                <div className="bg-white p-3 rounded-full shadow-sm">
+                  <Image src="/video.svg" alt="video" width={35} height={35} />
                 </div>
               </div>
 
               {/* Instagram */}
               <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2">
-                <div className="bg-white p-5 rounded-full shadow-sm">
+                <div className="bg-white p-3 rounded-full shadow-sm">
                   <Image
-                    src="/instagram.svg"
-                    alt="Instagram"
+                    src="/Rocket.svg"
+                    alt="Rocket"
                     width={35}
                     height={35}
                   />
@@ -74,9 +69,9 @@ const IntegrationPlatform = () => {
 
               {/* Messenger */}
               <div className="absolute bottom-1/4 left-0 transform translate-y-1/2">
-                <div className="bg-white p-5 rounded-full shadow-sm">
+                <div className="bg-white p-3 rounded-full shadow-sm">
                   <Image
-                    src="/messenger.svg"
+                    src="/massages.svg"
                     alt="Messenger"
                     width={35}
                     height={35}
@@ -85,8 +80,8 @@ const IntegrationPlatform = () => {
               </div>
 
               {/* WhatsApp */}
-              <div className="absolute top-1/4 left-0 transform -translate-y-1/2">
-                <div className="bg-white p-5 rounded-full shadow-sm">
+              {/* <div className="absolute top-1/4 left-0 transform -translate-y-1/2">
+                <div className="bg-white p-3 rounded-full shadow-sm">
                   <Image
                     src="/whatsapp.svg"
                     alt="WhatsApp"
@@ -94,7 +89,7 @@ const IntegrationPlatform = () => {
                     height={35}
                   />
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -109,23 +104,19 @@ const IntegrationPlatform = () => {
 
             {/* Title */}
             <h2 className="text-4xl lg:text-6xl font-bold  leading-[110%] text-center lg:text-left [@media(max-width:375px)]:text-[24px]  [@media(max-width:375px)]:font-[600] [@media(max-width:375px)]:leading-[34px] ">
-              <span className="gradient-text">Integrate</span>{" "}
-              <span className="text-black"> with your </span>
-              <br></br> <span className="text-black">Favorite Platform</span>
+              <span className="gradient-text">Tools & Support</span>{" "}
+              <span className="text-black"> to </span>
+              <br></br> <span className="text-black">Help You Win</span>
             </h2>
-
-            {/* Description */}
-            <p className="text-gray-600 text-center lg:text-left">
-              Easily connect INTO AI with your favorite tools for seamless
-              workflow.
-            </p>
 
             {/* Checklist */}
             <div className="space-y-4 w-full flex flex-col items-start">
               {[
-                "Explore 10+ supported integrations",
-                "Securely link your account",
-                "Sync and streamline your workflow",
+                "Personal partner portal & live dashboards",
+                "Customer success support",
+                "Product demos handled by our team",
+                "Ready-to-use emails, pitch decks, creatives",
+                "New product access before public release",
               ].map((item, index) => (
                 <div
                   key={index}
@@ -161,4 +152,4 @@ const IntegrationPlatform = () => {
   );
 };
 
-export default IntegrationPlatform;
+export default WhatYouGet;

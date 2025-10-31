@@ -1,6 +1,12 @@
+import BecameAPartner_sales from "@/components/BecameAPartner_sales";
 import BecameAPartnerFaq from "@/components/BecameAPartnerFaq";
+import WhoCanBecomePartner from "@/components/BecomePartner";
 import Footer from "@/components/Footer";
 import Header from "@/components/header";
+import Rewarding from "@/components/Rewarding";
+import PartnerNetwork from "@/components/partnerNetwork";
+import HeroBox from "@/components/HeroBox";
+import WhatYouGet from "@/components/WhatYouGet";
 
 export default function BecameAPartnerPage() {
   return (
@@ -15,15 +21,15 @@ export default function BecameAPartnerPage() {
       {/* Content */}
       <div className="relative z-10 min-h-screen flex flex-col">
         <Header />
-
-        <div className="flex-1 flex flex-col items-center justify-center pt-[150px]">
-          <div className="w-full">
-            <BecameAPartnerFaq />
-          </div>
-        </div>
+        <HeroBox />
+        <Rewarding />
+        <PartnerNetwork />
+        <WhoCanBecomePartner />
+        <WhatYouGet />
+        <BecameAPartnerFaq />
+        <BecameAPartner_sales />
+        <Footer />
       </div>
-
-      <Footer />
     </main>
   );
 }
