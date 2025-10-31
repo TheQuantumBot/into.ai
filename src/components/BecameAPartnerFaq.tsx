@@ -8,53 +8,28 @@ import WhatYouGet from "./WhatYouGet";
 const faqData = [
   {
     id: 1,
-    question: "Lorem ipsum dolor sit amet?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Namvele at libero hendrerit ultrices at nisl.",
+    question: "Do I need tech knowledge?",
+    answer: "No. We handle all demos and setup.",
     defaultOpen: true,
   },
   {
     id: 2,
-    question: "Aenean ultricies lectus a tristique?",
+    question: "Can I still run my business?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Namvele at libero hendrerit ultrices at nisl.",
+      "Yes - this program is designed to run alongside your existing work.",
   },
   {
     id: 3,
-    question: "Quisque placerat tellus effic?",
+    question: "Can I promote future Into AI products?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Namvele at libero hendrerit ultrices at nisl.",
+      "Yes -  partners automatically get access to our full AI suite as we launch new tools.",
   },
   {
     id: 4,
-    question: "Pellentesque sed purus a sem aliquam lacinia?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Namvele at libero hendrerit ultrices at nisl.",
+    question: "How do I get paid?",
+    answer: "Monthly payouts via bank transfer/UPI.",
   },
-  {
-    id: 5,
-    question: "Fusce efficitur neque condimentum vehicula?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Namvele at libero hendrerit ultrices at nisl.",
-  },
-  {
-    id: 6,
-    question: "Vivamus ornare velit eros accumsan?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Namvele at libero hendrerit ultrices at nisl.",
-  },
-  {
-    id: 7,
-    question: "Mauris is turpis facilisis pulvinar?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Namvele at libero hendrerit ultrices at nisl.",
-  },
-  {
-    id: 8,
-    question: "Pellentesque sed purus a sem aliquam lacinia?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Namvele at libero hendrerit ultrices at nisl.",
-  },
+  { id: 5, question: "Is there a joining fee?", answer: "No. It’s 100% free." },
 ];
 
 type FAQType = {
@@ -72,13 +47,13 @@ type FAQItemProps = {
 
 function FAQItem({ faq, isOpen, onToggle }: FAQItemProps) {
   return (
-    <div className="border-b border-gray-300 last:border-b-0">
+    <div className="border-b border-gray-300  border-t">
       <button
         onClick={onToggle}
         className="w-full py-6 flex items-center justify-between text-left hover:opacity-70 transition-opacity"
         aria-expanded={isOpen}
       >
-        <span className="text-base md:text-lg font-medium text-gray-900 pr-4">
+        <span className="text-base md:text-lg font-semibold text-gray-900 pr-4">
           {faq.question}
         </span>
         {isOpen ? (
@@ -93,7 +68,7 @@ function FAQItem({ faq, isOpen, onToggle }: FAQItemProps) {
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6">
+        <p className="text-gray-600 font-medium text-base md:text-base leading-relaxed mb-6">
           {faq.answer}
         </p>
       </div>
@@ -115,19 +90,19 @@ export default function BecameAPartnerFaq() {
     setOpenItems((prev) => ({ ...prev, [id]: !prev[id] }));
   };
 
-  const leftColumnFaqs = faqData.slice(0, 4);
-  const rightColumnFaqs = faqData.slice(4);
+  const leftColumnFaqs = faqData.slice(0, 3);
+  const rightColumnFaqs = faqData.slice(3);
 
   return (
     <div className="py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <Badge text="FAQs" />
-          <Hero title="Frequently Asked Questions" description="" />
-        </div>
-
-        <div>
-          <WhatYouGet />
+          <Hero
+            title="Frequently Asked Questions"
+            description=""
+            className="font-interTight font-semibold text-[44px] leading-[50px]"
+          />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16">

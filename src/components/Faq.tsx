@@ -5,15 +5,64 @@ import Badge from './Badge';
 import Hero from './Hero';
 
 const faqData = [
-  { id: 1, question: 'Lorem ipsum dolor sit amet?', answer: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Namvele at libero hendrerit ultrices at nisl.', defaultOpen: true },
-  { id: 2, question: 'Aenean ultricies lectus a tristique?', answer: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Namvele at libero hendrerit ultrices at nisl.' },
-  { id: 3, question: 'Quisque placerat tellus effic?', answer: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Namvele at libero hendrerit ultrices at nisl.' },
-  { id: 4, question: 'Pellentesque sed purus a sem aliquam lacinia?', answer: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Namvele at libero hendrerit ultrices at nisl.' },
-  { id: 5, question: 'Fusce efficitur neque condimentum vehicula?', answer: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Namvele at libero hendrerit ultrices at nisl.' },
-  { id: 6, question: 'Vivamus ornare velit eros accumsan?', answer: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Namvele at libero hendrerit ultrices at nisl.' },
-  { id: 7, question: 'Mauris is turpis facilisis pulvinar?', answer: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Namvele at libero hendrerit ultrices at nisl.' },
-  { id: 8, question: 'Pellentesque sed purus a sem aliquam lacinia?', answer: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Namvele at libero hendrerit ultrices at nisl.' },
+  {
+    id: 1,
+    question: "What makes SalesBot different from regular chatbots?",
+    answer:
+      "SalesBot isn’t a typical chatbot that just responds. It behaves like a real sales representative — powered by Agentic AI that understands context, handles objections, and guides customers toward a decision. It doesn’t just talk — it converts.",
+    defaultOpen: true,
+  },
+  {
+    id: 2,
+    question: "Is there a free trial available?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Namvele at libero hendrerit ultrices at nisl.",
+  },
+  {
+    id: 3,
+    question: "Can I customise the tone and personality?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Namvele at libero hendrerit ultrices at nisl.",
+  },
+  {
+    id: 4,
+    question: "Does SalesBot replace my sales team?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Namvele at libero hendrerit ultrices at nisl.",
+  },
+  {
+    id: 5,
+    question: "Can SalesBot handle objections and follow-ups?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Namvele at libero hendrerit ultrices at nisl.",
+  },
+  {
+    id: 6,
+    question: "Do I need any technical setup or coding?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Namvele at libero hendrerit ultrices at nisl.",
+  },
+  {
+    id: 7,
+    question: "What’s included in the paid plans?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Namvele at libero hendrerit ultrices at nisl.",
+  },
+  {
+    id: 8,
+    question: "How secure is my data?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Namvele at libero hendrerit ultrices at nisl.",
+  },
+  {
+    id: 9,
+    question: "What support do I get after purchasing?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Namvele at libero hendrerit ultrices at nisl.",
+  },
 ];
+
+
 
 type FAQType = {
   id: number;
@@ -30,7 +79,7 @@ type FAQItemProps = {
 
 function FAQItem({ faq, isOpen, onToggle }: FAQItemProps) {
   return (
-   <div className="border-b border-gray-300 last:border-b-0">
+    <div className="border-b border-gray-300 last:border-b-0">
       <button
         onClick={onToggle}
         className="w-full py-6 flex items-center justify-between text-left hover:opacity-70 transition-opacity"
@@ -43,9 +92,8 @@ function FAQItem({ faq, isOpen, onToggle }: FAQItemProps) {
       </button>
 
       <div
-        className={`overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-        }`}
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          }`}
       >
         <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6">
           {faq.answer}
