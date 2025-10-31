@@ -3,6 +3,7 @@ import BecameAPartnerFaq from "@/components/BecameAPartnerFaq";
 import WhoCanBecomePartner from "@/components/BecomePartner";
 import Footer from "@/components/Footer";
 import Header from "@/components/header";
+import Rewarding from "@/components/Rewarding";
 import PartnerNetwork from "@/components/partnerNetwork";
 
 export default function BecameAPartnerPage() {
@@ -21,6 +22,9 @@ export default function BecameAPartnerPage() {
         <PartnerNetwork />
 
         <div className="flex-1 flex flex-col items-center justify-center pt-[150px]">
+          <div>
+            <Rewarding  />
+          </div>
           <div className="w-full">
             <BecameAPartnerFaq />
           </div>

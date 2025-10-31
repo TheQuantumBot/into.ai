@@ -1,15 +1,6 @@
 import React from "react";
 import Badge from "./Badge";
-import Hero from "./Hero";
-import {
-  Percent,
-  Repeat,
-  Wrench,
-  FileText,
-  Gift,
-  Layers,
-  UserCheck,
-} from "lucide-react";
+import Heros from "./Heros";
 
 export default function PartnerNetwork() {
   const features = [
@@ -727,50 +718,40 @@ export default function PartnerNetwork() {
   ];
 
   return (
-    <section className="relative w-full flex flex-col items-center justify-center px-6 py-16 overflow-hidden">
-      {/* Subtle background lighting / glow effect */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_0%,rgba(245,230,255,0.6)_0%,rgba(255,255,255,0)_60%)]"></div>
+    <div className="w-full flex flex-col items-center justify-center px-4 sm:px-6 py-3 text-black font-medium space-y-6">
+      {/* Badge */}
+      <Badge text="Our Features" />
 
-      <div className="relative z-10 flex flex-col items-center justify-center text-center space-y-8 max-w-6xl">
-        {/* Badge */}
-        <Badge text="Why Join" />
-
-        {/* Hero Section */}
-        <h2 className="text-4xl sm:text-5xl font-bold mb-3 text-gray-900">
-          The{" "}
-          <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-            Into AI
-          </span>{" "}
-          Partner Network?
-        </h2>
-
-        <p className="text-gray-500 max-w-2xl mx-auto mb-14 leading-relaxed">
-          This isn’t a typical referral program. It’s a partnership built for
-          long-term earning and shared success. As a Channel Partner, you get:
-        </p>
-        {/* Grid Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 ">
-          {features.map((item, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-start gap-2 p-6  border border-[gray-200] transition-all duration-300"
-            >
-              {item.icon !== "" && (
-                <div className="p-3 h-[72px] w-[72px] shadow-[0_2px_8px_rgba(0,0,0,0.04)] bg-white rounded-lg flex items-center justify-center">
-                  {item.icon}
-                </div>
-              )}
-
-              <h3 className="font-[Inter_Tight] font-normal text-[24px] leading-[100%] tracking-[0] align-middle text-[#111111]">
-                {item.title}
-              </h3>
-              <p className="font-[Inter_Tight] font-normal text-[24px] leading-[100%] tracking-[0] align-middle text-[#4C4C4C]">
-                {item.description}
-              </p>
-            </div>
-          ))}
-        </div>
+      {/* Hero */}
+      <div className="w-full flex flex-col items-center justify-center">
+        <Heros
+          title={`Everything you need to <span class="gradient-text">Scale Your Sales</span>`}
+          description="From campaign launch to customer conversion, Our Ai-powered platform handles every steps of your sales funnel."
+        />
       </div>
-    </section>
+
+      {/* Grid Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 ">
+        {features.map((item, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-start gap-2 p-6  border border-[gray-200] transition-all duration-300"
+          >
+            {item.icon !== "" && (
+              <div className="p-3 h-[72px] w-[72px] shadow-[0_2px_8px_rgba(0,0,0,0.04)] bg-white rounded-lg flex items-center justify-center">
+                {item.icon}
+              </div>
+            )}
+
+            <h3 className="font-[Inter_Tight] font-normal text-[24px] leading-[100%] tracking-[0] align-middle text-[#111111]">
+              {item.title}
+            </h3>
+            <p className="font-[Inter_Tight] font-normal text-[24px] leading-[100%] tracking-[0] align-middle text-[#4C4C4C]">
+              {item.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
