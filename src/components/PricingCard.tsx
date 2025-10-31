@@ -575,9 +575,8 @@ export default function PlanPricing() {
         {/* Toggle */}
         <div className="flex items-center justify-center gap-4 mb-8">
           <span
-            className={`text-sm font-medium ${
-              !isYearly ? "text-gray-900" : "text-gray-500"
-            }`}
+            className={`text-sm font-medium ${!isYearly ? "text-gray-900" : "text-gray-500"
+              }`}
           >
             Billed Monthly
           </span>
@@ -598,17 +597,15 @@ export default function PlanPricing() {
               }}
             >
               <span
-                className={`inline-block h-4 w-4 transform rounded-full transition-all duration-300 ease-in-out ${
-                  isYearly ? "translate-x-6 bg-black" : "translate-x-1 bg-white"
-                }`}
+                className={`inline-block h-4 w-4 transform rounded-full transition-all duration-300 ease-in-out ${isYearly ? "translate-x-6 bg-black" : "translate-x-1 bg-white"
+                  }`}
               />
             </button>
           </div>
 
           <span
-            className={`text-sm font-medium ${
-              isYearly ? "text-gray-900" : "text-gray-500"
-            }`}
+            className={`text-sm font-medium ${isYearly ? "text-gray-900" : "text-gray-500"
+              }`}
           >
             Billed yearly (Save 20%)
           </span>
@@ -636,9 +633,8 @@ export default function PlanPricing() {
 
               {/* Top Card */}
               <div
-                className={`bg-white rounded-2xl shadow-md ${
-                  plan.borderColor || "border-gray-200"
-                } flex flex-col items-center justify-between z-10 relative lg:w-[345px] md:w-[290px]`}
+                className={`bg-white rounded-2xl shadow-md ${plan.borderColor || "border-gray-200"
+                  } flex flex-col items-center justify-between z-10 relative lg:w-[345px] md:w-[290px]`}
                 style={{ height: "400px", overflow: "hidden" }}
               >
                 <div className="p-8 flex flex-col justify-between h-full w-full">
@@ -706,7 +702,7 @@ export default function PlanPricing() {
                                   </svg>
                                 </div>
                                 <span className="absolute bottom-full mb-1 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-gray-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 whitespace-nowrap z-10">
-                                  Lorem ipsum dolor sit amet
+                                  {feature === "Advanced performance reports" ? "Advanced " : feature}
                                 </span>
                               </div>
                             )}
@@ -748,7 +744,7 @@ export default function PlanPricing() {
                                 />
                               </svg>
                               <span className="absolute bottom-full mb-1 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-gray-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 whitespace-nowrap z-10">
-                                Lorem ipsum dolor sit amet
+                                {feature === "Advanced performance reports" ? "Advanced " : feature}
                               </span>
                             </span>
                           )}
