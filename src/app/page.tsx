@@ -53,7 +53,8 @@ export default function HomePage() {
           {/* Hero Section */}
           <div className="flex-1 flex items-center justify-center px-6 sm:px-8 lg:px-12 pt-12 sm:pt-8 md:pt-4 lg:pt-0 relative z-30 mt-8 sm:mt-12 md:mt-0">
             <Heros
-              title={`<span class="text-[#111111] "> Turn Every </span> <span class='gradient-text'>Lead</span><br /> 
+              title={`
+                <span class="text-[#111111] "> Turn Every </span> <span class='gradient-text'>Lead</span><br /> 
                 <span class="flex flex-wrap items-center justify-center gap-[10px]">
 <span class="text-[#111111] ">into </span> <span class='gradient-text'>Revenue</span> <span class="text-[#111111] ">with </span> 
 
@@ -82,11 +83,10 @@ export default function HomePage() {
 
           {/* Floating Cards - Hidden on mobile and tablet */}
           {/* Conversation Card */}
-          <div className="hidden xl:block absolute top-[250px] left-[100px] rotate-[10deg]">
+          <div className="hidden md:block  md:w-[230px] md:h-[220px] absolute top-[250px] left-[100px] md:top-[91px] md:left-[101px] rotate-[10deg]">
             <Conversation_card />
             <div className="w-16 h-16 relative">
               <div className="absolute bottom-[30px] left-[260px] w-16 h-16 border-[2px] border-[#EFEFEF] rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center shadow-[0_8px_30px_rgba(255,102,0,0.3)] -rotate-[10deg]">
-                {/* Orange Icon */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="26"
@@ -112,12 +112,12 @@ export default function HomePage() {
           </div>
 
           {/* Campaign Card */}
-          <div className="hidden xl:block absolute top-[210px] right-[100px] rotate-0">
+          <div className="hidden md:block absolute  top-[134px] right-[152px] lg:top-[134px] lg:right-[152px] rotate-0">
             <Campaign_Card />
           </div>
 
           {/* Leads Card */}
-          <div className="hidden xl:block absolute top-[450px] right-[100px] -rotate-[10deg]">
+          <div className="hidden md:block absolute top-[300px] right-[25px] lg:top-[450px] lg:right-[100px] -rotate-[10deg]">
             <Leads_card />
             <div className="w-16 h-16 relative">
               <div className="absolute -top-[250px] left-[240px] w-16 h-16 border-[2px] border-[#EFEFEF] rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center shadow-[0_8px_30px_rgba(255,102,0,0.3)] rotate-[10deg]">

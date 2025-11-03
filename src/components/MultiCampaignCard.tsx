@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import CountUp from "./CountUp";
 
 export default function MultiCampaignCard() {
   return (
@@ -61,17 +62,22 @@ export default function MultiCampaignCard() {
         {/* Meta - Bottom Center */}
         <div className="absolute top-[196px] left-[340px] w-[500px] h-[2px] bg-gray-300"></div>
         <div className="absolute top-[144px] left-[430px] w-[100px] h-[100px] rounded-2xl bg-[linear-gradient(180deg,#E6F0FF_0%,#FFFFFF_100%)] flex items-center justify-center">
-          <Image
-            src="/meta.svg"
-            alt="Meta"
-            width={50}
-            height={50}
-          />
+          <Image src="/meta.svg" alt="Meta" width={50} height={50} />
         </div>
 
         {/* Conversion Rate Badge */}
-         <div className="absolute top-[160px] right-0 bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-2xl shadow-lg">
-          <div className="text-3xl font-medium leading-none">92%</div>
+        <div className="absolute top-[160px] right-0 bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-2xl shadow-lg">
+          <div className="text-3xl font-medium leading-none">
+            <CountUp
+              from={0}
+              to={92}
+              separator=","
+              direction="up"
+              duration={1}
+              className="count-up-text"
+            />
+            %
+          </div>
           <div className="text-sm opacity-90">Conversion Rate</div>
         </div>
         <div className="absolute top-[140px] right-[-65px] bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 opacity-15 rounded-2xl ]">
