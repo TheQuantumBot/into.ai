@@ -19,8 +19,13 @@ export default function FeaturesPageHeroSection() {
               </h1>
             </div>
 
-            <p className="font-inter-tight font-semibold italic text-lg leading-[24px] text-gray-600 max-w-md">
-              SalesBot isn’t here to “chat.”💬
+            <p className="font-inter-tight font-semibold italic text-lg leading-[24px] text-gray-600 max-w-md flex">
+             <span className="flex flex-row gap-1"> SalesBot isn’t here to “chat.”  <img
+                src="/threedot.png"
+                alt="Handshake Icon"
+                className = "w-[20px] h-[20px]"
+              /></span>
+              
             </p>
 
             <p className="text-lg	 text-gray-600 font-medium  leading-normal max-w-md">
