@@ -1,9 +1,12 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/header";
-import FeaturesFaq from "@/components/FeaturesFaq";
+import FeaturesSection from "@/components/FeaturesSection";
+import BecameAPartnerFaq from "@/components/BecameAPartnerFaq";
+import FeaturesPageHeroSection from "@/components/FeaturesPageHeroSection";
+import LeadConversion from "@/components/LeadConversion";
+import AgenticAIHero from "@/components/AgenticAI";
 import Features_sales from "@/components/Features_sales";
-import FeaturesPageHeroSection from "@/components/FeaturesPageHeroSection"
-
+import HumanStyleChat from "@/components/HumanStyleChat";
 
 export default function FeaturesPage() {
   return (
@@ -19,7 +22,11 @@ export default function FeaturesPage() {
       <div className="relative z-10 min-h-screen flex flex-col">
         <Header />
         <FeaturesPageHeroSection />
-        <FeaturesFaq />
+        <AgenticAIHero />
+        <HumanStyleChat />
+        <LeadConversion />
+        <FeaturesSection />
+        <BecameAPartnerFaq />
         <Features_sales />
         <Footer />
       </div>

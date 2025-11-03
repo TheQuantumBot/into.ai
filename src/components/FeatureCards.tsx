@@ -1,13 +1,25 @@
 "use client";
 import React from "react";
 
-export default function FeatureCards({ className = "absolute" ,description=''}: { className?: string,description?:string }) {
+export default function FeatureCards({
+  className = "absolute",
+  description = "",
+}: {
+  className?: string;
+  description?: string;
+}) {
   return (
     <div
       className={`w-fit ${className} h-fit bg-white gap-[20px] rounded-[12.5px] flex items-center shadow-[0px_3.42px_17.11px_0px_#0000001A] hover:shadow-xl transition-shadow duration-300 p-[12px]`}
     >
-      <div className="bg-cyan-50 border-[0.86px] flex items-center justify-center h-[54px] w-[54px] border-[#CDEEEE] rounded-full p-5 flex-shrink-0">
-        <svg width="54" height="54" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <div className="bg-cyan-50 border-[0.86px] flex items-center justify-center h-[54px] w-[54px] border-[#CDEEEE] rounded-full  flex-shrink-0">
+        <svg
+          width="23"
+          height="23"
+          viewBox="0 0 33 33"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <g clipPath="url(#clip0_3591_79297)">
             <path
               d="M10.397 11.6097C9.97372 11.8108 9.49492 12.168 9.17225 12.5808C9.48445 12.6918 9.69079 12.8531 9.84162 13.1706C10.1433 13.8055 9.81531 14.4801 9.28629 14.7314C8.96885 14.8823 8.70694 14.877 8.39479 14.7659C8.38425 15.2897 8.52985 15.8691 8.73095 16.2923C9.58568 18.0911 11.7207 18.7628 13.4136 17.9583C15.2124 17.1036 15.8841 14.9686 15.0796 13.2757C14.2752 11.5827 12.1957 10.755 10.397 11.6097Z"
@@ -20,18 +32,23 @@ export default function FeatureCards({ className = "absolute" ,description=''}: 
           </g>
           <defs>
             <clipPath id="clip0_3591_79297">
-              <rect width="25.8105" height="25.8105" fill="white" transform="translate(0 8.57969) rotate(-19.4152)" />
+              <rect
+                width="25.8105"
+                height="25.8105"
+                fill="white"
+                transform="translate(0 8.57969) rotate(-19.4152)"
+              />
             </clipPath>
           </defs>
         </svg>
       </div>
 
-      <div className="flex flex-col gap-[11px] max-w-[282px]">
+      <div className="flex flex-col gap-[11px] max-w-[267px]">
         <div className="font-semibold text-[16px] leading-[18px] capitalize text-[#1E1E1E]">
           Faster replies
         </div>
         <div className="font-normal text-[14px] leading-[120%] text-[#9A9A9A]">
-         {description} 
+          {description}
         </div>
       </div>
     </div>

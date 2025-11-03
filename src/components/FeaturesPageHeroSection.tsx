@@ -17,8 +17,6 @@ export default function FeaturesPageHeroSection() {
                   Not Just Talk
                 </span>{" "}
               </h1>
-
-
             </div>
 
             <p className="font-inter-tight font-semibold italic text-lg leading-[24px] text-gray-600 max-w-md">
@@ -26,7 +24,10 @@ export default function FeaturesPageHeroSection() {
             </p>
 
             <p className="text-lg	 text-gray-600 font-medium  leading-normal max-w-md">
-              It’s designed to understand leads, qualify them, handle objections, and close sales - just like your sharpest sales rep would. Powered by Agentic AI, it thinks, responds, and acts with purpose : Faster replies, smarter follow-ups, higher conversions.
+              It’s designed to understand leads, qualify them, handle
+              objections, and close sales - just like your sharpest sales rep
+              would. Powered by Agentic AI, it thinks, responds, and acts with
+              purpose : Faster replies, smarter follow-ups, higher conversions.
             </p>
             <div className="flex items-center gap-4">
               <ButtonPrimary>Watch Demo</ButtonPrimary>
@@ -40,7 +41,6 @@ export default function FeaturesPageHeroSection() {
 
           {/* Right - Visual with Icons */}
 
-
           <div
             className="relative flex items-center justify-center h-[500px] w-full bg-center bg-no-repeat bg-contain"
             style={{
@@ -53,16 +53,20 @@ export default function FeaturesPageHeroSection() {
                 backgroundImage: "url('/Features/girimg.png')",
               }}
             >
-          <FeatureCards description='Respond instantly when buyers are most excited, before competitors even see the lead.' className="rotate-[-14.99deg] absolute bottom-[90px] left-[-123px]"/>
-          <FeatureCards description='Reconnect naturally with perfect timing — no spam, just genuine conversations that convert.' className="rotate-[6deg] absolute bottom-[16px] right-[-190px]"/>
-          <FeatureCards description='Turn every chat into action, more site visits, more bookings, more sales.' className="rotate-[-10deg] absolute bottom-[-65px] right-[0px]"/>
-
-
+              <FeatureCards
+                description="Respond instantly when buyers are most excited, before competitors even see the lead."
+                className="left-[-110px] absolute bottom-[91px] -rotate-[16deg]"
+              />
+              <FeatureCards
+                description="Reconnect naturally with perfect timing  no spam, just genuine conversations that."
+                className="rotate-[6deg] absolute bottom-[34px] right-[-166px]"
+              />
+              <FeatureCards
+                description="Turn every chat into action, more site visits, more bookings, more sales."
+                className="rotate-[-4deg] absolute bottom-[-50px] left-[-26px]"
+              />
             </div>
           </div>
-
-
-
         </div>
       </div>
 
