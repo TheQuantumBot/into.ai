@@ -6,6 +6,7 @@ import FeaturesPageHeroSection from "@/components/FeaturesPageHeroSection";
 import LeadConversion from "@/components/LeadConversion";
 import AgenticAIHero from "@/components/AgenticAI";
 import Features_sales from "@/components/Features_sales";
+import HumanStyleChat from "@/components/HumanStyleChat";
 
 export default function FeaturesPage() {
   return (
@@ -22,6 +23,7 @@ export default function FeaturesPage() {
         <Header />
         <FeaturesPageHeroSection />
         <AgenticAIHero />
+        <HumanStyleChat />
         <LeadConversion />
         <FeaturesSection />
         <BecameAPartnerFaq />
