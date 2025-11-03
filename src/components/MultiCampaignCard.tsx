@@ -1,19 +1,16 @@
 import Image from "next/image";
 import React from "react";
 
-
-
 export default function MultiCampaignCard() {
   return (
     <div className="w-full bg-white rounded-3xl shadow-lg p-8 mx-auto relative overflow-hidden min-h-[465px]">
-
       {/* Flow Section */}
       <div className="w-full relative h-40 mt-[10px]">
-        <div className="absolute top-[52px] left-0 w-[90%] h-[2px] bg-gray-200"></div>
+        <div className="absolute top-[52px] left-[80px] w-[75%] h-[2px] bg-gray-200"></div>
 
         {/* SVG Stroke Line */}
         <svg
-          className="absolute top-[52px] left-5 pointer-events-none"
+          className="absolute top-[52px] right-5 pointer-events-none"
           width="100%"
           height="100%"
           viewBox="0 0 500 300"
@@ -29,7 +26,7 @@ export default function MultiCampaignCard() {
         </svg>
 
         {/* Into.AI Logo - Left */}
-        <div className="absolute top-0 left-0 w-[100px] h-[100px] rounded-2xl bg-gradient-to-b from-[rgba(194,197,255,0.77)] to-white flex items-center justify-center">
+        <div className="absolute top-0 left-[45px] w-[100px] h-[100px] rounded-2xl bg-gradient-to-b from-[rgba(194,197,255,0.77)] to-white flex items-center justify-center">
           <Image
             src="/logo.svg"
             alt="Into.AI Logo"
@@ -40,7 +37,7 @@ export default function MultiCampaignCard() {
         </div>
 
         {/* LinkedIn - Center */}
-        <div className="absolute top-0 left-[370px] w-[100px] h-[100px] rounded-2xl bg-[linear-gradient(180deg,#D5F1FF_0%,#FFFFFF_100%)] flex items-center justify-center">
+        <div className="absolute top-0 left-[400px] w-[100px] h-[100px] rounded-2xl bg-[linear-gradient(180deg,#D5F1FF_0%,#FFFFFF_100%)] flex items-center justify-center">
           <Image
             src="/linkedin.svg"
             alt="LinkedIn"
@@ -51,7 +48,7 @@ export default function MultiCampaignCard() {
         </div>
 
         {/* WhatsApp - Right */}
-        <div className="absolute top-0 right-8 w-[100px] h-[100px] rounded-2xl bg-[linear-gradient(180deg,#CAF2D3_0%,#FFFFFF_100%)] flex items-center justify-center">
+        <div className="absolute top-0 right-[100px] w-[100px] h-[100px] rounded-2xl bg-[linear-gradient(180deg,#CAF2D3_0%,#FFFFFF_100%)] flex items-center justify-center">
           <Image
             src="/whatsapp.svg"
             alt="WhatsApp"
@@ -62,8 +59,8 @@ export default function MultiCampaignCard() {
         </div>
 
         {/* Meta - Bottom Center */}
-        <div className="absolute top-[196px] left-[350px] w-[500px] h-[2px] bg-gray-300"></div>
-        <div className="absolute top-[144px] left-[480px] w-[100px] h-[100px] rounded-2xl bg-[linear-gradient(180deg,#E6F0FF_0%,#FFFFFF_100%)] flex items-center justify-center">
+        <div className="absolute top-[196px] left-[340px] w-[500px] h-[2px] bg-gray-300"></div>
+        <div className="absolute top-[144px] left-[430px] w-[100px] h-[100px] rounded-2xl bg-[linear-gradient(180deg,#E6F0FF_0%,#FFFFFF_100%)] flex items-center justify-center">
           <Image
             src="/meta.svg"
             alt="Meta"
@@ -73,9 +70,15 @@ export default function MultiCampaignCard() {
         </div>
 
         {/* Conversion Rate Badge */}
-        <div className="absolute top-[160px] right-0 bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-2xl shadow-lg">
+         <div className="absolute top-[160px] right-0 bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-2xl shadow-lg">
           <div className="text-3xl font-medium leading-none">92%</div>
           <div className="text-sm opacity-90">Conversion Rate</div>
+        </div>
+        <div className="absolute top-[140px] right-[-65px] bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 opacity-15 rounded-2xl ]">
+          <div className="text-3xl font-medium leading-none opacity-40">
+            92%
+          </div>
+          <div className="text-sm opacity-60">Conversion Rate</div>
         </div>
       </div>
 
@@ -86,9 +89,8 @@ export default function MultiCampaignCard() {
         </h2>
         <p className="text-gray-500 text-lg leading-relaxed">
           Run targeted campaign across LinkedIn, Meta, WhatsApp, and more
-          <span className="block">
-            from one unified dashboard
-          </span>        </p>
+          <span className="block">from one unified dashboard</span>{" "}
+        </p>
       </div>
 
       {/* Vertical Divider */}

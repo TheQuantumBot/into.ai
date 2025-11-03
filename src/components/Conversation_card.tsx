@@ -2,27 +2,39 @@
 
 import React, { useState } from "react";
 import {
-  LineChart,
-  Line,
+  AreaChart,
+  Area,
   XAxis,
   ResponsiveContainer,
   Tooltip,
+  YAxis,
 } from "recharts";
-import { ArrowUpRight } from "lucide-react";
+
 
 const data = [
-  { name: "Jun 17", value: 40 },
-  { name: "Jun 18", value: 32 },
-  { name: "Jun 19", value: 48 },
-  { name: "Jun 20", value: 60 },
+  { name: "Jun 17", value: 450 },
+  { name: "", value: 300 },
+  { name: "", value: 520 },
+  { name: "", value: 620 },
+  { name: "Jun 18", value: 680 },
+  { name: "", value: 320 },
+  { name: "", value: 480 },
+  { name: "", value: 500 },
+  { name: "Jun 19", value: 580 },
+  { name: "", value: 380 },
+  { name: "", value: 460 },
+  { name: "", value: 560 },
+  { name: "Jun 20", value: 550 },
 ];
+
+
 
 export default function Conversation_card() {
   const [activeTab, setActiveTab] = useState("Month");
 
   return (
-    <div className="bg-white/40 rounded-[24px] p-2 ">
-      <div className="w-[320px] bg-white rounded-[24px] p-4" >
+    <div className="bg-white/40 rounded-[24px] p-2">
+      <div className="w-[320px] bg-white rounded-[24px] p-4 shadow-sm">
         {/* Header */}
         <div className="flex items-center justify-between mb-2">
           <p className="text-sm font-medium text-gray-700">Conversation Rate</p>
@@ -56,13 +68,28 @@ export default function Conversation_card() {
         {/* Chart */}
         <div className="h-24">
           <ResponsiveContainer width="100%" height="100%">
-            <LineChart data={data}>
+            <AreaChart
+              data={data}
+              margin={{ top: 10, right: 10, left: 0, bottom: 0 }}
+            >
+              <defs>
+                <linearGradient id="mountainColor" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor="#9CA3AF" stopOpacity={0.2} />
+                  <stop offset="100%" stopColor="#9CA3AF" stopOpacity={0} />
+                </linearGradient>
+              </defs>
+
               <XAxis
                 dataKey="name"
                 axisLine={false}
                 tickLine={false}
                 tick={{ fontSize: 12, fill: "#6B7280" }}
+                interval="preserveStartEnd"
               />
+
+              <YAxis hide domain={[100, 500]} />
+
+
               <Tooltip
                 contentStyle={{
                   backgroundColor: "white",
@@ -71,14 +98,17 @@ export default function Conversation_card() {
                   fontSize: "12px",
                 }}
               />
-              <Line
+
+              <Area
                 type="monotone"
                 dataKey="value"
                 stroke="#9CA3AF"
                 strokeWidth={2}
+                fill="url(#mountainColor)"
+                fillOpacity={1}
                 dot={false}
               />
-            </LineChart>
+            </AreaChart>
           </ResponsiveContainer>
         </div>
       </div>

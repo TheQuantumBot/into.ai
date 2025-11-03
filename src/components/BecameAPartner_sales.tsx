@@ -1,7 +1,7 @@
 import Button from "./Button";
 import ButtonPrimary from "./Button-primary";
 
-export default function CtaCard() {
+export default function BecameAPartner_sales() {
   return (
     <div className="flex justify-center items-center py-8 px-4 sm:py-12 sm:px-6">
       {/* Outer div for gradient border */}
@@ -10,19 +10,21 @@ export default function CtaCard() {
         <div className="rounded-2xl bg-white px-6 py-8 sm:px-12 md:px-[80px] md:py-[40px] lg:px-[100px] lg:py-[50px]">
           {/* Title */}
           <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
-            Ready to <span className="gradient-text">10X</span> Your Sales?
+            Ready to Build a Future-Proof{" "}
+            <span className="gradient-text">Future-Proof</span> <br></br>Income
+            with AI?
           </h2>
 
           {/* Subtext */}
           <p className="mt-3 sm:mt-4 text-center text-sm sm:text-base lg:text-lg text-gray-500 max-w-2xl mx-auto">
-            Join thousands of businesses already using INTO AI to transform
-            their lead generation and conversion.
+            Join the Into AI partner network and earn for every business you
+            refer,  today and every month after. No technical skills. No risk.
+            Pure earning potential.
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-row  justify-center items-center gap-4 mt-6">
-            <ButtonPrimary>Watch a Demo</ButtonPrimary>
-            <Button>Start Free Trial</Button>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6">
+            <Button>Start Earning</Button>
           </div>
 
           {/* Features row */}

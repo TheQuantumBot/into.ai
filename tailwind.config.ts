@@ -12,11 +12,15 @@ export default {
           "40%": { left: "calc(100% + 20px)" },
           "100%": { left: "calc(100% + 20px)" },
         },
+        spinSlow: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
       },
       animation: {
         shine: "shine 2.5s ease infinite",
         scroll: 'scroll 30s linear infinite',
-
+        'spin-slow': 'spinSlow 12s linear infinite',
       },
       borderColor: {
         'white-40': 'rgba(255, 255, 255, 0.40)', // custom border color
