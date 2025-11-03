@@ -43,6 +43,7 @@ body {
     #ce4c9b 101.09%
   );
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
 }
@@ -69,11 +70,14 @@ body {
 }
 
 @keyframes orbit-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .orbit-rotate {
   animation: orbit-spin 20s linear infinite;
 }
-

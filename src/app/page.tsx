@@ -53,7 +53,8 @@ export default function HomePage() {
           {/* Hero Section */}
           <div className="flex-1 flex items-center justify-center px-6 sm:px-8 lg:px-12 pt-12 sm:pt-8 md:pt-4 lg:pt-0 relative z-30 mt-8 sm:mt-12 md:mt-0">
             <Heros
-              title={`<span class="text-[#111111] "> Turn Every </span> <span class='gradient-text'>Lead</span><br /> 
+              title={`
+                <span class="text-[#111111] "> Turn Every </span> <span class='gradient-text'>Lead</span><br /> 
                 <span class="flex flex-wrap items-center justify-center gap-[10px]">
 <span class="text-[#111111] ">into </span> <span class='gradient-text'>Revenue</span> <span class="text-[#111111] ">with </span> 
 

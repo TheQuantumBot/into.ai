@@ -213,11 +213,12 @@ export default function Header() {
             >
               {item.name}
               <svg
-                className={`absolute left-1/2 -bottom-4 w-8 h-3 -translate-x-1/2 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ${pathname === item.href ||
+                className={`absolute left-1/2 -bottom-4 w-8 h-3 -translate-x-1/2 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ${
+                  pathname === item.href ||
                   (item.href !== "/" && pathname?.startsWith(item.href))
-                  ? "scale-x-100"
-                  : "scale-x-0 group-hover:scale-x-100"
-                  }`}
+                    ? "scale-x-100"
+                    : "scale-x-0 group-hover:scale-x-100"
+                }`}
                 viewBox="0 0 100 20"
                 preserveAspectRatio="none"
               >
@@ -240,13 +241,17 @@ export default function Header() {
 
         {/* CTA Button for Desktop */}
         <div className="hidden md:block">
-          <div className="gap-6">
-            <span><Button buttonType="white">Login</Button> </span>
-            <span><Button >Start Free Trial</Button> </span>
-
+          <div className="flex gap-[20px]">
+            <span>
+              <Link href="https://salesbot.cloud/login" target="_self">
+                <Button buttonType="white">Login</Button>
+              </Link>
+            </span>
+            <span>
+              <Button>Start Free Trial</Button>{" "}
+            </span>
           </div>
         </div>
-
 
         {/* Mobile Menu Toggle */}
         <button
@@ -270,11 +275,12 @@ export default function Header() {
               >
                 {item.name}
                 <svg
-                  className={`absolute left-1/2 -bottom-2 w-12 h-3 -translate-x-1/2 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ${pathname === item.href ||
+                  className={`absolute left-1/2 -bottom-2 w-12 h-3 -translate-x-1/2 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ${
+                    pathname === item.href ||
                     (item.href !== "/" && pathname?.startsWith(item.href))
-                    ? "scale-x-100"
-                    : "scale-x-0 group-hover:scale-x-100"
-                    }`}
+                      ? "scale-x-100"
+                      : "scale-x-0 group-hover:scale-x-100"
+                  }`}
                   viewBox="0 0 100 20"
                   preserveAspectRatio="none"
                 >
