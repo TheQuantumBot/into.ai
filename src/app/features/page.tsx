@@ -1,12 +1,12 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/header";
+import FeaturesSection from "@/components/FeaturesSection";
 import BecameAPartnerFaq from "@/components/BecameAPartnerFaq";
 import BecameAPartner_sales from "@/components/BecameAPartner_sales";
-import FeaturesSection from "@/components/FeaturesSection";
-import FeaturesFaq from "@/components/FeaturesFaq";
-import Features_sales from "@/components/Features_sales";
 import FeaturesPageHeroSection from "@/components/FeaturesPageHeroSection";
 import LeadConversion from "@/components/LeadConversion";
+import AgenticAI from "@/components/AgenticAI";
+import AgenticAIHero from "@/components/AgenticAI";
 
 export default function FeaturesPage() {
   return (
@@ -25,9 +25,8 @@ export default function FeaturesPage() {
         <BecameAPartnerFaq />
         <FeaturesSection />
         <BecameAPartner_sales />
-        <FeaturesFaq />
-        <Features_sales />
         <LeadConversion />
+        <AgenticAIHero />
         <Footer />
       </div>
     </main>

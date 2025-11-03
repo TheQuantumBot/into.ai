@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Badge from "./Badge";
@@ -35,28 +37,40 @@ const WhatYouGet = () => {
             {/* Icons Around the Circle - Rotating Container */}
             <div className="absolute inset-0 flex items-center justify-center">
               {/* LinkedIn */}
-              <div className="absolute top-4 left-24 transform -translate-x-1/2">
+              <div
+                className="absolute top-4 left-16 transform -translate-x-1/2 animate-float"
+                style={{ animationDelay: "0.7s" }}
+              >
                 <div className="bg-white p-3 rounded-full shadow-sm">
                   <Image src="/Group.svg" alt="Group" width={35} height={35} />
                 </div>
               </div>
 
               {/* Slack */}
-              <div className="absolute top-1/4 right-0 transform -translate-y-1/2">
+              <div
+                className="absolute top-1/4 right-0 transform -translate-y-1/2 animate-float"
+                style={{ animationDelay: "0.5s" }}
+              >
                 <div className="bg-white p-3 rounded-full shadow-sm">
                   <Image src="/Mail.svg" alt="Mail" width={35} height={35} />
                 </div>
               </div>
 
               {/* Meta */}
-              <div className="absolute bottom-1/4 right-0 transform translate-y-1/2">
+              <div
+                className="absolute bottom-1/4 right-5 transform translate-y-1/2 animate-float"
+                style={{ animationDelay: "1s" }}
+              >
                 <div className="bg-white p-3 rounded-full shadow-sm">
                   <Image src="/video.svg" alt="video" width={35} height={35} />
                 </div>
               </div>
 
               {/* Instagram */}
-              <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2">
+              <div
+                className="absolute top-3/4 left-5 transform -translate-x-1/2 animate-float"
+                style={{ animationDelay: "1.5s" }}
+              >
                 <div className="bg-white p-3 rounded-full shadow-sm">
                   <Image
                     src="/Rocket.svg"
@@ -68,7 +82,10 @@ const WhatYouGet = () => {
               </div>
 
               {/* Messenger */}
-              <div className="absolute bottom-1/4 left-0 transform translate-y-1/2">
+              <div
+                className="absolute bottom-1/2 left-0 transform translate-y-1/2 animate-float"
+                style={{ animationDelay: "0.5s" }}
+              >
                 <div className="bg-white p-3 rounded-full shadow-sm">
                   <Image
                     src="/massages.svg"
@@ -148,6 +165,20 @@ const WhatYouGet = () => {
           </div>
         </div>
       </div>
+      <style jsx>{`
+        @keyframes float {
+          0%,
+          100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-15px);
+          }
+        }
+        .animate-float {
+          animation: float 3s ease-in-out infinite;
+        }
+      `}</style>
     </div>
   );
 };
