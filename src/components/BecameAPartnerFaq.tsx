@@ -1,15 +1,35 @@
-'use client';
-import { useState } from 'react';
-import { Plus, Minus } from 'lucide-react';
-import Badge from './Badge';
-import Hero from './Hero';
+"use client";
+import { useState } from "react";
+import { Plus, Minus } from "lucide-react";
+import Badge from "./Badge";
+import Hero from "./Hero";
+import WhatYouGet from "./WhatYouGet";
 
 const faqData = [
-  { id: 1, question: 'Do I need tech knowledge?', answer: 'No. We handle all demos and setup.', defaultOpen: true },
-  { id: 2, question: 'Can I still run my business?', answer: 'Yes - this program is designed to run alongside your existing work.' },
-  { id: 3, question: 'Can I promote future Into AI products?', answer: 'Yes -  partners automatically get access to our full AI suite as we launch new tools.' },
-  { id: 4, question: 'How do I get paid?', answer: 'Monthly payouts via bank transfer/UPI.' },
-  { id: 5, question: 'Is there a joining fee?', answer: 'No. It’s 100% free.' },
+  {
+    id: 1,
+    question: "Do I need tech knowledge?",
+    answer: "No. We handle all demos and setup.",
+    defaultOpen: true,
+  },
+  {
+    id: 2,
+    question: "Can I still run my business?",
+    answer:
+      "Yes - this program is designed to run alongside your existing work.",
+  },
+  {
+    id: 3,
+    question: "Can I promote future Into AI products?",
+    answer:
+      "Yes -  partners automatically get access to our full AI suite as we launch new tools.",
+  },
+  {
+    id: 4,
+    question: "How do I get paid?",
+    answer: "Monthly payouts via bank transfer/UPI.",
+  },
+  { id: 5, question: "Is there a joining fee?", answer: "No. It’s 100% free." },
 ];
 
 type FAQType = {
@@ -36,12 +56,17 @@ function FAQItem({ faq, isOpen, onToggle }: FAQItemProps) {
         <span className="text-base md:text-lg font-semibold text-gray-900 pr-4">
           {faq.question}
         </span>
-        {isOpen ? <Minus className="w-6 h-6 text-gray-900" /> : <Plus className="w-6 h-6 text-gray-900" />}
+        {isOpen ? (
+          <Minus className="w-6 h-6 text-gray-900" />
+        ) : (
+          <Plus className="w-6 h-6 text-gray-900" />
+        )}
       </button>
 
       <div
-        className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-          }`}
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
       >
         <p className="text-gray-600 font-medium text-base md:text-base leading-relaxed mb-6">
           {faq.answer}
@@ -73,7 +98,11 @@ export default function BecameAPartnerFaq() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <Badge text="FAQs" />
-          <Hero title="Frequently Asked Questions" description="" className="font-interTight font-semibold text-[44px] leading-[50px]" />
+          <Hero
+            title="Frequently Asked Questions"
+            description=""
+            className="font-interTight font-semibold text-[44px] leading-[50px]"
+          />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16">

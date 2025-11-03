@@ -6,6 +6,7 @@ import Header from "@/components/header";
 import Rewarding from "@/components/Rewarding";
 import PartnerNetwork from "@/components/partnerNetwork";
 import HeroBox from "@/components/HeroBox";
+import WhatYouGet from "@/components/WhatYouGet";
 
 export default function BecameAPartnerPage() {
   return (
@@ -21,20 +22,14 @@ export default function BecameAPartnerPage() {
       <div className="relative z-10 min-h-screen flex flex-col">
         <Header />
         <HeroBox />
+        <Rewarding />
         <PartnerNetwork />
-
-        <div className="flex-1 flex flex-col items-center justify-center pt-[150px]">
-          <div>
-            <Rewarding />
-          </div>
-          <div className="w-full">
-            <BecameAPartnerFaq />
-          </div>
-        </div>
+        <WhoCanBecomePartner />
+        <WhatYouGet />
+        <BecameAPartnerFaq />
+        <BecameAPartner_sales />
+        <Footer />
       </div>
-      <WhoCanBecomePartner />
-      <BecameAPartner_sales />
-      <Footer />
     </main>
   );
 }

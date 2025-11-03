@@ -720,13 +720,13 @@ export default function PartnerNetwork() {
   return (
     <div className="w-full flex flex-col items-center justify-center px-4 sm:px-6 py-3 text-black font-medium space-y-6">
       {/* Badge */}
-      <Badge text="Our Features" />
+      <Badge text="Why Join" />
 
       {/* Hero */}
       <div className="w-full flex flex-col items-center justify-center">
         <Heros
-          title={`Everything you need to <span class="gradient-text">Scale Your Sales</span>`}
-          description="From campaign launch to customer conversion, Our Ai-powered platform handles every steps of your sales funnel."
+          title={`The <span class="gradient-text">Into AI</span> Partner Network?`}
+          description="This isn’t a typical referral program. It’s a partnership built for long term earning and shared success. As a Channel Partner, you get"
         />
       </div>
 
