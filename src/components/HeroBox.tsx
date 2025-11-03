@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 export default function HeroBox() {
   return (
     <section className="relative overflow-hidden pt-[100px] pb-[48px]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24 relative z-10">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8">
