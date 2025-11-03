@@ -1,9 +1,62 @@
-'use client';
-import { useState } from 'react';
-import { Plus, Minus } from 'lucide-react';
-import Badge from './Badge';
-import Hero from './Hero';
+"use client";
+import { useState } from "react";
+import { Plus, Minus } from "lucide-react";
+import Badge from "./Badge";
+import Hero from "./Hero";
 
+const faqData111 = [
+  {
+    id: 1,
+    question: "What makes SalesBot different from regular chatbots?",
+    answer: `SalesBot isn’t a typical chatbot that just responds. 
+It behaves like a real sales representative — powered by Agentic AI that understands context, handles objections, and guides customers towards a decision.
+It doesn’t just talk. It converts.`,
+    defaultOpen: true,
+  },
+
+  {
+    id: 2,
+    question: "Is there a free trial available?",
+    answer:
+      "Yes - this program is designed to run alongside your existing work.",
+  },
+  {
+    id: 3,
+    question: "Can I customise the tone and personality?",
+    answer:
+      "Yes -  partners automatically get access to our full AI suite as we launch new tools.",
+  },
+  {
+    id: 4,
+    question: "Does SalesBot replace my sales team?",
+    answer: "Monthly payouts via bank transfer/UPI.",
+  },
+  {
+    id: 5,
+    question: "Can SalesBot handle objections and follow-ups? ",
+    answer: "Can SalesBot handle objections and follow-ups?",
+  },
+  {
+    id: 6,
+    question: "Do I need any technical setup or coding?",
+    answer: "Do I need any technical setup or coding",
+  },
+  {
+    id: 7,
+    question: "What’s included in the paid plans?",
+    answer: "What’s included in the paid plans?",
+  },
+  {
+    id: 8,
+    question: "How secure is my data? ",
+    answer: "How secure is my data?",
+  },
+  {
+    id: 9,
+    question: "What support do I get after purchasing? ",
+    answer: "What support do I get after purchasing?",
+  },
+];
 const faqData = [
   {
     id: 1,
@@ -89,8 +142,6 @@ It nudges prospects until they convert — or qualify out.`,
   },
 ];
 
-
-
 type FAQType = {
   id: number;
   question: string;
@@ -146,7 +197,8 @@ function FAQItem({ faq, isOpen, onToggle }: FAQItemProps) {
   );
 }
 
-export default function FAQ() {
+
+export default function FeaturesFaq() {
   // Define state type explicitly
   const [openItems, setOpenItems] = useState<Record<number, boolean>>(() => {
     const initialState: Record<number, boolean> = {};
@@ -160,15 +212,19 @@ export default function FAQ() {
     setOpenItems((prev) => ({ ...prev, [id]: !prev[id] }));
   };
 
-  const leftColumnFaqs = faqData.slice(0, 4);
-  const rightColumnFaqs = faqData.slice(4);
+  const leftColumnFaqs = faqData.slice(0, 5);
+  const rightColumnFaqs = faqData.slice(5);
 
   return (
     <div className="py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <Badge text="FAQs" />
-          <Hero title="Frequently Asked Questions" description="" />
+          <Hero
+            title="Frequently Asked Questions"
+            description=""
+            className="font-interTight font-semibold text-[44px] leading-[50px]"
+          />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
