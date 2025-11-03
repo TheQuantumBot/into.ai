@@ -2,11 +2,10 @@ import Footer from "@/components/Footer";
 import Header from "@/components/header";
 import FeaturesSection from "@/components/FeaturesSection";
 import BecameAPartnerFaq from "@/components/BecameAPartnerFaq";
-import BecameAPartner_sales from "@/components/BecameAPartner_sales";
 import FeaturesPageHeroSection from "@/components/FeaturesPageHeroSection";
 import LeadConversion from "@/components/LeadConversion";
-import AgenticAI from "@/components/AgenticAI";
 import AgenticAIHero from "@/components/AgenticAI";
+import Features_sales from "@/components/Features_sales";
 
 export default function FeaturesPage() {
   return (
@@ -22,11 +21,11 @@ export default function FeaturesPage() {
       <div className="relative z-10 min-h-screen flex flex-col">
         <Header />
         <FeaturesPageHeroSection />
-        <BecameAPartnerFaq />
-        <FeaturesSection />
-        <BecameAPartner_sales />
-        <LeadConversion />
         <AgenticAIHero />
+        <LeadConversion />
+        <FeaturesSection />
+        <BecameAPartnerFaq />
+        <Features_sales />
         <Footer />
       </div>
     </main>
