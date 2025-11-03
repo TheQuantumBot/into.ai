@@ -17,6 +17,7 @@ export default function FeaturesPage() {
           <div className="relative z-10 min-h-screen flex flex-col">
             <Header />
             <BecameAPartnerFaq />
+            
             <BecameAPartner_sales />
             <Footer />
           </div>
