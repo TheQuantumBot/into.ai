@@ -7,21 +7,14 @@ const LeadConversion = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
           {/* Left Column - Visual Side */}
           <div className="relative h-[400px] md:h-[500px] order-2 md:order-1">
-            {/* Large background green shape */}
             <div
               className="absolute top-12 right-8 w-[458.1542663574219px] h-[560px] 
                bg-[url('/backgound_with_arrow.svg')] 
                bg-cover bg-center 
                "
             ></div>
-            {/* Lead Conversations pill with speech tail - top left */}
-            {/* <div className="absolute top-4 left-8 z-10">
-              <div className="relative bg-gradient-to-r from-blue-500 to-pink-500 text-white px-4 py-2 text-sm font-medium shadow-lg animate-[float_3s_ease-in-out_infinite] flex items-center gap-1">
-                Lead Conversations 🎉
-                <div className="absolute -bottom-2 right-8 w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-t-[12px] border-t-pink-400"></div>
-              </div>
-            </div> */}
-            <div className="absolute top-[1rem] left-[8rem] z-10">
+
+            <div className="absolute top-[1rem] left-[8rem] z-10  animate-[float_3.2s_ease-in-out_infinite]">
               <div className="flex gap-[10px] bg-[url('/Vector.png')]  justify-center h-[60px] w-[240px] bg-no-repeat text-white pt-[14px] font-semibold text-[20.48px] leading-[14.79px] tracking-[0%]">
                 Lead Conversations{"  "}
                 <svg
@@ -61,7 +54,7 @@ const LeadConversion = () => {
             </div>
 
             {/* Share offers bubble with money bag - left side */}
-            <div className="w-[172px] h-[78px] absolute top-[10rem] border-[2px] border-[#15A3634D] left-[20rem] z-10  bg-[#EDFFF7] px-4 py-3 rounded-xl shadow-[4.92px_8.2px_16.4px_0px_#00000026]">
+            <div className="w-[172px] h-[78px] absolute top-[10rem] border-[2px] border-[#15A3634D] left-[20rem] z-10  bg-[#EDFFF7] px-4 py-3 rounded-xl shadow-[4.92px_8.2px_16.4px_0px_#00000026]  animate-[float_2.8s_ease-in-out_infinite]">
               <div
                 className="absolute top-[34px] right-[130px] w-[91px] h-[90px] 
                bg-[url('/money_bag.png')] 
@@ -77,7 +70,7 @@ const LeadConversion = () => {
             </div>
 
             {/* Book demos bubble - center right */}
-            <div className="border-[2px] border-[#F5A41F4D] flex justify-center items-center absolute w-[173px] h-[78px] top-[18rem] right-[6rem] z-10 bg-[#FFF8ED] px-4 py-3 rounded-xl shadow-[0_8px_16px_rgba(251,146,60,0.3)] text-sm font-medium animate-[float_3s_ease-in-out_infinite] flex items-start gap-2">
+            <div className="border-[2px] border-[#F5A41F4D] flex justify-center items-center absolute w-[173px] h-[78px] top-[18rem] right-[6rem] z-10 bg-[#FFF8ED] px-4 py-3 rounded-xl shadow-[0_8px_16px_rgba(251,146,60,0.3)] text-sm font-medium animate-[float_3.5s_ease-in-out_infinite] flex items-start gap-2">
               <img
                 src="/handshake.png"
                 alt="Handshake Icon"
@@ -90,16 +83,18 @@ const LeadConversion = () => {
             </div>
 
             {/* Lead conversations bubble - bottom right */}
-            <div className="absolute top-[28rem] left-[26rem] w-[218px] h-[78px]">
+            <div className="absolute top-[28rem] left-[26rem] w-[218px] h-[78px]  animate-[float_2.5s_ease-in-out_infinite]">
               <img
                 src="/threedot.png"
                 alt="Handshake Icon"
-                className="absolute z-[999] bottom-[63px] left-[186px] w-[64px] h-[38px] object-contain align-middle font-interTight font-semibold italic leading-[24px]"
+                className="absolute z-[999] bottom-[63px] left-[186px] w-[64px] h-[38px] object-contain align-middle"
               />
-              <div className=" border-[2px] border-[#F6553E4D] bottom-[2rem] right-4 w-[218px] h-[78px] z-10 bg-[#FFF1EF] text-[#F6553E] font-manrope font-bold text-[20px] leading-[100%] tracking-[0%] px-4 py-3 rounded-xl shadow-[0_8px_16px_rgba(244,114,182,0.4)] text-sm font-medium animate-[float_3s_ease-in-out_infinite] leading-tight">
-                Lead conversations
-                <br />
-                that inform, nurture
+              <div className=" border-[2px] border-[#F6553E4D] bottom-[2rem] right-4 w-[218px] h-[78px] z-10 bg-[#FFF1EF]  px-4 py-3 rounded-xl shadow-[0_8px_16px_rgba(244,114,182,0.4)] text-sm font-medium  leading-tight">
+                <span className="leading-tight text-[#F6553E] font-manrope font-bold text-[20px] leading-[100%] tracking-[0%]">
+                  Lead conversations
+                  <br />
+                  that inform, nurture
+                </span>
               </div>
             </div>
           </div>
@@ -107,7 +102,7 @@ const LeadConversion = () => {
           {/* Right Column - Text Side */}
           <div className="order-1 md:order-2 text-center md:text-left">
             {/* Small badge */}
-            <div className="inline-block border border-gray-300 rounded-full px-3 py-1 text-xs font-medium text-gray-600 mb-6">
+            <div className="bg-white inline-block border border-gray-300 rounded-full px-3 py-1 text-xs font-medium text-gray-600 mb-6">
               Conversion-First Intelligence
             </div>
 
