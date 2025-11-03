@@ -612,7 +612,7 @@ export default function PlanPricing() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="max-w-7xl  mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 ">
           {plans.map((plan, index) => (
             <div key={index} className="relative flex flex-col items-center">
               {/* Most Popular Badge */}
@@ -634,20 +634,20 @@ export default function PlanPricing() {
               {/* Top Card */}
               <div
                 className={`bg-white rounded-2xl shadow-md ${plan.borderColor || "border-gray-200"
-                  } flex flex-col items-center justify-between z-10 relative lg:w-[345px] md:w-[290px]`}
+                  } flex flex-col items-center justify-between z-10 relative w-full max-w-[345px]`}
                 style={{ height: "400px", overflow: "hidden" }}
               >
-                <div className="p-8 flex flex-col justify-between h-full w-full">
+                <div className="lg:p-[30px] md:p-[25px] p-[30px] flex flex-col justify-between h-full w-full">
                   {plan.icon}
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    <h3 className="lg:text-[22px] md:text-[20px]  text-[22px] leading-[26px]  font-bold text-gray-900 mb-2">
                       {plan.name}
                     </h3>
-                    <p className="text-sm text-gray-600 mb-6 min-h-[60px]">
+                    <p className="text-sm text-gray-600 mb-6 lg:text-[16px] lg:leading-[21px] text-[14px] leading-[20px]  min-h-[60px]">
                       {plan.description}
                     </p>
                     <div className="mb-6 flex items-baseline">
-                      <span className="text-5xl font-bold text-gray-900">
+                      <span className="lg:text-[48px] lg:leading-[48px] md:text-[42px] md:leading-[48px] text-[28px] leading-[28px] font-bold text-gray-900">
                         ${isYearly ? plan.yearlyPrice : plan.monthlyPrice}
                       </span>
                       <span className="text-gray-600 ml-2">/ month</span>
@@ -666,7 +666,7 @@ export default function PlanPricing() {
 
               {plan.name === "Pro" ? (
                 <div
-                  className="rounded-2xl p-1 -mt-16 relative z-0 flex justify-center lg:w-[345px] md:w-[290px]"
+                  className="rounded-2xl p-1 -mt-16 relative z-0 flex justify-center w-full max-w-[345px]"
                   style={{
                     height: "600px",
                     background:
@@ -714,7 +714,7 @@ export default function PlanPricing() {
                 </div>
               ) : (
                 <div
-                  className={`rounded-2xl shadow-sm p-6 -mt-16 relative z-0 border-2 lg:w-[345px] md:w-[290px] ${plan.borderColor}`}
+                  className={`rounded-2xl shadow-sm p-6 -mt-16 relative z-0 border-2 w-full max-w-[345px] ${plan.borderColor}`}
                   style={{
                     height: "600px",
                     overflowY: "auto",

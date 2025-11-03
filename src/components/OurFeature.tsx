@@ -6,6 +6,9 @@ import WhatsAppAgentCard from "./WhatsAppAgentCard";
 import LeadIntelligencecard from "./LeadIntelligencecard";
 import ROIOptimization from "./ROIOptimization";
 import Heros from "./Heros";
+import MultiCampaignCardDesktop from "./MultiCampaignCardComponents/MultiCampaignCardDesktop";
+import MultiCampaignCardTablet from "./MultiCampaignCardComponents/MultiCampaignCardTablet";
+import MultiCampaignCardMobile from "./MultiCampaignCardComponents/MultiCampaignCardMobile";
 
 interface OurfeatureProps {
   text: string;
@@ -31,7 +34,21 @@ const Ourfeature: React.FC<OurfeatureProps> = ({ text }) => {
           {/* First Row */}
           <div className="flex flex-col md:flex-row gap-6">
             <div className="w-full md:w-3/5">
-              <MultiCampaignCard />
+              {/* <MultiCampaignCard />
+               */}
+              <div className="hidden lg:block">
+                <MultiCampaignCardDesktop />
+              </div>
+
+              {/* Tablet: md to lg */}
+              <div className="hidden md:block lg:hidden">
+                <MultiCampaignCardTablet />
+              </div>
+
+              {/* Mobile: below md */}
+              <div className="block md:hidden">
+                <MultiCampaignCardMobile />
+              </div>
             </div>
             <div className="w-full md:w-2/5">
               <WhatsAppAgentCard />

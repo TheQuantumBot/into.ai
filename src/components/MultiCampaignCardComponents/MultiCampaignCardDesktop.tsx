@@ -1,17 +1,16 @@
 import Image from "next/image";
 import React from "react";
-import CountUp from "./CountUp";
 
-export default function MultiCampaignCard() {
+export default function MultiCampaignCardDesktop() {
   return (
     <div className="w-full bg-white rounded-3xl shadow-lg p-8 mx-auto relative overflow-hidden min-h-[465px]">
       {/* Flow Section */}
       <div className="w-full relative h-40 mt-[10px]">
-        <div className="absolute top-[52px] left-[80px] w-[75%] h-[2px] bg-gray-200"></div>
+        <div className="absolute top-[52px] left-[80px] w-[78%] h-[2px] bg-gray-200"></div>
 
         {/* SVG Stroke Line */}
         <svg
-          className="absolute top-[52px] right-5 pointer-events-none"
+          className="absolute top-[52px] right-5 pointer-events-none [@media(min-width:2100px)]:right-[5.5rem] [@media(min-width:2200px)]:right-[11.5rem]  "
           width="100%"
           height="100%"
           viewBox="0 0 500 300"
@@ -38,7 +37,7 @@ export default function MultiCampaignCard() {
         </div>
 
         {/* LinkedIn - Center */}
-        <div className="absolute top-0 left-[400px] w-[100px] h-[100px] rounded-2xl bg-[linear-gradient(180deg,#D5F1FF_0%,#FFFFFF_100%)] flex items-center justify-center">
+        <div className="absolute top-0 left-[400px] w-[100px] h-[100px] rounded-2xl bg-[linear-gradient(180deg,#D5F1FF_0%,#FFFFFF_100%)] flex items-center justify-center ">
           <Image
             src="/linkedin.svg"
             alt="LinkedIn"
@@ -60,24 +59,19 @@ export default function MultiCampaignCard() {
         </div>
 
         {/* Meta - Bottom Center */}
-        <div className="absolute top-[196px] left-[340px] w-[500px] h-[2px] bg-gray-300"></div>
-        <div className="absolute top-[144px] left-[430px] w-[100px] h-[100px] rounded-2xl bg-[linear-gradient(180deg,#E6F0FF_0%,#FFFFFF_100%)] flex items-center justify-center">
-          <Image src="/meta.svg" alt="Meta" width={50} height={50} />
+        <div className="absolute top-[196px] left-[340px] w-[500px]  h-[2px] bg-gray-300 [@media(min-width:2000px)]:w-[645px] [@media(min-width:2390px)]:w-[742px] [@media(min-width:1700px)]:w-[400px]" ></div>
+        <div className="absolute top-[144px] left-[430px]  w-[100px] h-[100px] rounded-2xl bg-[linear-gradient(180deg,#E6F0FF_0%,#FFFFFF_100%)] flex items-center justify-center [@media(min-width:2100px)]:left-[560px]">
+          <Image
+            src="/meta.svg"
+            alt="Meta"
+            width={50}
+            height={50}
+          />
         </div>
 
         {/* Conversion Rate Badge */}
-        <div className="absolute top-[160px] right-0 bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-2xl shadow-lg">
-          <div className="text-3xl font-medium leading-none">
-            <CountUp
-              from={0}
-              to={92}
-              separator=","
-              direction="up"
-              duration={1}
-              className="count-up-text"
-            />
-            %
-          </div>
+         <div className="absolute top-[160px] right-0 bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-2xl shadow-lg">
+          <div className="text-3xl font-medium leading-none">92%</div>
           <div className="text-sm opacity-90">Conversion Rate</div>
         </div>
         <div className="absolute top-[140px] right-[-65px] bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 opacity-15 rounded-2xl ]">
