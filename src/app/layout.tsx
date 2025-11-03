@@ -11,8 +11,8 @@ const interTight = Inter_Tight({
  
 
 export const metadata: Metadata = {
-  title: 'Next Tailwind App',
-  description: 'A simple Next.js app with Tailwind CSS',
+  title: 'Into AI',
+  description: 'Into AI',
 };
 
 export default function RootLayout({
