@@ -1,5 +1,6 @@
 "use client";
 import { ArrowRight } from "lucide-react";
+import Button from "./Button";
 
 export default function HeroBox() {
   return (
@@ -17,14 +18,14 @@ export default function HeroBox() {
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                 Become an{" "}
-                <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                <span className="bg-[linear-gradient(89.89deg,#35A1DA_0.24%,#857BBD_25.46%,#E8584B_50.67%,#584F9E_75.88%,#CE4C9B_101.09%)] bg-clip-text text-transparent">
                   Into AI
                 </span>{" "}
                 Channel Partner
               </h1>
             </div>
 
-            <p className="text-lg text-gray-600 leading-relaxed max-w-md">
+            <p className="text-lg text-black leading-relaxed max-w-md">
               Build a recurring income stream by promoting the future of
               AI-driven sales - zero investment, full support, and lifetime
               earning potential.
@@ -38,15 +39,14 @@ export default function HeroBox() {
             </p>
 
             <p className="text-base text-gray-600 leading-relaxed max-w-md">
-              Now, we're opening doors for partners who want to grow with the AI
-              revolution. Bring your network, we'll handle the tech, onboarding,
-              and support.
+              Now, we’re opening doors for partners who want to grow with the AI
+              revolution. Bring your network.  we’ll handle the tech,
+              onboarding, and support.
             </p>
 
-            <button className="px-8 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition font-medium flex items-center gap-2 group">
+            <Button className="px-8 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition font-medium flex items-center gap-2 group">
               Start Earning
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
-            </button>
+            </Button>
           </div>
 
           {/* Right - Visual with Icons */}
@@ -94,10 +94,9 @@ export default function HeroBox() {
               {/* Center Content Card */}
               <div className="absolute inset-0 flex items-center justify-center z-20 top-[-60%]">
                 <div className="bg-white rounded-2xl px-6 py-8 shadow-2xl max-w-xs text-center">
-                  <div className="text-3xl font-bold text-gray-900 mb-2">
+                  <div className="bg-[linear-gradient(89.89deg,#35A1DA_0.24%,#857BBD_25.46%,#E8584B_50.67%,#584F9E_75.88%,#CE4C9B_101.09%)] bg-clip-text text-transparent ">
                     Into AI
                   </div>
-                  <p className="text-sm text-gray-600">Partner with us</p>
                 </div>
               </div>
 

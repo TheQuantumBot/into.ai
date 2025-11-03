@@ -74,7 +74,7 @@ export default function HomePage() {
     transform:translateZ(20px);
   '>AI</span>
 </span></span>`}
-              description="Launch campaigns across LinkedIn, Meta & WhatsApp. Our AI engages leads 24/7, qualifying prospects and turning conversations into sales."
+              description="Launch campaigns across LinkedIn, Meta & WhatsApp. Our Ai Agent engages every Lead 24/7, qualifying prospects and turning conversations into customers while you sleep."
               primaryButtonText="Watch Demo"
               secondaryButtonText="Start Free Trial"
             />
