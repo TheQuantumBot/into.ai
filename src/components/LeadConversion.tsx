@@ -1,4 +1,5 @@
 import Button from "./Button";
+import { DotsLoader } from "./DotsLoader";
 
 const LeadConversion = () => {
   return (
@@ -15,7 +16,8 @@ const LeadConversion = () => {
             ></div>
 
             <div className="absolute top-[1rem] left-[8rem] z-10  animate-[float_3.2s_ease-in-out_infinite]">
-              <div className="flex gap-[10px] bg-[url('/Vector.png')]  justify-center h-[60px] w-[240px] bg-no-repeat text-white pt-[14px] font-semibold text-[20.48px] leading-[14.79px] tracking-[0%]">
+              <DotsLoader />
+              <div className="flex mt-2 gap-[10px] bg-[url('/Vector.png')]  justify-center h-[60px] w-[240px] bg-no-repeat text-white pt-[14px] font-semibold text-[20.48px] leading-[14.79px] tracking-[0%]">
                 Lead Conversations{"  "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
