@@ -2,8 +2,8 @@ import Footer from "@/components/Footer";
 import Header from "@/components/header";
 import FeaturesFaq from "@/components/FeaturesFaq";
 import Features_sales from "@/components/Features_sales";
-import FeaturesPageHeroSection from "@/components/FeaturesPageHeroSection"
-
+import FeaturesPageHeroSection from "@/components/FeaturesPageHeroSection";
+import LeadConversion from "@/components/LeadConversion";
 
 export default function FeaturesPage() {
   return (
@@ -21,6 +21,7 @@ export default function FeaturesPage() {
         <FeaturesPageHeroSection />
         <FeaturesFaq />
         <Features_sales />
+        <LeadConversion />
         <Footer />
       </div>
     </main>
