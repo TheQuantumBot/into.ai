@@ -20,6 +20,7 @@ const Kpicard = () => {
                   duration={1}
                   className="count-up-text"
                 />
+                %
               </div>
               <div className="text-gray-600 text-xs sm:text-sm lg:text-base">
                 Average ROI Increase
