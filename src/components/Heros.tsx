@@ -2,9 +2,10 @@ import React from "react";
 import { H1, Body } from "@/components/Typography";
 import Button from "./Button";
 import ButtonPrimary from "./Button-primary";
+import BlurText from "./BlurText";
 
 interface HeroProps {
-  title?: string;
+  title?: string | any;
   description?: string;
   primaryButtonText?: string;
   secondaryButtonText?: string;
@@ -21,7 +22,16 @@ export default function Heros({
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-4 pb-8">
         <div className="text-center max-w-[44rem] mx-auto">
           {/* Render Title if provided */}
-          {title && <H1 dangerouslySetInnerHTML={{ __html: title }} />}
+
+          {title && (
+            <BlurText
+              text={title}
+              delay={150}
+              animateBy="words"
+              direction="top"
+              className="text-4xl sm:text-5xl md:text-6xl font-bold text-center leading-tight"
+            />
+          )}
 
           {/* Render Description if provided */}
           {description && (

@@ -15,8 +15,8 @@ export default function CtaCard() {
 
           {/* Subtext */}
           <p className="mt-3 sm:mt-4 text-center text-sm sm:text-base lg:text-lg text-gray-500 max-w-2xl mx-auto">
-            Join thousands of businesses already using INTO AI to transform
-            their lead generation and conversion.
+            Join thousands of business already using INTO AI to transform their
+            lead generation and conversion.
           </p>
 
           {/* Buttons */}

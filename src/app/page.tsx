@@ -53,7 +53,8 @@ export default function HomePage() {
           {/* Hero Section */}
           <div className="flex-1 flex items-center justify-center px-6 sm:px-8 lg:px-12 pt-12 sm:pt-8 md:pt-4 lg:pt-0 relative z-30 mt-8 sm:mt-12 md:mt-0">
             <Heros
-              title={`<span class="text-[#111111] "> Turn Every </span> <span class='gradient-text'>Lead</span><br /> 
+              title={`
+                <span class="text-[#111111] "> Turn Every </span> <span class='gradient-text'>Lead</span><br /> 
                 <span class="flex flex-wrap items-center justify-center gap-[10px]">
 <span class="text-[#111111] ">into </span> <span class='gradient-text'>Revenue</span> <span class="text-[#111111] ">with </span> 
 
@@ -74,7 +75,7 @@ export default function HomePage() {
     transform:translateZ(20px);
   '>AI</span>
 </span></span>`}
-              description="Launch campaigns across LinkedIn, Meta & WhatsApp. Our AI engages leads 24/7, qualifying prospects and turning conversations into sales."
+              description="Launch campaigns across LinkedIn, Meta & WhatsApp. Our Ai Agent engages every Lead 24/7, qualifying prospects and turning conversations into customers while you sleep."
               primaryButtonText="Watch Demo"
               secondaryButtonText="Start Free Trial"
             />

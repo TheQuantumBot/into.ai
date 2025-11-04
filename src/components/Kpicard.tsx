@@ -1,3 +1,5 @@
+import CountUp from "./CountUp";
+
 const Kpicard = () => {
   return (
     <div className="w-full py-0 sm:py-4 lg:py-8 px-4 sm:px-6">
@@ -9,37 +11,70 @@ const Kpicard = () => {
             {/* Average ROI Increase */}
             <div className="text-center flex-1 min-w-[120px] sm:min-w-[150px]">
               <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-2">
-                312%
+                {/* 312% */}
+                <CountUp
+                  from={0}
+                  to={312}
+                  separator=","
+                  direction="up"
+                  duration={1}
+                  className="count-up-text"
+                />
               </div>
               <div className="text-gray-600 text-xs sm:text-sm lg:text-base">
                 Average ROI Increase
               </div>
             </div>
-            
+
             {/* Lead Conversion Rate */}
             <div className="text-center flex-1 min-w-[120px] sm:min-w-[150px]">
               <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-2">
-                47%
+                <CountUp
+                  from={0}
+                  to={47}
+                  separator=","
+                  direction="up"
+                  duration={1}
+                  className="count-up-text"
+                />
+                %
               </div>
               <div className="text-gray-600 text-xs sm:text-sm lg:text-base">
                 Lead Conversion Rate
               </div>
             </div>
-            
+
             {/* Response Time */}
             <div className="text-center flex-1 min-w-[120px] sm:min-w-[150px]">
               <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-2">
-                &lt;2min
+                &lt;{" "}
+                <CountUp
+                  from={0}
+                  to={2}
+                  separator=","
+                  direction="up"
+                  duration={1}
+                  className="count-up-text"
+                />
+                min
               </div>
               <div className="text-gray-600 text-xs sm:text-sm lg:text-base">
                 Response Time
               </div>
             </div>
-            
+
             {/* Client Satisfaction */}
             <div className="text-center flex-1 min-w-[120px] sm:min-w-[150px]">
               <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-2">
-                98%
+                <CountUp
+                  from={0}
+                  to={98}
+                  separator=","
+                  direction="up"
+                  duration={1}
+                  className="count-up-text"
+                />
+                %
               </div>
               <div className="text-gray-600 text-xs sm:text-sm lg:text-base">
                 Client Satisfaction
@@ -51,6 +86,5 @@ const Kpicard = () => {
     </div>
   );
 };
-
 
 export default Kpicard;

@@ -19,7 +19,7 @@ export default function WhatsAppAgentCard() {
         <h2 className="text-[16px] lg:text-[32px] mb-3 sm:mb-4 font-semibold text-[#1E1E1E]">
           AI-Powered WhatsApp Agent
         </h2>
-        <p className="lg:text-[20px] sm:text-lg leading-relaxed font-semibold text-[#808080]">
+        <p className="text-gray-500 text-lg leading-relaxed">
           Smart conversational AI that engages leads 24/7, qualifying and
           nurturing them towards conversion
         </p>
