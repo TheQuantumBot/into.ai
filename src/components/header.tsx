@@ -213,25 +213,35 @@ export default function Header() {
             >
               {item.name}
               <svg
-                className={`absolute left-1/2 -bottom-4 w-8 h-3 -translate-x-1/2 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ${
+                width="17"
+                height="7"
+                viewBox="0 0 17 7"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className={`absolute left-1/2 bottom[-16px] -translate-x-1/2 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ${
                   pathname === item.href ||
                   (item.href !== "/" && pathname?.startsWith(item.href))
                     ? "scale-x-100"
                     : "scale-x-0 group-hover:scale-x-100"
                 }`}
-                viewBox="0 0 100 20"
-                preserveAspectRatio="none"
               >
                 <path
-                  d="M0 0 Q50 20 100 0"
-                  stroke="url(#grad)"
-                  strokeWidth="5"
-                  fill="transparent"
+                  d="M0.00140953 1.77906C0.900244 3.1822 2.13546 4.33848 3.59482 5.14284C5.05418 5.94719 6.6914 6.37411 8.35771 6.3848C10.024 6.3955 11.6666 5.98962 13.1362 5.20406C14.6057 4.4185 15.8557 3.27816 16.7724 1.88667L14.0184 0.0721946C13.404 1.00477 12.5663 1.76902 11.5814 2.2955C10.5965 2.82198 9.49563 3.09399 8.37887 3.08683C7.26212 3.07966 6.16486 2.79354 5.1868 2.25447C4.20875 1.71539 3.38091 0.940454 2.77852 7.62939e-05L0.00140953 1.77906Z"
+                  fill="url(#paint0_linear_4607_20958)"
                 />
                 <defs>
-                  <linearGradient id="grad" x1="0" y1="0" x2="100%" y2="0">
-                    <stop offset="0%" stopColor="#35A1DA" />
-                    <stop offset="100%" stopColor="#F15A22" />
+                  <linearGradient
+                    id="paint0_linear_4607_20958"
+                    x1="18.4219"
+                    y1="-3.61499"
+                    x2="-1.57812"
+                    y2="-3.61499"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#FF2E2E" />
+                    <stop offset="0.362773" stop-color="#EE7B16" />
+                    <stop offset="0.697515" stop-color="#8A43E1" />
+                    <stop offset="1" stop-color="#D510FC" />
                   </linearGradient>
                 </defs>
               </svg>
