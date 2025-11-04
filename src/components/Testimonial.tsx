@@ -68,7 +68,7 @@ const Testimonial: React.FC<TestimonialProps> = ({ text }) => {
 
       <div className="px-4 sm:px-6 lg:px-8">
         <Heros
-          title={`<span class="gradient-text">Trusted by </span> Sales Teams Worldwide`}
+          title={`<span class="gradient-text mr-[10px]">Trusted by </span> Sales Teams Worldwide`}
           description={
             "Sales teams across the globe rely on powerful AI solutions to drive growth, build trust, and achieve lasting success."
           }

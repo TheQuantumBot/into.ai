@@ -1,15 +1,15 @@
-'use client';
-import { useState } from 'react';
-import { Plus, Minus } from 'lucide-react';
-import Badge from './Badge';
-import Hero from './Hero';
+"use client";
+import { useState } from "react";
+import { Plus, Minus } from "lucide-react";
+import Badge from "./Badge";
+import Hero from "./Hero";
 
 const faqData = [
   {
     id: 1,
     question: "What makes SalesBot different from regular chatbots?",
     answer: `SalesBot isn’t a typical chatbot that just responds. 
-It behaves like a real sales representative — powered by Agentic AI that understands context, handles objections, and guides customers towards a decision.
+It behaves like a real sales representative - powered by Agentic AI that understands context, handles objections, and guides customers towards a decision.
 
 It doesn’t just talk. It converts.`,
     defaultOpen: true,
@@ -17,7 +17,7 @@ It doesn’t just talk. It converts.`,
   {
     id: 2,
     question: "Do I need any technical setup or coding?",
-    answer: `No setup headaches — no coding required.
+    answer: `No setup headaches - no coding required.
 You can deploy SalesBot on your website, WhatsApp, Instagram, or landing pages in just a few minutes.
 
 If you can copy-paste, you can launch SalesBot.`,
@@ -26,7 +26,7 @@ If you can copy-paste, you can launch SalesBot.`,
     id: 3,
     question: "Is there a free trial available?",
     answer: `Yes, we offer a free trial so you can experience SalesBot before choosing a plan.
-Test real conversations, see real conversions — no credit card required.`,
+Test real conversations, see real conversions, no credit card required.`,
   },
   {
     id: 4,
@@ -38,18 +38,13 @@ Test real conversations, see real conversions — no credit card required.`,
 • Multi-channel deployment
 • Real-time analytics and insights
 
-Higher plans unlock:
-• Additional chat volumes
-• CRM syncing
-• Team seats
-• Enterprise integrations
-• Deeper automation`,
+Higher plans unlock additional chat volumes, CRM syncing, team seats, enterprise integrations, and deeper automation.`,
   },
   {
     id: 5,
     question: "Can I customise the tone and personality?",
     answer: `100%.
-SalesBot adapts to your brand — friendly, professional, bold, or conversational.
+SalesBot adapts to your brand: friendly, professional, bold, or conversational.
 It speaks like your business, not like a script.`,
   },
   {
@@ -61,7 +56,8 @@ Customer conversations remain private and are used only to improve their buying 
   {
     id: 7,
     question: "Does SalesBot replace my sales team?",
-    answer: `No — it boosts your sales team's performance.
+    answer: `No, it boosts your sales team’s performance.
+
 SalesBot handles first-touch interactions, warms up prospects, and qualifies leads, so your team closes deals instead of answering repetitive questions.
 
 Think of it as your AI SDR working 24/7.`,
@@ -75,7 +71,7 @@ Think of it as your AI SDR working 24/7.`,
 • Best-practice playbooks
 • Strategy assistance to maximise conversions
 
-We don't just give you a bot — we help you win with it.`,
+We don't just give you a bot, we help you win with it.`,
   },
   {
     id: 9,
@@ -85,11 +81,9 @@ We don't just give you a bot — we help you win with it.`,
 • Handling doubts in real time
 • Following up automatically without sounding robotic
 
-It nudges prospects until they convert — or qualify out.`,
+It nudges prospects until they convert or qualify out.`,
   },
 ];
-
-
 
 type FAQType = {
   id: number;
@@ -166,12 +160,16 @@ export default function FAQ() {
   return (
     <div className="py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-[30px] lg:mb-15 ">
           <Badge text="FAQs" />
-          <Hero title="Frequently Asked Questions" description="" />
+          <Hero
+            title="Frequently Asked Questions"
+            description=""
+            className="text-center font-semibold text-[28px] leading-[38px] md:text-[42px] md:leading-[50px] lg:text-[60px] lg:leading-[66px]"
+          />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
           <div>
             {leftColumnFaqs.map((faq) => (
               <FAQItem

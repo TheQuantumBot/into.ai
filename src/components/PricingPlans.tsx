@@ -7,6 +7,7 @@ import { FileQuestionMark } from "lucide-react";
 import Faq from "./Faq";
 import CtaCard from "./CtaCard";
 import Heros from "./Heros";
+import PricingRechargeModel from "./PricingRechargeModel";
 
 interface PricingPlansProps {
   text: string;
@@ -19,27 +20,15 @@ const PricingPlans: React.FC<PricingPlansProps> = ({ text }) => {
         <Badge text="Pricing & Plans" />
       </div>
       <div className="w-full items-center justify-center ">
-        <Heros
-          title={`Choose the plan that's right for you`}
-          description={
-            "Start with our straightforward pricing to transform your LinkedIn outreach"
-          }
-        />
+        <PricingRechargeModel />
 
-        <div className="w-full flex justify-center">
-          <div className="w-full ">
-            <PricingCard />
-          </div>
-        </div>
+        <PricingCard />
 
         <div className="w-full">
           <Faq />
         </div>
-        <div className="w-full flex justify-center">
-          <div className="w-full md:w-3/5">
-            <CtaCard />
-          </div>
-        </div>
+
+        <CtaCard />
       </div>
     </div>
   );
