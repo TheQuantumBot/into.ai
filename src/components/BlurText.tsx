@@ -96,9 +96,13 @@ const BlurText: React.FC<BlurTextProps> = ({
   );
 
   // Parse HTML content safely
-  const tempDiv = document.createElement("div");
-  tempDiv.innerHTML = text;
-  const nodes = Array.from(tempDiv.childNodes);
+  // ✅ Safe HTML parsing
+  const nodes = useMemo(() => {
+    if (typeof window === "undefined") return [];
+    const tempDiv = document.createElement("div");
+    tempDiv.innerHTML = text;
+    return Array.from(tempDiv.childNodes);
+  }, [text]);
 
   return (
     <p
@@ -142,8 +146,10 @@ const BlurText: React.FC<BlurTextProps> = ({
               </motion.span>
             );
           });
-        } else if (node.nodeType === Node.ELEMENT_NODE) {
-          // Preserve span or strong etc. (styled nodes)
+        } else if (
+          node.nodeType === Node.ELEMENT_NODE &&
+          node instanceof Element
+        ) {
           return (
             <span
               key={`html-${nodeIndex}`}
