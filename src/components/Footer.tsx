@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import {
   MapPin,
@@ -8,9 +9,13 @@ import {
   Linkedin,
   Twitter,
   Instagram,
+  ChevronDown,
 } from "lucide-react";
 
 export default function Footer() {
+  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
+  const [isProductOpen, setIsProductOpen] = useState(false);
+  const [isSupportOpen, setIsSupportOpen] = useState(false);
   const companyLinks = [
     { name: "Testimonials", href: "/testimonials" },
     { name: "FAQ's", href: "/faqs" },
@@ -309,8 +314,19 @@ export default function Footer() {
 
           {/* Company */}
           <div className="space-y-6">
-            <h3 className="text-lg font-medium text-white">Company</h3>
-            <ul className="space-y-3">
+            <button
+              type="button"
+              className="w-full flex items-center justify-between md:cursor-default"
+              onClick={() => setIsCompanyOpen((v) => !v)}
+            >
+              <h3 className="text-lg font-medium text-white">Company</h3>
+              <ChevronDown
+                className={`w-5 h-5 text-gray-400 transition-transform md:hidden ${
+                  isCompanyOpen ? "rotate-180" : "rotate-0"
+                }`}
+              />
+            </button>
+            <ul className={`${isCompanyOpen ? "block" : "hidden"} md:block space-y-3`}>
               {companyLinks.map((link, i) => (
                 <li key={i}>
                   <Link
@@ -326,8 +342,19 @@ export default function Footer() {
 
           {/* Product */}
           <div className="space-y-6">
-            <h3 className="text-lg font-medium text-white">Product</h3>
-            <ul className="space-y-3">
+            <button
+              type="button"
+              className="w-full flex items-center justify-between md:cursor-default"
+              onClick={() => setIsProductOpen((v) => !v)}
+            >
+              <h3 className="text-lg font-medium text-white">Product</h3>
+              <ChevronDown
+                className={`w-5 h-5 text-gray-400 transition-transform md:hidden ${
+                  isProductOpen ? "rotate-180" : "rotate-0"
+                }`}
+              />
+            </button>
+            <ul className={`${isProductOpen ? "block" : "hidden"} md:block space-y-3`}>
               {productLinks.map((link, i) => (
                 <li key={i}>
                   <Link
@@ -343,8 +370,19 @@ export default function Footer() {
 
           {/* Support */}
           <div className="space-y-6">
-            <h3 className="text-lg font-medium text-white">Support</h3>
-            <ul className="space-y-3">
+            <button
+              type="button"
+              className="w-full flex items-center justify-between md:cursor-default"
+              onClick={() => setIsSupportOpen((v) => !v)}
+            >
+              <h3 className="text-lg font-medium text-white">Support</h3>
+              <ChevronDown
+                className={`w-5 h-5 text-gray-400 transition-transform md:hidden ${
+                  isSupportOpen ? "rotate-180" : "rotate-0"
+                }`}
+              />
+            </button>
+            <ul className={`${isSupportOpen ? "block" : "hidden"} md:block space-y-3`}>
               {supportLinks.map((link, i) => (
                 <li key={i}>
                   <Link
