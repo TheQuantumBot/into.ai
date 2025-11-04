@@ -7,26 +7,6 @@ import Button from "./Button";
 export default function PlanPricing() {
   const [isYearly, setIsYearly] = useState(false);
 
-  const showTooltip = [
-    "5,000 credits/month",
-    "2 products maximum",
-    "Standard support",
-    "20,000 credits/month",
-    "12 campaigns maximum",
-    "9 products maximum",
-    "Unlimited user seats",
-    "Premium support",
-    "Advanced analytics",
-    "35,000 credits/month",
-    "Unlimited campaigns",
-    "Unlimited products",
-    "Bidirectional CRM integration",
-    "Unlimited user seats",
-    "Priority support",
-    "Advanced performance reports",
-    "Multi-step automations",
-    "Unlimited prompts",
-  ];
 
   const plans = [
     {
@@ -156,11 +136,12 @@ export default function PlanPricing() {
         </div>
       ),
       description:
-        "Perfect for entrepreneurs and small businesses starting with AI-powered LinkedIn prospecting.",
-      monthlyPrice: 92,
-      yearlyPrice: 74,
+        "Small to medium businesses who want consistent automation and measurable ROI. Ideal for teams managing inbound leads and repetitive customer queries daily.",
+      originalPrice: "9,999",
+      monthlyPrice: "9,499",
+      yearlyPrice: 9499,
       features: [
-        "5,000 credits/month",
+        "2,777 credits/month (3.4 ₹ /credit)",
         "One LinkedIn account",
         "3 campaigns maximum",
         "2 products maximum",
@@ -299,12 +280,13 @@ export default function PlanPricing() {
         </div>
       ),
       description:
-        "Ideal for sales teams looking to expand their LinkedIn prospecting with multiple accounts.",
-      monthlyPrice: 207,
+        "Scaling businesses handling large lead volumes or multiple campaigns across teams or regions. This plan delivers performance, insights, and growth at scale.",
+      originalPrice: "34,999",
+      monthlyPrice: "33,249",
       yearlyPrice: 166,
       features: [
         "All Basic features",
-        "20,000 credits/month",
+        "9,722 credits/month (3.2 ₹ /credit)",
         "Up to 3 LinkedIn accounts",
         "12 campaigns maximum",
         "9 products maximum",
@@ -546,23 +528,11 @@ export default function PlanPricing() {
         </div>
       ),
       description:
-        "Complete solution for businesses wanting to maximize prospecting results.",
-      monthlyPrice: 319,
+        "Need additional security, control, and support build your own tailored solution.",
+
+      monthlyPrice: "Custom",
       yearlyPrice: 255,
-      features: [
-        "All Pro features",
-        "35,000 credits/month",
-        "Up to 5 LinkedIn accounts",
-        "Unlimited campaigns",
-        "Unlimited products",
-        "Optimized API access (1 credit/request, unlimited)",
-        "Bidirectional CRM integration",
-        "Unlimited user seats",
-        "Priority support",
-        "Advanced performance reports",
-        "Multi-step automations",
-        "Unlimited prompts",
-      ],
+      features: [],
     },
   ];
   function handleGetStarted(name: string): void {
@@ -570,49 +540,10 @@ export default function PlanPricing() {
   }
 
   return (
-    <div className="min-h-screen py-6 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen mt-10">
       <div className="max-w-7xl mx-auto">
-        {/* Toggle */}
-        <div className="flex items-center justify-center gap-4 mb-8">
-          <span
-            className={`text-sm font-medium ${!isYearly ? "text-gray-900" : "text-gray-500"
-              }`}
-          >
-            Billed Monthly
-          </span>
-
-          {/* Gradient Border */}
-          <div
-            className="rounded-full p-[2px] flex items-center justify-center"
-            style={{
-              background:
-                "linear-gradient(90deg, #35A1DA -207.85%, #D4549F -28.59%, #F15A22 136.87%)",
-            }}
-          >
-            <button
-              onClick={() => setIsYearly(!isYearly)}
-              className="relative inline-flex h-6 w-11 items-center rounded-full focus:outline-none transition-all duration-300 ease-in-out"
-              style={{
-                backgroundColor: isYearly ? "#ffffff" : "#111111", // track color
-              }}
-            >
-              <span
-                className={`inline-block h-4 w-4 transform rounded-full transition-all duration-300 ease-in-out ${isYearly ? "translate-x-6 bg-black" : "translate-x-1 bg-white"
-                  }`}
-              />
-            </button>
-          </div>
-
-          <span
-            className={`text-sm font-medium ${isYearly ? "text-gray-900" : "text-gray-500"
-              }`}
-          >
-            Billed yearly (Save 20%)
-          </span>
-        </div>
-
         {/* Pricing Cards */}
-        <div className="max-w-7xl  mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 ">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {plans.map((plan, index) => (
             <div key={index} className="relative flex flex-col items-center">
               {/* Most Popular Badge */}
@@ -620,9 +551,9 @@ export default function PlanPricing() {
                 <span
                   className="absolute -top-3 left-1/2 transform -translate-x-1/2 text-white text-xs font-semibold flex items-center justify-center shadow-lg z-20"
                   style={{
-                    width: "120px", // fixed width
-                    height: "35px", // fixed height
-                    borderRadius: "9px", // rounded corners
+                    width: "120px",
+                    height: "35px",
+                    borderRadius: "9px",
                     background:
                       "linear-gradient(90deg, #35A1DA -207.85%, #D4549F -28.59%, #F15A22 136.87%)",
                   }}
@@ -633,37 +564,67 @@ export default function PlanPricing() {
 
               {/* Top Card */}
               <div
-                className={`bg-white rounded-2xl shadow-md ${plan.borderColor || "border-gray-200"
-                  } flex flex-col items-center justify-between z-10 relative w-full max-w-[345px]`}
-                style={{ height: "400px", overflow: "hidden" }}
+                className={`bg-white rounded-2xl shadow-md border border-gray-200 flex flex-col items-center justify-between z-10 relative w-full max-w-[345px]`}
               >
                 <div className="lg:p-[30px] md:p-[25px] p-[30px] flex flex-col justify-between h-full w-full">
                   {plan.icon}
-                  <div>
-                    <h3 className="lg:text-[22px] md:text-[20px]  text-[22px] leading-[26px]  font-bold text-gray-900 mb-2">
-                      {plan.name}
-                    </h3>
-                    <p className="text-sm text-gray-600 mb-6 lg:text-[16px] lg:leading-[21px] text-[14px] leading-[20px]  min-h-[60px]">
-                      {plan.description}
-                    </p>
-                    <div className="mb-6 flex items-baseline">
-                      <span className="lg:text-[48px] lg:leading-[48px] md:text-[42px] md:leading-[48px] text-[28px] leading-[28px] font-bold text-gray-900">
-                        ${isYearly ? plan.yearlyPrice : plan.monthlyPrice}
-                      </span>
-                      <span className="text-gray-600 ml-2">/ month</span>
+                  <div className="flex flex-col justify-between h-full">
+                    <div>
+                      <h3 className="lg:text-[22px] md:text-[20px] text-[22px] leading-[26px] font-bold text-gray-900 mb-2">
+                        {plan.name}
+                      </h3>
+                      <p className="text-sm text-gray-600 mb-6 lg:text-[16px] lg:leading-[21px] text-[14px] leading-[20px] min-h-[60px]">
+                        <span className="text-[#111111]">Perfect For:</span>{" "}
+                        {plan.description}
+                      </p>
+
+                      {/* Price Section */}
+                      <div className="flex flex-col justify-center items-baseline min-h-[90px] mb-6">
+                        {plan.originalPrice ? (
+                              <div className="text-gray-500 text-[20px] line-through">
+                                ₹{plan.originalPrice}
+                              </div>
+                            ):(
+                              <div className="text-gray-500 text-[20px] line-through"> 
+                              </div>
+                            )}
+                        {plan.monthlyPrice !== "Custom" ? (
+                          <>
+                            <div className="flex items-baseline">
+                              <span className="lg:text-[48px] lg:leading-[48px] md:text-[42px] md:leading-[48px] text-[28px] leading-[28px] font-bold text-gray-900">
+                                ₹
+                                {(isYearly
+                                  ? plan.yearlyPrice
+                                  : plan.monthlyPrice
+                                )}
+                              </span>
+                              <span className="text-gray-600 ml-2">
+                                / {isYearly ? "year" : "month"}
+                              </span>
+                            </div>
+                          </>
+                        ) : (
+                          <span className="lg:text-[48px] lg:leading-[48px] md:text-[42px] md:leading-[48px] text-[28px] leading-[28px] font-bold text-gray-900">
+                            Custom
+                          </span>
+                        )}
+                      </div>
+
+                      {/* Button */}
+                      <Button
+                        onClick={() => handleGetStarted(plan.name)}
+                        className="w-full"
+                      >
+                        {plan.monthlyPrice === "Custom"
+                          ? "Get Quote"
+                          : "Get Started"}
+                      </Button>
                     </div>
-                    <Button
-                      onClick={() => handleGetStarted(plan.name)}
-                      className="w-full" // optional, if you want to adjust width
-                    >
-                      Get Started
-                    </Button>
                   </div>
                 </div>
               </div>
 
               {/* Bottom Features Card */}
-
               {plan.name === "Pro" ? (
                 <div
                   className="rounded-2xl p-1 -mt-16 relative z-0 flex justify-center w-full max-w-[345px]"
@@ -675,7 +636,7 @@ export default function PlanPricing() {
                 >
                   <div
                     className="rounded-2xl shadow-sm p-6 overflow-y-auto h-full w-full"
-                    style={{ backgroundColor: "#fff" }} // inner bg color for Pro
+                    style={{ backgroundColor: "#fff" }}
                   >
                     <div className="space-y-3 mt-[70px]">
                       {plan.features.map((feature, idx) => (
@@ -683,29 +644,6 @@ export default function PlanPricing() {
                           <Check className="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" />
                           <div className="text-sm text-gray-700 flex-1">
                             {feature}
-                            {showTooltip.includes(feature) && (
-                              <div className="relative ml-1 inline-block group">
-                                <div className="mt-1">
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="w-4 h-4 text-gray-400 cursor-pointer"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                  >
-                                    <path
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                      strokeWidth={2}
-                                      d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z"
-                                    />
-                                  </svg>
-                                </div>
-                                <span className="absolute bottom-full mb-1 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-gray-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 whitespace-nowrap z-10">
-                                  {feature === "Advanced performance reports" ? "Advanced " : feature}
-                                </span>
-                              </div>
-                            )}
                           </div>
                         </div>
                       ))}
@@ -718,36 +656,15 @@ export default function PlanPricing() {
                   style={{
                     height: "600px",
                     overflowY: "auto",
-                    backgroundColor: plan.bgColor || "#E8E4E2", // dynamic background
+                    backgroundColor: plan.bgColor || "#E8E4E2",
                   }}
                 >
                   <div className="space-y-3 mt-[70px]">
                     {plan.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-start gap-3 ">
+                      <div key={idx} className="flex items-start gap-3">
                         <Check className="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" />
                         <span className="text-sm text-gray-700 flex-1">
                           {feature}
-                          {showTooltip.includes(feature) && (
-                            <span className="relative ml-1 inline-block group">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="w-4 h-4 text-gray-400 cursor-pointer"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth={2}
-                                  d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z"
-                                />
-                              </svg>
-                              <span className="absolute bottom-full mb-1 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-gray-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 whitespace-nowrap z-10">
-                                {feature === "Advanced performance reports" ? "Advanced " : feature}
-                              </span>
-                            </span>
-                          )}
                         </span>
                       </div>
                     ))}
@@ -756,122 +673,6 @@ export default function PlanPricing() {
               )}
             </div>
           ))}
-        </div>
-        <div className="mt-5">
-          <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-8">
-            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-              <div className="flex-grow">
-                <div className="flex items-center gap-3 mb-3">
-                  <h3 className="text-2xl font-bold text-gray-900">Explorer</h3>
-                  <span className="bg-green-500 text-white text-xs font-semibold px-2.5 py-1 rounded">
-                    Free Plan
-                  </span>
-                </div>
-                <p className="text-gray-600 mb-4">
-                  Create, test and share conversation prompts with 1,000 monthly
-                  credits
-                </p>
-                <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
-                  <div className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-gray-400" />
-                    <span>Full prompt editor</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-gray-400" />
-                    <span>Sell your prompts</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-gray-400" />
-                    <span>Create campaigns</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-gray-400" />
-                    <span>Add products</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-gray-400" />
-                    <span>Conversation simulator</span>
-                  </div>
-                </div>
-              </div>
-              <button
-                style={{
-                  width: "170px", // fixed width
-                  height: "65px", // fixed height
-                  borderRadius: "9px", // rounded corners
-                  background:
-                    "linear-gradient(90deg, #35A1DA -207.85%, #D4549F -28.59%, #F15A22 136.87%)",
-                }}
-                className="bg-gradient-to-r from-pink-500 to-rose-500 text-white font-semibold py-3.5 px-8 rounded-lg hover:from-pink-600 hover:to-rose-600 transition-all whitespace-nowrap"
-              >
-                Start for Free
-              </button>
-            </div>
-          </div>
-
-          {/* Bottom Features */}
-          <div className="flex flex-wrap items-center justify-center gap-8 mt-8 text-sm text-gray-600">
-            <div className="flex items-center gap-2">
-              <div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                >
-                  <path
-                    d="M4.74809 1.10397V3.35397M15.2481 1.10397V3.35397M0.996094 16.854V5.60097C0.996094 5.00424 1.23315 4.43194 1.6551 4.00998C2.07706 3.58803 2.64936 3.35097 3.24609 3.35097H16.7461C17.3428 3.35097 17.9151 3.58803 18.3371 4.00998C18.759 4.43194 18.9961 5.00424 18.9961 5.60097V16.852M18.9961 16.852C18.9961 17.4487 18.759 18.021 18.3371 18.443C17.9151 18.8649 17.3428 19.102 16.7461 19.102H3.24609C2.64936 19.102 2.07706 18.8649 1.6551 18.443C1.23315 18.021 0.996094 17.4487 0.996094 16.852V9.35197C0.996094 8.75524 1.23315 8.18294 1.6551 7.76098C2.07706 7.33903 2.64936 7.10197 3.24609 7.10197H16.7461C17.3428 7.10197 17.9151 7.33903 18.3371 7.76098C18.759 8.18294 18.9961 8.75524 18.9961 9.35197V16.852ZM12.2461 10.852H14.4961M5.49609 13.102H9.99609M9.99809 10.852H10.0031V10.858H9.99809V10.852ZM9.99709 15.352H10.0031V15.358H9.99709V15.352ZM7.74709 15.353H7.75209V15.359H7.74809V15.353H7.74709ZM5.49709 15.353H5.50209V15.358H5.49609V15.353H5.49709ZM12.2471 13.106H12.2521V13.111H12.2471V13.106ZM12.2471 15.353H12.2531V15.359H12.2471V15.353ZM14.4971 13.105H14.5031V13.11H14.4981L14.4971 13.105Z"
-                    stroke="#1E1E1E"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-              <span>Free 7 days trial</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="22"
-                  height="18"
-                  viewBox="0 0 22 18"
-                  fill="none"
-                >
-                  <path
-                    d="M1.25 5.35999H20.75M1.25 6.10999H20.75M4.25 11.36H10.25M4.25 13.61H7.25M3.5 16.61H18.5C19.0967 16.61 19.669 16.3729 20.091 15.951C20.5129 15.529 20.75 14.9567 20.75 14.36V3.85999C20.75 3.26325 20.5129 2.69095 20.091 2.269C19.669 1.84704 19.0967 1.60999 18.5 1.60999H3.5C2.90326 1.60999 2.33097 1.84704 1.90901 2.269C1.48705 2.69095 1.25 3.26325 1.25 3.85999V14.36C1.25 14.9567 1.48705 15.529 1.90901 15.951C2.33097 16.3729 2.90326 16.61 3.5 16.61Z"
-                    stroke="#1E1E1E"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-              <span>No credit card required</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="22"
-                  viewBox="0 0 18 22"
-                  fill="none"
-                >
-                  <path
-                    d="M17.25 5.48499C17.25 7.76299 13.556 9.60999 9 9.60999C4.444 9.60999 0.75 7.76299 0.75 5.48499M17.25 5.48499C17.25 3.20699 13.556 1.35999 9 1.35999C4.444 1.35999 0.75 3.20699 0.75 5.48499M17.25 5.48499V16.735C17.25 19.013 13.556 20.86 9 20.86C4.444 20.86 0.75 19.013 0.75 16.735V5.48499M17.25 5.48499V9.23499M0.75 5.48499V9.23499M17.25 9.23499V12.985C17.25 15.263 13.556 17.11 9 17.11C4.444 17.11 0.75 15.263 0.75 12.985V9.23499M17.25 9.23499C17.25 11.513 13.556 13.36 9 13.36C4.444 13.36 0.75 11.513 0.75 9.23499"
-                    stroke="#1E1E1E"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-              <span>Data migration</span>
-            </div>
-          </div>
         </div>
       </div>
     </div>
