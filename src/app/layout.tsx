@@ -12,6 +12,9 @@ const interTight = Inter_Tight({
 export const metadata: Metadata = {
   title: "Into AI",
   description: "Into AI",
+  icons: {
+    icon: "/favicon.ico", // this is the correct way to set favicon in App Router
+  },
 };
 
 export default function RootLayout({

@@ -5,7 +5,7 @@ import ButtonPrimary from "./Button-primary";
 import BlurText from "./BlurText";
 
 interface HeroProps {
-  title?: string;
+  title?: string | any;
   description?: string;
   primaryButtonText?: string;
   secondaryButtonText?: string;
