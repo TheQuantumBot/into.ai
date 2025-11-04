@@ -99,7 +99,7 @@ export default function FeaturesSection() {
         {/* Image */}
         <div className="relative w-full md:w-1/2 h-[240px] sm:h-[320px] md:h-auto min-h-[320px] flex-shrink-0">
           <Image
-            src="/secureForBusiness.png"
+            src="/secureForBusiness.svg"
             alt="Built for scale illustration"
             fill
             className="object-contain md:object-contain sm:object-cover"
