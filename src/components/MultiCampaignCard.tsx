@@ -78,13 +78,13 @@ export default function MultiCampaignCard() {
             />
             %
           </div>
-          <div className="text-sm opacity-90">Conversion Rate</div>
+          <div className="text-sm opacity-90">Conversation Rate </div>
         </div>
         <div className="absolute top-[140px] right-[-65px] bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 opacity-15 rounded-2xl ]">
           <div className="text-3xl font-medium leading-none opacity-40">
             92%
           </div>
-          <div className="text-sm opacity-60">Conversion Rate</div>
+          <div className="text-sm opacity-60">Conversation Rate </div>
         </div>
       </div>
 

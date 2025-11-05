@@ -7,7 +7,7 @@ export default function ROIOptimization() {
       {/* WhatsApp Icon and Chat Elements */}
 
       {/* Text Content */}
-      <div className="">
+      <div className="md:h-[400px] flex flex-col">
         <div className="relative h-[240px] sm:h-[300px] md:h-[345px] -mt-6 sm:-mt-8">
           <Image
             src="/ROIOptimization.svg"

@@ -7,7 +7,7 @@ export default function LeadIntelligencecard() {
       {/* WhatsApp Icon and Chat Elements */}
 
       {/* Text Content */}
-      <div className="">
+      <div className="md:h-[400px] flex flex-col">
         <div className="relative h-[220px] sm:h-[280px] md:h-[323px] -mt-6 sm:-mt-8">
           <Image
             src="/Lead-Intelligence.svg"
