@@ -11,7 +11,7 @@ interface ProcessSectionProps {
 
 const ProcessSection: React.FC<ProcessSectionProps> = ({ text }) => {
   return (
-    <div className="w-full flex flex-col items-center justify-center px-6 py-3 text-black text-lg font-medium space-y-[10px]">
+    <div className="w-full flex flex-col items-center justify-center px-6 py-[100px] text-black text-lg font-medium space-y-[10px] bg-[#F1F0EE]">
       {/* Section Badge */}
       <div>
         <Badge text="Process" />
