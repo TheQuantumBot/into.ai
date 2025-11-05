@@ -22,13 +22,8 @@ export default function CtaCard() {
 
           {/* Buttons */}
           <div className="flex flex-row  justify-center items-center gap-4 mt-6">
-<<<<<<< HEAD
             <ButtonPrimary>Watch a Demo</ButtonPrimary>
             <Button>Experience Now</Button>
-=======
-            <ButtonPrimary>Watch Demo</ButtonPrimary>
-            <Button>Start Free Trial</Button>
->>>>>>> 371ef55d9541ca4c2023a44294308a94385b733c
           </div>
 
           {/* Features row */}
