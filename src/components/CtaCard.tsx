@@ -5,8 +5,8 @@ export default function CtaCard() {
   return (
     <div className="max-w-7xl mx-auto">
       <div className="relative rounded-2xl p-[2px] bg-gradient-to-r from-red-500 via-orange-500 to-purple-600 shadow-md">
-      {/* Outer div for gradient border */}
-      {/* <div className="relative w-full max-w-7xl mx-auto rounded-2xl p-[2px] bg-gradient-to-r from-red-500 via-orange-500 to-purple-600 shadow-md"> */}
+        {/* Outer div for gradient border */}
+        {/* <div className="relative w-full max-w-7xl mx-auto rounded-2xl p-[2px] bg-gradient-to-r from-red-500 via-orange-500 to-purple-600 shadow-md"> */}
         {/* Inner white container */}
         <div className="rounded-2xl bg-white px-6 py-8 sm:px-12 md:px-[80px] md:py-[40px] lg:px-[100px] lg:py-[50px]">
           {/* Title */}
@@ -22,7 +22,7 @@ export default function CtaCard() {
 
           {/* Buttons */}
           <div className="flex flex-row  justify-center items-center gap-4 mt-6">
-            <ButtonPrimary>Watch a Demo</ButtonPrimary>
+            <ButtonPrimary>Watch Demo</ButtonPrimary>
             <Button>Start Free Trial</Button>
           </div>
 
