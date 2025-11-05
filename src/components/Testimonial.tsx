@@ -10,14 +10,14 @@ interface TestimonialProps {
 
 const Testimonial: React.FC<TestimonialProps> = ({ text }) => {
   const testimonials = [
-    {
-      name: "Sarah Mitchell",
-      role: "Marketing Lead",
-      company: "",
-      avatar: "/Image_container_sarah_girl.svg",
-      testimonial:
-        "“INTO AI transformed our lead generation process. We’re seeing 3x more qualified leads and our conversion rate has doubled.”",
-    },
+    // {
+    //   name: "Sarah Mitchell",
+    //   role: "Marketing Lead",
+    //   company: "",
+    //   avatar: "/Image_container_sarah_girl.svg",
+    //   testimonial:
+    //     "“INTO AI transformed our lead generation process. We’re seeing 3x more qualified leads and our conversion rate has doubled.”",
+    // },
     {
       name: "Raj P.",
       role: "COO @ FashionHub",

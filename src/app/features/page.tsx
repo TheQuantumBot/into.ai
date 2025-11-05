@@ -26,7 +26,7 @@ export default function FeaturesPage() {
         <HumanStyleChat />
         <LeadConversion />
         <FeaturesSection />
-        <BecameAPartnerFaq />
+        {/* <BecameAPartnerFaq /> */}
         <Features_sales />
         <Footer />
       </div>

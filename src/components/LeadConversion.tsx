@@ -155,7 +155,7 @@ const LeadConversion = () => {
 
             {/* CTA Button */}
             <Button className="bg-black text-white hover:bg-gray-800 transition-all duration-300 px-6 py-6 text-base font-medium rounded-md">
-              Start Free Trial
+              Get Yours Now
             </Button>
           </div>
         </div>

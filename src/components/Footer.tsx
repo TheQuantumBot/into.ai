@@ -331,7 +331,7 @@ export default function Footer() {
                 <li key={i}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors duration-300 text-sm"
+                    className="relative inline-block text-gray-400 hover:text-white transition-colors duration-300 text-sm after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:w-full after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:bg-gradient-to-r after:from-white/0 after:via-white/80 after:to-white/0"
                   >
                     {link.name}
                   </Link>
@@ -359,7 +359,7 @@ export default function Footer() {
                 <li key={i}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors duration-300 text-sm"
+                    className="relative inline-block text-gray-400 hover:text-white transition-colors duration-300 text-sm after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:w-full after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:bg-gradient-to-r after:from-white/0 after:via-white/80 after:to-white/0"
                   >
                     {link.name}
                   </Link>
@@ -387,7 +387,7 @@ export default function Footer() {
                 <li key={i}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors duration-300 text-sm"
+                    className="relative inline-block text-gray-400 hover:text-white transition-colors duration-300 text-sm after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:w-full after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:bg-gradient-to-r after:from-white/0 after:via-white/80 after:to-white/0"
                   >
                     {link.name}
                   </Link>
@@ -430,7 +430,7 @@ export default function Footer() {
                 <Link
                   key={i}
                   href={link.href}
-                  className="text-gray-400 hover:text-white transition-colors duration-300 text-sm"
+                  className="relative inline-block text-gray-400 hover:text-white transition-colors duration-300 text-sm after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:w-full after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:bg-gradient-to-r after:from-white/0 after:via-white/80 after:to-white/0"
                 >
                   {link.name}
                 </Link>
