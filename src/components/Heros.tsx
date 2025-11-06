@@ -1,11 +1,9 @@
 "use client";
 import React from "react";
-import { H1, Body } from "@/components/Typography";
+import { Body } from "@/components/Typography";
 import Button from "./Button";
 import ButtonPrimary from "./Button-primary";
-import dynamic from "next/dynamic";
-// import BlurText from "./BlurText";
-const BlurText = dynamic(() => import("./BlurText"), { ssr: false });
+import BlurText from "./BlurText";
 
 interface HeroProps {
   title?: string | any;
