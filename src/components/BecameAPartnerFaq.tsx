@@ -1,41 +1,15 @@
 "use client";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Plus, Minus } from "lucide-react";
 import Badge from "./Badge";
 import Hero from "./Hero";
-import WhatYouGet from "./WhatYouGet";
-
-const faqData = [
-  {
-    id: 1,
-    question: "Do I need tech knowledge?",
-    answer: "No. We handle all demos and setup.",
-    defaultOpen: true,
-  },
-  {
-    id: 2,
-    question: "Can I still run my business?",
-    answer:
-      "Yes - this program is designed to run alongside your existing work.",
-  },
-  {
-    id: 3,
-    question: "Can I promote future Into AI products?",
-    answer:
-      "Yes -  partners automatically get access to our full AI suite as we launch new tools.",
-  },
-  {
-    id: 4,
-    question: "How do I get paid?",
-    answer: "Monthly payouts via bank transfer/UPI.",
-  },
-  { id: 5, question: "Is there a joining fee?", answer: "No. It’s 100% free." },
-];
 
 type FAQType = {
   id: number;
   question: string;
-  answer: string;
+  answer1?: string;
+  answer2?: string;
+  answer3?: string;
   defaultOpen?: boolean;
 };
 
@@ -47,7 +21,7 @@ type FAQItemProps = {
 
 function FAQItem({ faq, isOpen, onToggle }: FAQItemProps) {
   return (
-    <div className="border-b border-gray-300  border-t">
+    <div className="border-t border-b border-gray-300">
       <button
         onClick={onToggle}
         className="w-full py-6 flex items-center justify-between text-left hover:opacity-70 transition-opacity"
@@ -68,30 +42,39 @@ function FAQItem({ faq, isOpen, onToggle }: FAQItemProps) {
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <p className="text-gray-600 font-medium text-base md:text-base leading-relaxed mb-6">
-          {faq.answer}
+        <p
+          className="text-gray-600 font-medium text-base md:text-base leading-relaxed "
+          dangerouslySetInnerHTML={{ __html: faq.answer1 ?? "" }}
+        />
+        <p className="text-gray-600 font-medium text-base md:text-base leading-relaxed">
+          {faq.answer2}
+        </p>
+        <p className="text-gray-600 font-medium text-base md:text-base leading-relaxed ">
+          {faq.answer3}
         </p>
       </div>
     </div>
   );
 }
 
-export default function BecameAPartnerFaq() {
-  // Define state type explicitly
-  const [openItems, setOpenItems] = useState<Record<number, boolean>>(() => {
-    const initialState: Record<number, boolean> = {};
-    faqData.forEach((faq) => {
-      initialState[faq.id] = !!faq.defaultOpen;
+export default function BecameAPartnerFaq({ faqs }: { faqs: FAQType[] }) {
+  const [openItems, setOpenItems] = useState<Record<number, boolean>>({});
+
+  // ✅ Fix: initialize open states after first render
+  useEffect(() => {
+    const initial: Record<number, boolean> = {};
+    faqs.forEach((faq) => {
+      initial[faq.id] = !!faq.defaultOpen;
     });
-    return initialState;
-  });
+    setOpenItems(initial);
+  }, [faqs]);
 
   const toggleItem = (id: number) => {
     setOpenItems((prev) => ({ ...prev, [id]: !prev[id] }));
   };
 
-  const leftColumnFaqs = faqData.slice(0, 3);
-  const rightColumnFaqs = faqData.slice(3);
+  const leftColumnFaqs = faqs.slice(0, Math.ceil(faqs.length / 2));
+  const rightColumnFaqs = faqs.slice(Math.ceil(faqs.length / 2));
 
   return (
     <div className="py-12 px-4 sm:px-6 lg:px-8">

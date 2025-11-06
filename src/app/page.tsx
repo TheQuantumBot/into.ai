@@ -51,10 +51,10 @@ export default function HomePage() {
           </div>
 
           {/* Hero Section */}
-          <div className="flex-1 flex items-center justify-center px-6 sm:px-8 lg:px-12 pt-12 sm:pt-8 md:pt-4 lg:pt-0 relative z-30 mt-8 sm:mt-12 md:mt-0">
+          <div className="flex-1 flex items-center md:items-end lg:items-center justify-center px-6 sm:px-8 lg:px-12 pt-12 sm:pt-8 md:pt-4 lg:pt-0 relative z-30 mt-8 sm:mt-12 md:mt-0">
             <Heros
               title={`
-                <span class="text-[#111111] "> Turn Every </span> <span class='gradient-text'>Lead</span><br /> 
+               <span class="text-[#111111] mr-[10px]">Turn</span> <span class='gradient-text' style="letter-spacing: 2px;">Every Lead</span><br />
                 <span class="flex flex-wrap items-center justify-center gap-[10px]">
 <span class="text-[#111111] ">into </span> <span class='gradient-text'>Revenue</span> <span class="text-[#111111] ">with </span> 
 
@@ -77,16 +77,17 @@ export default function HomePage() {
 </span></span>`}
               description="Launch campaigns across LinkedIn, Meta & WhatsApp. Our Ai Agent engages every Lead 24/7, qualifying prospects and turning conversations into customers while you sleep."
               primaryButtonText="Watch Demo"
-              secondaryButtonText="Start Free Trial"
+              secondaryButtonText="GET YOURS NOW"
+              secondaryButtonHref="https://salesbot.cloud/register"
             />
           </div>
 
           {/* Floating Cards - Hidden on mobile and tablet */}
           {/* Conversation Card */}
-          <div className="hidden md:block  md:w-[230px] md:h-[220px] absolute top-[250px] left-[100px] md:top-[91px] md:left-[101px] rotate-[10deg]">
+          <div className="hidden md:block  w-auto h-auto absolute top-[250px] left-[100px] md:top-[116px] md:left-[16px] rotate-[6deg] xl:rotate-[10deg]">
             <Conversation_card />
-            <div className="w-16 h-16 relative">
-              <div className="absolute bottom-[30px] left-[260px] w-16 h-16 border-[2px] border-[#EFEFEF] rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center shadow-[0_8px_30px_rgba(255,102,0,0.3)] -rotate-[10deg]">
+            <div className="relative">
+              <div className="absolute bottom-[-18px] lg:bottom-[-35px] xl:bottom-[-45px] left-[120px] lg:left-[105px] xl:left-[260px] w-[42px] h-[42px] lg:w-16 lg:h-16 border-[2px] border-[#EFEFEF] rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center shadow-[0_8px_30px_rgba(255,102,0,0.3)] -rotate-[10deg]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="26"
@@ -112,15 +113,15 @@ export default function HomePage() {
           </div>
 
           {/* Campaign Card */}
-          <div className="hidden md:block absolute  top-[134px] right-[152px] lg:top-[134px] lg:right-[152px] rotate-0">
+          <div className="hidden md:block absolute  top-[190px] right-[52px] lg:top-[100px] xl:top-[110px] lg:right-[90px] xl:right-[110px] rotate-2">
             <Campaign_Card />
           </div>
 
           {/* Leads Card */}
-          <div className="hidden md:block absolute top-[300px] right-[25px] lg:top-[450px] lg:right-[100px] -rotate-[10deg]">
+          <div className="hidden md:block absolute top-[514px] right-[0px] lg:top-[485px] xl:top-[450px] lg:right-[100px] -rotate-[6deg] lg:-rotate-[10deg]">
             <Leads_card />
-            <div className="w-16 h-16 relative">
-              <div className="absolute -top-[250px] left-[240px] w-16 h-16 border-[2px] border-[#EFEFEF] rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center shadow-[0_8px_30px_rgba(255,102,0,0.3)] rotate-[10deg]">
+            <div className="relative">
+              <div className="absolute -top-[168px] lg:-top-[250px] right-[8px] lg:left-[240px] w-[42px] h-[42px] lg:w-[64px] lg:h-[64px] border-[2px] border-[#EFEFEF] rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center shadow-[0_8px_30px_rgba(255,102,0,0.3)] rotate-[10deg]">
                 {/* Pink Icon */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -165,7 +166,13 @@ export default function HomePage() {
       </div>
 
       <div className="flex items-center justify-center bg-[#F6F5F4] z-30 py-8 sm:py-10 px-4">
-        <CtaCard />
+        <CtaCard
+          HeadingTitle={`Ready to <span class="gradient-text">10X</span> Your Sales?`}
+          Description="    Thousands of business already using INTO AI to transform their lead
+            generation and conversion."
+          PrimaryButton="Watch Demo"
+          secondaryButton="Experience Now"
+        />
       </div>
 
       <div className="w-full flex items-center justify-center bg-[#F6F5F4] z-30">

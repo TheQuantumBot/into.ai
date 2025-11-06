@@ -23,8 +23,12 @@ export default function Header() {
       className="fixed top-4 left-1/2 transform -translate-x-1/2 w-[95%] max-w-6xl 
                  bg-white/60 backdrop-blur-sm border border-white/30 
                  rounded-2xl shadow-md z-50"
+      style={{
+        WebkitBackdropFilter: "blur(6px)",
+        backdropFilter: "blur(6px)",
+      }}
     >
-      <div className="flex items-center justify-between px-6 py-3 ">
+      <div className="flex items-center justify-between  px-4 lg:px-6 py-3 ">
         {/* Logo */}
 
         <Link href="/">
@@ -34,7 +38,7 @@ export default function Header() {
             viewBox="0 0 142 32"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="cursor-pointer"
+            className="cursor-pointer md:w-[128px] md:h-[28px] lg:-[32px] lg:w-[142]"
           >
             <g clip-path="url(#clip0_6_757)">
               <path d="M12.0571 0H5.71338V31.9998H12.0571V0Z" fill="#E6E7E8" />
@@ -204,34 +208,44 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-8 text-black font-medium">
+        <nav className="hidden md:flex space-x-8 md:space-x-4 lg:space-x-8 text-black font-medium">
           {menuItems.map((item, idx) => (
             <Link
               key={idx}
               href={item.href}
-              className="relative group inline-block"
+              className="relative group inline-block md:text-[14px] text-[16px] lg:text-[16px] md:leading-[16px] leading-[20px] lg:leading-[20px] "
             >
               {item.name}
               <svg
-                className={`absolute left-1/2 -bottom-4 w-8 h-3 -translate-x-1/2 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ${
+                width="17"
+                height="7"
+                viewBox="0 0 17 7"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className={`absolute left-1/2 bottom[-16px] -translate-x-1/2 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ${
                   pathname === item.href ||
                   (item.href !== "/" && pathname?.startsWith(item.href))
                     ? "scale-x-100"
                     : "scale-x-0 group-hover:scale-x-100"
                 }`}
-                viewBox="0 0 100 20"
-                preserveAspectRatio="none"
               >
                 <path
-                  d="M0 0 Q50 20 100 0"
-                  stroke="url(#grad)"
-                  strokeWidth="5"
-                  fill="transparent"
+                  d="M0.00140953 1.77906C0.900244 3.1822 2.13546 4.33848 3.59482 5.14284C5.05418 5.94719 6.6914 6.37411 8.35771 6.3848C10.024 6.3955 11.6666 5.98962 13.1362 5.20406C14.6057 4.4185 15.8557 3.27816 16.7724 1.88667L14.0184 0.0721946C13.404 1.00477 12.5663 1.76902 11.5814 2.2955C10.5965 2.82198 9.49563 3.09399 8.37887 3.08683C7.26212 3.07966 6.16486 2.79354 5.1868 2.25447C4.20875 1.71539 3.38091 0.940454 2.77852 7.62939e-05L0.00140953 1.77906Z"
+                  fill="url(#paint0_linear_4607_20958)"
                 />
                 <defs>
-                  <linearGradient id="grad" x1="0" y1="0" x2="100%" y2="0">
-                    <stop offset="0%" stopColor="#35A1DA" />
-                    <stop offset="100%" stopColor="#F15A22" />
+                  <linearGradient
+                    id="paint0_linear_4607_20958"
+                    x1="18.4219"
+                    y1="-3.61499"
+                    x2="-1.57812"
+                    y2="-3.61499"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#FF2E2E" />
+                    <stop offset="0.362773" stop-color="#EE7B16" />
+                    <stop offset="0.697515" stop-color="#8A43E1" />
+                    <stop offset="1" stop-color="#D510FC" />
                   </linearGradient>
                 </defs>
               </svg>
@@ -241,14 +255,23 @@ export default function Header() {
 
         {/* CTA Button for Desktop */}
         <div className="hidden md:block">
-          <div className="flex gap-[20px]">
+          <div className="flex md:gap-[15px] lg:gap-[20px]">
             <span>
               <Link href="https://salesbot.cloud/login" target="_self">
-                <Button buttonType="white">Login</Button>
+                <Button
+                  buttonType="white"
+                  className="md:text-[14px] md:leading-[24px] lg:text-lg py-[10px] px-[20px]"
+                >
+                  Login
+                </Button>
               </Link>
             </span>
             <span>
-              <Button>Start Free Trial</Button>{" "}
+              <Link href="https://salesbot.cloud/register" target="_self">
+                <Button className="md:text-[14px] md:leading-[24px] lg:text-lg min-w-[138px]">
+                  Start Free Trial
+                </Button>{" "}
+              </Link>
             </span>
           </div>
         </div>
@@ -299,9 +322,14 @@ export default function Header() {
                 </svg>
               </Link>
             ))}
-            <Button buttonType="white">Login</Button>
-            {/* CTA Button for Mobile */}
-            <Button>Start Free Trial</Button>
+
+            <Link href="https://salesbot.cloud/login" target="_self">
+              <Button buttonType="white">Login</Button>
+            </Link>
+
+            <Link href="https://salesbot.cloud/register" target="_self">
+              <Button>Start Free Trial</Button>{" "}
+            </Link>
           </nav>
         </div>
       )}

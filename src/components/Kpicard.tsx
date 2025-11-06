@@ -7,19 +7,20 @@ const Kpicard = () => {
         {/* Single horizontal card containing all KPIs */}
         <div className="bg-white/50 backdrop-blur-[2.153846263885498px] border-[2px] border-[#EFEFEF] rounded-2xl shadow-lg px-4 sm:px-6 lg:px-8 py-6 hover:shadow-xl transition-shadow">
           {/* Mobile: 2x2 Grid, Desktop: Horizontal Row */}
-          <div className="grid grid-cols-2 gap-6 sm:gap-8 md:flex md:flex-wrap md:justify-between md:items-center">
+          <div className="grid grid-cols-2  md:flex md:justify-between md:items-center">
             {/* Average ROI Increase */}
             <div className="text-center flex-1 min-w-[120px] sm:min-w-[150px]">
               <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-2">
                 {/* 312% */}
                 <CountUp
                   from={0}
-                  to={312}
+                  to={58}
                   separator=","
                   direction="up"
                   duration={1}
                   className="count-up-text"
                 />
+                %
               </div>
               <div className="text-gray-600 text-xs sm:text-sm lg:text-base">
                 Average ROI Increase

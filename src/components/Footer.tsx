@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import {
   MapPin,
@@ -8,9 +9,13 @@ import {
   Linkedin,
   Twitter,
   Instagram,
+  ChevronDown,
 } from "lucide-react";
 
 export default function Footer() {
+  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
+  const [isProductOpen, setIsProductOpen] = useState(false);
+  const [isSupportOpen, setIsSupportOpen] = useState(false);
   const companyLinks = [
     { name: "Testimonials", href: "/testimonials" },
     { name: "FAQ's", href: "/faqs" },
@@ -105,9 +110,9 @@ export default function Footer() {
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-12">
           {/* Brand Section */}
-          <div className="lg:col-span-1 space-y-6">
+          <div className="md:col-span-4 lg:col-span-1 space-y-6">
             <div>
               <svg
                 width="142"
@@ -291,17 +296,62 @@ export default function Footer() {
             </div>
             <div className="space-y-3">
               <div className="flex items-start space-x-3 text-gray-400 text-sm">
-                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                <svg
+                  width="18"
+                  height="22"
+                  className="w-4 h-4 mt-0.5 flex-shrink-0"
+                  viewBox="0 0 18 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 0C11.3869 0 13.6761 0.948211 15.364 2.63604C17.0518 4.32387 18 6.61305 18 9C18 12.074 16.324 14.59 14.558 16.395C13.6757 17.2871 12.7129 18.0958 11.682 18.811L11.256 19.101L11.056 19.234L10.679 19.474L10.343 19.679L9.927 19.921C9.64463 20.0822 9.32513 20.1669 9 20.1669C8.67487 20.1669 8.35537 20.0822 8.073 19.921L7.657 19.679L7.137 19.359L6.945 19.234L6.535 18.961C5.42283 18.2085 4.3869 17.3491 3.442 16.395C1.676 14.589 0 12.074 0 9C0 6.61305 0.948211 4.32387 2.63604 2.63604C4.32387 0.948211 6.61305 0 9 0ZM9 6C8.60603 6 8.21593 6.0776 7.85195 6.22836C7.48797 6.37913 7.15726 6.6001 6.87868 6.87868C6.6001 7.15726 6.37913 7.48797 6.22836 7.85195C6.0776 8.21593 6 8.60603 6 9C6 9.39397 6.0776 9.78407 6.22836 10.1481C6.37913 10.512 6.6001 10.8427 6.87868 11.1213C7.15726 11.3999 7.48797 11.6209 7.85195 11.7716C8.21593 11.9224 8.60603 12 9 12C9.79565 12 10.5587 11.6839 11.1213 11.1213C11.6839 10.5587 12 9.79565 12 9C12 8.20435 11.6839 7.44129 11.1213 6.87868C10.5587 6.31607 9.79565 6 9 6Z"
+                    fill="#808080"
+                  />
+                </svg>
+
                 <span>
                   1521 Concord Pike, Suite 201, Wilmington, Delaware-19803
                 </span>
               </div>
               <div className="flex items-center space-x-3 text-gray-400 text-sm">
-                <Phone className="w-4 h-4 flex-shrink-0" />
+                <svg
+                  width="24"
+                  className="w-4 h-4 flex-shrink-0"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M1.5 4.5C1.5 3.70435 1.81607 2.94129 2.37868 2.37868C2.94129 1.81607 3.70435 1.5 4.5 1.5H5.872C6.732 1.5 7.482 2.086 7.691 2.92L8.796 7.343C8.88554 7.701 8.86746 8.07746 8.74401 8.42522C8.62055 8.77299 8.39723 9.07659 8.102 9.298L6.809 10.268C6.674 10.369 6.645 10.517 6.683 10.62C7.24738 12.1549 8.1386 13.5487 9.29495 14.7051C10.4513 15.8614 11.8451 16.7526 13.38 17.317C13.483 17.355 13.63 17.326 13.732 17.191L14.702 15.898C14.9234 15.6028 15.227 15.3794 15.5748 15.256C15.9225 15.1325 16.299 15.1145 16.657 15.204L21.08 16.309C21.914 16.518 22.5 17.268 22.5 18.129V19.5C22.5 20.2956 22.1839 21.0587 21.6213 21.6213C21.0587 22.1839 20.2956 22.5 19.5 22.5H17.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z"
+                    fill="#808080"
+                  />
+                </svg>
+
                 <span>+1 (940) 367-6376</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-400 text-sm">
-                <Mail className="w-4 h-4 flex-shrink-0" />
+                <svg
+                  width="24"
+                  className="w-4 h-4 flex-shrink-0"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.5 8.66992V17.2499C1.5 18.0456 1.81607 18.8086 2.37868 19.3712C2.94129 19.9339 3.70435 20.2499 4.5 20.2499H19.5C20.2956 20.2499 21.0587 19.9339 21.6213 19.3712C22.1839 18.8086 22.5 18.0456 22.5 17.2499V8.66992L13.572 14.1629C13.0992 14.4538 12.5551 14.6078 12 14.6078C11.4449 14.6078 10.9008 14.4538 10.428 14.1629L1.5 8.66992Z"
+                    fill="#808080"
+                  />
+                  <path
+                    d="M22.5 6.908V6.75C22.5 5.95435 22.1839 5.19129 21.6213 4.62868C21.0587 4.06607 20.2956 3.75 19.5 3.75H4.5C3.70435 3.75 2.94129 4.06607 2.37868 4.62868C1.81607 5.19129 1.5 5.95435 1.5 6.75V6.908L11.214 12.886C11.4504 13.0314 11.7225 13.1084 12 13.1084C12.2775 13.1084 12.5496 13.0314 12.786 12.886L22.5 6.908Z"
+                    fill="#808080"
+                  />
+                </svg>
+
                 <span>info@intoai.com</span>
               </div>
             </div>
@@ -309,13 +359,24 @@ export default function Footer() {
 
           {/* Company */}
           <div className="space-y-6">
-            <h3 className="text-lg font-medium text-white">Company</h3>
-            <ul className="space-y-3">
+            <button
+              type="button"
+              className="w-full flex items-center justify-between md:cursor-default"
+              onClick={() => setIsCompanyOpen((v) => !v)}
+            >
+              <h3 className="text-lg font-medium text-white">Company</h3>
+              <ChevronDown
+                className={`w-5 h-5 text-gray-400 transition-transform md:hidden ${
+                  isCompanyOpen ? "rotate-180" : "rotate-0"
+                }`}
+              />
+            </button>
+            <ul className={`${isCompanyOpen ? "block" : "hidden"} md:block space-y-3`}>
               {companyLinks.map((link, i) => (
                 <li key={i}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors duration-300 text-sm"
+                    className="relative inline-block text-gray-400 hover:text-white transition-colors duration-300 text-sm after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:w-full after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:bg-gradient-to-r after:from-white/0 after:via-white/80 after:to-white/0"
                   >
                     {link.name}
                   </Link>
@@ -326,13 +387,24 @@ export default function Footer() {
 
           {/* Product */}
           <div className="space-y-6">
-            <h3 className="text-lg font-medium text-white">Product</h3>
-            <ul className="space-y-3">
+            <button
+              type="button"
+              className="w-full flex items-center justify-between md:cursor-default"
+              onClick={() => setIsProductOpen((v) => !v)}
+            >
+              <h3 className="text-lg font-medium text-white">Product</h3>
+              <ChevronDown
+                className={`w-5 h-5 text-gray-400 transition-transform md:hidden ${
+                  isProductOpen ? "rotate-180" : "rotate-0"
+                }`}
+              />
+            </button>
+            <ul className={`${isProductOpen ? "block" : "hidden"} md:block space-y-3`}>
               {productLinks.map((link, i) => (
                 <li key={i}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors duration-300 text-sm"
+                    className="relative inline-block text-gray-400 hover:text-white transition-colors duration-300 text-sm after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:w-full after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:bg-gradient-to-r after:from-white/0 after:via-white/80 after:to-white/0"
                   >
                     {link.name}
                   </Link>
@@ -343,13 +415,24 @@ export default function Footer() {
 
           {/* Support */}
           <div className="space-y-6">
-            <h3 className="text-lg font-medium text-white">Support</h3>
-            <ul className="space-y-3">
+            <button
+              type="button"
+              className="w-full flex items-center justify-between md:cursor-default"
+              onClick={() => setIsSupportOpen((v) => !v)}
+            >
+              <h3 className="text-lg font-medium text-white">Support</h3>
+              <ChevronDown
+                className={`w-5 h-5 text-gray-400 transition-transform md:hidden ${
+                  isSupportOpen ? "rotate-180" : "rotate-0"
+                }`}
+              />
+            </button>
+            <ul className={`${isSupportOpen ? "block" : "hidden"} md:block space-y-3`}>
               {supportLinks.map((link, i) => (
                 <li key={i}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors duration-300 text-sm"
+                    className="relative inline-block text-gray-400 hover:text-white transition-colors duration-300 text-sm after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:w-full after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:bg-gradient-to-r after:from-white/0 after:via-white/80 after:to-white/0"
                   >
                     {link.name}
                   </Link>
@@ -392,7 +475,7 @@ export default function Footer() {
                 <Link
                   key={i}
                   href={link.href}
-                  className="text-gray-400 hover:text-white transition-colors duration-300 text-sm"
+                  className="relative inline-block text-gray-400 hover:text-white transition-colors duration-300 text-sm after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:w-full after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:bg-gradient-to-r after:from-white/0 after:via-white/80 after:to-white/0"
                 >
                   {link.name}
                 </Link>

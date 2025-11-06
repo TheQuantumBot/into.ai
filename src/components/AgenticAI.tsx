@@ -1,13 +1,15 @@
 "use client";
 
 import React from "react";
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 import Button from "./Button";
 import Badge from "./Badge";
+import { useRouter } from "next/navigation";
 
 const AgenticAIHero = () => {
+  const router = useRouter();
+
   return (
     <section className="relative overflow-hidden">
       <div className="max-w-7xl mx-auto sm:px-6 lg:px-8 py-12 relative z-10">
@@ -20,16 +22,16 @@ const AgenticAIHero = () => {
               <div className="flex mt-[25px] mr-[40px] items-center text-[19px] tracking-[2px] font-semibold absolute w-[200.29px] h-[45.31px] opacity-100 rounded-[433.34px] pt-[8.63px] pr-[19.26px] pb-[9.63px] pl-[19.26px] gap-[10.62px] bg-[linear-gradient(91.11deg,#9673E9_0.3%,#C558E5_29.11%,#EC9C75_57.17%,#EC7B5C_76.66%,#E9AE89_98.87%)]">
                 <span>
                   <Image
-                    src="/empty_white_stars.png"
-                    alt="arrow"
+                    src="/StartIcon.svg"
+                    alt="StartIcon"
                     width={25}
                     height={25}
                   />
                 </span>
                 Agentic AI
                 <Image
-                  src="/ArrowAI.png"
-                  alt="arrow"
+                  src="/ArrowAI.svg"
+                  alt="ArrowAI"
                   width={30}
                   height={30}
                   className="absolute right-[-16px] top-[-16px] rotate-[0deg]"
@@ -42,8 +44,8 @@ const AgenticAIHero = () => {
               <div className="bg-[rgba(255,255,255,1)] shadow-md px-[19px] py-[10px] rounded-[8px] text-sm font-medium flex items-center gap-2 rotate-[5deg]  text-gray-500">
                 <span className="border border-[rgba(255,147,1,1)] p-[4px] rounded-[10px]">
                   <Image
-                    src="/Lighting.png"
-                    alt="arrow"
+                    src="/LightingIcon.svg"
+                    alt="LightingIcon"
                     width={15}
                     height={15}
                   />
@@ -54,8 +56,8 @@ const AgenticAIHero = () => {
             <div className="absolute top-6 left-0 animate-float">
               <div className=" p-3 rounded-full">
                 <Image
-                  src="/PersonIcon.png"
-                  alt="Mail"
+                  src="/VectorIcon.svg"
+                  alt="VectorIcon"
                   width={43}
                   height={43}
                 />
@@ -64,7 +66,12 @@ const AgenticAIHero = () => {
             <div className="absolute bottom-[0%] left-[5%] animate-float-slow">
               <div className="bg-[rgba(255,255,255,1)] shadow-md px-[19px] py-[10px] rounded-[8px] text-sm font-medium flex items-center gap-2 rotate-[5deg] text-gray-500">
                 <span className="border border-[rgba(247,78,140,1)] p-[4px] rounded-[10px]">
-                  <Image src="/Mind.png" alt="arrow" width={15} height={15} />
+                  <Image
+                    src="/MindIcon.svg"
+                    alt="MindIcon"
+                    width={15}
+                    height={15}
+                  />
                 </span>
                 Smart Decisions
               </div>
@@ -73,7 +80,12 @@ const AgenticAIHero = () => {
             <div className="absolute bottom-[0%] right-[5%] animate-float">
               <div className="bg-[rgba(255,255,255,1)] shadow-md px-[19px] py-[10px] rounded-[8px] text-sm font-medium flex items-center gap-2 rotate-[-5deg] text-gray-500">
                 <span className="border border-[rgba(230,202,41,1)] p-[4px] rounded-[10px] bg-[rgba(255,252,237,1)]">
-                  <Image src="/port.png" alt="arrow" width={15} height={15} />
+                  <Image
+                    src="/PortIcon.svg"
+                    alt="PortIcon"
+                    width={15}
+                    height={15}
+                  />
                 </span>
                 More Closed Deals
               </div>
@@ -81,7 +93,7 @@ const AgenticAIHero = () => {
 
             <div className="absolute top-[185px] right-10 animate-float">
               <div className="p-3 rounded-ful">
-                <Image src="/AiIcon.png" alt="Mail" width={43} height={43} />
+                <Image src="/AiIcon.svg" alt="AiIcon" width={43} height={43} />
               </div>
             </div>
           </div>
@@ -129,8 +141,8 @@ const AgenticAIHero = () => {
               <div className="flex flex-wrap gap-3 text-[16px] font-medium">
                 <span className="flex items-center gap-1">
                   <Image
-                    src="/Lighting.png"
-                    alt="arrow"
+                    src="/LightingIcon.svg"
+                    alt="LightingIcon"
                     width={18}
                     height={18}
                   />
@@ -139,14 +151,24 @@ const AgenticAIHero = () => {
                   </span>
                 </span>
                 <span className="flex items-center gap-1">
-                  <Image src="/Watch.png" alt="arrow" width={18} height={18} />
+                  <Image
+                    src="/WatchIcon.svg"
+                    alt="WatchIcon"
+                    width={18}
+                    height={18}
+                  />
                   <span className="bg-[linear-gradient(89.75deg,#E8584B_0.34%,#584F9E_141.89%)] bg-clip-text text-transparent">
                     Smart Decisions
                   </span>
                 </span>
 
                 <span className="flex items-center gap-1">
-                  <Image src="/port.png" alt="arrow" width={18} height={18} />
+                  <Image
+                    src="/PortIcon.svg"
+                    alt="PortIcon"
+                    width={18}
+                    height={18}
+                  />
 
                   <span className="bg-[linear-gradient(90.11deg,#584F9E_0.29%,#CE4C9B_118.16%)] bg-clip-text text-transparent">
                     More Closed Deals
@@ -155,7 +177,13 @@ const AgenticAIHero = () => {
               </div>
 
               {/* Button */}
-              <Button>Start Free Trial</Button>
+              <Button
+                onClick={() => {
+                  router.push("https://salesbot.cloud/register");
+                }}
+              >
+                Get Yours Now
+              </Button>
             </div>
           </div>
         </div>

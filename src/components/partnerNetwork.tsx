@@ -725,7 +725,13 @@ export default function PartnerNetwork() {
       {/* Hero */}
       <div className="w-full flex flex-col items-center justify-center">
         <Heros
-          title={`The <span class="gradient-text">Into AI</span> Partner Network?`}
+          title={` 
+              <span class='space-x-1'>
+      <span>The</span>
+      <span class="gradient-text">Into AI</span>
+      <span>Partner Network?</span>
+    </span>
+           `}
           description="This isn’t a typical referral program. It’s a partnership built for long term earning and shared success. As a Channel Partner, you get"
         />
       </div>

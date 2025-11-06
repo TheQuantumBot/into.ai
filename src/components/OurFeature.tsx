@@ -16,9 +16,9 @@ interface OurfeatureProps {
 
 const Ourfeature: React.FC<OurfeatureProps> = ({ text }) => {
   return (
-    <div className="w-full flex flex-col items-center justify-center px-4 sm:px-6 py-3 text-black font-medium space-y-6">
+    <div className="w-[1542px] flex flex-col items-center justify-center py-3 text-black font-medium space-y-6">
       {/* Badge */}
-      <Badge text="Our Features" />
+      <Badge text="Our Benefits" />
 
       {/* Hero */}
       <div className="w-full flex flex-col items-center justify-center">
@@ -30,12 +30,12 @@ const Ourfeature: React.FC<OurfeatureProps> = ({ text }) => {
 
       {/* Cards */}
       <div className="w-full flex justify-center">
-        <div className="w-full mx-[2%] md:mx-[8%]">
+        <div className="w-full mx-auto">
           {/* First Row */}
           <div className="flex flex-col md:flex-row gap-6">
             <div className="w-full md:w-3/5">
-              {/* <MultiCampaignCard />
-               */}
+              {/* <MultiCampaignCard /> */}
+
               <div className="hidden lg:block">
                 <MultiCampaignCardDesktop />
               </div>

@@ -26,7 +26,6 @@ const buildKeyframes = (
     ...Object.keys(from),
     ...steps.flatMap((s) => Object.keys(s)),
   ]);
-
   const keyframes: Record<string, Array<string | number>> = {};
   keys.forEach((k) => {
     keyframes[k] = [from[k], ...steps.map((s) => s[k])];
@@ -34,7 +33,7 @@ const buildKeyframes = (
   return keyframes;
 };
 
-const BlurText: React.FC<BlurTextProps> = ({
+export default function BlurText({
   text = "",
   delay = 200,
   className = "",
@@ -47,9 +46,15 @@ const BlurText: React.FC<BlurTextProps> = ({
   easing = (t: number) => t,
   onAnimationComplete,
   stepDuration = 0.35,
-}) => {
+}: BlurTextProps) {
   const [inView, setInView] = useState(false);
+  const [isClient, setIsClient] = useState(false);
   const ref = useRef<HTMLParagraphElement>(null);
+
+  // Ensure code only runs on client after hydration
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   useEffect(() => {
     if (!ref.current) return;
@@ -88,18 +93,31 @@ const BlurText: React.FC<BlurTextProps> = ({
 
   const fromSnapshot = animationFrom ?? defaultFrom;
   const toSnapshots = animationTo ?? defaultTo;
-
   const stepCount = toSnapshots.length + 1;
   const totalDuration = stepDuration * (stepCount - 1);
   const times = Array.from({ length: stepCount }, (_, i) =>
     stepCount === 1 ? 0 : i / (stepCount - 1)
   );
 
-  // Parse HTML content safely
-  const tempDiv = document.createElement("div");
-  tempDiv.innerHTML = text;
-  const nodes = Array.from(tempDiv.childNodes);
+  // Parse nodes only on client to avoid SSR mismatch
+  const nodes = useMemo(() => {
+    if (!isClient) return [];
+    const tempDiv = document.createElement("div");
+    tempDiv.innerHTML = text;
+    return Array.from(tempDiv.childNodes);
+  }, [text, isClient]);
 
+  // ✅ On server: render plain text (safe SSR)
+  if (!isClient) {
+    return (
+      <p
+        ref={ref}
+        className={`blur-text ${className} flex flex-wrap justify-center`}
+      ></p>
+    );
+  }
+
+  // ✅ On client: animate spans normally
   return (
     <p
       ref={ref}
@@ -142,8 +160,10 @@ const BlurText: React.FC<BlurTextProps> = ({
               </motion.span>
             );
           });
-        } else if (node.nodeType === Node.ELEMENT_NODE) {
-          // Preserve span or strong etc. (styled nodes)
+        } else if (
+          node.nodeType === Node.ELEMENT_NODE &&
+          node instanceof Element
+        ) {
           return (
             <span
               key={`html-${nodeIndex}`}
@@ -155,6 +175,4 @@ const BlurText: React.FC<BlurTextProps> = ({
       })}
     </p>
   );
-};
-
-export default BlurText;
+}

@@ -18,9 +18,9 @@ const WhatYouGet = () => {
           <div className="relative w-[300px] h-[300px] lg:w-[400px] lg:h-[400px]">
             {/* Center Circle */}
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="rounded-xl flex items-center justify-center z-10">
+              <div className="rounded-xl flex items-center justify-center ">
                 <Image
-                  src="/girlsImage.png"
+                  src="/girlsImage.svg"
                   alt="Into.AI"
                   width={300}
                   height={300}
@@ -28,12 +28,6 @@ const WhatYouGet = () => {
                 />
               </div>
             </div>
-
-            {/* Outer Circle */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-full h-full rounded-full border-2 border-gray-200"></div>
-            </div>
-
             {/* Icons Around the Circle - Rotating Container */}
             <div className="absolute inset-0 flex items-center justify-center">
               {/* LinkedIn */}
