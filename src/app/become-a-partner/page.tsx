@@ -7,6 +7,7 @@ import Rewarding from "@/components/Rewarding";
 import PartnerNetwork from "@/components/partnerNetwork";
 import HeroBox from "@/components/HeroBox";
 import WhatYouGet from "@/components/WhatYouGet";
+import CtaCard from "@/components/CtaCard";
 
 const faqData = [
   {
@@ -62,7 +63,11 @@ export default function BecameAPartnerPage() {
         <WhoCanBecomePartner />
         <WhatYouGet />
         <BecameAPartnerFaq faqs={faqData as any} />
-        <BecameAPartner_sales />
+        <CtaCard
+          HeadingTitle={`Ready to Build a Future-Proof <span class="gradient-text">Future-Proof</span> </br> Income with AI?`}
+          Description="Join the Into AI partner network and earn for every business you refer, today and every month after. No technical skills. No risk. Pure earning potential."
+          secondaryButton="Start Earning"
+        />
         <Footer />
       </div>
     </main>

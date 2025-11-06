@@ -120,7 +120,13 @@ const PricingPlans: React.FC<PricingPlansProps> = ({ text }) => {
           <BecameAPartnerFaq faqs={faqData as any} />
         </div>
 
-        <CtaCard />
+        <CtaCard
+          HeadingTitle={`Ready to <span class="gradient-text">10X</span> Your Sales?`}
+          Description="    Thousands of business already using INTO AI to transform their lead
+                    generation and conversion."
+          PrimaryButton="Watch Demo"
+          secondaryButton="Experience Now"
+        />
       </div>
     </div>
   );
