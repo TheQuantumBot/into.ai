@@ -27,6 +27,11 @@ export default function HomePage() {
           loop
           muted
           playsInline
+          preload="auto"
+          webkit-playsinline="true"
+          x-webkit-airplay="allow"
+          controls={false}
+          disablePictureInPicture
         >
           <source src="/bg-video.mp4" type="video/mp4" />
         </video>
