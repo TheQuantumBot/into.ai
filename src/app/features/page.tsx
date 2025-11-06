@@ -119,8 +119,7 @@ export default function FeaturesPage() {
         <HumanStyleChat />
         <LeadConversion />
         <FeaturesSection />
-        <BecameAPartnerFaq faqs={faqData as any} />
-        {/* <Features_sales /> */}
+        {/* <BecameAPartnerFaq faqs={faqData as any} /> */}
         <CtaCard
           HeadingTitle={`Where <span class="gradient-text">Conversations</span> </br>Become Customers`}
           Description="Sales doesn’t happen by chance. SalesBot brings speed, empathy, and strategy to every interaction. Because talking is easy, closing is where it counts."
