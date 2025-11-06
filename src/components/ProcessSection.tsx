@@ -25,8 +25,8 @@ const ProcessSection: React.FC<ProcessSectionProps> = ({ text }) => {
         />
 
         {/* Cards Wrapper */}
-        <div className="w-full flex justify-center">
-          <div className="w-full mx-[8%] grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="max-w-[1542px]  mx-auto flex justify-center">
+          <div className=" grid grid-cols-1 md:grid-cols-3 gap-8">
             <ProcessCard
               step="01"
               title="Launch campaigns"

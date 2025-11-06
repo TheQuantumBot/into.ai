@@ -23,8 +23,12 @@ export default function Header() {
       className="fixed top-4 left-1/2 transform -translate-x-1/2 w-[95%] max-w-6xl 
                  bg-white/60 backdrop-blur-sm border border-white/30 
                  rounded-2xl shadow-md z-50"
+      style={{
+        WebkitBackdropFilter: "blur(6px)",
+        backdropFilter: "blur(6px)",
+      }}
     >
-      <div className="flex items-center justify-between px-6 py-3 ">
+      <div className="flex items-center justify-between  px-4 lg:px-6 py-3 ">
         {/* Logo */}
 
         <Link href="/">
@@ -34,7 +38,7 @@ export default function Header() {
             viewBox="0 0 142 32"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="cursor-pointer"
+            className="cursor-pointer md:w-[128px] md:h-[28px] lg:-[32px] lg:w-[142]"
           >
             <g clip-path="url(#clip0_6_757)">
               <path d="M12.0571 0H5.71338V31.9998H12.0571V0Z" fill="#E6E7E8" />
@@ -204,12 +208,12 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-8 text-black font-medium">
+        <nav className="hidden md:flex space-x-8 md:space-x-4 lg:space-x-8 text-black font-medium">
           {menuItems.map((item, idx) => (
             <Link
               key={idx}
               href={item.href}
-              className="relative group inline-block"
+              className="relative group inline-block md:text-[14px] text-[16px] lg:text-[16px] md:leading-[16px] leading-[20px] lg:leading-[20px] "
             >
               {item.name}
               <svg
@@ -251,15 +255,22 @@ export default function Header() {
 
         {/* CTA Button for Desktop */}
         <div className="hidden md:block">
-          <div className="flex gap-[20px]">
+          <div className="flex md:gap-[15px] lg:gap-[20px]">
             <span>
               <Link href="https://salesbot.cloud/login" target="_self">
-                <Button buttonType="white">Login</Button>
+                <Button
+                  buttonType="white"
+                  className="md:text-[14px] md:leading-[24px] lg:text-lg py-[10px] px-[20px]"
+                >
+                  Login
+                </Button>
               </Link>
             </span>
             <span>
               <Link href="https://salesbot.cloud/register" target="_self">
-                <Button>Start Free Trial</Button>{" "}
+                <Button className="md:text-[14px] md:leading-[24px] lg:text-lg min-w-[138px]">
+                  Start Free Trial
+                </Button>{" "}
               </Link>
             </span>
           </div>

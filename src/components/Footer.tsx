@@ -110,9 +110,9 @@ export default function Footer() {
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-12">
           {/* Brand Section */}
-          <div className="lg:col-span-1 space-y-6">
+          <div className="md:col-span-4 lg:col-span-1 space-y-6">
             <div>
               <svg
                 width="142"

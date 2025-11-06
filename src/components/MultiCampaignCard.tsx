@@ -95,7 +95,7 @@ export default function MultiCampaignCard() {
         </h2>
         <p className="text-gray-500 text-lg leading-relaxed">
           Run targeted campaign across LinkedIn, Meta, WhatsApp, and more
-          <span className="block">from one unified dashboard</span>{" "}
+          <span className="block">from one unified dashboard.</span>{" "}
         </p>
       </div>
 
