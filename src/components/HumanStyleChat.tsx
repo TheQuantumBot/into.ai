@@ -9,7 +9,7 @@ export default function HumanStyleChat() {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
-          <div className="w-full flex justify-center items-center py-8 ">
+          <div className="w-full flex md:justify-center lg:justify-start items-center py-8 ">
             <div className="space-y-8 max-w-xl">
               <div className="inline-block border border-gray-300 bg-white rounded-full px-4 py-1 text-sm text-gray-700 font-bold whitespace-normal break-words">
                 Build Trust
@@ -103,7 +103,7 @@ export default function HumanStyleChat() {
           {/* Right Image */}
           <div className="flex justify-center relative md:justify-end">
             <div className="w-[648px] h-[560px] rounded-t-[20px]  rounded-b-[0px] bg-white  overflow-visible relative">
-              <div className="flex  z-20  absolute left-[-33px] bottom-[28px] mt-[25px] mr-[40px] items-center text-white text-[20px] tracking-[2px] font-semibold  w-[200.29px] h-[45.31px] opacity-100 rounded-[433.34px] pt-[8.63px] pr-[19.26px] pb-[9.63px] pl-[19.26px] gap-[10.62px] bg-[linear-gradient(91.11deg,#9673E9_0.3%,#C558E5_29.11%,#EC9C75_57.17%,#EC7B5C_76.66%,#E9AE89_98.87%)]">
+              <div className="flex  z-20  absolute left-[-128px] bottom-[126px] mt-[25px] mr-[40px] items-center text-white text-[20px] tracking-[2px] font-semibold  w-[200.29px] h-[45.31px] opacity-100 rounded-[433.34px] pt-[8.63px] pr-[19.26px] pb-[9.63px] pl-[19.26px] gap-[10.62px] bg-[linear-gradient(91.11deg,#9673E9_0.3%,#C558E5_29.11%,#EC9C75_57.17%,#EC7B5C_76.66%,#E9AE89_98.87%)]">
                 <span>
                   <svg
                     width="24"
@@ -193,7 +193,7 @@ export default function HumanStyleChat() {
                   </defs>
                 </svg>
               </div>
-              <div className=" absolute top-[140px] right-[30px] inline-block ">
+              <div className=" absolute z-10 top-[25px] right-[71px] inline-block ">
                 <svg
                   width="53"
                   height="25"
@@ -210,8 +210,11 @@ export default function HumanStyleChat() {
                 </svg>
                 <span className="text-black font-medium ">Feels human</span>
               </div>
+              <div className="absolute bottom-[0px] right-[0px]  max-w-[155px] max-h-[260px]">
+                <Image src="/Rectangle18238.svg" alt="Arrow" width={200} height={100} />
+              </div>
               <div className="absolute bottom-[0px] z-10 right-[0px] ">
-                <Image src="/woman.svg" alt="Arrow" width={200} height={100} />
+                <Image src="/woman.svg" alt="Arrow" width={220} height={331} />
               </div>
               <div className="absolute lg:max-w-[457px] max-w-[244px] lg:max-h-[692px] max-h-[329px] lg:left-[38px] left-[20px] top-[-60px] ">
                 <Image
@@ -222,7 +225,7 @@ export default function HumanStyleChat() {
                   className="lg:max-w-[457px] max-w-[244px] lg:max-h-[692px] max-h-[329px] w-full h-auto"
                 />
               </div>
-              <div className="w-[616px] h-[78px] z-10 bg-[linear-gradient(to_bottom,_#ffffff36_0%,_#fffffff7_70%,_#fffffff5_100%)] overflow-hidden absolute bottom-0"></div>
+              <div className="w-[650px] h-[78px] z-10 bg-[linear-gradient(to_bottom,_#ffffff36_0%,_#fffffff7_70%,_#fffffff5_100%)] overflow-hidden absolute bottom-0"></div>
             </div>
           </div>
         </div>
