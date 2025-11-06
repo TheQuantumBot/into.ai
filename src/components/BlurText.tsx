@@ -34,7 +34,7 @@ const buildKeyframes = (
   return keyframes;
 };
 
-const BlurText: React.FC<BlurTextProps> = ({
+export default function BlurText({
   text = "",
   delay = 200,
   className = "",
@@ -47,7 +47,7 @@ const BlurText: React.FC<BlurTextProps> = ({
   easing = (t: number) => t,
   onAnimationComplete,
   stepDuration = 0.35,
-}) => {
+}: BlurTextProps) {
   const [inView, setInView] = useState(false);
   const ref = useRef<HTMLParagraphElement>(null);
 
@@ -161,6 +161,4 @@ const BlurText: React.FC<BlurTextProps> = ({
       })}
     </p>
   );
-};
-
-export default BlurText;
+}

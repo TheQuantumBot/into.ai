@@ -40,7 +40,7 @@ const Rewarding = () => {
   return (
     <div className="w-full flex min-h-screen flex-col items-center justify-center py-12 text-black text-lg font-medium space-y-8 relative px-0">
       <div className="px-4 sm:px-6 lg:px-8">
-        <Badge text="How Its Work" />
+        <Badge text="How It Works" />
       </div>
 
       <div className="px-4 sm:px-6 lg:px-8 leading-[76px]">

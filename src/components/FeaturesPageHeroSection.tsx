@@ -20,12 +20,15 @@ export default function FeaturesPageHeroSection() {
             </div>
 
             <p className="font-inter-tight font-semibold italic text-lg leading-[24px] text-gray-600 max-w-md flex">
-             <span className="flex flex-row gap-1"> SalesBot isn’t here to “chat.”  <img
-                src="/threedot.png"
-                alt="Handshake Icon"
-                className = "w-[20px] h-[20px]"
-              /></span>
-              
+              <span className="flex flex-row gap-1">
+                {" "}
+                SalesBot isn’t here to “chat.”{" "}
+                <img
+                  src="/threedot.png"
+                  alt="Handshake Icon"
+                  className="w-[20px] h-[20px]"
+                />
+              </span>
             </p>
 
             <p className="text-lg	 text-gray-600 font-medium  leading-normal max-w-md">
@@ -38,7 +41,7 @@ export default function FeaturesPageHeroSection() {
               <ButtonPrimary>Watch Demo</ButtonPrimary>
 
               <button className="px-8 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition font-medium flex items-center gap-2 group">
-                Start Earning
+                Experience Now
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
               </button>
             </div>

@@ -34,7 +34,7 @@ export default function Conversation_card() {
       <div className="w-[320px] bg-white rounded-[24px] p-4 shadow-sm">
         {/* Header */}
         <div className="flex items-center justify-between mb-2">
-          <p className="text-sm font-medium text-gray-700">Conversation Rate</p>
+          <p className="text-sm font-medium text-gray-700">Conversion Rate</p>
           <div className="flex items-center text-green-600 text-sm font-semibold">
             <svg
               xmlns="http://www.w3.org/2000/svg"

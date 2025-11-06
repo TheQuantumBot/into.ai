@@ -56,7 +56,7 @@ export default function HumanStyleChat() {
           </div>
           <div className="flex flex-row items-center gap-4 mt-6">
             <ButtonPrimary>Try a Live Demo Conversation </ButtonPrimary>
-            <Button>Start Free Trial</Button>
+            <Button>Experience Now</Button>
           </div>
         </div>
         {/* Right Image */}
