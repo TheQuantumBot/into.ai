@@ -4,6 +4,7 @@ import { Body } from "@/components/Typography";
 import Button from "./Button";
 import ButtonPrimary from "./Button-primary";
 import BlurText from "./BlurText";
+import { useRouter } from "next/navigation";
 
 interface HeroProps {
   title?: string | any;
@@ -11,6 +12,8 @@ interface HeroProps {
   description?: string;
   primaryButtonText?: string;
   secondaryButtonText?: string;
+  primaryButtonHref?: string | any;
+  secondaryButtonHref?: string | any;
 }
 
 export default function Heros({
@@ -19,7 +22,10 @@ export default function Heros({
   description,
   primaryButtonText,
   secondaryButtonText,
+  primaryButtonHref = null,
+  secondaryButtonHref = null,
 }: HeroProps) {
+  const router = useRouter();
   return (
     <section className="relative overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-4 pb-8">
@@ -48,12 +54,28 @@ export default function Heros({
             <div className="flex items-center justify-center my-4 gap-2">
               {primaryButtonText && (
                 <div>
-                  <ButtonPrimary>{primaryButtonText}</ButtonPrimary>
+                  <ButtonPrimary
+                    onClick={() => {
+                      if (primaryButtonHref && primaryButtonHref != "") {
+                        router.push(primaryButtonHref);
+                      }
+                    }}
+                  >
+                    {primaryButtonText}
+                  </ButtonPrimary>
                 </div>
               )}
               {secondaryButtonText && (
                 <div>
-                  <Button>{secondaryButtonText}</Button>
+                  <Button
+                    onClick={() => {
+                      if (secondaryButtonHref && secondaryButtonHref != "") {
+                        router.push(secondaryButtonHref);
+                      }
+                    }}
+                  >
+                    {secondaryButtonText}
+                  </Button>
                 </div>
               )}
             </div>

@@ -3,10 +3,11 @@
 import { useState } from "react";
 import { Check } from "lucide-react";
 import Button from "./Button";
+import { useRouter } from "next/navigation";
 
 export default function PlanPricing() {
+  const router = useRouter();
   const [isYearly, setIsYearly] = useState(false);
-
 
   const plans = [
     {
@@ -536,7 +537,7 @@ export default function PlanPricing() {
     },
   ];
   function handleGetStarted(name: string): void {
-    throw new Error("Function not implemented.");
+    // throw new Error("Function not implemented.");
   }
 
   return (
@@ -581,22 +582,20 @@ export default function PlanPricing() {
                       {/* Price Section */}
                       <div className="flex flex-col justify-center items-baseline min-h-[90px] mb-6">
                         {plan.originalPrice ? (
-                              <div className="text-gray-500 text-[20px] line-through">
-                                ₹{plan.originalPrice}
-                              </div>
-                            ):(
-                              <div className="text-gray-500 text-[20px] line-through"> 
-                              </div>
-                            )}
+                          <div className="text-gray-500 text-[20px] line-through">
+                            ₹{plan.originalPrice}
+                          </div>
+                        ) : (
+                          <div className="text-gray-500 text-[20px] line-through"></div>
+                        )}
                         {plan.monthlyPrice !== "Custom" ? (
                           <>
                             <div className="flex items-baseline">
                               <span className="lg:text-[48px] lg:leading-[48px] md:text-[42px] md:leading-[48px] text-[28px] leading-[28px] font-bold text-gray-900">
                                 ₹
-                                {(isYearly
+                                {isYearly
                                   ? plan.yearlyPrice
-                                  : plan.monthlyPrice
-                                )}
+                                  : plan.monthlyPrice}
                               </span>
                               <span className="text-gray-600 ml-2">
                                 / {isYearly ? "year" : "month"}
@@ -612,7 +611,13 @@ export default function PlanPricing() {
 
                       {/* Button */}
                       <Button
-                        onClick={() => handleGetStarted(plan.name)}
+                        onClick={() => {
+                          handleGetStarted(plan.name);
+
+                          if (plan.monthlyPrice !== "Custom") {
+                            router.push("https://salesbot.cloud/register");
+                          }
+                        }}
                         className="w-full"
                       >
                         {plan.monthlyPrice === "Custom"

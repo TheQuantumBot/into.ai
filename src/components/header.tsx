@@ -24,8 +24,8 @@ export default function Header() {
                  bg-white/60 backdrop-blur-sm border border-white/30 
                  rounded-2xl shadow-md z-50"
       style={{
-        WebkitBackdropFilter: "blur(6px)", 
-        backdropFilter: "blur(6px)", 
+        WebkitBackdropFilter: "blur(6px)",
+        backdropFilter: "blur(6px)",
       }}
     >
       <div className="flex items-center justify-between  px-4 lg:px-6 py-3 ">
@@ -258,11 +258,20 @@ export default function Header() {
           <div className="flex md:gap-[15px] lg:gap-[20px]">
             <span>
               <Link href="https://salesbot.cloud/login" target="_self">
-                <Button buttonType="white" className="md:text-[14px] md:leading-[24px] lg:text-lg py-[10px] px-[20px]">Login</Button>
+                <Button
+                  buttonType="white"
+                  className="md:text-[14px] md:leading-[24px] lg:text-lg py-[10px] px-[20px]"
+                >
+                  Login
+                </Button>
               </Link>
             </span>
             <span>
-              <Button className="md:text-[14px] md:leading-[24px] lg:text-lg min-w-[138px]">Start Free Trial</Button>{" "}
+              <Link href="https://salesbot.cloud/register" target="_self">
+                <Button className="md:text-[14px] md:leading-[24px] lg:text-lg min-w-[138px]">
+                  Start Free Trial
+                </Button>{" "}
+              </Link>
             </span>
           </div>
         </div>
@@ -313,9 +322,14 @@ export default function Header() {
                 </svg>
               </Link>
             ))}
-            <Button buttonType="white">Login</Button>
-            {/* CTA Button for Mobile */}
-            <Button>Start Free Trial</Button>
+
+            <Link href="https://salesbot.cloud/login" target="_self">
+              <Button buttonType="white">Login</Button>
+            </Link>
+
+            <Link href="https://salesbot.cloud/register" target="_self">
+              <Button>Start Free Trial</Button>{" "}
+            </Link>
           </nav>
         </div>
       )}

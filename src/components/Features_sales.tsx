@@ -1,7 +1,11 @@
+"use client";
 import Button from "./Button";
 import ButtonPrimary from "./Button-primary";
+import { useRouter } from "next/navigation";
 
 export default function Features_sales() {
+  const router = useRouter();
+
   return (
     <div className="flex justify-center items-center py-8 px-4 sm:py-12 sm:px-6">
       {/* Outer div for gradient border */}
@@ -10,20 +14,27 @@ export default function Features_sales() {
         <div className="rounded-2xl bg-white px-6 py-8 sm:px-12 md:px-[80px] md:py-[40px] lg:px-[100px] lg:py-[50px]">
           {/* Title */}
           <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
-            Where{" "}
-            <span className="gradient-text">Conversations</span> <br></br>Become Customers
+            Where <span className="gradient-text">Conversations</span> <br></br>
+            Become Customers
           </h2>
 
           {/* Subtext */}
           <p className="mt-3 sm:mt-4 text-center font-inter-tight font-medium text-[16px] sm:text-[18px] leading-[24px] text-[#808080] max-w-2xl mx-auto">
-            Sales doesn’t happen by chance. SalesBot brings speed, empathy, and strategy to every interaction. Because talking is easy, closing is where it counts.
+            Sales doesn’t happen by chance. SalesBot brings speed, empathy, and
+            strategy to every interaction. Because talking is easy, closing is
+            where it counts.
           </p>
-
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6">
             <ButtonPrimary>Watch Demo</ButtonPrimary>
-            <Button>Start Free Trial</Button>
+            <Button
+              onClick={() => {
+                router.push("https://salesbot.cloud/register");
+              }}
+            >
+              Experience Now
+            </Button>
           </div>
 
           {/* Features row */}

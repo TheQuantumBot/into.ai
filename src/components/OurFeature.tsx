@@ -18,7 +18,7 @@ const Ourfeature: React.FC<OurfeatureProps> = ({ text }) => {
   return (
     <div className="w-[1542px] flex flex-col items-center justify-center py-3 text-black font-medium space-y-6">
       {/* Badge */}
-      <Badge text="Benefits" />
+      <Badge text="Our Benefits" />
 
       {/* Hero */}
       <div className="w-full flex flex-col items-center justify-center">

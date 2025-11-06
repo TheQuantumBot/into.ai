@@ -77,7 +77,8 @@ export default function HomePage() {
 </span></span>`}
               description="Launch campaigns across LinkedIn, Meta & WhatsApp. Our Ai Agent engages every Lead 24/7, qualifying prospects and turning conversations into customers while you sleep."
               primaryButtonText="Watch Demo"
-              secondaryButtonText="Start Free Trial"
+              secondaryButtonText="GET YOURS NOW"
+              secondaryButtonHref="https://salesbot.cloud/register"
             />
           </div>
 
@@ -165,7 +166,13 @@ export default function HomePage() {
       </div>
 
       <div className="flex items-center justify-center bg-[#F6F5F4] z-30 py-8 sm:py-10 px-4">
-        <CtaCard />
+        <CtaCard
+          HeadingTitle={`Ready to <span class="gradient-text">10X</span> Your Sales?`}
+          Description="    Thousands of business already using INTO AI to transform their lead
+            generation and conversion."
+          PrimaryButton="Watch Demo"
+          secondaryButton="Experience Now"
+        />
       </div>
 
       <div className="w-full flex items-center justify-center bg-[#F6F5F4] z-30">

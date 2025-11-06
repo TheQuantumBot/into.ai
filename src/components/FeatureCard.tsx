@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Button from "./Button";
+import { useRouter } from "next/navigation";
 
 interface FeatureCardProps {
   img: string;
@@ -15,9 +16,11 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   img,
   title,
   description,
-  buttonText = "Start Free Trial",
+  buttonText = "Get Yours Now",
   className = "",
 }) => {
+  const router = useRouter();
+
   return (
     <div
       className={`bg-white rounded-[20px] border h-auto border-[#EAEAEA] shadow-sm hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden ${className}`}
@@ -45,7 +48,13 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
         />
 
         <div className="mt-6">
-          <Button>{buttonText}</Button>
+          <Button
+            onClick={() => {
+              router.push("https://salesbot.cloud/register");
+            }}
+          >
+            {buttonText}
+          </Button>
         </div>
       </div>
     </div>

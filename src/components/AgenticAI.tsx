@@ -1,13 +1,15 @@
 "use client";
 
 import React from "react";
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 import Button from "./Button";
 import Badge from "./Badge";
+import { useRouter } from "next/navigation";
 
 const AgenticAIHero = () => {
+  const router = useRouter();
+
   return (
     <section className="relative overflow-hidden">
       <div className="max-w-7xl mx-auto sm:px-6 lg:px-8 py-12 relative z-10">
@@ -175,7 +177,13 @@ const AgenticAIHero = () => {
               </div>
 
               {/* Button */}
-              <Button>Get Yours Now</Button>
+              <Button
+                onClick={() => {
+                  router.push("https://salesbot.cloud/register");
+                }}
+              >
+                Get Yours Now
+              </Button>
             </div>
           </div>
         </div>

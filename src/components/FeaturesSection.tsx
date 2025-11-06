@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import Button from "./Button";
 import FeatureCard from "./FeatureCard";
 import Heros from "./Heros";
+import { useRouter } from "next/navigation";
 
 const features = [
   {
@@ -62,6 +62,8 @@ const features = [
 ];
 
 export default function FeaturesSection() {
+  const router = useRouter();
+
   return (
     <section className="py-10 sm:py-14 lg:py-20 px-4 sm:px-8 lg:px-16 ">
       {/* Heading */}
@@ -506,7 +508,13 @@ export default function FeaturesSection() {
           </p>
 
           <div className="mt-6">
-            <Button>Start Free Trial</Button>
+            <Button
+              onClick={() => {
+                router.push("https://salesbot.cloud/register");
+              }}
+            >
+              Get Yours Now
+            </Button>
           </div>
         </div>
       </div>
