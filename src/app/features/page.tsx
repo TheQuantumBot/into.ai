@@ -7,6 +7,7 @@ import LeadConversion from "@/components/LeadConversion";
 import AgenticAIHero from "@/components/AgenticAI";
 import Features_sales from "@/components/Features_sales";
 import HumanStyleChat from "@/components/HumanStyleChat";
+import CtaCard from "@/components/CtaCard";
 
 const faqData = [
   {
@@ -119,7 +120,13 @@ export default function FeaturesPage() {
         <LeadConversion />
         <FeaturesSection />
         <BecameAPartnerFaq faqs={faqData as any} />
-        <Features_sales />
+        {/* <Features_sales /> */}
+        <CtaCard
+          HeadingTitle={`Where <span class="gradient-text">Conversations</span> </br>Become Customers`}
+          Description="Sales doesn’t happen by chance. SalesBot brings speed, empathy, and strategy to every interaction. Because talking is easy, closing is where it counts."
+          PrimaryButton="Watch Demo"
+          secondaryButton="Experience Now"
+        />
         <Footer />
       </div>
     </main>
