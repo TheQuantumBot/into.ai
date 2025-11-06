@@ -1,7 +1,11 @@
+"use client";
+
 import Button from "./Button";
-import ButtonPrimary from "./Button-primary";
+import { useRouter } from "next/navigation";
 
 export default function BecameAPartner_sales() {
+  const router = useRouter();
+
   return (
     <div className="flex justify-center items-center py-8 px-4 sm:py-12 sm:px-6">
       {/* Outer div for gradient border */}
@@ -24,7 +28,13 @@ export default function BecameAPartner_sales() {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6">
-            <Button>Start Earning</Button>
+            <Button
+              onClick={() => {
+                router.push("https://salesbot.cloud/register");
+              }}
+            >
+              Start Earning
+            </Button>
           </div>
 
           {/* Features row */}

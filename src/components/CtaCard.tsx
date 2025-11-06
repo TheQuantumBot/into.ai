@@ -1,7 +1,12 @@
+"use client";
+
 import Button from "./Button";
 import ButtonPrimary from "./Button-primary";
+import { useRouter } from "next/navigation";
 
 export default function CtaCard() {
+  const router = useRouter();
+
   return (
     <div className="max-w-7xl mx-auto">
       <div className="relative rounded-2xl p-[2px] bg-gradient-to-r from-red-500 via-orange-500 to-purple-600 shadow-md">
@@ -23,7 +28,13 @@ export default function CtaCard() {
           {/* Buttons */}
           <div className="flex flex-row  justify-center items-center gap-4 mt-6">
             <ButtonPrimary>Watch a Demo</ButtonPrimary>
-            <Button>Experience Now</Button>
+            <Button
+              onClick={() => {
+                router.push("https://salesbot.cloud/register");
+              }}
+            >
+              Experience Now
+            </Button>
           </div>
 
           {/* Features row */}
@@ -33,25 +44,6 @@ export default function CtaCard() {
               {/* First Row - Free Trial and No Credit Card */}
               <div className="flex flex-row gap-6">
                 {/* Free Trial */}
-                {/* <div className="flex flex-row items-center gap-2"> */}
-                {/* <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    className="flex-shrink-0"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                  >
-                    <path
-                      d="M4.75005 0.993896V3.2439M15.25 0.993896V3.2439M0.998047 16.7439V5.4909C0.998047 4.89416 1.2351 4.32186 1.65706 3.89991C2.07901 3.47795 2.65131 3.2409 3.24805 3.2409H16.748C17.3448 3.2409 17.9171 3.47795 18.339 3.89991C18.761 4.32186 18.998 4.89416 18.998 5.4909V16.7419M18.998 16.7419C18.998 17.3386 18.761 17.9109 18.339 18.3329C17.9171 18.7548 17.3448 18.9919 16.748 18.9919H3.24805C2.65131 18.9919 2.07901 18.7548 1.65706 18.3329C1.2351 17.9109 0.998047 17.3386 0.998047 16.7419V9.2419C0.998047 8.64516 1.2351 8.07286 1.65706 7.65091C2.07901 7.22895 2.65131 6.9919 3.24805 6.9919H16.748C17.3448 6.9919 17.9171 7.22895 18.339 7.65091C18.761 8.07286 18.998 8.64516 18.998 9.2419V16.7419Z"
-                      stroke="#808080"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                  <span className="whitespace-nowrap">Free 7 days trial</span> */}
-                {/* </div> */}
                 <div className="flex flex-row items-center gap-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

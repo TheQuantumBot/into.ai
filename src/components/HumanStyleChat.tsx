@@ -2,8 +2,11 @@
 import ButtonPrimary from "./Button-primary";
 import Button from "./Button";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function HumanStyleChat() {
+  const router = useRouter();
+
   return (
     <section className="py-20 px-6">
       <div className="max-w-7xl  mx-auto grid md:grid-cols-2 gap-12 items-center">
@@ -56,7 +59,13 @@ export default function HumanStyleChat() {
           </div>
           <div className="flex flex-row items-center gap-4 mt-6">
             <ButtonPrimary>Try a Live Demo Conversation </ButtonPrimary>
-            <Button>Experience Now</Button>
+            <Button
+              onClick={() => {
+                router.push("https://salesbot.cloud/register");
+              }}
+            >
+              Experience Now
+            </Button>
           </div>
         </div>
         {/* Right Image */}

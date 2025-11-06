@@ -258,7 +258,9 @@ export default function Header() {
               </Link>
             </span>
             <span>
-              <Button>Start Free Trial</Button>{" "}
+              <Link href="https://salesbot.cloud/register" target="_self">
+                <Button>Start Free Trial</Button>{" "}
+              </Link>
             </span>
           </div>
         </div>
@@ -309,9 +311,14 @@ export default function Header() {
                 </svg>
               </Link>
             ))}
-            <Button buttonType="white">Login</Button>
-            {/* CTA Button for Mobile */}
-            <Button>Start Free Trial</Button>
+
+            <Link href="https://salesbot.cloud/login" target="_self">
+              <Button buttonType="white">Login</Button>
+            </Link>
+
+            <Link href="https://salesbot.cloud/register" target="_self">
+              <Button>Start Free Trial</Button>{" "}
+            </Link>
           </nav>
         </div>
       )}

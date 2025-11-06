@@ -1,8 +1,10 @@
 "use client";
-import { ArrowRight } from "lucide-react";
 import Button from "./Button";
+import { useRouter } from "next/navigation";
 
 export default function HeroBox() {
+  const router = useRouter();
+
   return (
     <section className="relative overflow-hidden pt-[100px] pb-[48px]">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24 relative z-10">
@@ -44,7 +46,12 @@ export default function HeroBox() {
               onboarding, and support.
             </p>
 
-            <Button className="px-8 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition font-medium flex items-center gap-2 group">
+            <Button
+              onClick={() => {
+                router.push("https://salesbot.cloud/register");
+              }}
+              className="px-8 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition font-medium flex items-center gap-2 group"
+            >
               Start Earning
             </Button>
           </div>

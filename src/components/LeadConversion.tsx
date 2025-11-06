@@ -1,7 +1,12 @@
+"use client";
+
 import Button from "./Button";
 import { DotsLoader } from "./DotsLoader";
+import { useRouter } from "next/navigation";
 
 const LeadConversion = () => {
+  const router = useRouter();
+
   return (
     <section className="min-h-screen  py-16 px-6">
       <div className="max-w-[1440px] mx-auto">
@@ -154,7 +159,12 @@ const LeadConversion = () => {
             </p>
 
             {/* CTA Button */}
-            <Button className="bg-black text-white hover:bg-gray-800 transition-all duration-300 px-6 py-6 text-base font-medium rounded-md">
+            <Button
+              onClick={() => {
+                router.push("https://salesbot.cloud/register");
+              }}
+              className="bg-black text-white hover:bg-gray-800 transition-all duration-300 px-6 py-6 text-base font-medium rounded-md"
+            >
               Get Yours Now
             </Button>
           </div>
