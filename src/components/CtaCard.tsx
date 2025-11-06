@@ -22,7 +22,7 @@ export default function CtaCard() {
 
           {/* Buttons */}
           <div className="flex flex-row  justify-center items-center gap-4 mt-6">
-            <ButtonPrimary>Watch a Demo</ButtonPrimary>
+            <ButtonPrimary>Watch Demo</ButtonPrimary>
             <Button>Start Free Trial</Button>
           </div>
 

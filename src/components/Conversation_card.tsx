@@ -34,7 +34,7 @@ export default function Conversation_card() {
 
   return (
     <div className="bg-white/40 rounded-[24px] p-2">
-      <div className="w-[320px] bg-white rounded-[24px] p-4 shadow-sm">
+      <div className="md:w-[220px] lg:w-[225px]  xl:w-[320px]  bg-white rounded-[24px] p-2 lg:p-4 shadow-sm">
         {/* Header */}
         <div className="flex items-center justify-between mb-2">
           <p className="text-sm font-medium text-gray-700">Conversation Rate</p>
@@ -47,10 +47,10 @@ export default function Conversation_card() {
         </div>
 
         {/* Percentage */}
-        <p className="text-4xl font-bold text-gray-900 mb-4">44%</p>
+        <p className="lg:text-5xl text-3xl font-bold text-gray-900 mb-2 lg:mb-4">44%</p>
 
         {/* Tabs */}
-        <div className="flex space-x-2 mb-4">
+        <div className="flex space-x-2 mb-2 lg:mb-4">
           {["24 hours", "Week", "Month"].map((tab) => (
             <button
               key={tab}
@@ -66,7 +66,7 @@ export default function Conversation_card() {
         </div>
 
         {/* Chart */}
-        <div className="h-24">
+        <div className="h-12 lg:h-16 xl:h-24">
           <ResponsiveContainer width="100%" height="100%">
             <AreaChart
               data={data}

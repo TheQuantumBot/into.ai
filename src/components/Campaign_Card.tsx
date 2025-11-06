@@ -3,9 +3,9 @@ import Image from "next/image";
 export default function CampaignCard() {
   return (
     <div className="bg-white/40 rounded-[24px] p-2">
-      <div className="w-[300px] h-[100px] bg-white rounded-[24px] shadow-lg p-6 flex items-center">
+      <div className="lg:w-[300px] lg:h-[100px] h-[72px] w-[265px] bg-white rounded-[24px] shadow-lg p-6 flex items-center">
         {/* Left Icon Section */}
-        <div className="w-[64px] h-[64px] bg-[#2196F3] rounded-2xl flex items-center justify-center">
+        <div className="w-[42px] h-[42px] lg:w-[64px] lg:h-[64px] bg-[#2196F3] rounded-2xl flex items-center justify-center">
           <Image
             src="/icons/megaphone.svg"
             alt="Campaign Icon"

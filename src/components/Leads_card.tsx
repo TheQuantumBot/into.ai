@@ -3,13 +3,13 @@ import Image from "next/image";
 export default function LeadsCard() {
   return (
     <div className="bg-white/40 rounded-[24px] p-2 ">
-      <div className="relative w-[360px] p-4 rounded-[24px] bg-white shadow-lg">
+      <div className="relative w-[210px] h-[128px] lg:h-auto lg:w-[360px] p-4 rounded-[24px] bg-white shadow-lg">
         {/* Header */}
         <div className="flex justify-between items-center">
-          <h2 className="text-lg font-medium text-gray-900">
+          <h2 className="lg:text-lg text-[14px] leading-[18px] font-medium text-gray-900">
             Total Qualified Leads
           </h2>
-          <div className="flex items-center space-x-1">
+          <div className="flex lg:items-center space-x-1">
             {/* Growth Arrow Icon */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -28,38 +28,38 @@ export default function LeadsCard() {
         </div>
 
         {/* Leads Count */}
-        <div className="mt-4">
-          <span className="text-5xl font-bold text-gray-900">100+</span>
+        <div className="lg:mt-4">
+          <span className="lg:text-5xl text-3xl font-bold text-gray-900">100+</span>
         </div>
 
         {/* Avatars & Button */}
-        <div className="mt-6 flex items-center justify-between">
+        <div className="lg:mt-6 flex items-center justify-between">
           {/* Overlapping Avatars */}
           <div className="flex -space-x-3">
             <img
               src="/avatars/avatar1.svg"
               alt="Avatar 1"
-              className="w-12 h-12 rounded-full border-2 border-white"
+              className="w-[28px] lg:w-12 h-[28px] lg:h-12 rounded-full border-2 border-white"
             />
             <img
               src="/avatars/avatar2.svg"
               alt="Avatar 2"
-              className="w-12 h-12 rounded-full border-2 border-white"
+              className="w-[28px] lg:w-12 h-[28px] lg:h-12 rounded-full border-2 border-white"
             />
             <img
               src="/avatars/avatar3.svg"
               alt="Avatar 3"
-              className="w-12 h-12 rounded-full border-2 border-white"
+              className="w-[28px] lg:w-12 h-[28px] lg:h-12 rounded-full border-2 border-white"
             />
             <img
               src="/avatars/avatar4.svg"
               alt="Avatar 4"
-              className="w-12 h-12 rounded-full border-2 border-white"
+              className="w-[28px] lg:w-12 h-[28px] lg:h-12 rounded-full border-2 border-white"
             />
           </div>
 
           {/* View All Button */}
-          <button className="px-5 py-2 bg-gray-100 text-gray-700 text-sm font-medium rounded-full hover:bg-gray-200 transition">
+          <button className="px-[11px] lg:px-5 py-1 lg:py-2 bg-gray-100 text-gray-700 text-sm font-medium rounded-full hover:bg-gray-200 transition">
             View All
           </button>
         </div>

@@ -6,6 +6,7 @@ import BlurText from "./BlurText";
 
 interface HeroProps {
   title?: string | any;
+  className?: string;
   description?: string;
   primaryButtonText?: string;
   secondaryButtonText?: string;
@@ -13,6 +14,7 @@ interface HeroProps {
 
 export default function Heros({
   title,
+  className,
   description,
   primaryButtonText,
   secondaryButtonText,
@@ -29,7 +31,7 @@ export default function Heros({
               delay={150}
               animateBy="words"
               direction="top"
-              className="text-4xl sm:text-5xl md:text-6xl font-bold text-center leading-tight"
+              className={`text-4xl sm:text-5xl md:text-6xl font-bold text-center leading-tight ${className}`}
             />
           )}
 
@@ -42,7 +44,7 @@ export default function Heros({
 
           {/* Buttons */}
           {(primaryButtonText || secondaryButtonText) && (
-            <div className="flex items-center justify-center my-4 gap-4">
+            <div className="flex items-center justify-center my-4 gap-2">
               {primaryButtonText && (
                 <div>
                   <ButtonPrimary>{primaryButtonText}</ButtonPrimary>

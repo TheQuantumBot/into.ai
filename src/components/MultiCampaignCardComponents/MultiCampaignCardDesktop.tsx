@@ -3,7 +3,7 @@ import React from "react";
 
 export default function MultiCampaignCardDesktop() {
   return (
-    <div className="w-full bg-white rounded-3xl shadow-lg p-8 mx-auto relative overflow-hidden min-h-[465px]">
+    <div className="w-full bg-white rounded-3xl shadow-lg p-8 mx-auto relative overflow-hidden h-auto md:h-[590px] lg:h-[555px]">
       {/* Flow Section */}
       <div className="w-full relative h-40 mt-[10px]">
         <div className="absolute top-[52px] left-[80px] w-[78%] h-[2px] bg-gray-200"></div>
@@ -84,12 +84,12 @@ export default function MultiCampaignCardDesktop() {
 
       {/* Title & Description */}
       <div className="mt-[120px]">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">
+        <h2 className="lg:text-[32px] lg:leading-[40px] font-[600] text-[#1E1E1E] mb-3 sm:mb-4">
           Multi-Platform Campaign
         </h2>
-        <p className="text-gray-500 text-lg leading-relaxed">
+        <p className="text-[#808080] font-[400] text-[24px] leading-[34px]">
           Run targeted campaign across LinkedIn, Meta, WhatsApp, and more
-          <span className="block">from one unified dashboard</span>{" "}
+          <span className="block">from one unified dashboard.</span>{" "}
         </p>
       </div>
 

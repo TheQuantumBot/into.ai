@@ -23,6 +23,10 @@ export default function Header() {
       className="fixed top-4 left-1/2 transform -translate-x-1/2 w-[95%] max-w-6xl 
                  bg-white/60 backdrop-blur-sm border border-white/30 
                  rounded-2xl shadow-md z-50"
+      style={{
+        WebkitBackdropFilter: "blur(6px)", 
+        backdropFilter: "blur(6px)", 
+      }}
     >
       <div className="flex items-center justify-between px-6 py-3 ">
         {/* Logo */}

@@ -105,7 +105,7 @@ export default function Footer() {
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
           {/* Brand Section */}
           <div className="lg:col-span-1 space-y-6">
             <div>
@@ -306,78 +306,79 @@ export default function Footer() {
               </div>
             </div>
           </div>
-
-          {/* Company */}
-          <div className="space-y-6">
-            <h3 className="text-lg font-medium text-white">Company</h3>
-            <ul className="space-y-3">
-              {companyLinks.map((link, i) => (
-                <li key={i}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors duration-300 text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Product */}
-          <div className="space-y-6">
-            <h3 className="text-lg font-medium text-white">Product</h3>
-            <ul className="space-y-3">
-              {productLinks.map((link, i) => (
-                <li key={i}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors duration-300 text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Support */}
-          <div className="space-y-6">
-            <h3 className="text-lg font-medium text-white">Support</h3>
-            <ul className="space-y-3">
-              {supportLinks.map((link, i) => (
-                <li key={i}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors duration-300 text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Follow us */}
-          <div className="space-y-6">
-            <h3 className="text-lg font-medium text-white">Follow us</h3>
-            <ul className="space-y-3">
-              {socialLinks.map((link, i) => {
-                const IconComponent = link.icon;
-
-                return (
+          <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-12 mb-12">
+            {/* Company */}
+            <div className="space-y-6">
+              <h3 className="text-lg font-medium text-white">Company</h3>
+              <ul className="space-y-3">
+                {companyLinks.map((link, i) => (
                   <li key={i}>
                     <Link
                       href={link.href}
-                      className="bg-[#1E1E1E] flex items-center justify-center space-x-2 px-3 py-2 rounded w-36 hover:opacity-80 transition-opacity duration-300"
+                      className="text-gray-400 hover:text-white transition-colors duration-300 text-sm"
                     >
-                      {link.icon}
-                      <span className="text-[#808080]">{link.name}</span>
+                      {link.name}
                     </Link>
                   </li>
-                );
-              })}
-            </ul>
+                ))}
+              </ul>
+            </div>
+
+            {/* Product */}
+            <div className="space-y-6">
+              <h3 className="text-lg font-medium text-white">Product</h3>
+              <ul className="space-y-3">
+                {productLinks.map((link, i) => (
+                  <li key={i}>
+                    <Link
+                      href={link.href}
+                      className="text-gray-400 hover:text-white transition-colors duration-300 text-sm"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Support */}
+            <div className="space-y-6">
+              <h3 className="text-lg font-medium text-white">Support</h3>
+              <ul className="space-y-3">
+                {supportLinks.map((link, i) => (
+                  <li key={i}>
+                    <Link
+                      href={link.href}
+                      className="text-gray-400 hover:text-white transition-colors duration-300 text-sm"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Follow us */}
+            <div className="space-y-6">
+              <h3 className="text-lg font-medium text-white">Follow us</h3>
+              <ul className="space-y-3">
+                {socialLinks.map((link, i) => {
+                  const IconComponent = link.icon;
+
+                  return (
+                    <li key={i}>
+                      <Link
+                        href={link.href}
+                        className="bg-[#1E1E1E] flex items-center justify-center space-x-2 px-3 py-2 rounded w-36 hover:opacity-80 transition-opacity duration-300"
+                      >
+                        {link.icon}
+                        <span className="text-[#808080]">{link.name}</span>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           </div>
         </div>
 
