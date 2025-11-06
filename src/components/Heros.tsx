@@ -1,5 +1,6 @@
+"use client";
 import React from "react";
-import { H1, Body } from "@/components/Typography";
+import { Body } from "@/components/Typography";
 import Button from "./Button";
 import ButtonPrimary from "./Button-primary";
 import BlurText from "./BlurText";
@@ -37,7 +38,7 @@ export default function Heros({
 
           {/* Render Description if provided */}
           {description && (
-            <Body className="mt-7 font-inter-tight font-medium text-[18px] leading-[24px] text-center align-middle !text-[#888d96da]">
+            <Body className="mt-2 font-inter-tight font-medium text-[18px] leading-[24px] text-center align-middle !text-[#4C4C4C]">
               {description}
             </Body>
           )}

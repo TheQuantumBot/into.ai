@@ -14,7 +14,7 @@ const Kpicard = () => {
                 {/* 312% */}
                 <CountUp
                   from={0}
-                  to={312}
+                  to={58}
                   separator=","
                   direction="up"
                   duration={1}

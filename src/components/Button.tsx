@@ -11,8 +11,7 @@ export default function Button({
   buttonType = "black",
   ...props
 }: ButtonProps) {
-  const blackBtn =
-    `relative overflow-hidden px-3 py-2 sm:px-5 sm:py-3 min-w-[120px] 
+  const blackBtn = `relative overflow-hidden px-3 py-2 sm:px-5 sm:py-3 min-w-[120px] [@media(max-width:375px)]:px-[7px]  
      text-white font-semibold text-sm sm:text-lg tracking-wide rounded-lg 
      bg-gradient-to-br from-black to-[#222] font-inter outline-none transition-all duration-300 
      active:translate-y-[-1px]

@@ -4,7 +4,7 @@ import CountUp from "./CountUp";
 
 export default function MultiCampaignCard() {
   return (
-    <div className="w-full bg-white rounded-3xl shadow-lg p-8 mx-auto relative overflow-hidden min-h-[465px]">
+    <div className="w-full bg-white rounded-3xl shadow-lg p-8 mx-auto relative overflow-hidden min-h-[720px] md:min-h-[620px] lg:min-h-[200px]">
       {/* Flow Section */}
       <div className="w-full relative h-40 mt-[10px]">
         <div className="absolute top-[52px] left-[80px] w-[75%] h-[2px] bg-gray-200"></div>
@@ -78,13 +78,13 @@ export default function MultiCampaignCard() {
             />
             %
           </div>
-          <div className="text-sm opacity-90">Conversion Rate</div>
+          <div className="text-sm opacity-90">Conversation Rate </div>
         </div>
         <div className="absolute top-[140px] right-[-65px] bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 opacity-15 rounded-2xl ]">
           <div className="text-3xl font-medium leading-none opacity-40">
             92%
           </div>
-          <div className="text-sm opacity-60">Conversion Rate</div>
+          <div className="text-sm opacity-60">Conversation Rate </div>
         </div>
       </div>
 
@@ -103,7 +103,15 @@ export default function MultiCampaignCard() {
       <div className="absolute top-[276px] right-[112px] w-[2px] h-[100px] bg-gray-200"></div>
 
       {/* Avatar Group */}
-      <div className="absolute bottom-[45px] right-[45px] flex -space-x-4">
+      <div
+        className="
+  absolute bottom-[30px] right-[16px] flex -space-x-4
+  md:bottom-[20px] md:right-[20px]
+  lg:bottom-[45px] lg:right-[45px]
+  [@media(min-width:1024px)]:bottom-[30px] 
+  [@media(min-width:1024px)]:right-[30px]
+"
+      >
         <div className="w-[60px] h-[60px] rounded-full border-4 border-white overflow-hidden">
           <Image src="/user1.svg" alt="User 1" width={60} height={60} />
         </div>

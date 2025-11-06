@@ -64,7 +64,12 @@ const AgenticAIHero = () => {
             <div className="absolute bottom-[0%] left-[5%] animate-float-slow">
               <div className="bg-[rgba(255,255,255,1)] shadow-md px-[19px] py-[10px] rounded-[8px] text-sm font-medium flex items-center gap-2 rotate-[5deg] text-gray-500">
                 <span className="border border-[rgba(247,78,140,1)] p-[4px] rounded-[10px]">
-                  <Image src="/MindIcon.svg" alt="MindIcon" width={15} height={15} />
+                  <Image
+                    src="/MindIcon.svg"
+                    alt="MindIcon"
+                    width={15}
+                    height={15}
+                  />
                 </span>
                 Smart Decisions
               </div>
@@ -73,7 +78,12 @@ const AgenticAIHero = () => {
             <div className="absolute bottom-[0%] right-[5%] animate-float">
               <div className="bg-[rgba(255,255,255,1)] shadow-md px-[19px] py-[10px] rounded-[8px] text-sm font-medium flex items-center gap-2 rotate-[-5deg] text-gray-500">
                 <span className="border border-[rgba(230,202,41,1)] p-[4px] rounded-[10px] bg-[rgba(255,252,237,1)]">
-                  <Image src="/PortIcon.svg" alt="PortIcon" width={15} height={15} />
+                  <Image
+                    src="/PortIcon.svg"
+                    alt="PortIcon"
+                    width={15}
+                    height={15}
+                  />
                 </span>
                 More Closed Deals
               </div>
@@ -139,14 +149,24 @@ const AgenticAIHero = () => {
                   </span>
                 </span>
                 <span className="flex items-center gap-1">
-                  <Image src="/WatchIcon.svg" alt="WatchIcon" width={18} height={18} />
+                  <Image
+                    src="/WatchIcon.svg"
+                    alt="WatchIcon"
+                    width={18}
+                    height={18}
+                  />
                   <span className="bg-[linear-gradient(89.75deg,#E8584B_0.34%,#584F9E_141.89%)] bg-clip-text text-transparent">
                     Smart Decisions
                   </span>
                 </span>
 
                 <span className="flex items-center gap-1">
-                  <Image src="/PortIcon.svg" alt="PortIcon" width={18} height={18} />
+                  <Image
+                    src="/PortIcon.svg"
+                    alt="PortIcon"
+                    width={18}
+                    height={18}
+                  />
 
                   <span className="bg-[linear-gradient(90.11deg,#584F9E_0.29%,#CE4C9B_118.16%)] bg-clip-text text-transparent">
                     More Closed Deals
@@ -155,7 +175,7 @@ const AgenticAIHero = () => {
               </div>
 
               {/* Button */}
-              <Button>Start Free Trial</Button>
+              <Button>Get Yours Now</Button>
             </div>
           </div>
         </div>
