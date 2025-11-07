@@ -63,9 +63,9 @@ const WhoCanBecomePartner = () => {
             Perfect for Anyone With a Network - No Tech Skills Needed
           </p>
 
-          <button className="inline-flex items-center gap-2 bg-[#f05a25] text-white font-medium px-5 py-2.5 rounded-full shadow-sm hover:shadow-md transition-all">
+          <span className="inline-flex items-center gap-2 bg-[#f05a25] text-white font-medium px-5 py-2.5 rounded-full shadow-sm hover:shadow-md transition-all">
             👋 Anyone who believes in AI
-          </button>
+          </span>
 
           <div className="absolute right-0 top-0 hidden md:block">
             <Image src="/arrow.svg" alt="Arrow" width={200} height={100} />

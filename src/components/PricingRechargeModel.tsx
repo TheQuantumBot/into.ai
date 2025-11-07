@@ -1,9 +1,7 @@
 "use client";
 import { useState } from "react";
-import Button from "./Button";
-import ButtonPrimary from "./Button-primary";
 
-export default function PricingRechargeModel() {
+export default function PricingRechargeModel({ setIsYearlyStatus }: any) {
   const [isYearly, setIsYearly] = useState(false);
   return (
     <div className="max-w-7xl mx-auto">
@@ -37,7 +35,7 @@ export default function PricingRechargeModel() {
                 !isYearly ? "text-gray-900" : "text-gray-500"
               }`}
             >
-              Billed Monthly
+              Billed Monthly (5% OFF)
             </span>
 
             {/* Gradient Border */}
@@ -49,7 +47,10 @@ export default function PricingRechargeModel() {
               }}
             >
               <button
-                onClick={() => setIsYearly(!isYearly)}
+                onClick={() => {
+                  setIsYearly(!isYearly);
+                  setIsYearlyStatus(!isYearly);
+                }}
                 className="relative inline-flex h-6 w-11 items-center rounded-full focus:outline-none transition-all duration-300 ease-in-out"
                 style={{
                   backgroundColor: isYearly ? "#ffffff" : "#111111", // track color
@@ -70,7 +71,7 @@ export default function PricingRechargeModel() {
                 isYearly ? "text-gray-900" : "text-gray-500"
               }`}
             >
-              Billed yearly (Save 20%)
+              Billed yearly (10% OFF)
             </span>
           </div>
         </div>
