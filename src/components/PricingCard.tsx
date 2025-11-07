@@ -22,6 +22,7 @@ export default function PlanPricing({ isYearly }: any) {
       name: "Basic",
       borderColor: "border-[#DED8D3]",
       bgColor: "#E8E4E2",
+      isPopular: true,
       icon: (
         <div className="w-16 h-16 to-green-400 rounded-2xl flex items-center justify-center mb-6">
           <svg
@@ -557,16 +558,13 @@ export default function PlanPricing({ isYearly }: any) {
               {/* Most Popular Badge */}
               {plan.isPopular && (
                 <span
-                  className="absolute -top-3 left-1/2 transform -translate-x-1/2 text-white text-xs font-semibold flex items-center justify-center shadow-lg z-20"
+                  className="absolute -top-3 -right-8 lg:-top-3 lg:-right-3 transform -translate-x-1/2 text-white text-xs font-semibold flex items-center justify-center shadow-lg z-20 w-[62px] h-[34px] opacity-100 pt-[8px] pr-[10px] pb-[8px] pl-[10px] rounded-[8px] md:top-0 md:-right-11 sm:top-0 sm:right-20"
                   style={{
-                    width: "120px",
-                    height: "35px",
-                    borderRadius: "9px",
                     background:
                       "linear-gradient(90deg, #35A1DA -207.85%, #D4549F -28.59%, #F15A22 136.87%)",
                   }}
                 >
-                  Most Popular
+                  5% Off
                 </span>
               )}
 
