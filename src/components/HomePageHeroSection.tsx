@@ -66,7 +66,7 @@ export default function HomePageHeroSection({
                 </div>
               )}
               {secondaryButtonText && (
-                <div>
+                <div className="flex">
                   <Button
                     onClick={() => {
                       if (secondaryButtonHref && secondaryButtonHref != "") {
