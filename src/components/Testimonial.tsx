@@ -10,14 +10,14 @@ interface TestimonialProps {
 
 const Testimonial: React.FC<TestimonialProps> = ({ text }) => {
   const testimonials = [
-    // {
-    //   name: "Sarah Mitchell",
-    //   role: "Marketing Lead",
-    //   company: "",
-    //   avatar: "/Image_container_sarah_girl.svg",
-    //   testimonial:
-    //     "“INTO AI transformed our lead generation process. We’re seeing 3x more qualified leads and our conversion rate has doubled.”",
-    // },
+    {
+      name: "Sarah Mitchell",
+      role: "Marketing Lead",
+      company: "",
+      avatar: "/Image_container_sarah_girl.svg",
+      testimonial:
+        "“INTO AI transformed our lead generation process. We’re seeing 3x more qualified leads and our conversion rate has doubled.”",
+    },
     {
       name: "Raj P.",
       role: "COO @ FashionHub",
@@ -27,12 +27,12 @@ const Testimonial: React.FC<TestimonialProps> = ({ text }) => {
         "The WhatsApp AI bot feels almost human! It engages leads instantly, even outside office hours, and books meetings for us while we sleep.",
     },
     {
-      name: "Sarah Mitchell",
-      role: "Marketing Lead",
+      name: "Guy Hawkins",
+      role: "CTO",
       company: "",
-      avatar: "/Testimonial1.svg",
+      avatar: "/Image_container_guy.svg",
       testimonial:
-        "“INTO AI transformed our lead generation process. We’re seeing 3x more qualified leads and our conversion rate has doubled.”",
+        "“TechBoost has revolutionized our approach to lead generation. We're now attracting 3 times as many qualified leads, and our conversion rate has skyrocketed!“",
     },
     {
       name: "Carlos M.",
@@ -51,8 +51,8 @@ const Testimonial: React.FC<TestimonialProps> = ({ text }) => {
         "“Before Into AI, we struggled to track campaigns across platforms. Now, LinkedIn, Meta, and WhatsApp campaigns are all in one dashboard — a game changer for our team”",
     },
     {
-      name: "Sarah Mitchell",
-      role: "CEO @ LifeStyle Co.",
+      name: "Cameron Williamson",
+      role: "CEO @ Lifestyle Retial",
       company: "UrbanStore",
       avatar: "/Image_container_sarah.svg",
       testimonial:
