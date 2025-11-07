@@ -16,6 +16,7 @@ export default function Header() {
     { name: "Features", href: "/features" },
     { name: "Become a partner", href: "/become-a-partner" },
     { name: "Pricing", href: "/pricing" },
+    { name: "Privacy Policy", href: "/privacy-policy" },
   ];
 
   return (
