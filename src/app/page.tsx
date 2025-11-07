@@ -82,7 +82,7 @@ export default function HomePage() {
 </span></span>`}
               description="Launch campaigns across LinkedIn, Meta & WhatsApp. Our Ai Agent engages every Lead 24/7, qualifying prospects and turning conversations into customers while you sleep."
               primaryButtonText="Watch Demo"
-              secondaryButtonText="GET YOURS NOW"
+              secondaryButtonText="Get Yours Now"
               secondaryButtonHref="https://salesbot.cloud/register"
             />
           </div>
