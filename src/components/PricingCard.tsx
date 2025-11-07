@@ -8,7 +8,16 @@ import { useRouter } from "next/navigation";
 export default function PlanPricing() {
   const router = useRouter();
   const [isYearly, setIsYearly] = useState(false);
-
+  const showTooltip = [
+    "No cap on LinkedIn Account",
+    "Unlimited Campaigns",
+    "No Maximum Product Limit",
+    "Free API Integration",
+    "Unlimited Prompts",
+    "Full AI Conversation Management",
+    "Intelligent Lead Intention Spotting",
+    "24/7 Support",
+  ];
   const plans = [
     {
       name: "Basic",
@@ -142,16 +151,14 @@ export default function PlanPricing() {
       monthlyPrice: "9,499",
       yearlyPrice: 9499,
       features: [
-        "2,777 credits/month (3.4 ₹ /credit)",
-        "One LinkedIn account",
-        "3 campaigns maximum",
-        "2 products maximum",
+        "No cap on LinkedIn Account",
+        "Unlimited Campaigns",
+        "No Maximum Product Limit",
+        "Free API Integration",
         "Unlimited Prompts",
-        "Full AI conversation management",
-        "Intelligent Lead Scoring",
-        "AI-powered LinkedIn post comments",
-        "1 user seat",
-        "Standard support",
+        "Full AI Conversation Management",
+        "Intelligent Lead Intention Spotting",
+        "24/7 Support",
       ],
     },
     {
@@ -286,15 +293,14 @@ export default function PlanPricing() {
       monthlyPrice: "33,249",
       yearlyPrice: 166,
       features: [
-        "All Basic features",
-        "9,722 credits/month (3.2 ₹ /credit)",
-        "Up to 3 LinkedIn accounts",
-        "12 campaigns maximum",
-        "9 products maximum",
-        "API access (3 credits/request, limited to 1,000 requests/month)",
-        "Unlimited user seats",
-        "Premium support",
-        "Advanced analytics",
+        "No cap on LinkedIn Account",
+        "Unlimited Campaigns",
+        "No Maximum Product Limit",
+        "Free API Integration",
+        "Unlimited Prompts",
+        "Full AI Conversation Management",
+        "Intelligent Lead Intention Spotting",
+        "24/7 Support",
       ],
     },
     {
@@ -630,7 +636,31 @@ export default function PlanPricing() {
               </div>
 
               {/* Bottom Features Card */}
-              {plan.name === "Pro" ? (
+              {plan.name === "Enterprise" ? (
+                <div
+                  className={`rounded-2xl shadow-sm p-6 -mt-16 relative z-0 border-2 w-full max-w-[345px] ${plan.borderColor}`}
+                  style={{
+                    height: "600px",
+                    backgroundColor: plan.bgColor || "#E8E4E2",
+                  }}
+                >
+                  <div className="mt-[70px] space-y-5 text-[16px] leading-[1.7] text-black font-medium">
+                    <p>Because Growth Has No Limits.</p>
+                    <p>
+                      For teams who want more than “features” – they want
+                      results.
+                    </p>
+
+                    <p>
+                      Unlock enterprise-grade AI that spots every lead intent,
+                      personalizes every pitch, and keeps your pipeline full
+                      24/7.
+                    </p>
+
+                    <p>Get your customized enterprise plan today.</p>
+                  </div>
+                </div>
+              ) : plan.name === "Pro" ? (
                 <div
                   className="rounded-2xl p-1 -mt-16 relative z-0 flex justify-center w-full max-w-[345px]"
                   style={{
@@ -640,15 +670,44 @@ export default function PlanPricing() {
                   }}
                 >
                   <div
-                    className="rounded-2xl shadow-sm p-6 overflow-y-auto h-full w-full"
+                    className="rounded-2xl shadow-sm p-6 h-full w-full"
                     style={{ backgroundColor: "#fff" }}
                   >
                     <div className="space-y-3 mt-[70px]">
                       {plan.features.map((feature, idx) => (
-                        <div key={idx} className="flex items-start gap-3">
+                        <div key={idx} className="flex items-center gap-3">
                           <Check className="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" />
-                          <div className="text-sm text-gray-700 flex-1">
-                            {feature}
+
+                          <div className="text-sm text-gray-700 flex items-center ">
+                            <span className="text-sm text-gray-700 flex-1">
+                              {feature}
+                            </span>
+                            {showTooltip.includes(feature) && (
+                              <div className="relative  group ml-[5px]">
+                                {/* Info Icon */}
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  className="w-4 h-4 text-gray-400 cursor-pointer"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke="currentColor"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z"
+                                  />
+                                </svg>
+
+                                {/* Tooltip */}
+                                <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 text-xs text-white bg-gray-900 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10">
+                                  {feature === "Advanced performance reports"
+                                    ? "Advanced"
+                                    : feature}
+                                </span>
+                              </div>
+                            )}
                           </div>
                         </div>
                       ))}
@@ -660,17 +719,46 @@ export default function PlanPricing() {
                   className={`rounded-2xl shadow-sm p-6 -mt-16 relative z-0 border-2 w-full max-w-[345px] ${plan.borderColor}`}
                   style={{
                     height: "600px",
-                    overflowY: "auto",
+                    // overflowY: "auto",
                     backgroundColor: plan.bgColor || "#E8E4E2",
                   }}
                 >
                   <div className="space-y-3 mt-[70px]">
                     {plan.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-start gap-3">
+                      <div key={idx} className="flex items-center gap-3">
                         <Check className="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-gray-700 flex-1">
-                          {feature}
-                        </span>
+
+                        <div className="text-sm text-gray-700 flex items-center ">
+                          <span className="text-sm text-gray-700 flex-1">
+                            {feature}
+                          </span>
+                          {showTooltip.includes(feature) && (
+                            <div className="relative  group ml-[5px]">
+                              {/* Info Icon */}
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="w-4 h-4 text-gray-400 cursor-pointer"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z"
+                                />
+                              </svg>
+
+                              {/* Tooltip */}
+                              <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 text-xs text-white bg-gray-900 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10">
+                                {feature === "Advanced performance reports"
+                                  ? "Advanced"
+                                  : feature}
+                              </span>
+                            </div>
+                          )}
+                        </div>
                       </div>
                     ))}
                   </div>
