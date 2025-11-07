@@ -67,12 +67,6 @@ export default function FeaturesSection() {
 
   return (
     <section className="py-10 sm:py-14 lg:py-20 px-4 sm:px-8 lg:px-16 ">
-      <div className="flex justify-center">
-        <div className="inline-block border border-gray-300 bg-white rounded-full px-4 py-1 text-sm text-gray-700 font-bold whitespace-normal break-words">
-          Features
-        </div>
-      </div>
-
       {/* Heading */}
 
       <div className="px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
