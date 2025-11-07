@@ -36,19 +36,19 @@ const Ourfeature: React.FC<OurfeatureProps> = ({ text }) => {
             <div className="w-full md:w-3/5">
               {/* <MultiCampaignCard /> */}
 
-              <div className="hidden lg:block">
+              <div className="block">
                 <MultiCampaignCardDesktop />
               </div>
 
               {/* Tablet: md to lg */}
-              <div className="hidden md:block lg:hidden">
+              {/* <div className="hidden md:block lg:hidden">
                 <MultiCampaignCardTablet />
-              </div>
+              </div> */}
 
               {/* Mobile: below md */}
-              <div className="block md:hidden">
+              {/* <div className="block md:hidden">
                 <MultiCampaignCardMobile />
-              </div>
+              </div> */}
             </div>
             <div className="w-full md:w-2/5">
               <WhatsAppAgentCard />
