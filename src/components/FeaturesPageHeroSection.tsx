@@ -49,8 +49,7 @@ export default function FeaturesPageHeroSection() {
                 }}
                 className="px-8 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition font-medium flex items-center gap-2 group"
               >
-                Experience Now
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
+                Get Yours Now
               </button>
             </div>
           </div>

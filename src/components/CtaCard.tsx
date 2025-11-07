@@ -118,7 +118,7 @@ export default function CtaCard({
             </div>
 
             {/* Desktop View */}
-            <div className="hidden sm:flex flex-row items-center justify-center gap-6">
+            <div className="hidden sm:flex flex-row items-center justify-center gap-[10px]">
               {/* Free Trial */}
               <div className="flex flex-row items-center gap-2"></div>
 
@@ -144,6 +144,11 @@ export default function CtaCard({
                   No credit card required
                 </span>
               </div>
+
+              <div
+                className="w-[8px] h-[8px] opacity-100 rounded-[4px] bg-[#DED8D3]
+"
+              ></div>
 
               {/* Cancel Anytime */}
               <div className="flex flex-row items-center gap-2">

@@ -132,9 +132,9 @@ const AgenticAIHero = () => {
                 . When a lead hesitates, SalesBot doesn’t freeze or send generic
                 replies – it uses{" "}
                 <span className="font-semibold text-gray-800">
-                  context, behavior signals, and offers nudges
+                  context, behavior signals, and offers nudges to move them
+                  forward.
                 </span>{" "}
-                to move them forward.
               </p>
 
               {/* Highlights */}

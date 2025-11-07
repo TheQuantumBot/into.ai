@@ -1,9 +1,7 @@
 "use client";
 import { useState } from "react";
-import Button from "./Button";
-import ButtonPrimary from "./Button-primary";
 
-export default function PricingRechargeModel() {
+export default function PricingRechargeModel({ setIsYearlyStatus }: any) {
   const [isYearly, setIsYearly] = useState(false);
   return (
     <div className="max-w-7xl mx-auto">
@@ -17,9 +15,16 @@ export default function PricingRechargeModel() {
             <h3 className="text-center text-[16px] leading-[100%] md:text-[18px] lg:text-[24px] lg:leading-[28px] font-[600] text-[#1E1E1E]">
               Starting at ₹10 | ₹3.6/credit
             </h3>
+            <div>
+              <button className="flex justify-center items-center w-[145px] h-[48px] opacity-100 rounded-[8px] text-[rgba(255,255,255,1)] bg-[linear-gradient(90deg,#35A1DA_-207.85%,#D4549F_-28.59%,#F15A22_136.87%)] font-inter-tight font-medium text-[16px] leading-[24px] text-center align-middle">
+                Recharge
+              </button>
+            </div>
             {/* Subtext */}
             <p className="text-center text-[16px] leading-[100%] lg:text-[18px] lg:leading-[24px] text-[#4C4C4C] max-w-2xl mx-auto">
-              Perfect For: Freelancers, startups, or early-stage businesses testing AI-led conversations. No commitments, no contracts just top-up and go. 
+              Perfect For: Freelancers, startups, or early-stage businesses
+              testing AI-led conversations. No commitments, no contracts just
+              top-up and go.
             </p>
           </div>
           {/* </div> */}
@@ -30,7 +35,7 @@ export default function PricingRechargeModel() {
                 !isYearly ? "text-gray-900" : "text-gray-500"
               }`}
             >
-              Billed Monthly
+              Billed Monthly (5% OFF)
             </span>
 
             {/* Gradient Border */}
@@ -42,7 +47,10 @@ export default function PricingRechargeModel() {
               }}
             >
               <button
-                onClick={() => setIsYearly(!isYearly)}
+                onClick={() => {
+                  setIsYearly(!isYearly);
+                  setIsYearlyStatus(!isYearly);
+                }}
                 className="relative inline-flex h-6 w-11 items-center rounded-full focus:outline-none transition-all duration-300 ease-in-out"
                 style={{
                   backgroundColor: isYearly ? "#ffffff" : "#111111", // track color
@@ -63,7 +71,7 @@ export default function PricingRechargeModel() {
                 isYearly ? "text-gray-900" : "text-gray-500"
               }`}
             >
-              Billed yearly (Save 20%)
+              Billed yearly (10% OFF)
             </span>
           </div>
         </div>
