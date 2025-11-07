@@ -564,7 +564,7 @@ export default function PlanPricing({ isYearly }: any) {
                       "linear-gradient(90deg, #35A1DA -207.85%, #D4549F -28.59%, #F15A22 136.87%)",
                   }}
                 >
-                  5% Off
+                  {isYearly ? "10% off" : "5% Off"}
                 </span>
               )}
 
