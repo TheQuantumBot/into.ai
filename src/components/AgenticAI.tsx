@@ -116,25 +116,25 @@ const AgenticAIHero = () => {
 
               {/* Subheading */}
               <p className="!my-2">
-                <span className="font-inter-tight font-medium text-[18px] leading-[26px] align-middle text-gray-400">
+                <span className="font-inter-tight font-medium text-[18px] leading-[26px] align-middle text-[rgba(128,128,128,1)]">
                   Most bots follow commands, SalesBot makes{" "}
                 </span>
-                <span className="font-inter-tight font-bold text-[18px] leading-[26px] align-middle text-gray-700">
+                <span className="font-inter-tight font-bold text-[18px] leading-[26px] align-middle text-[rgba(76,76,76,1)]">
                   decisions{" "}
                 </span>
               </p>
 
               {/* Description */}
-              <p className="text-[17px] text-gray-600 leading-relaxed">
+              <p className="text-[17px] text-[rgba(76,76,76,1)] leading-relaxed">
                 It analyzes intent, asks the right questions, and guides every
                 chat toward one outcome –
                 <span className="font-semibold text-gray-800"> conversion</span>
                 . When a lead hesitates, SalesBot doesn’t freeze or send generic
                 replies – it uses{" "}
                 <span className="font-semibold text-gray-800">
-                  context, behavior signals, and offers nudges
+                  context, behavior signals, and offers nudges to move them
+                  forward.
                 </span>{" "}
-                to move them forward.
               </p>
 
               {/* Highlights */}
