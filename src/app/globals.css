@@ -35,12 +35,14 @@ body {
 }
 
 .gradient-text {
-  background-image: linear-gradient(90deg,
-      #35a1da 0.24%,
-      #847bbd 25.46%,
-      #e8584b 50.67%,
-      #584f9e 75.88%,
-      #ce4c9b 101.09%);
+  background-image: linear-gradient(
+    90deg,
+    #35a1da 0.24%,
+    #847bbd 25.46%,
+    #e8584b 50.67%,
+    #584f9e 75.88%,
+    #ce4c9b 101.09%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -78,7 +80,6 @@ body {
   animation: infinite-scroll 12s linear infinite;
 }
 
-
 @keyframes orbit-spin {
   from {
     transform: rotate(0deg);
@@ -91,4 +92,13 @@ body {
 
 .orbit-rotate {
   animation: orbit-spin 20s linear infinite;
+}
+
+/* Hide scrollbar but keep scroll functionality */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

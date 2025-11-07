@@ -15,7 +15,7 @@ import Testimonial from "@/components/Testimonial";
 import CtaCard from "@/components/CtaCard";
 import Footer from "@/components/Footer";
 import Heros from "@/components/Heros";
-import HomePageHeroSection from "@/components/HomePageHeroSection";
+import { IndustriesSlider } from "@/components/IndustriesSlider";
 
 export default function HomePage() {
   return (
@@ -58,15 +58,29 @@ export default function HomePage() {
 
           {/* Hero Section */}
           <div className="flex-1 flex items-center md:items-end lg:items-center justify-center px-6 sm:px-8 lg:px-12 pt-12 sm:pt-8 md:pt-4 lg:pt-0 relative z-30 mt-8 sm:mt-12 md:mt-0">
-            <HomePageHeroSection
+            <Heros
               title={`
-               <span class="text-[#111111] mr-[10px]">Let your</span>
-                <span class="gradient-text" style="letter-spacing: 2px">Agentic AI</span>
-                <span class="text-[#111111] ml-[10px]">find,</span><br />
+               <span class="text-[#111111] mr-[10px]">Turn</span> <span class='gradient-text' style="letter-spacing: 2px;">Every Lead</span><br />
                 <span class="flex flex-wrap items-center justify-center gap-[10px]">
-                  <span class="text-[#111111]">Follow, & Finalize your next client </span>
-                </span>
-`}
+<span class="text-[#111111] ">into </span> <span class='gradient-text'>Revenue</span> <span class="text-[#111111] ">with </span> 
+
+<span class='relative font-semibold  text-[#FFFFFF] flex items-center justify-center h-[50px] w-[50px] md:h-[60px] text-[26px] md:text-[30px] md:w-[60px] lg:text-[40px] lg:h-[70px] lg:w-[70px] rounded-xl shadow-md bg-[linear-gradient(95.7deg,_#35A1DA_-101.6%,_#857BBD_-31.24%,_#E8584B_39.11%,_#584F9E_109.47%,_#CE4C9B_179.82%)]'
+      style='
+        perspective:400px;
+        transform:rotateX(10deg) rotateY(-10deg);
+        box-shadow:0 8px 20px rgba(0,0,0,0.25);
+      '>
+
+  <svg class='absolute top-[5.49px] left-[5.49px]' width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <path d='M14.3533 0.412364C14.3228 0.294334 14.2539 0.189785 14.1576 0.115144C14.0612 0.0405027 13.9427 0 13.8208 0C13.6989 0 13.5805 0.0405027 13.4841 0.115144C13.3877 0.189785 13.3188 0.294334 13.2883 0.412364C13.1203 1.08236 12.8833 1.53136 12.5623 1.85136C12.2423 2.17136 11.7943 2.40836 11.1243 2.57636C11.0058 2.60652 10.9008 2.6753 10.8258 2.77182C10.7507 2.86834 10.71 2.98711 10.71 3.10936C10.71 3.23162 10.7507 3.35039 10.8258 3.44691C10.9008 3.54343 11.0058 3.6122 11.1243 3.64236C11.7943 3.80936 12.2423 4.04736 12.5633 4.36736C12.8833 4.68736 13.1203 5.13536 13.2883 5.80536C13.3188 5.92339 13.3877 6.02794 13.4841 6.10258C13.5805 6.17723 13.6989 6.21773 13.8208 6.21773C13.9427 6.21773 14.0612 6.17723 14.1576 6.10258C14.2539 6.02794 14.3228 5.92339 14.3533 5.80536C14.5213 5.13536 14.7583 4.68736 15.0793 4.36736C15.3993 4.04736 15.8473 3.80936 16.5173 3.64236C16.6358 3.6122 16.7408 3.54343 16.8159 3.44691C16.8909 3.35039 16.9316 3.23162 16.9316 3.10936C16.9316 2.98711 16.8909 2.86834 16.8159 2.77182C16.7408 2.6753 16.6358 2.60652 16.5173 2.57636C15.8473 2.40836 15.3993 2.17136 15.0783 1.85136C14.7583 1.53136 14.5213 1.08336 14.3533 0.412364ZM5.84031 6.72836C5.81015 6.60989 5.74138 6.50484 5.64486 6.42981C5.54833 6.35478 5.42957 6.31405 5.30731 6.31405C5.18506 6.31405 5.06629 6.35478 4.96977 6.42981C4.87325 6.50484 4.80447 6.60989 4.77431 6.72836C4.44931 8.02636 3.97631 8.94536 3.30431 9.61836C2.63031 10.2924 1.71131 10.7644 0.414313 11.0894C0.295838 11.1195 0.19079 11.1883 0.115761 11.2848C0.040732 11.3813 0 11.5001 0 11.6224C0 11.7446 0.040732 11.8634 0.115761 11.9599C0.19079 12.0564 0.295838 12.1252 0.414313 12.1554C1.71131 12.4794 2.63031 12.9524 3.30431 13.6254C3.97631 14.2994 4.44931 15.2174 4.77431 16.5154C4.80447 16.6338 4.87325 16.7389 4.96977 16.8139C5.06629 16.8889 5.18506 16.9297 5.30731 16.9297C5.42957 16.9297 5.54833 16.8889 5.64486 16.8139C5.74138 16.7389 5.81015 16.6338 5.84031 16.5154C6.16431 15.2174 6.63731 14.2994 7.31031 13.6254C7.98331 12.9524 8.90231 12.4794 10.2003 12.1554C10.3188 12.1252 10.4238 12.0564 10.4989 11.9599C10.5739 11.8634 10.6146 11.7446 10.6146 11.6224C10.6146 11.5001 10.5739 11.3813 10.4989 11.2848C10.4238 11.1883 10.3188 11.1195 10.2003 11.0894C8.90231 10.7644 7.98331 10.2924 7.31031 9.61936C6.63731 8.94536 6.16431 8.02536 5.84031 6.72836Z' fill='white'/>
+  </svg>
+
+  <span style='
+    display:inline-block;
+    text-shadow:2px 2px 3px rgba(0,0,0,0.4);
+    transform:translateZ(20px);
+  '>AI</span>
+</span></span>`}
               description="Launch campaigns across LinkedIn, Meta & WhatsApp. Our Ai Agent engages every Lead 24/7, qualifying prospects and turning conversations into customers while you sleep."
               primaryButtonText="Watch Demo"
               secondaryButtonText="Get Yours Now"
@@ -76,7 +90,7 @@ export default function HomePage() {
 
           {/* Floating Cards - Hidden on mobile and tablet */}
           {/* Conversation Card */}
-          <div className="hidden md:block  w-auto h-auto absolute top-[250px] left-[100px] md:top-[190px] md:left-[145px] rotate-[6deg] xl:rotate-[6deg]">
+          <div className="hidden md:block  w-auto h-auto absolute top-[250px] left-[100px] md:top-[116px] md:left-[16px] rotate-[6deg] xl:rotate-[10deg]">
             <Conversation_card />
             <div className="relative">
               <div className="absolute bottom-[-18px] lg:bottom-[-35px] xl:bottom-[-45px] left-[120px] lg:left-[105px] xl:left-[260px] w-[42px] h-[42px] lg:w-16 lg:h-16 border-[2px] border-[#EFEFEF] rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center shadow-[0_8px_30px_rgba(255,102,0,0.3)] -rotate-[10deg]">
@@ -152,7 +166,7 @@ export default function HomePage() {
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <IntegrationPlatform />
       </div>
-
+      <IndustriesSlider />
       <div className="flex items-center justify-center bg-[#F6F5F4] z-30 py-8 sm:py-10 px-4">
         <Testimonial text="Testimonial" />
       </div>
