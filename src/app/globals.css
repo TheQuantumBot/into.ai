@@ -92,3 +92,6 @@ body {
 .orbit-rotate {
   animation: orbit-spin 20s linear infinite;
 }
+.interTight  {
+    font-family: "Inter Tight", sans-serif;
+  }
