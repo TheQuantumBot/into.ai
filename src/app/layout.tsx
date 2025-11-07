@@ -12,9 +12,6 @@ const interTight = Inter_Tight({
 export const metadata: Metadata = {
   title: "Into AI",
   description: "Into AI",
-  icons: {
-    icon: "/favicon.ico", // this is the correct way to set favicon in App Router
-  },
 };
 
 export default function RootLayout({
@@ -24,6 +21,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
+
       <body className={`${interTight.className} bg-[#111] antialiased`}>
         <ClickSpark
           sparkColor="#ce4c9b"
@@ -34,6 +35,7 @@ export default function RootLayout({
           extraScale={1.2}
         />
         {children}
+        {/* <NextScript /> */}
       </body>
     </html>
   );
