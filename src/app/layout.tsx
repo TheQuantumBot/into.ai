@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import { Html, Head, Main, NextScript } from "next/document";
-
 import "./globals.css";
 import { Inter_Tight } from "next/font/google";
 import ClickSpark from "@/components/ClickSpark";

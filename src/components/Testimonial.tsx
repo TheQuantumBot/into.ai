@@ -3,6 +3,7 @@ import Badge from "@/components/Badge";
 import Hero from "./Hero";
 import TestimonialCard from "./TestimonialCard";
 import Heros from "./Heros";
+import DynamicGradientText from "./DynamicGradientText";
 
 interface TestimonialProps {
   text: string;
@@ -62,18 +63,13 @@ const Testimonial: React.FC<TestimonialProps> = ({ text }) => {
 
   return (
     <div className="w-full flex flex-col items-center justify-center py-12 text-black text-lg font-medium space-y-6 relative px-0">
-      <div className="px-4 sm:px-6 lg:px-8">
-        <Badge text="Testimonial" />
-      </div>
-
-      <div className="px-4 sm:px-6 lg:px-8">
-        <Heros
-          title={`<span class="gradient-text mr-[10px]">Trusted by </span> Sales Teams Worldwide`}
-          description={
-            "Sales teams across the globe rely on powerful AI solutions to drive growth, build trust, and achieve lasting success."
-          }
-        />
-      </div>
+      <DynamicGradientText
+        badgeText={"Testimonial"}
+        title={`<span class="gradient-text mr-[10px]">Trusted by </span> Sales Teams Worldwide`}
+        description={
+          "Sales teams across the globe rely on powerful AI solutions to drive growth, build trust, and achieve lasting success."
+        }
+      />
 
       {/* Scroll wrapper */}
       <div className="relative w-full py-8 px-0">

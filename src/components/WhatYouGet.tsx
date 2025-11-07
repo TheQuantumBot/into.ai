@@ -15,7 +15,7 @@ const WhatYouGet = () => {
 
         {/* ===== LEFT SIDE - Circle Section ===== */}
         <div className="flex-1 flex justify-center items-center min-w-0 order-2 lg:order-1">
-          <div className="relative w-[300px] h-[300px] lg:w-[400px] lg:h-[400px]">
+          <div className="relative w-[270px] h-[270px] sm:w-[300px] sm:h-[300px] md:w-[320px] md:h-[320px] lg:w-[330px] lg:h-[330px]">
             {/* Center Circle */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="rounded-xl flex items-center justify-center ">
@@ -32,7 +32,7 @@ const WhatYouGet = () => {
             <div className="absolute inset-0 flex items-center justify-center">
               {/* LinkedIn */}
               <div
-                className="absolute top-4 left-16 transform -translate-x-1/2 animate-float"
+                className="absolute -top-[5%] left-[7%] transform -translate-x-1/2 animate-float"
                 style={{ animationDelay: "0.7s" }}
               >
                 <div className="bg-white p-3 rounded-full shadow-sm">
@@ -52,7 +52,7 @@ const WhatYouGet = () => {
 
               {/* Meta */}
               <div
-                className="absolute bottom-1/4 right-5 transform translate-y-1/2 animate-float"
+                className="absolute -bottom-3 -right-5 transform translate-y-1/2 animate-float"
                 style={{ animationDelay: "1s" }}
               >
                 <div className="bg-white p-3 rounded-full shadow-sm">
@@ -62,7 +62,7 @@ const WhatYouGet = () => {
 
               {/* Instagram */}
               <div
-                className="absolute top-3/4 left-5 transform -translate-x-1/2 animate-float"
+                className="absolute top-full left-0 transform -translate-x-1/2 animate-float"
                 style={{ animationDelay: "1.5s" }}
               >
                 <div className="bg-white p-3 rounded-full shadow-sm">
@@ -77,7 +77,7 @@ const WhatYouGet = () => {
 
               {/* Messenger */}
               <div
-                className="absolute bottom-1/2 left-0 transform translate-y-1/2 animate-float"
+                className="absolute bottom-1/2 -left-2.5 transform translate-y-1/2 animate-float"
                 style={{ animationDelay: "0.5s" }}
               >
                 <div className="bg-white p-3 rounded-full shadow-sm">
@@ -134,10 +134,7 @@ const WhatYouGet = () => {
                   className="flex items-start space-x-3 text-left w-full"
                 >
                   {/* Gradient Check Icon */}
-                  <div
-                    className="flex-shrink-0 w-8 h-8 p-[2px] flex items-center justify-center rounded-[10px] shadow-md 
-      bg-[linear-gradient(90deg,#35A1DA_0.24%,#847BBD_25.46%,#E8584B_50.67%,#584F9E_75.88%,#CE4C9B_101.09%)]"
-                  >
+                  <div className="flex-shrink-0 w-8 h-8 p-[2px] flex items-center justify-center rounded-[10px] shadow-md bg-[linear-gradient(90deg,#35A1DA_0.24%,#847BBD_25.46%,#E8584B_50.67%,#584F9E_75.88%,#CE4C9B_101.09%)]">
                     <div className="bg-black rounded-[10px] w-full h-full flex items-center justify-center">
                       <Image
                         src="/check.svg"
