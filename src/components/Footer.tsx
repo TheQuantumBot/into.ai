@@ -110,9 +110,9 @@ export default function Footer() {
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-12 mb-12">
           {/* Brand Section */}
-          <div className="md:col-span-4 lg:col-span-1 space-y-6">
+          <div className="md:col-span-4 lg:col-span-2 space-y-6">
             <div>
               <svg
                 width="142"
@@ -295,7 +295,7 @@ export default function Footer() {
               </p>
             </div>
             <div className="space-y-3">
-              <div className="flex items-start space-x-3 text-gray-400 text-sm">
+              <div className="flex items-start space-x-3 text-[#DDDDDD] text-sm">
                 <svg
                   width="20"
                   height="20"
@@ -322,13 +322,13 @@ export default function Footer() {
                 </svg>
 
                 <span className="flex flex-col">
-                  <span>Main Headquarter:</span>
+                  <span className="font-[500]">Main Headquarter:</span>
                   <span>
                     1521 Concord Pike, Suite 201, Wilmington, Delaware-19803
                   </span>
                 </span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-400 text-sm">
+              <div className="flex items-center space-x-3 text-[#DDDDDD] text-sm">
                 <svg
                   width="21"
                   height="21"
@@ -347,15 +347,17 @@ export default function Footer() {
                 <span>+1 (940) 367-6376</span>
               </div>
             </div>
+              <div className="h-[1px] bg-[#3D3D3D] w-[auto]"></div>
 
             <div className="space-y-3">
-              <div className="flex items-start space-x-3 text-gray-400 text-sm">
+              <div className="flex items-start space-x-3 text-[#DDDDDD] text-sm">
                 <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  className="w-12 h-12"
                 >
                   <mask
                     id="mask0_5226_35005"
@@ -591,16 +593,16 @@ export default function Footer() {
                 </svg>
 
                 <span className="flex flex-col">
-                  <span>Asia-Pacific Headquarter:</span>
+                  <span className="font-[500]">Asia-Pacific Headquarter:</span>
                   <span>
                     1113 to 1115, Sankalp Square 3B, Sindhu Bhavan Rd, beside
                     Taj Skyline, PRL Colony, Thaltej, Ahmedabad, Gujarat 380058
                   </span>
                 </span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-400 text-sm">
-                <span className="flex items-center ">
-                  <span className="flex items-center ">
+              <div className="flex items-center space-x-3 text-[#DDDDDD] text-sm">
+                <span className="flex items-center gap-[8px]">
+                  <span className="flex items-center gap-[10px]">
                     {" "}
                     <svg
                       width="21"
@@ -618,7 +620,7 @@ export default function Footer() {
                     </svg>
                     <span className="text-[14px]">+91 8849 701120</span>
                   </span>
-                  <span className="flex items-center ">
+                  <span className="flex items-center gap-[10px]">
                     {" "}
                     <svg
                       width="24"
