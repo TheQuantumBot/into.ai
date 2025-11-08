@@ -18,7 +18,7 @@ export default function HeroBox() {
                 </p>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-[600] text-gray-900 leading-tight">
                 Become an{" "}
                 <span className="bg-[linear-gradient(89.89deg,#35A1DA_0.24%,#857BBD_25.46%,#E8584B_50.67%,#584F9E_75.88%,#CE4C9B_101.09%)] bg-clip-text text-transparent">
                   Into AI

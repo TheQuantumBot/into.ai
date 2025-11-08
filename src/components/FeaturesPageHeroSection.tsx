@@ -14,7 +14,7 @@ export default function FeaturesPageHeroSection() {
           {/* Left Content */}
           <div className="space-y-5">
             <div className="space-y-4">
-              <h1 className="text-2xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+              <h1 className="text-2xl sm:text-5xl lg:text-6xl font-[600] text-gray-900 leading-[66px]">
                 Conversations Built to <br /> Convert -{" "}
                 <span className="gradient-text bg-clip-text text-transparent">
                   Not Just Talk

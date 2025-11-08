@@ -14,11 +14,13 @@ interface HeroProps {
   secondaryButtonText?: string;
   primaryButtonHref?: string | any;
   secondaryButtonHref?: string | any;
+  lineHeight?: string;
 }
 
 export default function Heros({
   title,
   className,
+  lineHeight,
   description,
   primaryButtonText,
   secondaryButtonText,
@@ -28,7 +30,7 @@ export default function Heros({
   const router = useRouter();
   return (
     <section className="relative overflow-hidden">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-4 pb-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-4 pb-8 ">
         <div className="text-center max-w-[44rem] mx-auto">
           {/* Render Title if provided */}
 
@@ -38,7 +40,9 @@ export default function Heros({
               delay={150}
               animateBy="words"
               direction="top"
-              className={`text-4xl sm:text-5xl md:text-6xl font-bold text-center leading-tight ${className}`}
+              className={`text-4xl sm:text-5xl md:text-6xl font-[600] text-center ${
+                lineHeight ? `leading-[${lineHeight}]` : "leading-tight"
+              } ${className}`}
             />
           )}
 

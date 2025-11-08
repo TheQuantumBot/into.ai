@@ -723,14 +723,14 @@ export default function PartnerNetwork() {
       <Badge text="Why Join" />
 
       {/* Hero */}
-      <div className="w-full flex flex-col items-center justify-center">
+      <div className="w-full flex flex-col items-center justify-center font font-[600]">
         <Heros
-          title={` 
+          title={`
               <span class='space-x-1'>
-      <span>The</span>
-      <span class="gradient-text">Into AI</span>
-      <span>Partner Network?</span>
-    </span>
+                 <span>The</span>
+                 <span class="gradient-text">Into AI</span>
+                 <span>Partner Network?</span>
+              </span>
            `}
           description="This isn’t a typical referral program. It’s a partnership built for long term earning and shared success. As a Channel Partner, you get"
         />
