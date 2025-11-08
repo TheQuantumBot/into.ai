@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Badge from "@/components/Badge";
 import Hero from "./Hero";
 import ProcessSection from "./ProcessSection";
@@ -106,15 +108,17 @@ const faqData = [
   },
 ];
 const PricingPlans: React.FC<PricingPlansProps> = ({ text }) => {
+  const [isYearly, setIsYearly] = useState(false);
+
   return (
     <div className="w-full flex flex-col items-center justify-center px-6 py-3 text-black text-lg font-medium space-y-6">
       <div>
         <Badge text="Pricing & Plans" />
       </div>
       <div className="w-full items-center justify-center ">
-        <PricingRechargeModel />
+        <PricingRechargeModel setIsYearlyStatus={setIsYearly} />
 
-        <PricingCard />
+        <PricingCard isYearly={isYearly} />
 
         <div className="w-full">
           <BecameAPartnerFaq faqs={faqData as any} />

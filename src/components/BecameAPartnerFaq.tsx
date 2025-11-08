@@ -77,7 +77,7 @@ export default function BecameAPartnerFaq({ faqs }: { faqs: FAQType[] }) {
   const rightColumnFaqs = faqs.slice(Math.ceil(faqs.length / 2));
 
   return (
-    <div className="py-12 px-4 sm:px-6 lg:px-8">
+    <div id="faqs" className="py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <Badge text="FAQs" />
