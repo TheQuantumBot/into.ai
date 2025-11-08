@@ -20,7 +20,7 @@ const cards = [
     title: "3. Promote & connect us with leads",
   },
   {
-    img: "/infographic.png",
+    img: "/infographic.svg",
     title: "4. Earn commissions + track earnings live",
   },
 ];
