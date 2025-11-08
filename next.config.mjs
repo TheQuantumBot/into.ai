@@ -5,6 +5,7 @@ const nextConfig = {
     optimizePackageImports: ["react", "react-dom"],
   },
   output: "export",
+  trailingSlash: true,
 };
 
 export default nextConfig;
