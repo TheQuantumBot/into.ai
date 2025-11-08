@@ -631,10 +631,7 @@ export default function PlanPricing({ isYearly }: any) {
                       </Button>
 
                       {plan?.credits && (
-                        <div
-                          className="flex mt-[30px] font-[500] text-[16px] leading-[26px] gap-[4px] items-center
-"
-                        >
+                        <div className="flex mt-[30px] font-[500] text-[16px] leading-[26px] gap-[4px] items-center">
                           <svg
                             width="12"
                             height="10"

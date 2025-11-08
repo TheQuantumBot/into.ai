@@ -5,11 +5,13 @@ interface DynamicGradientTextProps {
   badgeText?: string;
   title: string;
   description: string;
+  lineHeight?: string;
 }
 const DynamicGradientText = ({
   badgeText,
   title,
   description,
+  lineHeight,
 }: DynamicGradientTextProps) => {
   return (
     <>
@@ -19,8 +21,12 @@ const DynamicGradientText = ({
         </div>
       )}
 
-      <div className="px-4 sm:px-6 lg:px-8">
-        <Heros title={title} description={description} />
+      <div className="px-4 sm:px-6 lg:px-8 ">
+        <Heros
+          title={title}
+          description={description}
+          lineHeight={lineHeight}
+        />
       </div>
     </>
   );

@@ -19,7 +19,7 @@ export default function HumanStyleChat() {
               </div>
 
               <h2
-                className="text-[28px] sm:text-[40px] lg:text-[56px] font-bold leading-tight text-black 
+                className="text-[28px] sm:text-[40px] lg:text-[56px] font-[600] leading-tight text-black 
                whitespace-normal break-words w-full"
               >
                 Human-Style <br className="block sm:hidden" /> Conversations{" "}

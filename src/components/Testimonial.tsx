@@ -245,6 +245,7 @@ const Testimonial: React.FC<TestimonialProps> = ({ text }) => {
         description={
           "Sales teams across the globe rely on powerful AI solutions to drive growth, build trust, and achieve lasting success."
         }
+        lineHeight="66px"
       />
 
       {/* Scroll wrapper */}

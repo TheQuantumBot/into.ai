@@ -114,7 +114,7 @@ const LeadConversion = () => {
             </div>
 
             {/* Main heading */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-[600] text-gray-900 mb-4 leading-tight">
               Lead conversations are structured{" "}
               <span className="bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
                 to inform, nurture, and convert.
