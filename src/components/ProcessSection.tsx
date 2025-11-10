@@ -4,6 +4,7 @@ import Hero from "./Hero";
 import ProcessCard from "./ProcessCard";
 import IntegrationPlatform from "./IntegrationPlatform";
 import Heros from "./Heros";
+import DynamicGradientText from "./DynamicGradientText";
 
 interface ProcessSectionProps {
   text: string;
@@ -13,17 +14,22 @@ const ProcessSection: React.FC<ProcessSectionProps> = ({ text }) => {
   return (
     <div className="w-full flex flex-col items-center justify-center px-6 py-[100px] text-black text-lg font-medium space-y-[10px] bg-[#F1F0EE]">
       {/* Section Badge */}
-      <div>
+      {/* <div>
         <Badge text="Process" />
       </div>
 
+      <Heros
+        title={`<span class="[@media(max-width:375px)]:text-[34px]">How INTO AI</span> <br /> <span class="gradient-text  test-[60px] [@media(max-width:375px)]:text-[28px] [@media(max-width:375px)]:font-[600] [@media(max-width:375px)]:leading-[34px] [@media(max-width:1024px)]:leading-[52px]  [@media(max-width:1024px)]:text-[42px]" >Transforms Yours Sales</span>`}
+        description={`INTO AI automates sales and delivers real-time insights - helping you close deals faster.`}
+      /> */}
       {/* Hero Section */}
+      <DynamicGradientText
+        title={`<span class="[@media(max-width:375px)]:text-[34px]">How INTO AI</span> <br /> <span class="gradient-text  test-[60px] [@media(max-width:375px)]:text-[28px] [@media(max-width:375px)]:font-[600] [@media(max-width:375px)]:leading-[34px] [@media(max-width:1024px)]:leading-[52px]  [@media(max-width:1024px)]:text-[42px]" >Transforms Yours Sales</span>`}
+        description={`INTO AI automates sales and delivers real-time insights - helping you close deals faster.`}
+        badgeText="Process"
+        lineHeight={"66px"}
+      />
       <div className="w-full items-center justify-center">
-        <Heros
-          title={`<span class="[@media(max-width:375px)]:text-[34px]">How INTO AI</span> <br /> <span class="gradient-text  test-[60px] [@media(max-width:375px)]:text-[28px] [@media(max-width:375px)]:font-[600] [@media(max-width:375px)]:leading-[34px] [@media(max-width:1024px)]:leading-[52px]  [@media(max-width:1024px)]:text-[42px]" >Transforms Yours Sales</span>`}
-          description={`INTO AI automates sales and delivers real-time insights - helping you close deals faster.`}
-        />
-
         {/* Cards Wrapper */}
         <div className="max-w-[1542px]  mx-auto flex justify-center">
           <div className=" grid grid-cols-1 md:grid-cols-3 gap-8">

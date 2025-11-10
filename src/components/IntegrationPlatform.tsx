@@ -108,7 +108,7 @@ const IntegrationPlatform = () => {
             </div>
 
             {/* Title */}
-            <h2 className="text-4xl lg:text-6xl font-bold  leading-[110%] text-center lg:text-left [@media(max-width:375px)]:text-[24px]  [@media(max-width:375px)]:font-[600] [@media(max-width:375px)]:leading-[34px] ">
+            <h2 className="text-4xl lg:text-6xl font-[600] leading-[110%] text-center lg:text-left [@media(max-width:375px)]:text-[24px]  [@media(max-width:375px)]:font-[600] [@media(max-width:375px)]:leading-[34px] ">
               <span className="gradient-text">Integrate</span>{" "}
               <span className="text-black"> with your </span>
               <br></br> <span className="text-black">Favorite Platform</span>

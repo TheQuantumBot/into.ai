@@ -14,13 +14,11 @@ interface HeroProps {
   secondaryButtonText?: string;
   primaryButtonHref?: string | any;
   secondaryButtonHref?: string | any;
-  lineHeight?: string;
 }
 
-export default function Heros({
+export default function HomePageHeroSection({
   title,
   className,
-  lineHeight,
   description,
   primaryButtonText,
   secondaryButtonText,
@@ -30,8 +28,8 @@ export default function Heros({
   const router = useRouter();
   return (
     <section className="relative overflow-hidden">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-4 pb-8 ">
-        <div className="text-center max-w-[44rem] mx-auto">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-4 pb-8">
+        <div className="text-center mx-auto">
           {/* Render Title if provided */}
 
           {title && (
@@ -40,15 +38,13 @@ export default function Heros({
               delay={150}
               animateBy="words"
               direction="top"
-              className={`text-4xl sm:text-5xl md:text-6xl font-[600] text-center ${
-                lineHeight ? `leading-[${lineHeight}]` : "leading-tight"
-              } ${className}`}
+              className={`text-4xl sm:text-5xl md:text-6xl font-bold text-center leading-tight ${className}`}
             />
           )}
 
           {/* Render Description if provided */}
           {description && (
-            <Body className="mt-2 font-inter-tight font-medium text-[18px] leading-[24px] text-center align-middle !text-[#4C4C4C]">
+            <Body className="mt-2 font-inter-tight font-medium text-[18px] leading-[24px] max-w-[44rem] flex items-center justify-center mx-auto mt-[14px] align-middle !text-[#4C4C4C]">
               {description}
             </Body>
           )}
@@ -70,7 +66,7 @@ export default function Heros({
                 </div>
               )}
               {secondaryButtonText && (
-                <div>
+                <div className="flex">
                   <Button
                     onClick={() => {
                       if (secondaryButtonHref && secondaryButtonHref != "") {

@@ -1,5 +1,6 @@
 "use client";
 
+import Badge from "./Badge";
 import Button from "./Button";
 import FeatureCard from "./FeatureCard";
 import Heros from "./Heros";
@@ -67,9 +68,15 @@ export default function FeaturesSection() {
   return (
     <section className="py-10 sm:py-14 lg:py-20 px-4 sm:px-8 lg:px-16 ">
       {/* Heading */}
+
+      <div className="px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
+        <Badge text="Features" />
+      </div>
+
       <div className="w-full flex flex-col items-center justify-center mb-10">
         <Heros
-          title={`OUR CORE <span class="gradient-text">DIFFERENTIATORS</span>`}
+          className="text-black font-[600]"
+          title={`OUR CORE <span class="gradient-text ml-[6px]">Differentiators</span>`}
         />
       </div>
       {/* Feature Cards in two columns */}

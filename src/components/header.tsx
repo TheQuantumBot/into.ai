@@ -269,7 +269,7 @@ export default function Header() {
             <span>
               <Link href="https://salesbot.cloud/register" target="_self">
                 <Button className="md:text-[14px] md:leading-[24px] lg:text-lg min-w-[138px]">
-                  Start Free Trial
+                  Experience Now
                 </Button>{" "}
               </Link>
             </span>
@@ -328,7 +328,7 @@ export default function Header() {
             </Link>
 
             <Link href="https://salesbot.cloud/register" target="_self">
-              <Button>Start Free Trial</Button>{" "}
+              <Button>Experience Now</Button>{" "}
             </Link>
           </nav>
         </div>

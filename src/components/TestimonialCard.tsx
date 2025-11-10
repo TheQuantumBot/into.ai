@@ -58,6 +58,8 @@ interface TestimonialCardProps {
   company: string;
   avatar: string;
   testimonial: string;
+  companyLogo: any;
+  impect: any;
 }
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({
@@ -66,6 +68,8 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   company,
   avatar,
   testimonial,
+  companyLogo,
+  impect,
 }) => {
   return (
     <div
@@ -79,7 +83,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
         flex flex-col
         justify-between
         p-6
-        gap-[30px]
+        gap-[20px]
         shadow-sm
         transition-all
         duration-300
@@ -107,17 +111,12 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       <p className="text-gray-800 text-[14px] leading-relaxed flex-1">
         {testimonial}
       </p>
+      <p className="text-gray-800 text-[14px] leading-relaxed flex-1">
+        <span className="font-[700]">Impact:</span> {impect}
+      </p>
 
       {/* Quote Icon */}
-      <div>
-        <Image
-          src="/quote.svg"
-          alt="quote"
-          width={24}
-          height={24}
-          className="opacity-70"
-        />
-      </div>
+      <div>{companyLogo}</div>
     </div>
   );
 };
