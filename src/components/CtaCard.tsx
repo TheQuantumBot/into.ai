@@ -65,7 +65,6 @@ export default function CtaCard({
             )}
           </div>
 
-          {/* Features row */}
           <div className="mt-6 text-xs sm:text-sm lg:text-base text-gray-500">
             {/* Mobile View */}
             <div className="flex flex-col items-center gap-4 sm:hidden">
@@ -90,7 +89,6 @@ export default function CtaCard({
                   </svg>
                   <span className="whitespace-nowrap">Cancel anytime</span>
                 </div>
-                {/* No Credit Card Required */}
                 <div className="flex flex-row items-center gap-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -113,8 +111,6 @@ export default function CtaCard({
                   </span>
                 </div>
               </div>
-
-              {/* Second Row - Cancel Anytime */}
             </div>
 
             {/* Desktop View */}
