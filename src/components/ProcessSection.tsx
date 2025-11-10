@@ -41,7 +41,7 @@ const ProcessSection: React.FC<ProcessSectionProps> = ({ text }) => {
             />
             <ProcessCard
               step="02"
-              title="Ai Engages Leads"
+              title="AI Engages Leads"
               description="Our WhatsApp AI bot immediately engages every lead, qualifying prospects and nurturing them through personalized conversations."
               gradient="linear-gradient(87deg, #ffffff 0%, #8A43E1 12%, #8A43E1 100%)"
             />

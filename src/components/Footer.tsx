@@ -30,7 +30,7 @@ export default function Footer() {
   ];
 
   const supportLinks = [
-    { name: "Help Center", href: "/" },
+    { name: "Help Center", href: "/contact-us" },
     { name: "Privacy Policy", href: "/" },
   ];
   const socialLinks = [
@@ -327,7 +327,7 @@ export default function Footer() {
                 <span>+1 (940) 367-6376</span>
               </div>
             </div>
-              <div className="h-[1px] bg-[#3D3D3D] w-[auto]"></div>
+            <div className="h-[1px] bg-[#3D3D3D] w-[auto]"></div>
 
             <div className="space-y-3">
               <div className="flex items-start space-x-3 text-[#DDDDDD] text-sm">
