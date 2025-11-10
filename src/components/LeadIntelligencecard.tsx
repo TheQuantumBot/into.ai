@@ -3,7 +3,7 @@ import React from "react";
 
 export default function LeadIntelligencecard() {
   return (
-    <div className="bg-white rounded-3xl shadow-lg p-6 sm:p-8 h-auto md:h-[450px] lg:h-[490px] relative overflow-hidden">
+    <div className="bg-white rounded-3xl shadow-lg p-4 md:p-5 lg:p-[30PX] h-auto md:h-[450px] lg:h-[490px] relative overflow-hidden">
       {/* WhatsApp Icon and Chat Elements */}
 
       {/* Text Content */}

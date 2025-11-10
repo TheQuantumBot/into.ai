@@ -14,7 +14,7 @@ export default function ROIOptimization() {
           />
         </div>
       {/* Text Content */}
-      <div className=" p-6 sm:p-8">
+      <div className="p-4 md:p-5 lg:p-[30PX]">
         
         <h2 className="text-[16px] leading-[20px] md:text-[20px] md:leading-[26px] lg:text-[32px] lg:leading-[40px] font-[600] text-[#1E1E1E] mb-3 sm:mb-4">
           ROI Optimization
