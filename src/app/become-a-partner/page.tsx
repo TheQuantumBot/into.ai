@@ -67,6 +67,8 @@ export default function BecameAPartnerPage() {
           HeadingTitle={`Ready to Build a Future-Proof <span class="gradient-text">Future-Proof</span> </br> Income with AI?`}
           Description="Join the Into AI partner network and earn for every business you refer, today and every month after. No technical skills. No risk. Pure earning potential."
           secondaryButton="Start Earning"
+          primaryButtonHref="https://salesbot.cloud/register"
+          PrimaryButton="Contact Us"
         />
         <Footer />
       </div>

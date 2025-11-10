@@ -5,6 +5,7 @@ import Badge from "./Badge";
 import Hero from "./Hero";
 import RewardingCard from "./RewardingCard";
 import Heros from "./Heros";
+import DynamicGradientText from "./DynamicGradientText";
 
 const cards = [
   {
@@ -20,7 +21,7 @@ const cards = [
     title: "3. Promote & connect us with leads",
   },
   {
-    img: "/infographic.png",
+    img: "/infographic.svg",
     title: "4. Earn commissions + track earnings live",
   },
 ];
@@ -43,15 +44,22 @@ const Rewarding = () => {
         <Badge text="How It Works" />
       </div>
 
-      <div className="px-4 sm:px-6 lg:px-8 leading-[76px]">
+      <div className="px-4 sm:px-6 lg:px-8 font-[600] leading-[66px]">
         <Hero
-          title={`<span class="text-black text-[60px]">Simple, Transparent, Rewarding -</span> <span class="gradient-text text-[60px]">4 Steps to Start</span>`}
+          title={`<span class="text-black text-[60px]">Simple, Transparent, Rewarding -</span><span class="gradient-text text-[60px]">4 Steps to Start</span>`}
           description={
             "Everything is automated: onboarding, tracking, and payout system."
           }
         />
       </div>
-
+      {/* <DynamicGradientText
+        title={`<span class="text-black text-[60px]">Simple, Transparent, Rewarding -</span> <span class="gradient-text text-[60px]">4 Steps to Start</span>`}
+        badgeText="How It Works"
+        description={
+          "Everything is automated: onboarding, tracking, and payout system."
+        }
+        lineHeight="66px"
+      /> */}
       <div className="overflow-hidden w-full flex justify-center">
         <RewardingCard rewardContent={infiniteCards} current={current} />
       </div>

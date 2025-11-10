@@ -14,7 +14,7 @@ export default function FeaturesPageHeroSection() {
           {/* Left Content */}
           <div className="space-y-5">
             <div className="space-y-4">
-              <h1 className="text-2xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+              <h1 className="text-2xl sm:text-5xl lg:text-6xl font-[600] text-gray-900 leading-[66px]">
                 Conversations Built to <br /> Convert -{" "}
                 <span className="gradient-text bg-clip-text text-transparent">
                   Not Just Talk
@@ -22,7 +22,7 @@ export default function FeaturesPageHeroSection() {
               </h1>
             </div>
 
-            <p className="font-inter-tight font-semibold italic text-lg leading-[24px] text-gray-600 max-w-md flex">
+            <p className="font-inter-tight font-semibold italic text-lg leading-[24px] text-black max-w-md flex">
               <span className="flex flex-row gap-1">
                 {" "}
                 SalesBot isn’t here to “chat.”{" "}
@@ -34,7 +34,7 @@ export default function FeaturesPageHeroSection() {
               </span>
             </p>
 
-            <p className="text-lg	 text-gray-600 font-medium  leading-normal max-w-md">
+            <p className="text-lg	 text-[rgba(76,76,76,1)] font-medium  leading-normal max-w-md">
               It’s designed to understand leads, qualify them, handle
               objections, and close sales - just like your sharpest sales rep
               would. Powered by Agentic AI, it thinks, responds, and acts with
@@ -49,8 +49,7 @@ export default function FeaturesPageHeroSection() {
                 }}
                 className="px-8 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition font-medium flex items-center gap-2 group"
               >
-                Experience Now
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
+                Get Yours Now
               </button>
             </div>
           </div>

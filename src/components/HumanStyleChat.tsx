@@ -19,7 +19,7 @@ export default function HumanStyleChat() {
               </div>
 
               <h2
-                className="text-[28px] sm:text-[40px] lg:text-[56px] font-bold leading-tight text-black 
+                className="text-[28px] sm:text-[40px] lg:text-[56px] font-[600] leading-tight text-black 
                whitespace-normal break-words w-full"
               >
                 Human-Style <br className="block sm:hidden" /> Conversations{" "}
@@ -37,11 +37,11 @@ export default function HumanStyleChat() {
               </h2>
 
               <div className="mt-4 space-y-[14px]">
-                <p className="text-[16px] text-gray-600 leading-relaxed mt-2 whitespace-normal break-words">
+                <p className="text-[18px] text-[rgba(128,128,128,1)] leading-relaxed mt-2 whitespace-normal break-words">
                   Your customers shouldn't feel like they’re talking to a bot.
                 </p>
 
-                <p className="text-[16px] text-gray-600 leading-relaxed whitespace-normal break-words">
+                <p className="text-[18px] text-[rgba(128,128,128,1)] leading-relaxed whitespace-normal break-words">
                   SalesBot adapts to tone, reads context, and responds
                   thoughtfully, so conversations feel friendly, natural, and
                   consultative, not robotic.
@@ -220,7 +220,12 @@ export default function HumanStyleChat() {
                 <span className="text-black font-medium ">Feels human</span>
               </div>
               <div className="absolute bottom-[0px] right-[0px]  max-w-[155px] max-h-[260px]">
-                <Image src="/Rectangle18238.svg" alt="Arrow" width={200} height={100} />
+                <Image
+                  src="/Rectangle18238.svg"
+                  alt="Arrow"
+                  width={200}
+                  height={100}
+                />
               </div>
               <div className="absolute bottom-[0px] z-10 right-[0px] ">
                 <Image src="/woman.svg" alt="Arrow" width={220} height={331} />
