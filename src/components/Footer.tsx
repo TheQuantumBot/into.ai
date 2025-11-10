@@ -26,7 +26,7 @@ export default function Footer() {
   const productLinks = [
     { name: "Features", href: "/features" },
     { name: "Pricing", href: "/pricing" },
-    { name: "Become a Partner", href: "/" },
+    { name: "Become a Partner", href: "/become-a-partner" },
   ];
 
   const supportLinks = [
