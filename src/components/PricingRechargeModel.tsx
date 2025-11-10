@@ -1,8 +1,11 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function PricingRechargeModel({ setIsYearlyStatus }: any) {
   const [isYearly, setIsYearly] = useState(false);
+  const router = useRouter();
+
   return (
     <div className="max-w-7xl mx-auto">
       <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-5">
@@ -16,7 +19,12 @@ export default function PricingRechargeModel({ setIsYearlyStatus }: any) {
               Starting at ₹10 | ₹3.6/credit
             </h3>
             <div>
-              <button className="flex justify-center items-center w-[145px] h-[48px] opacity-100 rounded-[8px] text-[rgba(255,255,255,1)] bg-[linear-gradient(90deg,#35A1DA_-207.85%,#D4549F_-28.59%,#F15A22_136.87%)] font-inter-tight font-medium text-[16px] leading-[24px] text-center align-middle">
+              <button
+                onClick={() => {
+                  router.push("https://salesbot.cloud/register");
+                }}
+                className="flex justify-center items-center w-[145px] h-[48px] opacity-100 rounded-[8px] text-[rgba(255,255,255,1)] bg-[linear-gradient(90deg,#35A1DA_-207.85%,#D4549F_-28.59%,#F15A22_136.87%)] font-inter-tight font-medium text-[16px] leading-[24px] text-center align-middle"
+              >
                 Recharge
               </button>
             </div>
