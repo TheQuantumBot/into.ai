@@ -58,10 +58,9 @@ export default function HomePage() {
           </div>
 
           {/* Hero Section */}
-          <div className="flex-1 text-[28px] md:text-[42px] lg:text-[60px] leading-[50px] relative flex items-center md:items-end lg:items-center justify-center px-6 sm:px-8 lg:px-12 pt-12 sm:pt-8 md:pt-4 lg:pt-0 relative z-30 mt-8 sm:mt-12 md:mt-0">
+          <div className="flex-1 text-[28px] md:text-[42px] lg:text-[60px] leading-[50px] font-[600] relative flex items-center md:items-end lg:items-center justify-center px-6 sm:px-8 lg:px-12 pt-12 sm:pt-8 md:pt-4 lg:pt-0 relative z-30 mt-8 sm:mt-12 md:mt-0">
             <HomePageHeroSection
-              title={`
-               <span class="text-[#111111] mr-[10px] flex items-center h-[100%]">Let your</span>
+              title={`<span class="text-[#111111] mr-[10px] flex items-center h-[100%]">Let your</span>
 
                 <span class='relative font-semibold py-[6px]  px-[22px] lg:py-[15px]  lg:px-[15px] md:py-[10px]  md:px-[22px]  text-[#FFFFFF] flex items-center justify-center  text-[28px] md:text-[42px] lg:text-[60px]  rounded-xl shadow-md bg-[linear-gradient(95.7deg,_#35A1DA_-101.6%,_#857BBD_-31.24%,_#E8584B_39.11%,_#584F9E_109.47%,_#CE4C9B_179.82%)]'
       style='
@@ -82,7 +81,7 @@ export default function HomePage() {
 
                 <span class="flex items-center h-[100%] text-[#111111] ml-[10px]">find,</span><br />
                 <span class="flex items-center h-[100%] flex flex-wrap items-center justify-center gap-[10px]">
-                  <span class="flex items-center h-[100%] text-[#111111]">Follow & Finalize your next client </span>
+                  <span class="flex items-center h-[100%] text-[#111111]">Follow & Finalize your next  </span> <span class="gradient-text">Client </span>
                 </span>
                 
 `}
@@ -182,7 +181,7 @@ export default function HomePage() {
       <div className="flex items-center justify-center bg-[#F6F5F4] z-30 py-8 sm:py-10 px-4">
         <CtaCard
           HeadingTitle={`Ready to <span class="gradient-text">10X</span> Your Sales?`}
-          Description="    Thousands of business already using INTO AI to transform their lead
+          Description="Thousands of business already using INTO AI to transform their lead
             generation and conversion."
           PrimaryButton="Watch Demo"
           secondaryButton="Experience Now"

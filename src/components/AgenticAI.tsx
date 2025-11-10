@@ -107,7 +107,7 @@ const AgenticAIHero = () => {
                 <Badge text="Agentic AI" />
               </div>
               {/* Main Heading */}
-              <h1 className="text-[40px] sm:text-[50px] lg:text-[56px] font-bold leading-[1.1] text-black">
+              <h1 className="text-[40px] sm:text-[50px] lg:text-[56px] font-[600] leading-[1.1] text-black">
                 <span className="bg-[linear-gradient(89.89deg,#35A1DA_0.24%,#857BBD_25.46%,#E8584B_50.67%,#584F9E_75.88%,#CE4C9B_101.09%)] bg-clip-text text-transparent">
                   Agentic AI
                 </span>{" "}
