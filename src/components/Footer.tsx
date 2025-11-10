@@ -36,7 +36,7 @@ export default function Footer() {
   const socialLinks = [
     {
       name: "LinkedIn",
-      href: "#",
+      href: "https://www.linkedin.com/company/intoaipvtltd/",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +54,7 @@ export default function Footer() {
     },
     {
       name: "Instagram",
-      href: "#",
+      href: "https://www.instagram.com/__intoai?igsh=MTRuNGN4eTI3M2RucQ%3D%3D&utm_source=qr",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -324,7 +324,9 @@ export default function Footer() {
                   />
                 </svg>
 
-                <span>+1 (940) 367-6376</span>
+                <span>
+                  <a href="tel:+1 (551) 373-2708">+1 (551) 373-2708</a>
+                </span>
               </div>
             </div>
             <div className="h-[1px] bg-[#3D3D3D] w-[auto]"></div>
@@ -598,7 +600,9 @@ export default function Footer() {
                         fill="#C95AA3"
                       />
                     </svg>
-                    <span className="text-[14px]">+91 8849 701120</span>
+                    <span className="text-[14px]">
+                      <a href="tel:+91 8849 701120">+91 8849 701120</a>
+                    </span>
                   </span>
                   <span className="flex items-center gap-[10px]">
                     {" "}

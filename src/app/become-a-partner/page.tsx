@@ -1,4 +1,3 @@
-import BecameAPartner_sales from "@/components/BecameAPartner_sales";
 import BecameAPartnerFaq from "@/components/BecameAPartnerFaq";
 import WhoCanBecomePartner from "@/components/BecomePartner";
 import Footer from "@/components/Footer";
@@ -64,10 +63,11 @@ export default function BecameAPartnerPage() {
         <WhatYouGet />
         <BecameAPartnerFaq faqs={faqData as any} />
         <CtaCard
-          HeadingTitle={`Ready to Build a Future-Proof <span class="gradient-text">Future-Proof</span> </br> Income with AI?`}
+          HeadingTitle={`Ready to Build a <span class="gradient-text">Future-Proof</span> </br> Income with AI?`}
           Description="Join the Into AI partner network and earn for every business you refer, today and every month after. No technical skills. No risk. Pure earning potential."
           secondaryButton="Start Earning"
-          primaryButtonHref="https://salesbot.cloud/register"
+          secondaryButtonHref="https://salesbot.cloud/register"
+          primaryButtonHref="/contact-us"
           PrimaryButton="Contact Us"
         />
         <Footer />
