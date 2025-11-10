@@ -79,7 +79,7 @@ export default function HomePage() {
   '>Agentic AI</span>
 </span>
 
-                <span class="flex items-center h-[100%] text-[#111111] ml-[10px]">find,</span><br />
+                <span class="flex items-center h-[100%] text-[#111111] ml-[10px]">Find,</span><br />
                 <span class="flex items-center h-[100%] flex flex-wrap items-center justify-center gap-[10px]">
                   <span class="flex items-center h-[100%] text-[#111111]">Follow & Finalize your next  </span> <span class="gradient-text">Client </span>
                 </span>
@@ -87,7 +87,7 @@ export default function HomePage() {
 `}
               description="Launch campaigns across LinkedIn, Meta & WhatsApp. Our AI Agent engages every Lead 24/7, qualifying prospects and turning conversations into customers while you sleep."
               primaryButtonText="Watch Demo"
-              secondaryButtonText="Get Yours Now"
+              secondaryButtonText="Experience Now"
               secondaryButtonHref="https://salesbot.cloud/register"
             />
           </div>

@@ -88,7 +88,7 @@ export default function BecameAPartnerFaq({ faqs }: { faqs: FAQType[] }) {
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 lg:max-w-none md:max-w-[654px] md:mx-auto">
           <div>
             {leftColumnFaqs.map((faq) => (
               <FAQItem

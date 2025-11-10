@@ -24,7 +24,7 @@ const Ourfeature: React.FC<OurfeatureProps> = ({ text }) => {
       <div className="w-full flex flex-col items-center justify-center">
         <Heros
           title={`Everything you need to <span class="gradient-text">Scale Your Sales</span>`}
-          description="From campaign launch to customer conversion, Our Ai-powered platform handles every steps of your sales funnel."
+          description="From campaign launch to customer conversion, Our AI-powered platform handles every steps of your sales funnel."
         />
       </div>
 
@@ -36,19 +36,19 @@ const Ourfeature: React.FC<OurfeatureProps> = ({ text }) => {
             <div className="w-full md:w-3/5">
               {/* <MultiCampaignCard /> */}
 
-              <div className="hidden lg:block">
+              <div className="block">
                 <MultiCampaignCardDesktop />
               </div>
 
               {/* Tablet: md to lg */}
-              <div className="hidden md:block lg:hidden">
+              {/* <div className="hidden md:block lg:hidden">
                 <MultiCampaignCardTablet />
-              </div>
+              </div> */}
 
               {/* Mobile: below md */}
-              <div className="block md:hidden">
+              {/* <div className="block md:hidden">
                 <MultiCampaignCardMobile />
-              </div>
+              </div> */}
             </div>
             <div className="w-full md:w-2/5">
               <WhatsAppAgentCard />

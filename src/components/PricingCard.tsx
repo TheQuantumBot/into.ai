@@ -553,7 +553,7 @@ export default function PlanPricing({ isYearly }: any) {
       <div className="max-w-7xl mx-auto">
         {/* Pricing Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {plans.map((plan, index) => (
+          {plans.map((plan: any, index) => (
             <div key={index} className="relative flex flex-col items-center">
               {/* Most Popular Badge */}
               {plan.isPopular && (
@@ -619,7 +619,9 @@ export default function PlanPricing({ isYearly }: any) {
                         onClick={() => {
                           handleGetStarted(plan.name);
 
-                          if (plan.monthlyPrice !== "Custom") {
+                          if (plan.monthlyPrice === "Custom") {
+                            router.push("/contact-us");
+                          } else {
                             router.push("https://salesbot.cloud/register");
                           }
                         }}
@@ -709,7 +711,7 @@ export default function PlanPricing({ isYearly }: any) {
                     style={{ backgroundColor: "#fff" }}
                   >
                     <div className="space-y-3 mt-[70px]">
-                      {plan.features.map((feature, idx) => (
+                      {plan.features.map((feature: any, idx: any) => (
                         <div key={idx} className="flex items-center gap-3">
                           <Check className="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" />
 
@@ -759,7 +761,7 @@ export default function PlanPricing({ isYearly }: any) {
                   }}
                 >
                   <div className="space-y-3 mt-[70px]">
-                    {plan.features.map((feature, idx) => (
+                    {plan.features.map((feature: any, idx: any) => (
                       <div key={idx} className="flex items-center gap-3">
                         <Check className="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" />
 

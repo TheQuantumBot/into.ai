@@ -298,29 +298,31 @@ export default function Header() {
                 onClick={() => setMenuOpen(false)}
               >
                 {item.name}
-                <svg
-                  className={`absolute left-1/2 -bottom-2 w-12 h-3 -translate-x-1/2 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ${
-                    pathname === item.href ||
-                    (item.href !== "/" && pathname?.startsWith(item.href))
-                      ? "scale-x-100"
-                      : "scale-x-0 group-hover:scale-x-100"
-                  }`}
-                  viewBox="0 0 100 20"
-                  preserveAspectRatio="none"
-                >
-                  <path
-                    d="M0 0 Q50 20 100 0"
-                    stroke="url(#grad)"
-                    strokeWidth="2"
-                    fill="transparent"
-                  />
-                  <defs>
-                    <linearGradient id="grad" x1="0" y1="0" x2="100%" y2="0">
-                      <stop offset="0%" stopColor="#35A1DA" />
-                      <stop offset="100%" stopColor="#F15A22" />
-                    </linearGradient>
-                  </defs>
-                </svg>
+                {!menuOpen && (
+                  <svg
+                    className={`absolute left-1/2 -bottom-2 w-12 h-3 -translate-x-1/2 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ${
+                      pathname === item.href ||
+                      (item.href !== "/" && pathname?.startsWith(item.href))
+                        ? "scale-x-100"
+                        : "scale-x-0 group-hover:scale-x-100"
+                    }`}
+                    viewBox="0 0 100 20"
+                    preserveAspectRatio="none"
+                  >
+                    <path
+                      d="M0 0 Q50 20 100 0"
+                      stroke="url(#grad)"
+                      strokeWidth="2"
+                      fill="transparent"
+                    />
+                    <defs>
+                      <linearGradient id="grad" x1="0" y1="0" x2="100%" y2="0">
+                        <stop offset="0%" stopColor="#35A1DA" />
+                        <stop offset="100%" stopColor="#F15A22" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                )}
               </Link>
             ))}
 
