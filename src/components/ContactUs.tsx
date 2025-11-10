@@ -3,8 +3,8 @@
 import React, { useState } from "react";
 import Button from "./Button";
 import Badge from "./Badge";
-import { useForm } from "react-hook-form";
 import Image from "next/image";
+import { useFormState } from "react-dom";
 type FormValues = {
   fullName: string;
   emailId: string;
@@ -13,7 +13,7 @@ type FormValues = {
 };
 const ContactUs = () => {
   //   const router = useRouter();
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit } = useFormState();
 
   // Submit handler
   const onSubmit = (data: FormValues) => {

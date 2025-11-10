@@ -17,6 +17,8 @@ export default function PlanPricing({ isYearly }: any) {
     "Intelligent Lead Intention Spotting",
     "24/7 Support",
   ];
+  const [activePlan, setActivePlan] = useState<string | null>("Pro");
+
   const plans = [
     {
       name: "Basic",
@@ -541,7 +543,12 @@ export default function PlanPricing({ isYearly }: any) {
 
       monthlyPrice: "Custom",
       yearlyPrice: 255,
-      features: [],
+      features: [
+        "Because Growth Has No Limits.",
+        "For teams who want more than “features” - they want results.",
+        "Unlock enterprise-grade AI that spots every lead intent, personalizes every pitch, and keeps your pipeline full 24/7.",
+        "Get your customized enterprise plan today.",
+      ],
     },
   ];
   function handleGetStarted(name: string): void {
@@ -553,251 +560,312 @@ export default function PlanPricing({ isYearly }: any) {
       <div className="max-w-7xl mx-auto">
         {/* Pricing Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {plans.map((plan: any, index) => (
-            <div key={index} className="relative flex flex-col items-center">
-              {/* Most Popular Badge */}
-              {plan.isPopular && (
-                <span
-                  className="absolute -top-3 -right-8 lg:-top-3 lg:-right-3 transform -translate-x-1/2 text-white text-xs font-semibold flex items-center justify-center shadow-lg z-20 w-[62px] h-[34px] opacity-100 pt-[8px] pr-[10px] pb-[8px] pl-[10px] rounded-[8px] md:top-0 md:-right-11 sm:top-0 sm:right-20"
-                  style={{
-                    background:
-                      "linear-gradient(90deg, #35A1DA -207.85%, #D4549F -28.59%, #F15A22 136.87%)",
-                  }}
-                >
-                  {isYearly ? "10% off" : "5% Off"}
-                </span>
-              )}
-
-              {/* Top Card */}
+          {plans.map((plan: any, index) => {
+            console.log("🚀 ~ PlanPricing ~ plan:", plan.features);
+            return (
               <div
-                className={`bg-white rounded-2xl shadow-md border border-gray-200 flex flex-col items-center justify-between z-10 relative w-full max-w-[345px]`}
+                key={index}
+                onClick={() => setActivePlan(plan.name)}
+                className={`relative flex flex-col items-center
+              `}
               >
-                <div className="lg:p-[30px] md:p-[25px] p-[30px] flex flex-col justify-between h-full w-full">
-                  {plan.icon}
-                  <div className="flex flex-col justify-between h-full">
-                    <div>
-                      <h3 className="lg:text-[22px] md:text-[20px] text-[22px] leading-[26px] font-bold text-gray-900 mb-2">
-                        {plan.name}
-                      </h3>
-                      <p className="text-sm text-gray-600 mb-6 lg:text-[16px] lg:leading-[21px] text-[14px] leading-[20px] min-h-[60px]">
-                        <span className="text-[#111111]">Perfect For:</span>{" "}
-                        {plan.description}
-                      </p>
-
-                      {/* Price Section */}
-                      <div className="flex flex-col justify-center items-baseline min-h-[90px] mb-6">
-                        {plan.originalPrice ? (
-                          <div className="text-gray-500 text-[20px] line-through">
-                            ₹{plan.originalPrice}
-                          </div>
-                        ) : (
-                          <div className="text-gray-500 text-[20px] line-through"></div>
-                        )}
-                        {plan.monthlyPrice !== "Custom" ? (
-                          <>
-                            <div className="flex items-baseline">
-                              <span className="lg:text-[48px] lg:leading-[48px] md:text-[42px] md:leading-[48px] text-[28px] leading-[28px] font-bold text-gray-900">
-                                ₹
-                                {isYearly
-                                  ? plan.yearlyPrice
-                                  : plan.monthlyPrice}
-                              </span>
-                              <span className="text-gray-600 ml-2">
-                                / {isYearly ? "year" : "month"}
-                              </span>
-                            </div>
-                          </>
-                        ) : (
-                          <span className="lg:text-[48px] lg:leading-[48px] md:text-[42px] md:leading-[48px] text-[28px] leading-[28px] font-bold text-gray-900">
-                            Custom
-                          </span>
-                        )}
-                      </div>
-
-                      {/* Button */}
-                      <Button
-                        onClick={() => {
-                          handleGetStarted(plan.name);
-                          router.push("/contact-us");
-                        }}
-                        className="w-full"
-                      >
-                        {plan.monthlyPrice === "Custom"
-                          ? "Get Quote"
-                          : "Get Started"}
-                      </Button>
-
-                      {plan?.credits && (
-                        <div className="flex mt-[30px] font-[500] text-[16px] leading-[26px] gap-[4px] items-center">
-                          <svg
-                            width="12"
-                            height="10"
-                            viewBox="0 0 12 10"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0.75 5.19444L4.75 8.75L10.75 0.75"
-                              stroke="#111111"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </svg>
-                          {plan?.credits}
-                          <svg
-                            width="20"
-                            height="20"
-                            viewBox="0 0 20 20"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M9.93994 9.5H9.94661L9.93994 13.5M17.5 10C17.5 10.9849 17.306 11.9602 16.9291 12.8701C16.5522 13.7801 15.9997 14.6069 15.3033 15.3033C14.6069 15.9997 13.7801 16.5522 12.8701 16.9291C11.9602 17.306 10.9849 17.5 10 17.5C9.01509 17.5 8.03982 17.306 7.12987 16.9291C6.21993 16.5522 5.39314 15.9997 4.6967 15.3033C4.00026 14.6069 3.44781 13.7801 3.0709 12.8701C2.69399 11.9602 2.5 10.9849 2.5 10C2.5 8.01088 3.29018 6.10322 4.6967 4.6967C6.10322 3.29018 8.01088 2.5 10 2.5C11.9891 2.5 13.8968 3.29018 15.3033 4.6967C16.7098 6.10322 17.5 8.01088 17.5 10ZM10 6.875H10.0067V6.88167H10V6.875Z"
-                              stroke="#808080"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </svg>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Bottom Features Card */}
-              {plan.name === "Enterprise" ? (
-                <div
-                  className={`rounded-2xl shadow-sm p-6 -mt-16 relative z-0 border-2 w-full max-w-[345px] ${plan.borderColor}`}
-                  style={{
-                    height: "600px",
-                    backgroundColor: plan.bgColor || "#E8E4E2",
-                  }}
-                >
-                  <div className="mt-[70px] space-y-5 text-[16px] leading-[1.7] text-black font-medium">
-                    <p>Because Growth Has No Limits.</p>
-                    <p>
-                      For teams who want more than “features” – they want
-                      results.
-                    </p>
-
-                    <p>
-                      Unlock enterprise-grade AI that spots every lead intent,
-                      personalizes every pitch, and keeps your pipeline full
-                      24/7.
-                    </p>
-
-                    <p>Get your customized enterprise plan today.</p>
-                  </div>
-                </div>
-              ) : plan.name === "Pro" ? (
-                <div
-                  className="rounded-2xl p-1 -mt-16 relative z-0 flex justify-center w-full max-w-[345px]"
-                  style={{
-                    height: "600px",
-                    background:
-                      "linear-gradient(90deg, #35A1DA -207.85%, #D4549F -28.59%, #F15A22 136.87%)",
-                  }}
-                >
-                  <div
-                    className="rounded-2xl shadow-sm p-6 h-full w-full"
-                    style={{ backgroundColor: "#fff" }}
+                {/* Most Popular Badge */}
+                {plan.isPopular && (
+                  <span
+                    className="absolute -top-3 -right-8 lg:-top-3 lg:-right-3 transform -translate-x-1/2 text-white text-xs font-semibold flex items-center justify-center shadow-lg z-20 w-[62px] h-[34px] opacity-100 pt-[8px] pr-[10px] pb-[8px] pl-[10px] rounded-[8px] md:top-0 md:-right-11 sm:top-0 sm:right-20"
+                    style={{
+                      background:
+                        "linear-gradient(90deg, #35A1DA -207.85%, #D4549F -28.59%, #F15A22 136.87%)",
+                    }}
                   >
-                    <div className="space-y-3 mt-[70px]">
-                      {plan.features.map((feature: any, idx: any) => (
-                        <div key={idx} className="flex items-center gap-3">
-                          <Check className="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" />
+                    {isYearly ? "10% off" : "5% Off"}
+                  </span>
+                )}
 
-                          <div className="text-sm text-gray-700 flex items-center ">
-                            <span className="text-sm text-gray-700 flex-1">
-                              {feature}
-                            </span>
-                            {showTooltip.includes(feature) && (
-                              <div className="relative  group ml-[5px]">
-                                {/* Info Icon */}
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  className="w-4 h-4 text-gray-400 cursor-pointer"
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                  stroke="currentColor"
-                                >
-                                  <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z"
-                                  />
-                                </svg>
+                {/* Top Card */}
+                <div
+                  className={`bg-white rounded-2xl shadow-md border border-gray-200 flex flex-col items-center justify-between z-10 relative w-full max-w-[345px]`}
+                >
+                  <div className="lg:p-[30px] md:p-[25px] p-[30px] flex flex-col justify-between h-full w-full">
+                    {plan.icon}
+                    <div className="flex flex-col justify-between h-full">
+                      <div>
+                        <h3 className="lg:text-[22px] md:text-[20px] text-[22px] leading-[26px] font-bold text-gray-900 mb-2">
+                          {plan.name}
+                        </h3>
+                        <p className="text-sm text-gray-600 mb-6 lg:text-[16px] lg:leading-[21px] text-[14px] leading-[20px] min-h-[60px]">
+                          <span className="text-[#111111]">Perfect For:</span>{" "}
+                          {plan.description}
+                        </p>
 
-                                {/* Tooltip */}
-                                <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 text-xs text-white bg-gray-900 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10">
-                                  {feature === "Advanced performance reports"
-                                    ? "Advanced"
-                                    : feature}
+                        {/* Price Section */}
+                        <div className="flex flex-col justify-center items-baseline min-h-[90px] mb-6">
+                          {plan.originalPrice ? (
+                            <div className="text-gray-500 text-[20px] line-through">
+                              ₹{plan.originalPrice}
+                            </div>
+                          ) : (
+                            <div className="text-gray-500 text-[20px] line-through"></div>
+                          )}
+                          {plan.monthlyPrice !== "Custom" ? (
+                            <>
+                              <div className="flex items-baseline">
+                                <span className="lg:text-[48px] lg:leading-[48px] md:text-[42px] md:leading-[48px] text-[28px] leading-[28px] font-bold text-gray-900">
+                                  ₹
+                                  {isYearly
+                                    ? plan.yearlyPrice
+                                    : plan.monthlyPrice}
+                                </span>
+                                <span className="text-gray-600 ml-2">
+                                  / {isYearly ? "year" : "month"}
                                 </span>
                               </div>
-                            )}
-                          </div>
+                            </>
+                          ) : (
+                            <span className="lg:text-[48px] lg:leading-[48px] md:text-[42px] md:leading-[48px] text-[28px] leading-[28px] font-bold text-gray-900">
+                              Custom
+                            </span>
+                          )}
                         </div>
-                      ))}
+
+                        {/* Button */}
+                        <Button
+                          onClick={() => {
+                            handleGetStarted(plan.name);
+                            router.push("/contact-us");
+                          }}
+                          className="w-full"
+                        >
+                          {plan.monthlyPrice === "Custom"
+                            ? "Get Quote"
+                            : "Get Started"}
+                        </Button>
+
+                        {plan?.credits && (
+                          <div className="flex mt-[30px] font-[500] text-[16px] leading-[26px] gap-[4px] items-center">
+                            <svg
+                              width="12"
+                              height="10"
+                              viewBox="0 0 12 10"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M0.75 5.19444L4.75 8.75L10.75 0.75"
+                                stroke="#111111"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                            {plan?.credits}
+                            <svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M9.93994 9.5H9.94661L9.93994 13.5M17.5 10C17.5 10.9849 17.306 11.9602 16.9291 12.8701C16.5522 13.7801 15.9997 14.6069 15.3033 15.3033C14.6069 15.9997 13.7801 16.5522 12.8701 16.9291C11.9602 17.306 10.9849 17.5 10 17.5C9.01509 17.5 8.03982 17.306 7.12987 16.9291C6.21993 16.5522 5.39314 15.9997 4.6967 15.3033C4.00026 14.6069 3.44781 13.7801 3.0709 12.8701C2.69399 11.9602 2.5 10.9849 2.5 10C2.5 8.01088 3.29018 6.10322 4.6967 4.6967C6.10322 3.29018 8.01088 2.5 10 2.5C11.9891 2.5 13.8968 3.29018 15.3033 4.6967C16.7098 6.10322 17.5 8.01088 17.5 10ZM10 6.875H10.0067V6.88167H10V6.875Z"
+                                stroke="#808080"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </div>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
-              ) : (
-                <div
-                  className={`rounded-2xl shadow-sm p-6 -mt-16 relative z-0 border-2 w-full max-w-[345px] ${plan.borderColor}`}
-                  style={{
-                    height: "600px",
-                    // overflowY: "auto",
-                    backgroundColor: plan.bgColor || "#E8E4E2",
-                  }}
-                >
-                  <div className="space-y-3 mt-[70px]">
-                    {plan.features.map((feature: any, idx: any) => (
-                      <div key={idx} className="flex items-center gap-3">
-                        <Check className="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" />
 
-                        <div className="text-sm text-gray-700 flex items-center ">
-                          <span className="text-sm text-gray-700 flex-1">
-                            {feature}
-                          </span>
-                          {showTooltip.includes(feature) && (
-                            <div className="relative  group ml-[5px]">
-                              {/* Info Icon */}
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="w-4 h-4 text-gray-400 cursor-pointer"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth={2}
-                                  d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z"
-                                />
-                              </svg>
+                {/* Bottom Features Card */}
+                {plan.name === "Enterprise" ? (
+                  <div
+                    className="rounded-2xl p-1 -mt-16 relative z-0 flex justify-center w-full max-w-[345px]"
+                    style={{
+                      height: "600px",
+                      border: "1px solid #DED8D3",
+                      background:
+                        activePlan === plan.name
+                          ? "linear-gradient(90deg, #35A1DA -207.85%, #D4549F -28.59%, #F15A22 136.87%)"
+                          : "#E8E4E2",
+                    }}
+                  >
+                    <div
+                      className="rounded-2xl p-6 h-full w-full"
+                      style={{
+                        backgroundColor:
+                          activePlan === plan.name ? "#fff" : "#E8E4E2",
+                      }}
+                    >
+                      <div className="space-y-3 mt-[70px]">
+                        {plan.features.map((feature: any, idx: any) => (
+                          <div key={idx} className="flex items-center gap-3">
+                            {/* <Check className="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" /> */}
 
-                              {/* Tooltip */}
-                              <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 text-xs text-white bg-gray-900 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10">
-                                {feature === "Advanced performance reports"
-                                  ? "Advanced"
-                                  : feature}
+                            <div className="text-sm text-gray-700 flex items-center ">
+                              <span className="text-sm text-gray-700 flex-1">
+                                {feature}
                               </span>
+                              {showTooltip.includes(feature) && (
+                                <div className="relative  group ml-[5px]">
+                                  {/* Info Icon */}
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="w-4 h-4 text-gray-400 cursor-pointer"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                  >
+                                    <path
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      strokeWidth={2}
+                                      d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z"
+                                    />
+                                  </svg>
+
+                                  {/* Tooltip */}
+                                  <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 text-xs text-white bg-gray-900 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10">
+                                    {feature === "Advanced performance reports"
+                                      ? "Advanced"
+                                      : feature}
+                                  </span>
+                                </div>
+                              )}
                             </div>
-                          )}
-                        </div>
+                          </div>
+                        ))}
                       </div>
-                    ))}
+                    </div>
                   </div>
-                </div>
-              )}
-            </div>
-          ))}
+                ) : plan.name === "Pro" ? (
+                  <div
+                    className="rounded-2xl p-1 -mt-16 relative z-0 flex justify-center w-full max-w-[345px]"
+                    style={{
+                      height: "600px",
+                      border: "1px solid #DED8D3",
+                      background:
+                        activePlan === plan.name
+                          ? "linear-gradient(90deg, #35A1DA -207.85%, #D4549F -28.59%, #F15A22 136.87%)"
+                          : "#E8E4E2",
+                    }}
+                  >
+                    <div
+                      className="rounded-2xl p-6 h-full w-full "
+                      style={{
+                        backgroundColor:
+                          activePlan === plan.name ? "#fff" : "#E8E4E2",
+                      }}
+                    >
+                      <div className="space-y-3 mt-[70px]">
+                        {plan.features.map((feature: any, idx: any) => (
+                          <div key={idx} className="flex items-center gap-3">
+                            <Check className="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" />
+
+                            <div className="text-sm text-gray-700 flex items-center ">
+                              <span className="text-sm text-gray-700 flex-1">
+                                {feature}
+                              </span>
+                              {showTooltip.includes(feature) && (
+                                <div className="relative  group ml-[5px]">
+                                  {/* Info Icon */}
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="w-4 h-4 text-gray-400 cursor-pointer"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                  >
+                                    <path
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      strokeWidth={2}
+                                      d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z"
+                                    />
+                                  </svg>
+
+                                  {/* Tooltip */}
+                                  <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 text-xs text-white bg-gray-900 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10">
+                                    {feature === "Advanced performance reports"
+                                      ? "Advanced"
+                                      : feature}
+                                  </span>
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div
+                    className={`rounded-2xl shadow-sm p-1 -mt-16 relative z-0 border-2 w-full max-w-[345px] `}
+                    style={{
+                      height: "600px",
+                      border: "1px solid #DED8D3",
+                      background:
+                        activePlan === plan.name
+                          ? "linear-gradient(90deg, #35A1DA -207.85%, #D4549F -28.59%, #F15A22 136.87%)"
+                          : "#E8E4E2",
+                    }}
+                  >
+                    <div
+                      className="rounded-2xl p-6 h-full w-full"
+                      style={{
+                        backgroundColor:
+                          activePlan === plan.name ? "#fff" : "#E8E4E2",
+                      }}
+                    >
+                      <div className="space-y-3 mt-[70px]">
+                        {plan.features.map((feature: any, idx: any) => (
+                          <div key={idx} className="flex items-center gap-3">
+                            <Check className="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" />
+
+                            <div className="text-sm text-gray-700 flex items-center ">
+                              <span className="text-sm text-gray-700 flex-1">
+                                {feature}
+                              </span>
+                              {showTooltip.includes(feature) && (
+                                <div className="relative  group ml-[5px]">
+                                  {/* Info Icon */}
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="w-4 h-4 text-gray-400 cursor-pointer"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                  >
+                                    <path
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      strokeWidth={2}
+                                      d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z"
+                                    />
+                                  </svg>
+
+                                  {/* Tooltip */}
+                                  <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 text-xs text-white bg-gray-900 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10">
+                                    {feature === "Advanced performance reports"
+                                      ? "Advanced"
+                                      : feature}
+                                  </span>
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
