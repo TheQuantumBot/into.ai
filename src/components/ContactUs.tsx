@@ -25,8 +25,8 @@ const ContactUs = () => {
   };
 
   return (
-    <section className="relative overflow-hidden">
-      <div className="max-w-7xl mx-auto p-[30px] md:p-[50px] relative z-10 bg-[#faf9f8] rounded-[20px] border border-[#EAEAEA] shadow-sm hover:shadow-md transition-all duration-300 flex flex-col md:flex-row">
+    <section className="relative overflow-hidden p-5">
+      <div className="max-w-7xl mx-auto p-[30px] md:p-[50px] relative z-10 bg-[#FFFFFF] rounded-[20px] border border-[#EAEAEA] shadow-sm hover:shadow-md transition-all duration-300 flex flex-col md:flex-row">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10  items-center">
           {/* left Text Section */}
           <div className="w-full flex relative justify-center items-center lg:py-8 ">
@@ -56,7 +56,7 @@ const ContactUs = () => {
               <p className="font-inter-tight font-medium text-[16px] lg:text-[20px] leading-[25px] text-[#191919]">
                 Or just reach out manually to info@intoai.us
               </p>
-              <div className="absolute bottom-[0px] left-[-50px]">
+              <div className="absolute bottom-[0px] left-[-30px] md:left-[-50px] -z-10">
                 <Image
                   src="/ContectBG.svg"
                   alt="Arrow"
@@ -77,7 +77,7 @@ const ContactUs = () => {
           </div>
 
           {/* Right Text Section */}
-          <div className="w-full max-w-4xl p-8">
+          <div className="w-full max-w-4xl">
             <form
               onSubmit={handleSubmit(onSubmit)}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6"
