@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function LeadsCard() {
   return (
     <div className="bg-white/40 rounded-[24px] p-2 ">
-      <div className="relative w-[210px] h-[128px] lg:h-auto lg:w-[360px] p-4 rounded-[24px] bg-white shadow-lg">
+      <div className="relative w-[210px] h-[128px] lg:h-[165px] xl:h-auto lg:w-[280px] p-3 xl:p-4 rounded-[24px] bg-white shadow-lg">
         {/* Header */}
         <div className="flex justify-between items-center">
           <h2 className="lg:text-lg text-[14px] leading-[18px] font-medium text-gray-900">
@@ -28,12 +28,12 @@ export default function LeadsCard() {
         </div>
 
         {/* Leads Count */}
-        <div className="lg:mt-4">
-          <span className="lg:text-5xl text-3xl font-bold text-gray-900">100+</span>
+        <div className="xl:mt-4 lg:mt-3">
+          <span className="xl:text-5xl lg:text-4xl text-3xl font-bold text-gray-900">100+</span>
         </div>
 
         {/* Avatars & Button */}
-        <div className="lg:mt-6 flex items-center justify-between">
+        <div className="xl:mt-6 lg:mt-4 flex items-center justify-between">
           {/* Overlapping Avatars */}
           <div className="flex -space-x-3">
             <img
