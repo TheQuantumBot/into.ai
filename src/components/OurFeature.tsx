@@ -24,7 +24,7 @@ const Ourfeature: React.FC<OurfeatureProps> = ({ text }) => {
       <div className="w-full flex flex-col items-center justify-center">
         <Heros
           title={`Everything you need to <span class="gradient-text">Scale Your Sales</span>`}
-          description="From campaign launch to customer conversion, Our Ai-powered platform handles every steps of your sales funnel."
+          description="From campaign launch to customer conversion, Our AI-powered platform handles every steps of your sales funnel."
         />
       </div>
 

@@ -76,7 +76,7 @@ export default function FeaturesSection() {
       <div className="w-full flex flex-col items-center justify-center mb-10">
         <Heros
           className="text-black font-[600]"
-          title={`OUR CORE <span class="gradient-text ml-[6px]">Differentiators</span>`}
+          title={`Our Core <span class="gradient-text ml-[6px]">Differentiators</span>`}
         />
       </div>
       {/* Feature Cards in two columns */}
