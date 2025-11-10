@@ -8,9 +8,12 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 const ContactUs = () => {
-  //   const router = useRouter();
-  const { register, handleSubmit } = useForm();
   const router = useRouter();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
   // Submit handler
   const onSubmit = (data: any) => {
@@ -19,10 +22,11 @@ const ContactUs = () => {
 
   return (
     <section className="relative overflow-hidden">
-      <div className="max-w-7xl mx-auto sm:px-6 lg:px-8 py-12 relative z-10 bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm hover:shadow-md transition-all duration-300 flex flex-col md:flex-row">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          <div className="w-full flex justify-center items-center py-8 ">
-            <div className="space-y-7 max-w-xl text-left">
+      <div className="max-w-7xl mx-auto p-[30px] md:p-[50px] relative z-10 bg-[#faf9f8] rounded-[20px] border border-[#EAEAEA] shadow-sm hover:shadow-md transition-all duration-300 flex flex-col md:flex-row">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10  items-center">
+          {/* left Text Section */}
+          <div className="w-full flex relative justify-center items-center lg:py-8 ">
+            <div className="space-y-7  max-w-xl text-center lg:text-left">
               {/* Tag */}
 
               <div className="">
@@ -48,7 +52,7 @@ const ContactUs = () => {
               <p className="font-inter-tight font-medium text-[16px] lg:text-[20px] leading-[25px] text-[#191919]">
                 Or just reach out manually to info@intoai.us
               </p>
-              <div className="absolute bottom-[0px] left-[0px]">
+              <div className="absolute bottom-[0px] left-[-50px]">
                 <Image
                   src="/ContectBG.svg"
                   alt="Arrow"
@@ -74,45 +78,65 @@ const ContactUs = () => {
               onSubmit={handleSubmit(onSubmit)}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6"
             >
+              {/* Full Name */}
               <div className="md:col-span-2">
                 <label className="block text-sm font-medium text-gray-900 mb-2">
                   Full Name<span className="text-red-500">*</span>
                 </label>
                 <input
-                  {...register("fullName")}
+                  {...register("fullName", {
+                    required: "Full name is required",
+                  })}
                   type="text"
                   placeholder="Enter your full name"
-                  className="w-full px-4 py-3 bg-gray-50 border-0 rounded-lg text-sm text-gray-900"
-                  required
+                  className="w-full px-4 py-3 bg-[#F0F0F0] border-0 rounded-lg text-sm text-gray-900 focus:outline-none"
                 />
+                {errors.fullName && (
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.fullName.message as string}
+                  </p>
+                )}
               </div>
 
+              {/* Email */}
               <div className="lg:col-span-2">
                 <label className="block text-sm font-medium text-gray-900 mb-2">
                   Email Id<span className="text-red-500">*</span>
                 </label>
                 <input
-                  {...register("emailId")}
+                  {...register("emailId", { required: "Email is required" })}
                   type="email"
                   placeholder="Enter your mail id"
-                  className="w-full px-4 py-3 bg-gray-50 border-0 rounded-lg text-sm text-gray-900"
-                  required
+                  className="w-full px-4 py-3 bg-[#F0F0F0] border-0 rounded-lg text-sm text-gray-900  focus:outline-none "
                 />
+                {errors.emailId && (
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.emailId.message as string}
+                  </p>
+                )}
               </div>
 
-              <div>
+              {/* Phone */}
+              <div className="lg:col-span-2">
                 <label className="block text-sm font-medium text-gray-900 mb-2">
                   Phone Number<span className="text-red-500">*</span>
                 </label>
                 <input
-                  {...register("phoneNumber")}
+                  {...register("phoneNumber", {
+                    required: "Phone number is required",
+                  })}
                   type="tel"
                   placeholder="Enter your phone number"
-                  className="w-full px-4 py-3 bg-gray-50 border-0 rounded-lg text-sm text-gray-900"
-                  required
+                  className="w-full px-4 py-3 bg-[#F0F0F0] border-0 rounded-lg text-sm text-gray-900 focus:outline-none"
                 />
+                {errors.phoneNumber && (
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.phoneNumber.message as string}
+                  </p>
+                )}
               </div>
 
+              {/* Message */}
               <div className="md:col-span-2">
                 <label className="block text-sm font-medium text-gray-900 mb-2">
                   Message
@@ -120,7 +144,7 @@ const ContactUs = () => {
                 <textarea
                   {...register("message")}
                   placeholder="Leave your message here..."
-                  className="w-full px-4 py-3 bg-gray-50 border-0 rounded-lg text-sm text-gray-900 resize-none"
+                  className="w-full h-[147px] px-4 py-3 bg-[#F0F0F0] border-0 rounded-lg text-sm text-gray-900 resize-none focus:outline-none"
                 />
               </div>
 
