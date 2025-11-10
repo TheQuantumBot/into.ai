@@ -1,18 +1,14 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Button from "./Button";
 import Badge from "./Badge";
 import { useForm } from "react-hook-form";
 import Image from "next/image";
-type FormValues = {
-  fullName: string;
-  emailId: string;
-  phoneNumber: string;
-  message: string;
-};
+import { useRouter } from "next/navigation";
+
 const ContactUs = () => {
-  //   const router = useRouter();
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -20,7 +16,7 @@ const ContactUs = () => {
   } = useForm();
 
   // Submit handler
-  const onSubmit = (data: FormValues) => {
+  const onSubmit = (data: any) => {
     console.log("Form Data:", data);
   };
 
@@ -67,9 +63,9 @@ const ContactUs = () => {
 
               {/* Button */}
               <Button
-              // onClick={() => {
-              //   router.push("https://salesbot.cloud/register");
-              // }}
+                onClick={() => {
+                  router.push("https://salesbot.cloud/register");
+                }}
               >
                 Experience Now
               </Button>

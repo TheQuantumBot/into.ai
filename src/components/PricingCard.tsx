@@ -618,7 +618,12 @@ export default function PlanPricing({ isYearly }: any) {
                       <Button
                         onClick={() => {
                           handleGetStarted(plan.name);
-                          router.push("/contact-us");
+
+                          if (plan.monthlyPrice === "Custom") {
+                            router.push("/contact-us");
+                          } else {
+                            router.push("https://salesbot.cloud/register");
+                          }
                         }}
                         className="w-full"
                       >
