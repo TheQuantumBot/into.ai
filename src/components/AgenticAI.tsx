@@ -6,6 +6,7 @@ import Image from "next/image";
 import Button from "./Button";
 import Badge from "./Badge";
 import { useRouter } from "next/navigation";
+import ScrollAnimation from "./ScrollAnimation";
 
 const AgenticAIHero = () => {
   const router = useRouter();
@@ -107,74 +108,80 @@ const AgenticAIHero = () => {
                 <Badge text="Agentic AI" />
               </div>
               {/* Main Heading */}
-              <h1 className="text-[40px] sm:text-[50px] lg:text-[56px] font-[600] leading-[1.1] text-black">
-                <span className="bg-[linear-gradient(89.89deg,#35A1DA_0.24%,#857BBD_25.46%,#E8584B_50.67%,#584F9E_75.88%,#CE4C9B_101.09%)] bg-clip-text text-transparent">
-                  Agentic AI
-                </span>{" "}
-                That Sells – Not Scripts
-              </h1>
 
-              {/* Subheading */}
-              <p className="!my-2">
-                <span className="font-inter-tight font-medium text-[18px] leading-[26px] align-middle text-[rgba(128,128,128,1)]">
-                  Most bots follow commands, SalesBot makes{" "}
-                </span>
-                <span className="font-inter-tight font-bold text-[18px] leading-[26px] align-middle text-[rgba(76,76,76,1)]">
-                  decisions{" "}
-                </span>
-              </p>
+              <ScrollAnimation>
+                <h1 className="fade-up text-[40px] sm:text-[50px] lg:text-[56px] font-[600] leading-[1.1] text-black">
+                  <span className="bg-[linear-gradient(89.89deg,#35A1DA_0.24%,#857BBD_25.46%,#E8584B_50.67%,#584F9E_75.88%,#CE4C9B_101.09%)] bg-clip-text text-transparent">
+                    Agentic AI
+                  </span>{" "}
+                  That Sells – Not Scripts
+                </h1>
 
-              {/* Description */}
-              <p className="text-[17px] text-[rgba(76,76,76,1)] leading-relaxed">
-                It analyzes intent, asks the right questions, and guides every
-                chat toward one outcome –
-                <span className="font-semibold text-gray-800"> conversion</span>
-                . When a lead hesitates, SalesBot doesn’t freeze or send generic
-                replies – it uses{" "}
-                <span className="font-semibold text-gray-800">
-                  context, behavior signals, and offers nudges to move them
-                  forward.
-                </span>{" "}
-              </p>
-
-              {/* Highlights */}
-              <div className="flex flex-wrap gap-3 text-[16px] font-medium">
-                <span className="flex items-center gap-1">
-                  <Image
-                    src="/LightingIcon.svg"
-                    alt="LightingIcon"
-                    width={18}
-                    height={18}
-                  />
-                  <span className="bg-[linear-gradient(90.28deg,#35A1DA_0.47%,#857BBD_84.44%,#E8584B_109.47%)] bg-clip-text text-transparent">
-                    Real-time Qualification
+                {/* Subheading */}
+                <p className="fade-up !my-2">
+                  <span className="font-inter-tight font-medium text-[18px] leading-[26px] align-middle text-[rgba(128,128,128,1)]">
+                    Most bots follow commands, SalesBot makes{" "}
                   </span>
-                </span>
-                <span className="flex items-center gap-1">
-                  <Image
-                    src="/WatchIcon.svg"
-                    alt="WatchIcon"
-                    width={18}
-                    height={18}
-                  />
-                  <span className="bg-[linear-gradient(89.75deg,#E8584B_0.34%,#584F9E_141.89%)] bg-clip-text text-transparent">
-                    Smart Decisions
+                  <span className="font-inter-tight font-bold text-[18px] leading-[26px] align-middle text-[rgba(76,76,76,1)]">
+                    decisions{" "}
                   </span>
-                </span>
+                </p>
 
-                <span className="flex items-center gap-1">
-                  <Image
-                    src="/PortIcon.svg"
-                    alt="PortIcon"
-                    width={18}
-                    height={18}
-                  />
-
-                  <span className="bg-[linear-gradient(90.11deg,#584F9E_0.29%,#CE4C9B_118.16%)] bg-clip-text text-transparent">
-                    More Closed Deals
+                {/* Description */}
+                <p className="fade-up text-[17px] text-[rgba(76,76,76,1)] leading-relaxed">
+                  It analyzes intent, asks the right questions, and guides every
+                  chat toward one outcome –
+                  <span className="font-semibold text-gray-800">
+                    {" "}
+                    conversion
                   </span>
-                </span>
-              </div>
+                  . When a lead hesitates, SalesBot doesn’t freeze or send
+                  generic replies – it uses{" "}
+                  <span className="font-semibold text-gray-800">
+                    context, behavior signals, and offers nudges to move them
+                    forward.
+                  </span>{" "}
+                </p>
+
+                {/* Highlights */}
+                <div className="fade-up flex flex-wrap gap-3 text-[16px] font-medium">
+                  <span className="flex items-center gap-1">
+                    <Image
+                      src="/LightingIcon.svg"
+                      alt="LightingIcon"
+                      width={18}
+                      height={18}
+                    />
+                    <span className="bg-[linear-gradient(90.28deg,#35A1DA_0.47%,#857BBD_84.44%,#E8584B_109.47%)] bg-clip-text text-transparent">
+                      Real-time Qualification
+                    </span>
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <Image
+                      src="/WatchIcon.svg"
+                      alt="WatchIcon"
+                      width={18}
+                      height={18}
+                    />
+                    <span className="bg-[linear-gradient(89.75deg,#E8584B_0.34%,#584F9E_141.89%)] bg-clip-text text-transparent">
+                      Smart Decisions
+                    </span>
+                  </span>
+
+                  <span className="flex items-center gap-1">
+                    <Image
+                      src="/PortIcon.svg"
+                      alt="PortIcon"
+                      width={18}
+                      height={18}
+                    />
+
+                    <span className="bg-[linear-gradient(90.11deg,#584F9E_0.29%,#CE4C9B_118.16%)] bg-clip-text text-transparent">
+                      More Closed Deals
+                    </span>
+                  </span>
+                </div>
+              </ScrollAnimation>
 
               {/* Button */}
               <Button

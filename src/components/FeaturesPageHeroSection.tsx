@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import ButtonPrimary from "./Button-primary";
 import FeatureCards from "@/components/FeatureCards";
 import { useRouter } from "next/navigation";
+import ScrollAnimation from "./ScrollAnimation";
 
 export default function FeaturesPageHeroSection() {
   const router = useRouter();
@@ -12,47 +13,50 @@ export default function FeaturesPageHeroSection() {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-5">
-            <div className="space-y-4">
-              <h1 className="text-2xl sm:text-5xl lg:text-6xl font-[600] text-gray-900 leading-[66px]">
-                Conversations Built to <br /> Convert -{" "}
-                <span className="gradient-text bg-clip-text text-transparent">
-                  Not Just Talk
-                </span>{" "}
-              </h1>
+          <ScrollAnimation>
+            <div className="space-y-5">
+              <div className="space-y-4">
+                <h1 className="fade-up text-2xl sm:text-5xl lg:text-6xl font-[600] text-gray-900 leading-[66px]">
+                  Conversations Built to <br /> Convert -{" "}
+                  <span className="gradient-text bg-clip-text text-transparent">
+                    Not Just Talk
+                  </span>{" "}
+                </h1>
+              </div>
+
+              <p className="fade-up font-inter-tight font-semibold italic text-lg leading-[24px] text-black max-w-md flex">
+                <span className="flex flex-row gap-1">
+                  {" "}
+                  SalesBot isn’t here to “chat.”{" "}
+                  <img
+                    src="/threedot.png"
+                    alt="Handshake Icon"
+                    className="w-[20px] h-[20px]"
+                  />
+                </span>
+              </p>
+
+              <p className="fade-up text-lg	 text-[rgba(76,76,76,1)] font-medium  leading-normal max-w-md">
+                It’s designed to understand leads, qualify them, handle
+                objections, and close sales - just like your sharpest sales rep
+                would. Powered by Agentic AI, it thinks, responds, and acts with
+                purpose : Faster replies, smarter follow-ups, higher
+                conversions.
+              </p>
+              <div className="flex items-center gap-4">
+                <ButtonPrimary>Watch Demo</ButtonPrimary>
+
+                <button
+                  onClick={() => {
+                    router.push("https://salesbot.cloud/register");
+                  }}
+                  className="px-8 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition font-medium flex items-center gap-2 group"
+                >
+                  Get Yours Now
+                </button>
+              </div>
             </div>
-
-            <p className="font-inter-tight font-semibold italic text-lg leading-[24px] text-black max-w-md flex">
-              <span className="flex flex-row gap-1">
-                {" "}
-                SalesBot isn’t here to “chat.”{" "}
-                <img
-                  src="/threedot.png"
-                  alt="Handshake Icon"
-                  className="w-[20px] h-[20px]"
-                />
-              </span>
-            </p>
-
-            <p className="text-lg	 text-[rgba(76,76,76,1)] font-medium  leading-normal max-w-md">
-              It’s designed to understand leads, qualify them, handle
-              objections, and close sales - just like your sharpest sales rep
-              would. Powered by Agentic AI, it thinks, responds, and acts with
-              purpose : Faster replies, smarter follow-ups, higher conversions.
-            </p>
-            <div className="flex items-center gap-4">
-              <ButtonPrimary>Watch Demo</ButtonPrimary>
-
-              <button
-                onClick={() => {
-                  router.push("https://salesbot.cloud/register");
-                }}
-                className="px-8 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition font-medium flex items-center gap-2 group"
-              >
-                Get Yours Now
-              </button>
-            </div>
-          </div>
+          </ScrollAnimation>
 
           {/* Right - Visual with Icons */}
 

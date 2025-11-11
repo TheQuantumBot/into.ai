@@ -114,7 +114,7 @@ const PricingPlans: React.FC<PricingPlansProps> = ({ text }) => {
 
   const fetchData = async () => {
     try {
-      const res = await getPricingPlans();
+      const res: any = await getPricingPlans();
       const allPlans = res?.data || [];
 
       // Filter based on billing_cycle and isYearly state
