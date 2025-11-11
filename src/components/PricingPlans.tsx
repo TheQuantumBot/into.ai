@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Badge from "@/components/Badge";
 import Hero from "./Hero";
 import ProcessSection from "./ProcessSection";
@@ -11,6 +11,7 @@ import CtaCard from "./CtaCard";
 import Heros from "./Heros";
 import PricingRechargeModel from "./PricingRechargeModel";
 import BecameAPartnerFaq from "./BecameAPartnerFaq";
+import { getPricingPlans } from "@/services/pricing.service";
 
 interface PricingPlansProps {
   text: string;
@@ -109,7 +110,29 @@ const faqData = [
 ];
 const PricingPlans: React.FC<PricingPlansProps> = ({ text }) => {
   const [isYearly, setIsYearly] = useState(false);
+  const [priceData, setPriceData] = useState<any[]>([]);
 
+  const fetchData = async () => {
+    try {
+      const res = await getPricingPlans();
+      const allPlans = res?.data || [];
+
+      // Filter based on billing_cycle and isYearly state
+      const filteredPlans = allPlans.filter(
+        (plan: any) => plan.billing_cycle === (isYearly ? "yearly" : "monthly")
+      );
+
+      setPriceData(filteredPlans);
+    } catch (error) {
+      console.error("Failed to fetch plans:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, [isYearly]); // re-fetch when user toggles yearly/monthly
+
+  console.log("priceDatapriceData", priceData);
   return (
     <div className="w-full flex flex-col items-center justify-center px-6 py-3 text-black text-lg font-medium space-y-6">
       <div>
@@ -118,7 +141,7 @@ const PricingPlans: React.FC<PricingPlansProps> = ({ text }) => {
       <div className="w-full items-center justify-center ">
         <PricingRechargeModel setIsYearlyStatus={setIsYearly} />
 
-        <PricingCard isYearly={isYearly} />
+        <PricingCard isYearly={isYearly} data={priceData} />
 
         <div className="w-full">
           <BecameAPartnerFaq faqs={faqData as any} />
