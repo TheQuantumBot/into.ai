@@ -31,7 +31,7 @@ export default function Conversation_card() {
 
   return (
     <div className="bg-white/40 rounded-[24px] p-2">
-      <div className="md:w-[220px] lg:w-[225px]  xl:w-[320px]  bg-white rounded-[24px] p-2 lg:p-4 shadow-sm">
+      <div className="md:w-[220px] lg:w-[225px]  xl:w-[320px]  bg-white rounded-[24px] p-2 xl:p-4 shadow-sm">
         {/* Header */}
         <div className="flex items-center justify-between mb-2">
           <p className="text-sm font-medium text-gray-700">Conversion Rate</p>
@@ -53,15 +53,15 @@ export default function Conversation_card() {
         </div>
 
         {/* Percentage */}
-        <p className="lg:text-5xl text-3xl font-bold text-gray-900 mb-2 lg:mb-4">44%</p>
+        <p className="xl:text-5xl lg:text-4xl text-3xl font-bold text-gray-900 mb-2 lg:mb-4">44%</p>
 
         {/* Tabs */}
-        <div className="flex space-x-2 mb-2 lg:mb-4">
+        <div className="flex space-x-2 mb-2 xl:mb-4">
           {["24 hours", "Week", "Month"].map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-3 py-1 text-sm rounded-md border transition ${
+              className={`px-2 xl:px-3 py-1 text-sm rounded-md border transition ${
                 activeTab === tab
                   ? "bg-orange-500 text-white border-orange-500"
                   : "bg-gray-100 text-gray-600 border-gray-200 hover:bg-gray-200"
