@@ -58,8 +58,8 @@ export default function Footer() {
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
+          width="24"
+          height="25"
           viewBox="0 0 20 20"
           fill="none"
         >
@@ -728,7 +728,7 @@ export default function Footer() {
           {/* Follow us */}
           <div className="space-y-6">
             <h3 className="text-lg font-medium text-white">Follow us</h3>
-            <ul className="space-y-3">
+            <ul className=" gap-4 flex sm:flex-col mid:flex-col md:flex-col">
               {socialLinks.map((link, i) => {
                 const IconComponent = link.icon;
 
@@ -736,10 +736,12 @@ export default function Footer() {
                   <li key={i}>
                     <Link
                       href={link.href}
-                      className="bg-[#1E1E1E] flex items-center justify-center space-x-2 px-3 py-2 rounded w-36 hover:opacity-80 transition-opacity duration-300"
+                      className="bg-[#1E1E1E] flex flex-row items-center justify-center space-x-2 px-3 py-2 rounded w-12 sm:w-36 mid:w-36  hover:opacity-80 transition-opacity duration-300"
                     >
                       {link.icon}
-                      <span className="text-[#808080]">{link.name}</span>
+                      <span className="text-[#808080] lg:flex md:flex sm:flex mid:flex hidden">
+                        {link.name}
+                      </span>
                     </Link>
                   </li>
                 );

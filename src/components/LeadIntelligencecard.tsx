@@ -8,7 +8,7 @@ export default function LeadIntelligencecard() {
 
       {/* Text Content */}
 
-      <div className="relative h-[200px] sm:h-[280px] md:h-[180px] lg:h-[255]px] -mt-6 sm:-mt-8">
+      <div className="relative h-80 -mt-6 sm:-mt-8">
         <Image
           src="/Lead-Intelligence.svg"
           alt="User 1"
@@ -16,7 +16,7 @@ export default function LeadIntelligencecard() {
           className="object-contain "
         />
       </div>
-      <div className="mt-0 md:mt-24 lg:mt-32">
+      <div className="">
         <h2 className="text-[16px] leading-[20px] md:text-[20px] md:leading-[26px] lg:text-[32px] lg:leading-[40px] font-[600] text-[#1E1E1E] mb-3 sm:mb-4">
           Lead Intelligence
         </h2>
