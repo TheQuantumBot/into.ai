@@ -8,7 +8,7 @@ export default function FeaturesPageHeroSection() {
   const router = useRouter();
 
   return (
-    <section className="relative overflow-hidden pt-[100px] pb-[48px]">
+    <section className="relative overflow-hidden pt-[100px]">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
