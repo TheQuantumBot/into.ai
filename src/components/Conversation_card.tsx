@@ -53,7 +53,9 @@ export default function Conversation_card() {
         </div>
 
         {/* Percentage */}
-        <p className="xl:text-5xl lg:text-4xl text-3xl font-bold text-gray-900 mb-2 lg:mb-4">44%</p>
+        <p className="xl:text-5xl lg:text-4xl text-3xl font-bold text-gray-900 mb-2 lg:mb-4">
+          44%
+        </p>
 
         {/* Tabs */}
         <div className="flex space-x-2 mb-2 xl:mb-4">

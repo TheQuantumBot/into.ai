@@ -29,7 +29,9 @@ export default function LeadsCard() {
 
         {/* Leads Count */}
         <div className="xl:mt-4 lg:mt-3">
-          <span className="xl:text-5xl lg:text-4xl text-3xl font-bold text-gray-900">100+</span>
+          <span className="xl:text-5xl lg:text-4xl text-3xl font-bold text-gray-900">
+            100+
+          </span>
         </div>
 
         {/* Avatars & Button */}
