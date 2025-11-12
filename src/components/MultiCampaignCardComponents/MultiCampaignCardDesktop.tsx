@@ -3,7 +3,7 @@ import React from "react";
 
 export default function MultiCampaignCardDesktop() {
   return (
-    <div className="w-full bg-white rounded-3xl shadow-lg p-4 md:p-5 lg:p-[30PX] mx-auto relative overflow-hidden h-[360px] md:h-[500px] lg:h-[555px]">
+    <div className="w-full bg-white rounded-3xl shadow-lg p-4 md:p-5 lg:p-[30PX] mx-auto relative overflow-hidden h-[360px] md:h-[500px] lg:h-[516px]">
       {/* Flow Section */}
       <div className="w-full relative h-40 mt-[10px]">
         <div className="absolute top-[20px] md:top-[35px] lg:top-[52px] left-[40px] md:left-[80px] w-[86%] md:w-[70%] lg:w-[80%] h-[2px] bg-gray-200"></div>
