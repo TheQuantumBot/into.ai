@@ -108,7 +108,7 @@ export default function FeaturesPage() {
       <img
         src="/Pricing-Bg.png"
         alt="Background"
-        className="absolute inset-0 h-[1024px] object-cover"
+        className="absolute inset-0 w-[-webkit-fill-available] h-[1024px] object-cover"
       />
 
       {/* Content */}
