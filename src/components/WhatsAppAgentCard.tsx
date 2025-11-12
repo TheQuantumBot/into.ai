@@ -3,7 +3,7 @@ import React from "react";
 
 export default function WhatsAppAgentCard() {
   return (
-    <div className="bg-white rounded-3xl shadow-lg p-4 md:p-5 lg:p-[30PX]  h-auto md:h-[500px] lg:h-[555px] relative overflow-hidden">
+    <div className="bg-white rounded-3xl shadow-lg p-4 md:p-5 lg:p-[30PX]  h-auto md:h-[500px] lg:h-[516px] relative overflow-hidden">
       {/* WhatsApp Icon and Chat Elements */}
 
       {/* Text Content */}

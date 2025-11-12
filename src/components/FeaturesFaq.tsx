@@ -197,7 +197,6 @@ function FAQItem({ faq, isOpen, onToggle }: FAQItemProps) {
   );
 }
 
-
 export default function FeaturesFaq() {
   // Define state type explicitly
   const [openItems, setOpenItems] = useState<Record<number, boolean>>(() => {
