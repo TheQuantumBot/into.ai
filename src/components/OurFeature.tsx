@@ -7,8 +7,6 @@ import LeadIntelligencecard from "./LeadIntelligencecard";
 import ROIOptimization from "./ROIOptimization";
 import Heros from "./Heros";
 import MultiCampaignCardDesktop from "./MultiCampaignCardComponents/MultiCampaignCardDesktop";
-import MultiCampaignCardTablet from "./MultiCampaignCardComponents/MultiCampaignCardTablet";
-import MultiCampaignCardMobile from "./MultiCampaignCardComponents/MultiCampaignCardMobile";
 
 interface OurfeatureProps {
   text: string;
