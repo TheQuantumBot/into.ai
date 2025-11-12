@@ -9,7 +9,7 @@ const LeadConversion = () => {
   const router = useRouter();
 
   return (
-    <section className="min-h-screen  py-16 px-6">
+    <section className="py-16 px-6">
       <div className="max-w-[1440px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
           {/* Left Column - Visual Side */}
