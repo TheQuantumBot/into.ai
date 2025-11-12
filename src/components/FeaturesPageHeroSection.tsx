@@ -4,6 +4,7 @@ import ButtonPrimary from "./Button-primary";
 import FeatureCards from "@/components/FeatureCards";
 import { useRouter } from "next/navigation";
 import ScrollAnimation from "./ScrollAnimation";
+import Button from "./Button";
 
 export default function FeaturesPageHeroSection() {
   const router = useRouter();
@@ -46,14 +47,14 @@ export default function FeaturesPageHeroSection() {
               <div className="flex items-center gap-4">
                 <ButtonPrimary>Watch Demo</ButtonPrimary>
 
-                <button
+                <Button
                   onClick={() => {
                     router.push("https://salesbot.cloud/register");
                   }}
                   className="px-8 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition font-medium flex items-center gap-2 group"
                 >
                   Get Yours Now
-                </button>
+                </Button>
               </div>
             </div>
           </ScrollAnimation>

@@ -9,6 +9,7 @@ import Heros from "./Heros";
 import MultiCampaignCardDesktop from "./MultiCampaignCardComponents/MultiCampaignCardDesktop";
 import MultiCampaignCardTablet from "./MultiCampaignCardComponents/MultiCampaignCardTablet";
 import MultiCampaignCardMobile from "./MultiCampaignCardComponents/MultiCampaignCardMobile";
+import CardAnimation from "./CardAnimation";
 
 interface OurfeatureProps {
   text: string;
@@ -37,7 +38,9 @@ const Ourfeature: React.FC<OurfeatureProps> = ({ text }) => {
               {/* <MultiCampaignCard /> */}
 
               <div className="block">
-                <MultiCampaignCardDesktop />
+                <CardAnimation>
+                  <MultiCampaignCardDesktop />
+                </CardAnimation>
               </div>
 
               {/* Tablet: md to lg */}
@@ -51,17 +54,23 @@ const Ourfeature: React.FC<OurfeatureProps> = ({ text }) => {
               </div> */}
             </div>
             <div className="w-full md:w-2/5">
-              <WhatsAppAgentCard />
+              <CardAnimation>
+                <WhatsAppAgentCard />
+              </CardAnimation>
             </div>
           </div>
 
           {/* Second Row */}
           <div className="flex flex-col md:flex-row gap-6 mt-5">
             <div className="w-full md:w-2/5">
-              <LeadIntelligencecard />
+              <CardAnimation>
+                <LeadIntelligencecard />
+              </CardAnimation>
             </div>
             <div className="w-full md:w-3/5">
-              <ROIOptimization />
+              <CardAnimation>
+                <ROIOptimization />
+              </CardAnimation>
             </div>
           </div>
         </div>
