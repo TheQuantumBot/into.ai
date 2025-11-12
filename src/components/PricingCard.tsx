@@ -881,7 +881,7 @@ import { useRouter } from "next/navigation";
 export default function PlanPricing({ isYearly, data }: any) {
   const router = useRouter();
 
-  const [activePlan, setActivePlan] = useState<string | null>("Pro");
+  const [activePlan, setActivePlan] = useState<string | null>("Growth");
   // ✅ Map API plan names to your internal plan names
 
   const plans = useMemo(() => {
@@ -1077,11 +1077,9 @@ export default function PlanPricing({ isYearly, data }: any) {
                 </div>
               </div>
 
-              {/* Bottom Features */}
               <div
-                className={`rounded-2xl p-1 -mt-16 relative z-0 flex justify-center w-full max-w-[345px]`}
+                className={`rounded-2xl p-1 -mt-16 relative z-0 flex justify-center w-full max-w-[345px] flex-col h-full`} // ✅ added flex-col + h-full
                 style={{
-                  height: "600px",
                   border: "1px solid #DED8D3",
                   background:
                     activePlan === plan.name
@@ -1090,21 +1088,15 @@ export default function PlanPricing({ isYearly, data }: any) {
                 }}
               >
                 <div
-                  className="rounded-2xl p-6 h-full w-full"
+                  className="rounded-2xl p-6 h-full w-full flex flex-col justify-between" // ✅ added h-full + flex + justify-between
                   style={{
                     backgroundColor:
                       activePlan === plan.name ? "#fff" : "#E8E4E2",
                   }}
                 >
-                  {/* <div className="space-y-3 mt-[70px]">
-                    {plan.features?.map((feature: any, idx: any) => (
-                      <div key={idx} className="flex items-center gap-3">
-                        <Check className="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-gray-700">{feature}</span>
-                      </div>
-                    ))}
-                  </div> */}
-                  <div className="space-y-3 mt-[70px]">
+                  <div className="space-y-3 mt-[70px] flex-1">
+                    {" "}
+                    {/* ✅ flex-1 makes this section stretch */}
                     {plan.features?.map((feature: any, idx: any) => (
                       <div
                         key={idx}
