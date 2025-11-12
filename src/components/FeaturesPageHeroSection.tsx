@@ -12,20 +12,20 @@ export default function FeaturesPageHeroSection() {
   return (
     <section className="relative overflow-hidden pt-[100px] pb-[48px]">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
           <ScrollAnimation>
-            <div className="space-y-5">
-              <div className="space-y-4">
-                <h1 className="fade-up text-2xl sm:text-5xl lg:text-6xl font-[600] text-gray-900 leading-[66px]">
-                  Conversations Built to <br /> Convert -{" "}
+            <div className="space-y-5 text-center md:text-left  order-2 md:order-1 ">
+              <div className="">
+                <h1 className="fade-up text-[28px] md:text-[42px] lg:text-[60px] font-[600] leading-[24px] md:leading-[50px] lg:leading-[66px]  text-gray-900 ">
+                  Conversations Built to Convert -{" "}
                   <span className="gradient-text bg-clip-text text-transparent">
                     Not Just Talk
                   </span>{" "}
                 </h1>
               </div>
 
-              <p className="fade-up font-inter-tight font-semibold italic text-lg leading-[24px] text-black max-w-md flex">
+              <p className="fade-up font-inter-tight font-semibold justify-center md:justify-start italic text-lg leading-[24px] text-black text-center flex">
                 <span className="flex flex-row gap-1">
                   {" "}
                   SalesBot isn’t here to “chat.”{" "}
@@ -37,38 +37,39 @@ export default function FeaturesPageHeroSection() {
                 </span>
               </p>
 
-              <p className="fade-up text-lg	 text-[rgba(76,76,76,1)] font-medium  leading-normal max-w-md">
+              <p className="text-lg	fade-up text-[rgba(76,76,76,1)] font-medium  leading-normal text-center md:text-left">
                 It’s designed to understand leads, qualify them, handle
                 objections, and close sales - just like your sharpest sales rep
                 would. Powered by Agentic AI, it thinks, responds, and acts with
                 purpose : Faster replies, smarter follow-ups, higher
                 conversions.
               </p>
-              <div className="flex items-center gap-4">
-                <ButtonPrimary>Watch Demo</ButtonPrimary>
+              <div className="flex justify-center md:justify-start items-center gap-4">
+                <ButtonPrimary className="px-8 py-3 rounded-lg transition font-medium flex items-center gap-2 group">
+                  Watch Demo
+                </ButtonPrimary>
 
-                <Button
+                <button
                   onClick={() => {
                     router.push("https://salesbot.cloud/register");
                   }}
                   className="px-8 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition font-medium flex items-center gap-2 group"
                 >
                   Get Yours Now
-                </Button>
+                </button>
               </div>
             </div>
           </ScrollAnimation>
-
           {/* Right - Visual with Icons */}
 
           <div
-            className="relative flex items-center justify-center h-[500px] w-full bg-center bg-no-repeat bg-contain"
+            className="relative order-1 md:order-2 flex items-center justify-center h-[340px] md:h-[350px]  lg:h-[500px] w-full bg-center bg-no-repeat bg-contain"
             style={{
               backgroundImage: "url('/Features/pattern.svg')",
             }}
           >
             <div
-              className="absolute  h-[450px] w-[350px] bg-center bg-contain bg-no-repeat top-[-34px]"
+              className="absolute h-[250px] lg:h-[450px] md:h-[255px] w-[184px] md:w-[192px] lg:w-[350px] bg-center bg-contain bg-no-repeat top-[-34px]"
               style={{
                 backgroundImage: "url('/Features/girimg.png')",
               }}
@@ -82,6 +83,7 @@ export default function FeaturesPageHeroSection() {
                     height="33"
                     viewBox="0 0 33 33"
                     fill="none"
+                    className="w-[28px] lg:w-[56px] h-[28px] lg:h-[56px]"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g clip-path="url(#clip0_3591_79297)">
@@ -107,7 +109,7 @@ export default function FeaturesPageHeroSection() {
                   </svg>
                 }
                 description="Respond instantly when buyers are most excited, before competitors even see the lead."
-                className="left-[-110px] absolute bottom-[91px] -rotate-[16deg]"
+                className="md:left-[-45px] lg:left-[-110px] left-[-55px] w-[184px] lg:w-fit absolute bottom-[60px] md:bottom-[43px] lg:bottom-[110px] -rotate-[16deg] lg:-rotate-[12deg] z-10 "
               />
               <FeatureCards
                 title="Smarter follow-ups"
@@ -118,6 +120,7 @@ export default function FeaturesPageHeroSection() {
                     height="38"
                     viewBox="0 0 38 38"
                     fill="none"
+                    className="w-[28px] lg:w-[56px] h-[28px] lg:h-[56px]"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g clip-path="url(#clip0_3591_79310)">
@@ -155,7 +158,7 @@ export default function FeaturesPageHeroSection() {
                   </svg>
                 }
                 description="Reconnect naturally with perfect timing  no spam, just genuine conversations that."
-                className="rotate-[6deg] absolute bottom-[34px] right-[-166px]"
+                className="rotate-[6deg] w-[191px] lg:w-fit absolute bottom-[29px] md:bottom-[-5px] lg:bottom-[34px] left-[70px] md:right-[-166px] lg:z-10 lg:right-[-196px]"
               />
               <FeatureCards
                 title="Higher conversions"
@@ -166,6 +169,7 @@ export default function FeaturesPageHeroSection() {
                     height="29"
                     viewBox="0 0 29 29"
                     fill="none"
+                    className="w-[28px] lg:w-[56px] h-[28px] lg:h-[56px]"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g clip-path="url(#clip0_3591_79321)">
@@ -203,7 +207,7 @@ export default function FeaturesPageHeroSection() {
                   </svg>
                 }
                 description="Turn every chat into action, more site visits, more bookings, more sales."
-                className="rotate-[-4deg] absolute bottom-[-50px] left-[-26px]"
+                className="rotate-[-4deg] w-[172px] lg:w-fit absolute bottom-[-20px] md:bottom-[-69px] lg:bottom-[-50px] left-[15px] md:left-[-24px] lg:left-[-26px]"
               />
             </div>
           </div>

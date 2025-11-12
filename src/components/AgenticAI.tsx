@@ -13,10 +13,11 @@ const AgenticAIHero = () => {
 
   return (
     <section className="relative overflow-hidden">
-      <div className="max-w-7xl mx-auto sm:px-6 lg:px-8 py-12 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
+          {/* Left Text Section */}
           <div
-            className="relative flex justify-center items-center bg-cover bg-center sm:h-[700px] lg:h-auto"
+            className="relative flex justify-center items-center bg-cover bg-center h-auto"
             style={{ backgroundImage: "url('AiImages.png')" }}
           >
             <div className="relative w-[360px] h-[360px] flex justify-center items-center rounded-full bg-transparent">
@@ -101,7 +102,7 @@ const AgenticAIHero = () => {
 
           {/* Right Text Section */}
           <div className="w-full flex justify-center items-center py-8 ">
-            <div className="space-y-8 max-w-xl text-left">
+            <div className="space-y-8 max-w-xl text-center md:text-left">
               {/* Tag */}
 
               <div className="">

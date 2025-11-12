@@ -1,14 +1,8 @@
 "use client";
-
 import React, { useEffect, useState } from "react";
 import Badge from "@/components/Badge";
-import Hero from "./Hero";
-import ProcessSection from "./ProcessSection";
 import PricingCard from "./PricingCard";
-import { FileQuestionMark } from "lucide-react";
-import Faq from "./Faq";
 import CtaCard from "./CtaCard";
-import Heros from "./Heros";
 import PricingRechargeModel from "./PricingRechargeModel";
 import BecameAPartnerFaq from "./BecameAPartnerFaq";
 import { getPricingPlans } from "@/services/pricing.service";

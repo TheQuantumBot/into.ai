@@ -79,11 +79,10 @@ export default function HomePage() {
   '>Agentic AI</span>
 </span>
 
-                <span class="flex items-center text-[#111111] ml-[10px]">Find,</span><br />
+                <span class="flex items-center text-[#111111] ml-[10px] h-[100%]">Find,</span><br />
                 <span class="items-center  flex-wrap  justify-center gap-[10px]">
-                  <span class=" items-center inline flex-wrap text-[#111111]">Follow & Finalize your next <span class="gradient-text">Client </span> </span> 
-                </span>
-`}
+                  <span class="items-center inline flex-wrap text-[#111111]">Follow & Finalize your next <span class="gradient-text">Client </span> </span> 
+                </span>`}
               description="Launch campaigns across LinkedIn, Meta & WhatsApp. Our AI Agent engages every Lead 24/7, qualifying prospects and turning conversations into customers while you sleep."
               primaryButtonText="Watch Demo"
               secondaryButtonText="Experience Now"

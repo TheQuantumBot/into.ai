@@ -880,18 +880,8 @@ import { useRouter } from "next/navigation";
 
 export default function PlanPricing({ isYearly, data }: any) {
   const router = useRouter();
-  const showTooltip = [
-    "No cap on LinkedIn Account",
-    "Unlimited Campaigns",
-    "No Maximum Product Limit",
-    "Free API Integration",
-    "Unlimited Prompts",
-    "Full AI Conversation Management",
-    "Intelligent Lead Intention Spotting",
-    "24/7 Support",
-  ];
-  const [activePlan, setActivePlan] = useState<string | null>("Pro");
 
+  const [activePlan, setActivePlan] = useState<string | null>("Pro");
   // ✅ Map API plan names to your internal plan names
 
   const plans = useMemo(() => {
@@ -996,12 +986,13 @@ export default function PlanPricing({ isYearly, data }: any) {
           : plan.monthlyPrice,
         yearlyPrice: plan.yearlyPrice,
         features: apiFeatures.length ? apiFeatures : plan.features,
+        id: apiPlan?.id,
       };
     });
   }, [data]);
 
-  function handleGetStarted(name: string): void {
-    console.log("Selected Plan:", name);
+  function handleGetStarted(plan: any): void {
+    router.push(`${process.env.NEXT_PUBLIC_PLAN_REDIRECT_URI}${plan.id}`);
   }
 
   return (
@@ -1065,8 +1056,8 @@ export default function PlanPricing({ isYearly, data }: any) {
                       {/* CTA Button */}
                       <Button
                         onClick={() => {
-                          handleGetStarted(plan.name);
-                          router.push("/contact-us");
+                          handleGetStarted(plan);
+                          // router.push("/contact-us");
                         }}
                         className="w-full"
                       >
