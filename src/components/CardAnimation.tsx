@@ -72,7 +72,7 @@ export default function CardAnimation({
       onMouseLeave={handleMouseLeave}
     >
       <motion.div
-        className="relative transform-style-preserve-3d will-change-transform"
+        className="relative transform-style-preserve-3d will-change-transform w-full"
         style={{
           rotateX,
           rotateY,
