@@ -17,7 +17,7 @@ export default function Header() {
     { name: "Features", href: "/features" },
     { name: "Become a partner", href: "/become-a-partner" },
     { name: "Pricing", href: "/pricing" },
-    { name: "Privacy Policy", href: "/privacy-policy" },
+    // { name: "Privacy Policy", href: "/privacy-policy" },
   ];
 
   return (
@@ -327,11 +327,15 @@ export default function Header() {
               </Link>
             ))}
             <Link href="https://salesbot.cloud/login" target="_self">
-              <Button className="w-[-webkit-fill-available]" buttonType="white">Login</Button>
+              <Button className="w-[-webkit-fill-available]" buttonType="white">
+                Login
+              </Button>
             </Link>
 
             <Link href="https://salesbot.cloud/register" target="_self">
-              <Button className="w-[-webkit-fill-available]">Experience Now</Button>{" "}
+              <Button className="w-[-webkit-fill-available]">
+                Experience Now
+              </Button>{" "}
             </Link>
           </nav>
         </div>
