@@ -3,6 +3,7 @@
 import Button from "./Button";
 import { DotsLoader } from "./DotsLoader";
 import { useRouter } from "next/navigation";
+import ScrollAnimation from "./ScrollAnimation";
 
 const LeadConversion = () => {
   const router = useRouter();
@@ -113,51 +114,52 @@ const LeadConversion = () => {
               Conversion-First Intelligence
             </div>
 
-            {/* Main heading */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-[600] text-gray-900 mb-4 leading-tight">
-              Lead conversations are structured{" "}
-              <span className="bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
-                to Inform. Nurture and Convert.
-              </span>
-            </h1>
+            <ScrollAnimation>
+              {/* Main heading */}
+              <h1 className="fade-up text-4xl md:text-5xl lg:text-6xl font-[600] text-gray-900 mb-4 leading-tight">
+                Lead conversations are structured{" "}
+                <span className="bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
+                  to Inform. Nurture and Convert.
+                </span>
+              </h1>
 
-            {/* Subheading */}
-            <p className="text-gray-600 text-sm md:text-base mb-6">
-              Salesbot can :
-            </p>
+              {/* Subheading */}
+              <p className="fade-up text-gray-600 text-sm md:text-base mb-6">
+                Salesbot can :
+              </p>
 
-            {/* Bullet list */}
-            <ul className="space-y-2 text-gray-600 text-sm md:text-base mb-6">
-              <li className="flex items-start gap-2 justify-center md:justify-start">
-                <span>•</span>
-                <span>Share offers & product info</span>
-              </li>
-              <li className="flex items-start gap-2 justify-center md:justify-start">
-                <span>•</span>
-                <span>Recommend plans</span>
-              </li>
-              <li className="flex items-start gap-2 justify-center md:justify-start">
-                <span>•</span>
-                <span>Collect requirements</span>
-              </li>
-              <li className="flex items-start gap-2 justify-center md:justify-start">
-                <span>•</span>
-                <span>Book demos & calls</span>
-              </li>
-              <li className="flex items-start gap-2 justify-center md:justify-start">
-                <span>•</span>
-                <span>Push for a decision when the lead is ready</span>
-              </li>
-            </ul>
+              {/* Bullet list */}
+              <ul className="fade-up space-y-2 text-gray-600 text-sm md:text-base mb-6">
+                <li className="flex items-start gap-2 justify-center md:justify-start">
+                  <span>•</span>
+                  <span>Share offers & product info</span>
+                </li>
+                <li className="flex items-start gap-2 justify-center md:justify-start">
+                  <span>•</span>
+                  <span>Recommend plans</span>
+                </li>
+                <li className="flex items-start gap-2 justify-center md:justify-start">
+                  <span>•</span>
+                  <span>Collect requirements</span>
+                </li>
+                <li className="flex items-start gap-2 justify-center md:justify-start">
+                  <span>•</span>
+                  <span>Book demos & calls</span>
+                </li>
+                <li className="flex items-start gap-2 justify-center md:justify-start">
+                  <span>•</span>
+                  <span>Push for a decision when the lead is ready</span>
+                </li>
+              </ul>
 
-            {/* Italic text */}
-            <p className="text-sm md:text-base italic text-gray-900 mb-8">
-              Not just interaction —{" "}
-              <span className="text-pink-500 font-semibold">
-                action with intention.
-              </span>
-            </p>
-
+              {/* Italic text */}
+              <p className="fade-up text-sm md:text-base italic text-gray-900 mb-8">
+                Not just interaction —{" "}
+                <span className="text-pink-500 font-semibold">
+                  action with intention.
+                </span>
+              </p>
+            </ScrollAnimation>
             {/* CTA Button */}
             <Button
               onClick={() => {

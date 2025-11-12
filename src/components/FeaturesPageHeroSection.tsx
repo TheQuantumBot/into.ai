@@ -3,6 +3,8 @@ import { ArrowRight } from "lucide-react";
 import ButtonPrimary from "./Button-primary";
 import FeatureCards from "@/components/FeatureCards";
 import { useRouter } from "next/navigation";
+import ScrollAnimation from "./ScrollAnimation";
+import Button from "./Button";
 
 export default function FeaturesPageHeroSection() {
   const router = useRouter();
@@ -12,48 +14,52 @@ export default function FeaturesPageHeroSection() {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-5 text-center md:text-left  order-2 md:order-1 ">
-            <div className="">
-              <h1 className="text-[28px] md:text-[42px] lg:text-[60px] font-[600] leading-[24px] md:leading-[50px] lg:leading-[66px]  text-gray-900 ">
-                Conversations Built to  Convert -{" "}
-                <span className="gradient-text bg-clip-text text-transparent">
-                  Not Just Talk
-                </span>{" "}
-              </h1>
+          <ScrollAnimation>
+            <div className="space-y-5 text-center md:text-left  order-2 md:order-1 ">
+              <div className="">
+                <h1 className="fade-up text-[28px] md:text-[42px] lg:text-[60px] font-[600] leading-[24px] md:leading-[50px] lg:leading-[66px]  text-gray-900 ">
+                  Conversations Built to Convert -{" "}
+                  <span className="gradient-text bg-clip-text text-transparent">
+                    Not Just Talk
+                  </span>{" "}
+                </h1>
+              </div>
+
+              <p className="fade-up font-inter-tight font-semibold justify-center md:justify-start italic text-lg leading-[24px] text-black text-center flex">
+                <span className="flex flex-row gap-1">
+                  {" "}
+                  SalesBot isn’t here to “chat.”{" "}
+                  <img
+                    src="/threedot.png"
+                    alt="Handshake Icon"
+                    className="w-[20px] h-[20px]"
+                  />
+                </span>
+              </p>
+
+              <p className="text-lg	fade-up text-[rgba(76,76,76,1)] font-medium  leading-normal text-center md:text-left">
+                It’s designed to understand leads, qualify them, handle
+                objections, and close sales - just like your sharpest sales rep
+                would. Powered by Agentic AI, it thinks, responds, and acts with
+                purpose : Faster replies, smarter follow-ups, higher
+                conversions.
+              </p>
+              <div className="flex justify-center md:justify-start items-center gap-4">
+                <ButtonPrimary className="px-8 py-3 rounded-lg transition font-medium flex items-center gap-2 group">
+                  Watch Demo
+                </ButtonPrimary>
+
+                <button
+                  onClick={() => {
+                    router.push("https://salesbot.cloud/register");
+                  }}
+                  className="px-8 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition font-medium flex items-center gap-2 group"
+                >
+                  Get Yours Now
+                </button>
+              </div>
             </div>
-
-            <p className="font-inter-tight font-semibold justify-center md:justify-start italic text-lg leading-[24px] text-black text-center flex">
-              <span className="flex flex-row gap-1">
-                {" "}
-                SalesBot isn’t here to “chat.”{" "}
-                <img
-                  src="/threedot.png"
-                  alt="Handshake Icon"
-                  className="w-[20px] h-[20px]"
-                />
-              </span>
-            </p>
-
-            <p className="text-lg	 text-[rgba(76,76,76,1)] font-medium  leading-normal text-center md:text-left">
-              It’s designed to understand leads, qualify them, handle
-              objections, and close sales - just like your sharpest sales rep
-              would. Powered by Agentic AI, it thinks, responds, and acts with
-              purpose : Faster replies, smarter follow-ups, higher conversions.
-            </p>
-            <div className="flex justify-center md:justify-start items-center gap-4">
-              <ButtonPrimary className="px-8 py-3 rounded-lg transition font-medium flex items-center gap-2 group">Watch Demo</ButtonPrimary>
-
-              <button
-                onClick={() => {
-                  router.push("https://salesbot.cloud/register");
-                }}
-                className="px-8 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition font-medium flex items-center gap-2 group"
-              >
-                Get Yours Now
-              </button>
-            </div>
-          </div>
-
+          </ScrollAnimation>
           {/* Right - Visual with Icons */}
 
           <div

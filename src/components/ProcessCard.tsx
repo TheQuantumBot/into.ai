@@ -17,7 +17,7 @@ const ProcessCard: React.FC<ProcessCardProps> = ({
     <div className="bg-white rounded-2xl shadow-sm p-6 w-full h-full">
       {/* Step Number */}
       <div
-        className="text-4xl font-bold"
+        className="text-4xl font-bold animate-bounce"
         style={{
           // background: "linear-gradient(87deg, #ffffff 0%, #D4549F 12%, #F15A22 100%)",
           background: gradient,

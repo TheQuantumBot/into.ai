@@ -92,7 +92,7 @@ export default function HomePage() {
 
           {/* Floating Cards - Hidden on mobile and tablet */}
           {/* Conversation Card */}
-          <div className="hidden md:block  w-auto h-auto absolute top-[250px] left-[100px] md:top-[82px] md:left-[16px] rotate-[6deg] lg:rotate-[2deg] xl:rotate-[10deg]">
+          <div className="hidden md:block  w-auto h-auto absolute top-[250px] left-[100px] md:top-[180px] md:left-[85px] rotate-[6deg] lg:rotate-[2deg] xl:rotate-[7deg]">
             <Conversation_card />
             <div className="relative">
               <div className="absolute bottom-[-18px] lg:bottom-[-35px] xl:bottom-[-45px] left-[120px] lg:left-[105px] xl:left-[260px] w-[42px] h-[42px] lg:w-16 lg:h-16 border-[2px] border-[#EFEFEF] rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center shadow-[0_8px_30px_rgba(255,102,0,0.3)] -rotate-[10deg]">

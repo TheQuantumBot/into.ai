@@ -19,19 +19,20 @@ export default {
       },
       animation: {
         shine: "shine 2.5s ease infinite",
-        scroll: 'scroll 30s linear infinite',
-        'spin-slow': 'spinSlow 12s linear infinite',
+        scroll: "scroll 30s linear infinite",
+        "spin-slow": "spinSlow 12s linear infinite",
       },
       borderColor: {
-        'white-40': 'rgba(255, 255, 255, 0.40)', // custom border color
+        "white-40": "rgba(255, 255, 255, 0.40)", // custom border color
       },
       scroll: {
-        '0%': { transform: 'translateX(0)' },
-        '100%': { transform: 'translateX(-50%)' },
+        "0%": { transform: "translateX(0)" },
+        "100%": { transform: "translateX(-50%)" },
       },
-     
+      screens: {
+        mid: { min: "450px", max: "640px" },
+      },
     },
   },
   plugins: [],
-
 };

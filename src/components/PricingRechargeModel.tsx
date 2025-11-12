@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import ScrollAnimation from "./ScrollAnimation";
 
 export default function PricingRechargeModel({ setIsYearlyStatus }: any) {
   const [isYearly, setIsYearly] = useState(false);
@@ -11,30 +12,32 @@ export default function PricingRechargeModel({ setIsYearlyStatus }: any) {
       <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-5">
         <div className="flex flex-col  lg:items-center lg:justify-between gap-[15px] md:gap-[25px]">
           {/* <div className="flex-grow"> */}
-          <div className="flex flex-col items-center gap-[14px] ">
-            <h2 className="text-center text-[28px] md:text-[42px] lg:text-[60px] leading-[100%] font-[600] text-[#111111]">
-              Pay As You Go Recharge Model
-            </h2>
-            <h3 className="text-center text-[16px] leading-[100%] md:text-[18px] lg:text-[24px] lg:leading-[28px] font-[600] text-[#1E1E1E]">
-              Starting at ₹10 | ₹3.6/credit
-            </h3>
-            <div>
-              <button
-                onClick={() => {
-                  router.push("https://salesbot.cloud/register");
-                }}
-                className="flex justify-center items-center w-[145px] h-[48px] opacity-100 rounded-[8px] text-[rgba(255,255,255,1)] bg-[linear-gradient(90deg,#35A1DA_-207.85%,#D4549F_-28.59%,#F15A22_136.87%)] font-inter-tight font-medium text-[16px] leading-[24px] text-center align-middle"
-              >
-                Recharge
-              </button>
+          <ScrollAnimation>
+            <div className="flex flex-col items-center gap-[14px] ">
+              <h2 className="fade-up text-center text-[28px] md:text-[42px] lg:text-[60px] leading-[100%] font-[600] text-[#111111]">
+                Pay As You Go Recharge Model
+              </h2>
+              <h3 className="fade-up text-center text-[16px] leading-[100%] md:text-[18px] lg:text-[24px] lg:leading-[28px] font-[600] text-[#1E1E1E]">
+                Starting at ₹10 | ₹3.6/credit
+              </h3>
+              <div>
+                <button
+                  onClick={() => {
+                    router.push("https://salesbot.cloud/register");
+                  }}
+                  className="flex justify-center items-center w-[145px] h-[48px] opacity-100 rounded-[8px] text-[rgba(255,255,255,1)] bg-[linear-gradient(90deg,#35A1DA_-207.85%,#D4549F_-28.59%,#F15A22_136.87%)] font-inter-tight font-medium text-[16px] leading-[24px] text-center align-middle"
+                >
+                  Recharge
+                </button>
+              </div>
+              {/* Subtext */}
+              <p className="fade-up text-center text-[16px] leading-[100%] lg:text-[18px] lg:leading-[24px] text-[#4C4C4C] max-w-2xl mx-auto">
+                Perfect For: Freelancers, startups, or early-stage businesses
+                testing AI-led conversations. No commitments, no contracts just
+                top-up and go.
+              </p>
             </div>
-            {/* Subtext */}
-            <p className="text-center text-[16px] leading-[100%] lg:text-[18px] lg:leading-[24px] text-[#4C4C4C] max-w-2xl mx-auto">
-              Perfect For: Freelancers, startups, or early-stage businesses
-              testing AI-led conversations. No commitments, no contracts just
-              top-up and go.
-            </p>
-          </div>
+          </ScrollAnimation>
           {/* </div> */}
           {/* Toggle */}
           <div className="flex items-center justify-center gap-4 ">
