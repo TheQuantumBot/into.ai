@@ -126,7 +126,6 @@ const PricingPlans: React.FC<PricingPlansProps> = ({ text }) => {
     fetchData();
   }, [isYearly]); // re-fetch when user toggles yearly/monthly
 
-  console.log("priceDatapriceData", priceData);
   return (
     <div className="w-full flex flex-col items-center justify-center px-6 py-3 text-black text-lg font-medium space-y-6">
       <div>
