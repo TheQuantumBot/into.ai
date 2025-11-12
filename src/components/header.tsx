@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 import React, { useState } from "react";
 import { usePathname } from "next/navigation";
 import ButtonPrimary from "./Button-primary";
+import Image from "next/image";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -293,7 +294,7 @@ export default function Header() {
               <Link
                 key={idx}
                 href={item.href}
-                className="relative group inline-block"
+                className="relative group inline-block "
                 onClick={() => setMenuOpen(false)}
               >
                 {item.name}
@@ -324,13 +325,12 @@ export default function Header() {
                 )}
               </Link>
             ))}
-
             <Link href="https://salesbot.cloud/login" target="_self">
-              <Button buttonType="white">Login</Button>
+              <Button className="w-[-webkit-fill-available]" buttonType="white">Login</Button>
             </Link>
 
             <Link href="https://salesbot.cloud/register" target="_self">
-              <Button>Experience Now</Button>{" "}
+              <Button className="w-[-webkit-fill-available]">Experience Now</Button>{" "}
             </Link>
           </nav>
         </div>

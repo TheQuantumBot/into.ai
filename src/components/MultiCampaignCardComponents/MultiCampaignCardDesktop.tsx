@@ -59,7 +59,7 @@ export default function MultiCampaignCardDesktop() {
         </div>
 
         {/* Meta - Bottom Center */}
-        <div className="absolute top-[164px] md:top-[179px] lg:top-[196px] left-[265px] sm:left-[310px]  lg:left-[340px] w-[500px]  h-[2px] bg-gray-300 [@media(min-width:2000px)]:w-[645px] [@media(min-width:2390px)]:w-[742px] [@media(min-width:1700px)]:w-[400px] [@media(min-width:1700px)]:left-[400px]" ></div>
+        <div className="absolute top-[164px] md:top-[179px] lg:top-[196px] left-[265px] sm:left-[310px]  lg:left-[340px] w-[500px]  h-[2px] bg-gray-300  [@media(min-width:2000px)]:w-[645px] [@media(min-width:2390px)]:w-[742px] [@media(min-width:1700px)]:w-[400px] [@media(min-width:1430px)]:left-[400px]" ></div>
         <div className="absolute top-[144px] left-[140px] sm:left-[360px] md:left-[180px] lg:left-[260px] xl:left-[430px] w-[50px] md:w-[78px] lg:w-[100px] h-[50px] md:h-[78px] lg:h-[100px] rounded-2xl bg-[linear-gradient(180deg,#E6F0FF_0%,#FFFFFF_100%)] flex items-center justify-center [@media(min-width:2100px)]:left-[560px]">
           <Image
             src="/meta.svg"
@@ -94,7 +94,7 @@ export default function MultiCampaignCardDesktop() {
       </div>
 
       {/* Vertical Divider */}
-      <div className="absolute top-[240px] lg:top-[276px] right-[44px] md:right-[112px] w-[2px] h-[100px] bg-gray-200"></div>
+      <div className="absolute top-[240px] lg:top-[280px] right-[44px] md:right-[112px] w-[2px] h-[85px] md:h-[170px] bg-gray-200"></div>
 
       {/* Avatar Group */}
       <div className="absolute bottom-[10px] md:bottom-[45px] right-[10px] md:right-[45px] flex -space-x-2 md:-space-x-4">

@@ -8,18 +8,18 @@ export default function HumanStyleChat() {
   const router = useRouter();
 
   return (
-    <section className="relative overflow-hidden pt-[100px] pb-[48px]">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+    <section className="relative overflow-hidden  pb-[48px]">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-12 items-center">
           {/* Left Content */}
-          <div className="w-full flex md:justify-center lg:justify-start items-center py-8 ">
-            <div className="space-y-8 max-w-xl">
+          <div className="w-full order-2 md:order-1 flex justify-center lg:justify-start items-center py-8 ">
+            <div className="space-y-8 max-w-xl text-center md:text-left">
               <div className="inline-block border border-gray-300 bg-white rounded-full px-4 py-1 text-sm text-gray-700 font-bold whitespace-normal break-words">
                 Build Trust
               </div>
 
               <h2
-                className="text-[28px] sm:text-[40px] lg:text-[56px] font-[600] leading-tight text-black 
+                className="text-[28px] md:text-[42px] lg:text-[60px] font-[600] leading-[24px] md:leading-[50px] lg:leading-[66px] text-black 
                whitespace-normal break-words w-full"
               >
                 Human-Style <br className="block sm:hidden" /> Conversations{" "}
@@ -37,23 +37,24 @@ export default function HumanStyleChat() {
               </h2>
 
               <div className="mt-4 space-y-[14px]">
-                <p className="text-[18px] text-[rgba(128,128,128,1)] leading-relaxed mt-2 whitespace-normal break-words">
+                <p className="text-[14px] md:text-[16px] lg:text-[18px]  text-[#808080] leading-relaxed mt-2  break-words">
                   Your customers shouldn't feel like they’re talking to a bot.
                 </p>
 
-                <p className="text-[18px] text-[rgba(128,128,128,1)] leading-relaxed whitespace-normal break-words">
+                <p className="text-[14px] md:text-[16px] lg:text-[18px] text-[#808080] font-[500] leading-relaxed whitespace-normal break-words">
                   SalesBot adapts to tone, reads context, and responds
                   thoughtfully, so conversations feel friendly, natural, and
                   consultative, not robotic.
                 </p>
 
-                <div className="flex flex-wrap gap-3 text-[16px] font-medium whitespace-normal break-words">
+                <div className="flex flex-wrap gap-3 text-[14px] md:text-[16px] lg:text-[18px] font-[700] whitespace-normal break-words">
                   <span className="flex items-center gap-1 flex-shrink-0">
                     <svg
                       width="18"
                       height="14"
                       viewBox="0 0 18 14"
                       fill="none"
+                      className="w-[14px] md:w-[16px] lg:w-[18px] h-[14px] md:h-[16px] lg:h-[18px]"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
@@ -72,6 +73,7 @@ export default function HumanStyleChat() {
                       height="18"
                       viewBox="0 0 18 18"
                       fill="none"
+                      className="w-[14px] md:w-[16px] lg:w-[18px] h-[14px] md:h-[16px] lg:h-[18px]"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
@@ -110,6 +112,7 @@ export default function HumanStyleChat() {
                       height="18"
                       viewBox="0 0 18 18"
                       fill="none"
+                      className="w-[14px] md:w-[16px] lg:w-[18px] h-[14px] md:h-[16px] lg:h-[18px]"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
@@ -148,6 +151,7 @@ export default function HumanStyleChat() {
                       height="13"
                       viewBox="0 0 14 13"
                       fill="none"
+                      className="w-[14px] md:w-[16px] lg:w-[18px] h-[14px] md:h-[16px] lg:h-[18px]"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
@@ -174,6 +178,7 @@ export default function HumanStyleChat() {
                       height="18"
                       viewBox="0 0 18 18"
                       fill="none"
+                      className="w-[14px] md:w-[16px] lg:w-[18px] h-[14px] md:h-[16px] lg:h-[18px]"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
@@ -209,29 +214,73 @@ export default function HumanStyleChat() {
                 </div>
               </div>
 
-              <div className="flex flex-wrap items-center gap-4 mt-6">
+              <div className="flex items-center flex-col md:flex-row gap-4 mt-5 lg:mt-6">
                 <ButtonPrimary>Try a Live Demo Conversation</ButtonPrimary>
                 <Button
                   onClick={() => {
                     router.push("https://salesbot.cloud/register");
                   }}
                 >
-                  Experience Now
+                  Get Started
                 </Button>
               </div>
             </div>
           </div>
 
           {/* Right Image */}
-          <div className="flex justify-center relative md:justify-end">
-            <div className="w-[648px] h-[560px] rounded-t-[20px]  rounded-b-[0px] bg-white  overflow-visible relative">
-              <div className="flex  z-20  absolute left-[-128px] bottom-[126px] mt-[25px] mr-[40px] items-center text-white text-[20px] tracking-[2px] font-semibold  w-[200.29px] h-[45.31px] opacity-100 rounded-[433.34px] pt-[8.63px] pr-[19.26px] pb-[9.63px] pl-[19.26px] gap-[10.62px] bg-[linear-gradient(91.11deg,#9673E9_0.3%,#C558E5_29.11%,#EC9C75_57.17%,#EC7B5C_76.66%,#E9AE89_98.87%)]">
+          <div className="flex order-1 md:order-2 justify-center relative md:justify-end">
+            <div className="lg:w-[648px] w-[348px] h-[300px] lg:h-[560px] rounded-t-[10px] lg:rounded-t-[20px]  rounded-b-[0px] bg-white  overflow-visible relative">
+              
+
+              <div className="absolute bottom-[0px] right-[0px] max-w-[95px] lg:max-w-[155px] max-h-[260px]">
+                <Image
+                  src="/Rectangle18238.svg"
+                  alt="Arrow"
+                  width={200}
+                  height={100}
+                />
+              </div>
+              <div className="absolute w-[112px] lg:w-[200px] xl:w-[220px] bottom-[0px] z-10 right-[0px] ">
+                <Image src="/woman.svg" alt="Arrow" width={220} height={331} />
+              </div>
+              <div className="absolute lg:max-w-[457px] max-w-[240px] md:max-w-[255px] lg:max-h-[692px] xl:max-h-[692px]  lg:left-[38px] left-[25px] top-[-30px] md:top-[-45px] xl:top-[-60px] ">
+                <Image
+                  src="/HumanChet.svg"
+                  alt="Arrow"
+                  width={457}
+                  height={692}  
+                  className="lg:max-w-[390px] xl:max-w-[457px] lg:max-h-[692px] w-full h-auto"
+                />
+                <div className=" absolute z-10 top-[45px] -right-[40px] inline-block lg:top-[85px] xl:top-[105px] lg:-right-[60px] md:top-[50px] md:-right-[60px] sm:top-[45px] sm:-right-[60px]">
+                  <svg
+                    className="w-[36px] h-[18px] sm:w-[40px] sm:h-[20px] md:w-[48px] md:h-[22px] lg:w-[53px] lg:h-[25px]"
+                    viewBox="0 0 53 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M12.4531 10.2352C10.214 9.49338 8.10473 10.9639 5.68868 10.8408C6.10824 10.3414 6.39133 9.90451 6.78417 9.5381C12.008 4.62242 18.2859 2.43979 25.4323 2.49348C27.179 2.52791 28.8722 2.82826 30.4123 3.70354C32.0405 4.62629 33.2319 5.89172 33.6585 7.93526C33.0028 8.1147 32.3919 8.2956 31.7818 8.45421C27.3972 9.60544 24.435 13.8808 24.8946 18.3566C25.2373 21.6019 27.9739 22.8952 30.658 20.975C33.4569 18.9693 34.8977 16.005 35.8539 12.7797C36.0323 12.1163 36.1891 11.43 36.3675 10.7667C42.1173 11.7341 49.6033 18.5793 51.2925 24.5225C51.6853 24.1561 52.2081 23.9277 52.263 23.6172C52.3295 22.9503 52.3787 22.1266 52.0617 21.5364C51.2185 19.9031 50.4005 18.1814 49.2128 16.8046C46.0388 13.1105 42.1181 10.3289 37.4883 8.68418C36.7345 8.43665 36.2738 8.13173 36.076 7.32236C34.8849 2.59978 31.4336 0.547207 26.943 0.133695C19.9512 -0.539497 13.5708 1.34985 7.81705 5.33385C7.2213 5.73828 6.66888 6.18872 5.95688 6.7232C5.85731 5.64936 6.52672 5.04659 6.90802 4.34524C7.48071 3.27094 8.16387 2.24483 8.69178 1.16907C8.81311 0.883054 8.62902 0.341774 8.41314 0.0894159C8.2839 -0.0709122 7.69757 0.0438679 7.44628 0.191836C7.03395 0.468396 6.6635 0.835536 6.35948 1.22714C5.61134 2.18422 4.79677 3.11684 4.22408 4.19115C2.86567 6.68971 1.61702 9.25874 0.301208 11.8256C-0.0346076 12.5061 -0.216628 13.2809 0.462087 13.7713C0.922025 14.0985 1.67875 14.2569 2.22104 14.1184C5.22564 13.3684 8.18766 12.5502 11.1511 11.6873C11.6486 11.5474 12.1086 11.1831 12.565 10.9303C12.5279 10.6912 12.4907 10.4595 12.4531 10.2352ZM27.8268 19.8347C26.5049 17.0707 27.2452 14.9758 28.496 13.0314C29.7453 11.1315 31.8365 10.218 33.8179 10.6169C32.9598 14.2693 31.6858 17.6181 27.8268 19.8347Z"
+                      fill="black"
+                    />
+                  </svg>
+
+                  <span
+                    className="text-black font-medium 
+                   text-[10px] sm:text-[12px] md:text-[13px] lg:text-[14px]"
+                  >
+                    Feels human
+                  </span>
+                </div>
+                <div className="flex  z-20  absolute left-[-40px] md:left-[-90px] lg:left-[-100px] xl:left-[-80px] bottom-[95px] md:bottom-[80px] lg:bottom-[140px] xl:bottom-[175px] mt-[25px] mr-[40px] items-center text-white text-[11px] md:text-[20px] font-semibold opacity-100 rounded-[159px] py-[3px] px-[6px] md:px-[7px] lg:rounded-[433.34px] lg:pt-[8.63px] lg:pr-[19.26px] lg:pb-[9.63px] lg:pl-[19.26px] gap-[10.62px] bg-[linear-gradient(91.11deg,#9673E9_0.3%,#C558E5_29.11%,#EC9C75_57.17%,#EC7B5C_76.66%,#E9AE89_98.87%)]">
                 <span>
                   <svg
                     width="24"
                     height="23"
                     viewBox="0 0 24 23"
                     fill="none"
+                    className="w-[11px] md:w-[20px] lg:w-[24px] h-[11px] md:h-[20px] lg:h-[24px]"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
@@ -263,7 +312,7 @@ export default function HumanStyleChat() {
                   viewBox="0 0 30 29"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="absolute right-[-16px] top-[-16px] rotate-[0deg]"
+                  className="absolute right-[-8px] md:right-[-16px] top-[-8px] md:top-[-16px] rotate-[0deg] w-[11px] md:w-[20px] lg:w-[24px] h-[11px] md:h-[20px] lg:h-[24px]"
                 >
                   <g filter="url(#filter0_d_3552_111783)">
                     <path
@@ -315,50 +364,8 @@ export default function HumanStyleChat() {
                   </defs>
                 </svg>
               </div>
-
-              <div className="absolute bottom-[0px] right-[0px]  max-w-[155px] max-h-[260px]">
-                <Image
-                  src="/Rectangle18238.svg"
-                  alt="Arrow"
-                  width={200}
-                  height={100}
-                />
               </div>
-              <div className="absolute bottom-[0px] z-10 right-[0px] ">
-                <Image src="/woman.svg" alt="Arrow" width={220} height={331} />
-              </div>
-              <div className="absolute lg:max-w-[457px] max-w-[244px] lg:max-h-[692px] max-h-[329px] lg:left-[38px] left-[20px] top-[-60px] ">
-                <Image
-                  src="/HumanChet.svg"
-                  alt="Arrow"
-                  width={457}
-                  height={692}
-                  className="lg:max-w-[457px] max-w-[244px] lg:max-h-[692px] max-h-[329px] w-full h-auto"
-                />
-                <div className=" absolute z-10 top-[90px] -right-[22px] inline-block lg:top-[196px] lg:-right-[22px] md:top-[89px] md:-right-[56px] sm:top-[90px] sm:-right-[30px]">
-                  <svg
-                    className="w-[36px] h-[18px] sm:w-[40px] sm:h-[20px] md:w-[48px] md:h-[22px] lg:w-[53px] lg:h-[25px]"
-                    viewBox="0 0 53 25"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M12.4531 10.2352C10.214 9.49338 8.10473 10.9639 5.68868 10.8408C6.10824 10.3414 6.39133 9.90451 6.78417 9.5381C12.008 4.62242 18.2859 2.43979 25.4323 2.49348C27.179 2.52791 28.8722 2.82826 30.4123 3.70354C32.0405 4.62629 33.2319 5.89172 33.6585 7.93526C33.0028 8.1147 32.3919 8.2956 31.7818 8.45421C27.3972 9.60544 24.435 13.8808 24.8946 18.3566C25.2373 21.6019 27.9739 22.8952 30.658 20.975C33.4569 18.9693 34.8977 16.005 35.8539 12.7797C36.0323 12.1163 36.1891 11.43 36.3675 10.7667C42.1173 11.7341 49.6033 18.5793 51.2925 24.5225C51.6853 24.1561 52.2081 23.9277 52.263 23.6172C52.3295 22.9503 52.3787 22.1266 52.0617 21.5364C51.2185 19.9031 50.4005 18.1814 49.2128 16.8046C46.0388 13.1105 42.1181 10.3289 37.4883 8.68418C36.7345 8.43665 36.2738 8.13173 36.076 7.32236C34.8849 2.59978 31.4336 0.547207 26.943 0.133695C19.9512 -0.539497 13.5708 1.34985 7.81705 5.33385C7.2213 5.73828 6.66888 6.18872 5.95688 6.7232C5.85731 5.64936 6.52672 5.04659 6.90802 4.34524C7.48071 3.27094 8.16387 2.24483 8.69178 1.16907C8.81311 0.883054 8.62902 0.341774 8.41314 0.0894159C8.2839 -0.0709122 7.69757 0.0438679 7.44628 0.191836C7.03395 0.468396 6.6635 0.835536 6.35948 1.22714C5.61134 2.18422 4.79677 3.11684 4.22408 4.19115C2.86567 6.68971 1.61702 9.25874 0.301208 11.8256C-0.0346076 12.5061 -0.216628 13.2809 0.462087 13.7713C0.922025 14.0985 1.67875 14.2569 2.22104 14.1184C5.22564 13.3684 8.18766 12.5502 11.1511 11.6873C11.6486 11.5474 12.1086 11.1831 12.565 10.9303C12.5279 10.6912 12.4907 10.4595 12.4531 10.2352ZM27.8268 19.8347C26.5049 17.0707 27.2452 14.9758 28.496 13.0314C29.7453 11.1315 31.8365 10.218 33.8179 10.6169C32.9598 14.2693 31.6858 17.6181 27.8268 19.8347Z"
-                      fill="black"
-                    />
-                  </svg>
-
-                  <span
-                    className="text-black font-medium 
-                   text-[10px] sm:text-[12px] md:text-[13px] lg:text-[14px]"
-                  >
-                    Feels human
-                  </span>
-                </div>
-              </div>
-              <div className="w-[650px] h-[78px] z-10 bg-[linear-gradient(to_bottom,_#ffffff36_0%,_#fffffff7_70%,_#fffffff5_100%)] overflow-hidden absolute bottom-0"></div>
+              <div className="w-[-webkit-fill-available] h-[78px] z-10 bg-[linear-gradient(to_bottom,_#ffffff36_0%,_#fffffff7_70%,_#fffffff5_100%)] overflow-hidden absolute bottom-0"></div>
             </div>
           </div>
         </div>
