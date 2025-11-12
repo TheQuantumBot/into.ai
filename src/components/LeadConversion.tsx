@@ -9,21 +9,21 @@ const LeadConversion = () => {
   const router = useRouter();
 
   return (
-    <section className="relative overflow-hidden">
-      <div className="max-w-[1440px] mx-auto">
+    <section className="relative overflow-hidden ">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 relative z-10 ">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
           {/* Left Column - Visual Side */}
-          <div className="relative h-[400px] md:h-[500px] order-2 md:order-1">
+          <div className="relative h-[400px] md:h-[500px] order-2 md:order-1 flex justify-center">
             <div
-              className="absolute top-12 right-8 w-[458.1542663574219px] h-[560px] 
+              className="flex  justify-center w-[275px] md:w-[320px] lg:w-[458px] h-[330px] md:h-[385px] lg:h-[560px] 
                bg-[url('/backgound_with_arrow.svg')] 
                bg-cover bg-center 
                "
             ></div>
 
-            <div className="absolute top-[1rem] left-[8rem] z-10  animate-[float_3.2s_ease-in-out_infinite]">
+            <div className="absolute top-[-16px] left-[0px] z-10  animate-[float_3.2s_ease-in-out_infinite]">
               <DotsLoader />
-              <div className="flex mt-2 gap-[10px] bg-[url('/Vector.png')]  justify-center h-[60px] w-[240px] bg-no-repeat text-white pt-[14px] font-semibold text-[20.48px] leading-[14.79px] tracking-[0%]">
+              <div className="flex mt-2 gap-[4px] lg:gap-[10px] bg-[url('/VectorBG.svg')]  lg:bg-[url('/VectorLG.svg')] justify-center h-[40px] lg:h-[60px] w-[140px] lg:w-[240px] bg-no-repeat text-white p-[7px] lg:p-[12px] font-semibold text-[10px] md:text-[12px] lg:text-[20px] leading-[100%] tracking-[0%]">
                 Lead Conversations{"  "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -31,6 +31,7 @@ const LeadConversion = () => {
                   width="20"
                   height="20"
                   viewBox="0 0 30 30"
+                  className="w-[10px] md:w-[12px] lg:w-[20px] h-[10px] md:h-[12px] lg:h-[20px]"
                   fill="none"
                 >
                   <path
@@ -62,48 +63,46 @@ const LeadConversion = () => {
             </div>
 
             {/* Share offers bubble with money bag - left side */}
-            <div className="w-[172px] h-[78px] absolute top-[10rem] border-[2px] border-[#15A3634D] left-[20rem] z-10  bg-[#EDFFF7] px-4 py-3 rounded-xl shadow-[4.92px_8.2px_16.4px_0px_#00000026]  animate-[float_2.8s_ease-in-out_infinite]">
-              <div
-                className="absolute top-[34px] right-[130px] w-[91px] h-[90px] 
-               bg-[url('/money_bag.png')] 
-               bg-cover bg-center 
-               "
-              ></div>
-              <div className="flex justify-center items-center ">
-                <span className="text-[#15A363] font-manrope font-bold text-[20px] leading-[100%] tracking-[0%]">
+            <div className="w-fit flex justify-center items-center  gap-2 absolute top-[75px] md:top-[80px] lg:top-[110px] border-[2px] border-[#15A3634D] left-[100px] md:left-[115px] lg:left-[145px] xl:left-[235px] z-10  bg-[#EDFFF7] p-[7px] lg:p-[12px] rounded-xl shadow-[4.92px_8.2px_16.4px_0px_#00000026]  animate-[float_2.8s_ease-in-out_infinite]">
+              <img
+                src="/money_bag.png"
+                alt="money_bag Icon"
+                className="absolute z-10 top-[20px] md:top-[30px] lg:top-[60px] right-[61px] md:right-[75px] lg:right-[120px] w-[42px] lg:w-[80px] h-[42px] lg:h-[80px] object-contain align-middle "
+              />
+              {/* <div className="flex justify-center items-center "> */}
+                <span className="text-[#15A363] font-manrope font-bold text-[10px] md:text-[12px] lg:text-[20px] leading-[100%]  ">
                   Share offers &<br />
                   product info
                 </span>
-              </div>
+              {/* </div> */}
             </div>
 
             {/* Book demos bubble - center right */}
-            <div className="border-[2px] border-[#F5A41F4D] flex justify-center items-center absolute w-[173px] h-[78px] top-[18rem] right-[6rem] z-10 bg-[#FFF8ED] px-4 py-3 rounded-xl shadow-[0_8px_16px_rgba(251,146,60,0.3)] text-sm font-medium animate-[float_3.5s_ease-in-out_infinite] flex items-start gap-2">
+            <div className="w-fit flex justify-center items-center  gap-2 absolute top-[150px] md:top-[160px] lg:top-[250px]  left-[155px] md:left-[175px] lg:left-[230px] xl:left-[320px] border-[2px] border-[#F5A41F4D] z-10  bg-[#FFF8ED] p-[7px] lg:p-[12px] rounded-xl shadow-[0_8px_16px_rgba(251,146,60,0.3)]  animate-[float_2.8s_ease-in-out_infinite]">
+              {/* <div className="border-[2px] border-[#F5A41F4D] justify-center absolute w-fit p-[7px] lg:p-[12px] top-[160px] lg:bottom-[170px] left-[175px] lg:left-[230px] z-10 bg-[#FFF8ED] rounded-xl shadow-[0_8px_16px_rgba(251,146,60,0.3)] animate-[float_3.5s_ease-in-out_infinite] flex items-start gap-2"> */}
               <img
                 src="/handshake.png"
                 alt="Handshake Icon"
-                className="absolute bottom-[44px] left-[125px] w-[80px] h-[80px] object-contain align-middle font-interTight font-semibold italic leading-[24px]"
+                className="absolute bottom-[20px] md:bottom-[25px] lg:bottom-[44px] left-[55px] md:left-[70px] lg:left-[125px] w-[42px] lg:w-[80px] h-[42px] lg:h-[80px] object-contain align-middle "
               />
-              <span className="leading-tight text-[#F5A41F] font-manrope font-bold text-[20px] leading-[100%] tracking-[0%]">
+              <span className=" text-[#F5A41F] font-manrope font-bold text-[10px] md:text-[12px] lg:text-[20px] leading-[100%] ">
                 Book demos &<br />
                 close deals
               </span>
             </div>
 
             {/* Lead conversations bubble - bottom right */}
-            <div className="absolute top-[28rem] left-[26rem] w-[218px] h-[78px]  animate-[float_2.5s_ease-in-out_infinite]">
+            <div className=" border-[2px] border-[#F6553E4D] bg-[#FFF1EF]  absolute bottom-[145px] md:bottom-[215px] lg:bottom-[45px] xl:bottom-[55px] right-[10px] md:right-[-20px] lg:right-[-30px] xl:right-[45px] w-fit p-[7px] lg:p-[12px] rounded-xl shadow-[0_8px_16px_rgba(244,114,182,0.4)]  animate-[float_2.8s_ease-in-out_infinite] flex items-start gap-2">
               <img
                 src="/threedot.png"
                 alt="Handshake Icon"
-                className="absolute z-[999] bottom-[63px] left-[186px] w-[64px] h-[38px] object-contain align-middle"
+                className="absolute z-10 bottom-[25px] md:bottom-[35px] lg:bottom-[55px] left-[90px] md:left-[100px] lg:left-[160px] w-[42px] lg:w-[80px] h-[42px] lg:h-[80px] object-contain align-middle"
               />
-              <div className=" border-[2px] border-[#F6553E4D] bottom-[2rem] right-4 w-[218px] h-[78px] z-10 bg-[#FFF1EF]  px-4 py-3 rounded-xl shadow-[0_8px_16px_rgba(244,114,182,0.4)] text-sm font-medium  leading-tight">
-                <span className="leading-tight text-[#F6553E] font-manrope font-bold text-[20px] leading-[100%] tracking-[0%]">
+               <span className=" text-[#F6553E] font-manrope font-bold text-[10px] md:text-[12px] lg:text-[20px] leading-[100%] tracking-[0%]">
                   Lead conversations
                   <br />
                   that inform, nurture
                 </span>
-              </div>
             </div>
           </div>
 
