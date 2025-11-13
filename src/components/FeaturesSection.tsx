@@ -1,10 +1,13 @@
 "use client";
 
+import { useAnimation, useInView, motion } from "framer-motion";
 import Badge from "./Badge";
 import Button from "./Button";
 import FeatureCard from "./FeatureCard";
 import Heros from "./Heros";
 import { useRouter } from "next/navigation";
+import { useEffect, useRef } from "react";
+import CardAnimation from "./CardAnimation";
 
 const features = [
   {
@@ -64,6 +67,25 @@ const features = [
 
 export default function FeaturesSection() {
   const router = useRouter();
+  const controlsLeft = useAnimation();
+  const controlsRight = useAnimation();
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { amount: 0.1 });
+
+  useEffect(() => {
+    if (inView) {
+      controlsLeft.start({
+        x: 0,
+        opacity: 1,
+        transition: { duration: 0.8, ease: "easeOut" },
+      });
+      controlsRight.start({
+        x: 0,
+        opacity: 1,
+        transition: { duration: 0.8, ease: "easeOut" },
+      });
+    }
+  }, [inView, controlsLeft, controlsRight]);
 
   return (
     <section className="py-10 sm:py-14 lg:py-20 px-4 sm:px-8 lg:px-16 ">
@@ -80,38 +102,51 @@ export default function FeaturesSection() {
         />
       </div>
       {/* Feature Cards in two columns */}
-      <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row justify-center gap-10">
+      <div
+        className="max-w-[1400px] mx-auto flex flex-col lg:flex-row justify-center gap-10"
+        ref={ref}
+      >
         {/* Column 1 */}
         <div className="flex flex-col gap-10 flex-1 min-w-[320px]">
-          <FeatureCard
-            img={features[0].img}
-            title={features[0].title}
-            description={features[0].description}
-          />
-          <FeatureCard
-            img={features[2].img}
-            title={features[2].title}
-            description={features[2].description}
-          />
+          <motion.div initial={{ x: -100, opacity: 0 }} animate={controlsLeft}>
+            <FeatureCard
+              img={features[0].img}
+              title={features[0].title}
+              description={features[0].description}
+            />
+          </motion.div>
+
+          <motion.div initial={{ x: -100, opacity: 0 }} animate={controlsLeft}>
+            <FeatureCard
+              img={features[2].img}
+              title={features[2].title}
+              description={features[2].description}
+            />
+          </motion.div>
         </div>
 
         {/* Column 2 */}
         <div className="flex flex-col gap-10 flex-1 min-w-[320px]">
-          <FeatureCard
-            img={features[1].img}
-            title={features[1].title}
-            description={features[1].description}
-          />
-          <FeatureCard
-            img={features[3].img}
-            title={features[3].title}
-            description={features[3].description}
-          />
+          <motion.div initial={{ x: 100, opacity: 0 }} animate={controlsRight}>
+            <FeatureCard
+              img={features[1].img}
+              title={features[1].title}
+              description={features[1].description}
+            />
+          </motion.div>
+
+          <motion.div initial={{ x: 100, opacity: 0 }} animate={controlsRight}>
+            <FeatureCard
+              img={features[3].img}
+              title={features[3].title}
+              description={features[3].description}
+            />
+          </motion.div>
         </div>
       </div>
 
       {/* Bottom Section */}
-      <div className="max-w-[1400px] mx-auto mt-10 bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm hover:shadow-md transition-all duration-300 flex flex-col md:flex-row items-stretch     overflow-hidden">
+      <div className="max-w-[1400px] mx-auto mt-10 bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm hover:shadow-xl hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] flex flex-col md:flex-row items-stretch overflow-hidden">
         {/* Image */}
         <div className="relative w-full md:w-1/2 h-[240px] sm:h-[320px] md:h-auto min-h-[320px] flex-shrink-0">
           <svg

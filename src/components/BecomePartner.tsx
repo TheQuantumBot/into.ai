@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
+import ScrollAnimation from "./ScrollAnimation";
 
 const WhoCanBecomePartner = () => {
   const roles = [
@@ -54,19 +55,19 @@ const WhoCanBecomePartner = () => {
           <div className="bg-white inline-block border border-gray-300 rounded-full px-4 py-1 text-sm text-gray-700 font-bold">
             Partner
           </div>
+          <ScrollAnimation>
+            <h2 className="fade-up text-4xl sm:text-5xl font-bold text-gray-900 leading-tight">
+              Who Can <br /> Become a Partner
+            </h2>
 
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight">
-            Who Can <br /> Become a Partner
-          </h2>
+            <p className="fade-up text-gray-500 text-lg">
+              Perfect for Anyone With a Network - No Tech Skills Needed
+            </p>
 
-          <p className="text-gray-500 text-lg">
-            Perfect for Anyone With a Network - No Tech Skills Needed
-          </p>
-
-          <span className="inline-flex items-center gap-2 bg-[#f05a25] text-white font-medium px-5 py-2.5 rounded-full shadow-sm hover:shadow-md transition-all">
-            👋 Anyone who believes in AI
-          </span>
-
+            <span className="fade-up inline-flex items-center gap-2 bg-[#f05a25] text-white font-medium px-5 py-2.5 rounded-full shadow-sm hover:shadow-md transition-all">
+              👋 Anyone who believes in AI
+            </span>
+          </ScrollAnimation>
           <div className="absolute right-0 top-0 hidden md:block">
             <Image src="/arrow.svg" alt="Arrow" width={200} height={100} />
           </div>
