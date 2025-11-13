@@ -6,18 +6,21 @@ export default function PrivacyPolicyPage() {
   return (
     <main className="min-h-screen bg-[#ECE9E6] relative overflow-hidden">
       {/* Background Image */}
-      <img
+      {/* <img
         src="/Pricing-Bg.png"
         alt="Background"
         className="absolute inset-0 h-[1024px] object-cover"
-      />
+      /> */}
 
       {/* Content */}
       <div className="relative z-10 min-h-screen flex flex-col">
         <Header />
-        <Privacy_policy />
-        <Footer />
+
+        <div className="flex-1 flex flex-col items-center justify-center pt-[100px]">
+          <Privacy_policy />
+        </div>
       </div>
+      <Footer />
     </main>
   );
 }
