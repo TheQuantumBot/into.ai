@@ -82,7 +82,7 @@ export default function FeaturesSection() {
       {/* Feature Cards in two columns */}
       <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row justify-center gap-10">
         {/* Column 1 */}
-        <div className="flex flex-col gap-10 flex-1 min-w-[320px]">
+        <div className="flex flex-col gap-10 flex-1 ">
           <FeatureCard
             img={features[0].img}
             title={features[0].title}
@@ -96,7 +96,7 @@ export default function FeaturesSection() {
         </div>
 
         {/* Column 2 */}
-        <div className="flex flex-col gap-10 flex-1 min-w-[320px]">
+        <div className="flex flex-col gap-10 flex-1">
           <FeatureCard
             img={features[1].img}
             title={features[1].title}
@@ -113,7 +113,8 @@ export default function FeaturesSection() {
       {/* Bottom Section */}
       <div className="max-w-[1400px] mx-auto mt-10 bg-white rounded-[20px] border border-[#EAEAEA] shadow-sm hover:shadow-md transition-all duration-300 flex flex-col md:flex-row items-stretch     overflow-hidden">
         {/* Image */}
-        <div className="relative w-full md:w-1/2 h-[240px] sm:h-[320px] md:h-auto min-h-[320px] flex-shrink-0">
+        <div className="relative flex justify-center items-center w-full md:w-1/2 h-[240px] sm:h-[320px] md:h-auto min-h-[320px] flex-shrink-0">
+        <div className="flex justify-center items-center w-[-webkit-fill-available]">
           <svg
             width="705"
             height="478"
@@ -494,6 +495,7 @@ export default function FeaturesSection() {
               </radialGradient>
             </defs>
           </svg>
+          </div>
         </div>
 
         {/* Text Section */}

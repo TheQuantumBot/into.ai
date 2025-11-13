@@ -27,7 +27,7 @@ export default function CtaCard({
 
   return (
     <ScrollAnimation>
-      <div className="max-w-7xl mx-auto my-10 ">
+      <div className="max-w-7xl mx-auto my-10 py-10 sm:py-14 lg:py-20 px-4 sm:px-8 lg:px-16 ">
         <div className="relative rounded-2xl p-[2px] bg-gradient-to-r from-red-500 via-orange-500 to-purple-600 shadow-md">
           <div className="rounded-2xl bg-white px-6 py-8 sm:px-12 md:px-[80px] md:py-[40px] [@media(max-width:375px)]:px-[15px] lg:px-[100px] lg:py-[50px]">
             {/* Title */}
