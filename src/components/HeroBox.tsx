@@ -67,7 +67,7 @@ export default function HeroBox() {
               }}
             >
               <div
-                className="relative w-full h-full flex items-center justify-center bottom-[-110px] right-[12px] bg-contain bg-center bg-no-repeat"
+                className="relative w-full h-full flex items-center justify-center bottom-[-90px] right-[0px] bg-contain bg-center bg-no-repeat sm:bottom-[-65px]"
                 style={{
                   backgroundImage: "url('/become-a-partner/pattern.svg')",
                 }}

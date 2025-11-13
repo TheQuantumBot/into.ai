@@ -246,7 +246,7 @@ export default function HumanStyleChat() {
                   height={692}
                   className="lg:max-w-[390px] xl:max-w-[457px] lg:max-h-[692px] w-full h-auto"
                 />
-                <div className=" absolute z-10 top-[45px] -right-[40px] inline-block lg:top-[85px] xl:top-[105px] lg:-right-[60px] md:top-[50px] md:-right-[60px] sm:top-[45px] sm:-right-[60px]">
+                <div className="animate-bounce-x absolute z-10 top-[94px] -right-[25px] inline-block lg:top-[165px] xl:top-[193px] lg:-right-[20px] md:top-[99px] md:-right-[42px] sm:top-[94px] sm:-right-[42px]">
                   <svg
                     className="w-[36px] h-[18px] sm:w-[40px] sm:h-[20px] md:w-[48px] md:h-[22px] lg:w-[53px] lg:h-[25px]"
                     viewBox="0 0 53 25"
@@ -307,7 +307,7 @@ export default function HumanStyleChat() {
                     viewBox="0 0 30 29"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="absolute right-[-8px] md:right-[-16px] top-[-8px] md:top-[-16px] rotate-[0deg] w-[11px] md:w-[20px] lg:w-[24px] h-[11px] md:h-[20px] lg:h-[24px]"
+                    className="animate-move-45 absolute right-[-8px] md:right-[-16px] top-[-8px] md:top-[-16px] rotate-[0deg] w-[11px] md:w-[20px] lg:w-[24px] h-[11px] md:h-[20px] lg:h-[24px]"
                   >
                     <g filter="url(#filter0_d_3552_111783)">
                       <path

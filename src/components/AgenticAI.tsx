@@ -36,7 +36,7 @@ const AgenticAIHero = () => {
                   alt="ArrowAI"
                   width={30}
                   height={30}
-                  className="absolute right-[-16px] top-[-16px] rotate-[0deg]"
+                  className="absolute animate-move-45 right-[-16px] top-[-16px] rotate-[0deg]"
                 />
               </div>
             </div>

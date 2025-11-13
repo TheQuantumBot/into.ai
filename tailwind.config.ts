@@ -16,11 +16,29 @@ export default {
           "0%": { transform: "rotate(0deg)" },
           "100%": { transform: "rotate(360deg)" },
         },
+        "bounce-x": {
+          "0%, 100%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(-25%)" },
+        },
+        "move-45": {
+          "0%, 100%": { transform: "translate(0, 0)" },
+          "50%": { transform: "translate(10px, -10px)" }, // moves diagonally (45°)
+        },
+        "move-diagonal": {
+          "0%": { transform: "translate(0, 0)" },
+          "25%": { transform: "translate(20px, -20px)" }, // ↗️ up-right
+          "50%": { transform: "translate(20px, 20px)" }, // ↘️ down-right
+          "75%": { transform: "translate(-20px, 20px)" }, // ↙️ down-left
+          "100%": { transform: "translate(0, 0)" }, // back to center ↖️
+        },
       },
       animation: {
         shine: "shine 2.5s ease infinite",
         scroll: "scroll 30s linear infinite",
         "spin-slow": "spinSlow 12s linear infinite",
+        "bounce-x": "bounce-x 2s infinite",
+        "move-45": "move-45 1.7s ease-in-out infinite",
+        "move-diagonal": "move-diagonal 7s ease-in-out infinite",
       },
       borderColor: {
         "white-40": "rgba(255, 255, 255, 0.40)", // custom border color
