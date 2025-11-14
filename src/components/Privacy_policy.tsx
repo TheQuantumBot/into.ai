@@ -1,9 +1,10 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function PrivacyPolicy() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isSticky, setIsSticky] = useState(false);
 
   const items = [
     {
@@ -40,6 +41,29 @@ export default function PrivacyPolicy() {
 
   const activeBg =
     "linear-gradient(89.89deg, #35A1DA 0.24%, #857BBD 25.46%, #E8584B 50.67%, #584F9E 75.88%, #CE4C9B 101.09%)";
+
+  // Sticky effect only when reaching Interpretation & Definitions
+  useEffect(() => {
+    const target = document.querySelector("#interpretation-and-definitions");
+    if (!target) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsSticky(true);
+          } else {
+            setIsSticky(false);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(target);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="w-full relative flex flex-col items-center justify-center px-6 py-3 text-black text-lg font-medium space-y-6">
       <section className="relative flex max-w-7xl w-full mx-auto py-16 ">
@@ -96,7 +120,7 @@ export default function PrivacyPolicy() {
 
       <div className="flex flex-col md:flex-row gap-[20px] max-w-7xl w-full mx-auto min-h-screen ">
         {/* Sidebar Navigation */}
-        <aside className="sticky top-[120px] self-start w-[333px] h-fit bg-white rounded-[12px] border border-t-[#DED8D3] border-gray-200 p-[20px]">
+        <aside className="sticky top-[120px] self-start w-[-webkit-fill-available] md:w-fit h-fit bg-white rounded-[12px] border border-t-[#DED8D3] border-gray-200 p-[20px]">
           <h2 className="text-[#101828] text-lg font-[600] interTight mb-[30px]">
             Quick Navigation
           </h2>
@@ -105,10 +129,9 @@ export default function PrivacyPolicy() {
             {items.map((item, index) => (
               <li
                 key={index}
-                onClick={() => setActiveIndex(index)}
-                className={`flex items-center gap-[10px] w-[291px] h-[33px] px-[10px] py-[8px] rounded-[8px] cursor-pointer transition ${
+                className={`flex items-center gap-[10px] px-[10px] py-[8px] rounded-[8px] transition ${
                   activeIndex === index
-                    ? "text-white"
+                    ? "text-white sticky top-4 z-20"
                     : "hover:bg-gray-100 text-gray-700"
                 }`}
                 style={{
@@ -118,6 +141,43 @@ export default function PrivacyPolicy() {
                 <a
                   href={item.href}
                   className="flex items-center gap-[10px] w-full"
+                  onClick={(e) => {
+                    // prevent default anchor jump (we'll handle scrolling programmatically)
+                    e.preventDefault();
+                    setActiveIndex(index);
+
+                    // update URL hash (no navigation)
+                    try {
+                      if (typeof window !== "undefined" && item.href) {
+                        history.replaceState(null, "", item.href);
+                      }
+                    } catch (err) {
+                      // ignore
+                    }
+
+                    // scroll to the target section smoothly, accounting for sticky offset
+                    try {
+                      const target = document.querySelector(
+                        item.href
+                      ) as HTMLElement | null;
+                      if (target && typeof window !== "undefined") {
+                        const STICKY_OFFSET = 120; // match aside top value
+                        const targetY =
+                          target.getBoundingClientRect().top +
+                          window.scrollY -
+                          STICKY_OFFSET;
+
+                        window.scrollTo({ top: targetY, behavior: "smooth" });
+
+                        // keep accessibility: ensure focusable and focus without additional scrolling
+                        if (!target.hasAttribute("tabindex"))
+                          target.setAttribute("tabindex", "-1");
+                        target.focus({ preventScroll: true });
+                      }
+                    } catch (err) {
+                      // ignore
+                    }
+                  }}
                 >
                   <Image
                     src={item.icon}
@@ -635,9 +695,7 @@ export default function PrivacyPolicy() {
                   height={24}
                 />
               </span>
-              <h1 className="text-[24px] font-[500]">
-                Children's Privacy
-              </h1>
+              <h1 className="text-[24px] font-[500]">Children's Privacy</h1>
             </div>
 
             <section className="interTight space-y-[20px]">
