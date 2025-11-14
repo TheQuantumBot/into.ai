@@ -11,10 +11,50 @@ import { useSearchParams } from "next/navigation";
 export const BlogData = ({ blog }: any) => {
   const card = blog;
   console.log("Received card:", card);
+  const SocialMediaIcon = [
+    { img: "/FB.svg" },
+    { img: "/TW.svg" },
+    { img: "/IG.svg" },
+    { img: "/IN.svg" },
+    { img: "/Link.svg" },
+  ];
 
+  const LastPoseCard = [
+    {
+      image: "/cardImage1.svg",
+      title: "What Is SalesBot and How It’s Revolutionizing WhatsApp Sales",
+      description:
+        "Ever wished your sales team could reply faster, sell smarter, and close deals around the clock - without hiring....",
+      footerImg: "/ProfileImage.svg",
+      personName: "Joel Keneley",
+      date: "November 12, 2025",
+      category: "Innovation",
+    },
+    {
+      image: "/cardImage2.svg",
+      title: "Why Businesses Are Switching to AI-Powered Sales Agents",
+      description:
+        "Let’s be honest, customers today don’t wait. They ask, compare, and expect instant responses....",
+      footerImg: "/ProfileImage.svg",
+      personName: "Joel Keneley",
+      date: "November 12, 2025",
+      category: "Growth",
+    },
+    {
+      image: "/cardImage.svg",
+      title: "How SalesBot Converts Chats into Paying Customers",
+
+      description:
+        "Most businesses believe that sales start the moment a rep steps in, but in reality, it starts way before when....",
+      footerImg: "/ProfileImage.svg",
+      personName: "Joel Keneley",
+      date: "November 12, 2025",
+      category: "AI & Tech",
+    },
+  ];
   return (
     <section className="w-full relative overflow-hidden max-w-[1440px] mx-auto">
-      <div className="px-4 sm:px-6 lg:px-8 py-12 md:py-24 relative z-10 flex flex-col gap-10">
+      <div className="px-4 sm:px-6 lg:px-8 py-12 md:py-24 relative z-10 flex flex-col gap-6">
         <div className="flex flex-col gap-[10px]">
           <div className="text-left">
             <Badge text={card?.category} />
@@ -48,12 +88,49 @@ export const BlogData = ({ blog }: any) => {
             <p className="text-[14px] text-[#808080]">{card?.date}</p>
           </div>
         </div>
+        <div className="w-full h-fit gap-[25px] flex flex-col opacity-100 rounded-[12px] p-[20px] border-[1px] bg-[#FFFFFF]">
+          <h3 className="font-inter-tight font-semibold text-[16px] leading-[21px] lg:text-[20px] text-black">
+            Category
+          </h3>
+          <div className="flex flex-wrap gap-[6px]">
+            <div className="bg-[#F4F2F1] w-fit rounded-[8px] pt-[10px] pb-[10px] px-[20px] md:rounded-[6px] md:pt-[6px] md:pb-[6px] md:px-[10px] lg:rounded-[12px] lg:pt-[10px] lg:pb-[10px] lg:px-[20px]">
+              <p className="font-inter-tight font-medium text-[14px] leading-none text-[#4A5565] md:text-[12px] lg:text-[14px]">
+                All
+              </p>
+            </div>
+            <div className="bg-[#F4F2F1] w-fit rounded-[8px] pt-[10px] pb-[10px] px-[20px] md:rounded-[6px] md:pt-[6px] md:pb-[6px] md:px-[10px] lg:rounded-[12px] lg:pt-[10px] lg:pb-[10px] lg:px-[20px]">
+              <p className="font-inter-tight font-medium text-[14px] leading-none text-[#4A5565] md:text-[12px] lg:text-[14px]">
+                Innovation
+              </p>
+            </div>
+            <div className="bg-[#F4F2F1] w-fit rounded-[8px] pt-[10px] pb-[10px] px-[20px] md:rounded-[6px] md:pt-[6px] md:pb-[6px] md:px-[10px] lg:rounded-[12px] lg:pt-[10px] lg:pb-[10px] lg:px-[20px]">
+              <p className="font-inter-tight font-medium text-[14px] leading-none text-[#4A5565] md:text-[12px] lg:text-[14px]">
+                Growth
+              </p>
+            </div>
+            <div className="bg-[#F4F2F1] w-fit rounded-[8px] pt-[10px] pb-[10px] px-[20px] md:rounded-[6px] md:pt-[6px] md:pb-[6px] md:px-[10px] lg:rounded-[12px] lg:pt-[10px] lg:pb-[10px] lg:px-[20px]">
+              <p className="font-inter-tight font-medium text-[14px] leading-none text-[#4A5565] md:text-[12px] lg:text-[14px]">
+                AI & Tech
+              </p>
+            </div>
+            <div className="bg-[#F4F2F1] w-fit rounded-[8px] pt-[10px] pb-[10px] px-[20px] md:rounded-[6px] md:pt-[6px] md:pb-[6px] md:px-[10px] lg:rounded-[12px] lg:pt-[10px] lg:pb-[10px] lg:px-[20px]">
+              <p className="font-inter-tight font-medium text-[14px] leading-none text-[#4A5565] md:text-[12px] lg:text-[14px]">
+                Industries
+              </p>
+            </div>
+            <div className="bg-[#F4F2F1] w-fit rounded-[8px] pt-[10px] pb-[10px] px-[20px] md:rounded-[6px] md:pt-[6px] md:pb-[6px] md:px-[10px] lg:rounded-[12px] lg:pt-[10px] lg:pb-[10px] lg:px-[20px]">
+              <p className="font-inter-tight font-medium text-[14px] leading-none text-[#4A5565] md:text-[12px] lg:text-[14px]">
+                Marketing
+              </p>
+            </div>
+          </div>
+        </div>
         <div
           className="w-full h-auto 
             flex flex-col md:flex-row 
             gap-[20px] opacity-100 mx-auto"
         >
-          <div className="w-full md:w-[75%] h-auto flex flex-col gap-[30px] opacity-100 rounded-[12px] p-[40px] border-[1px] bg-[#FFFFFF]">
+          <div className="w-full h-auto flex flex-col gap-[30px] opacity-100 rounded-[12px] p-[40px] border-[1px] bg-[#FFFFFF]">
             <div className="flex flex-col gap-[10px]">
               <p className="font-inter-tight font-normal text-[14px] leading-none text-[#4C4C4C] lg:text-[16px]">
                 Ever wished your sales team could{" "}
@@ -97,7 +174,7 @@ export const BlogData = ({ blog }: any) => {
             <div className="border-[1px] border-[#0000001A]"></div>
             <div className="flex flex-col gap-[10px]">
               {/* First Title */}
-              <h1 className="font-inter-tight font-medium text-[24px] leading-none">
+              <h1 className="font-inter-tight font-medium text-[24px] leading-none text-[black]">
                 What Is SalesBot?
               </h1>
 
@@ -135,7 +212,13 @@ export const BlogData = ({ blog }: any) => {
               </p>
 
               <p className="font-inter-tight font-normal text-[14px] leading-none text-[#4C4C4C] lg:text-[16px]">
-                👉 <span className="font-semibold">See How SalesBot Works</span>
+                👉{" "}
+                <a
+                  className="font-semibold text-[var(--color-azure-45,rgba(0,146,232,1))] underline"
+                  href=""
+                >
+                  See How SalesBot Works
+                </a>
               </p>
               <p className="font-inter-tight font-normal text-[14px] leading-none text-[#4C4C4C] lg:text-[16px]">
                 How SalesBot Is Changing the Way Businesses Sell on WhatsApp
@@ -164,7 +247,7 @@ export const BlogData = ({ blog }: any) => {
               </p>
 
               {/* Second Title */}
-              <h2 className="font-inter-tight font-semibold text-[18px] leading-none">
+              <h2 className="font-inter-tight font-semibold text-[18px] leading-none text-[black]">
                 Here’s What It Brings to the Table:
               </h2>
 
@@ -198,7 +281,7 @@ export const BlogData = ({ blog }: any) => {
             </div>
             <div className="flex flex-col gap-[10px]">
               {/* First Title */}
-              <h1 className="font-inter-tight font-medium text-[24px] leading-none">
+              <h1 className="font-inter-tight font-medium text-[24px] leading-none text-[black]">
                 One Bot. All Channels.
               </h1>
 
@@ -213,7 +296,7 @@ export const BlogData = ({ blog }: any) => {
               </p>
 
               {/* Second Title */}
-              <h2 className="font-inter-tight font-semibold text-[18px] leading-none">
+              <h2 className="font-inter-tight font-semibold text-[18px] leading-none text-[black]">
                 Here’s Where the Magic Happens:
               </h2>
 
@@ -258,7 +341,7 @@ export const BlogData = ({ blog }: any) => {
             </div>
             <div className="flex flex-col gap-[10px]">
               {/* First Title */}
-              <h1 className="font-inter-tight font-medium text-[24px] leading-none">
+              <h1 className="font-inter-tight font-medium text-[24px] leading-none text-[black]">
                 Why Businesses Are Falling in Love with SalesBot
               </h1>
 
@@ -292,7 +375,7 @@ export const BlogData = ({ blog }: any) => {
               </p>
 
               {/* Second Title */}
-              <h2 className="font-inter-tight font-semibold text-[18px] leading-none">
+              <h2 className="font-inter-tight font-semibold text-[18px] leading-none text-[black]">
                 Here’s What Businesses Love Most:
               </h2>
 
@@ -321,16 +404,19 @@ export const BlogData = ({ blog }: any) => {
               </ul>
 
               {/* Final Link */}
-              <p className="font-inter-tight font-normal text-[14px] leading-none text-[#4C4C4C] lg:text-[16px]">
+              <p className="font-inter-tight font-normal text-[14px] leading-none text-[#4C4C4C] lg:text-[16px] ">
                 👉{" "}
-                <span className="font-semibold">
+                <a
+                  className="font-semibold text-[var(--color-azure-45,rgba(0,146,232,1))] underline"
+                  href=""
+                >
                   Explore Real Customer Results
-                </span>
+                </a>
               </p>
             </div>
             <div className="flex flex-col gap-[10px]">
               {/* First Title */}
-              <h1 className="font-inter-tight font-medium text-[24px] leading-none">
+              <h1 className="font-inter-tight font-medium text-[24px] leading-none text-[black]">
                 The Future of Selling Is Agentic AI
               </h1>
 
@@ -377,7 +463,7 @@ export const BlogData = ({ blog }: any) => {
             </div>
             <div className="flex flex-col gap-[10px]">
               {/* First Title */}
-              <h1 className="font-inter-tight font-medium text-[24px] leading-none">
+              <h1 className="font-inter-tight font-medium text-[24px] leading-none text-[black]">
                 Try SalesBot Today, Turn Every Chat into a Conversion
               </h1>
               <p className="font-inter-tight font-normal text-[14px] leading-none text-[#4C4C4C] lg:text-[16px]">
@@ -399,44 +485,76 @@ export const BlogData = ({ blog }: any) => {
               </Button>
             </div>
           </div>
-          <div className="w-full md:w-[25%] h-fit gap-[25px] flex flex-col opacity-100 rounded-[12px] p-[20px] border-[1px] bg-[#FFFFFF]">
-            <h3 className="font-inter-tight font-semibold text-[16px] leading-[21px] lg:text-[20px]">
-              Category
-            </h3>
-            <div className="flex flex-wrap gap-[6px]">
-              <div className="bg-[#F4F2F1] w-fit rounded-[8px] pt-[10px] pb-[10px] px-[20px] md:rounded-[6px] md:pt-[6px] md:pb-[6px] md:px-[10px] lg:rounded-[12px] lg:pt-[10px] lg:pb-[10px] lg:px-[20px]">
-                <p className="font-inter-tight font-medium text-[14px] leading-none text-[#4A5565] md:text-[12px] lg:text-[14px]">
-                  All
-                </p>
-              </div>
-              <div className="bg-[#F4F2F1] w-fit rounded-[8px] pt-[10px] pb-[10px] px-[20px] md:rounded-[6px] md:pt-[6px] md:pb-[6px] md:px-[10px] lg:rounded-[12px] lg:pt-[10px] lg:pb-[10px] lg:px-[20px]">
-                <p className="font-inter-tight font-medium text-[14px] leading-none text-[#4A5565] md:text-[12px] lg:text-[14px]">
-                  Innovation
-                </p>
-              </div>
-              <div className="bg-[#F4F2F1] w-fit rounded-[8px] pt-[10px] pb-[10px] px-[20px] md:rounded-[6px] md:pt-[6px] md:pb-[6px] md:px-[10px] lg:rounded-[12px] lg:pt-[10px] lg:pb-[10px] lg:px-[20px]">
-                <p className="font-inter-tight font-medium text-[14px] leading-none text-[#4A5565] md:text-[12px] lg:text-[14px]">
-                  Growth
-                </p>
-              </div>
-              <div className="bg-[#F4F2F1] w-fit rounded-[8px] pt-[10px] pb-[10px] px-[20px] md:rounded-[6px] md:pt-[6px] md:pb-[6px] md:px-[10px] lg:rounded-[12px] lg:pt-[10px] lg:pb-[10px] lg:px-[20px]">
-                <p className="font-inter-tight font-medium text-[14px] leading-none text-[#4A5565] md:text-[12px] lg:text-[14px]">
-                  AI & Tech
-                </p>
-              </div>
-              <div className="bg-[#F4F2F1] w-fit rounded-[8px] pt-[10px] pb-[10px] px-[20px] md:rounded-[6px] md:pt-[6px] md:pb-[6px] md:px-[10px] lg:rounded-[12px] lg:pt-[10px] lg:pb-[10px] lg:px-[20px]">
-                <p className="font-inter-tight font-medium text-[14px] leading-none text-[#4A5565] md:text-[12px] lg:text-[14px]">
-                  Industries
-                </p>
-              </div>
-              <div className="bg-[#F4F2F1] w-fit rounded-[8px] pt-[10px] pb-[10px] px-[20px] md:rounded-[6px] md:pt-[6px] md:pb-[6px] md:px-[10px] lg:rounded-[12px] lg:pt-[10px] lg:pb-[10px] lg:px-[20px]">
-                <p className="font-inter-tight font-medium text-[14px] leading-none text-[#4A5565] md:text-[12px] lg:text-[14px]">
-                  Marketing
-                </p>
-              </div>
-            </div>
+        </div>
+        <div className="flex flex-col gap-3">
+          <div className="font-inter-tight font-semibold text-[20px] leading-[21px] text-black">
+            Share it with the world
+          </div>
+          <div className="flex gap-3">
+            {SocialMediaIcon.map((item, index) => (
+              <img
+                key={index}
+                src={item.img}
+                alt="avatar"
+                className="w-[32px] h-[32px] rounded-full object-cover"
+              />
+            ))}
           </div>
         </div>
+      </div>
+      <div>
+        <div className="flex flex-col gap-[15px]">
+          <div className="text-center">
+            <Badge text={"Our Blog"} />
+          </div>
+          <h1 className="text-black text-center font-inter-tight font-semibold text-[44px] leading-[50px] text-center align-middle ">
+            Latest Posts
+          </h1>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 mx-auto">
+          {LastPoseCard.map((card) => (
+            <div className="bg-white flex flex-col rounded-[24px] p-[8px]">
+              <div className="rounded-[16px] relative">
+                <img
+                  src={card.image}
+                  className="w-full h-full object-cover rounded-[24px]"
+                />
+                <p className="absolute top-3 right-3 bg-white px-4 py-1 rounded-[10px] shadow-md text-[rgba(76,76,76,1)]">
+                  {card.category}
+                </p>
+              </div>
+
+              <div className="flex flex-col gap-[6px] px-5 border-b border-dashed pb-5 pt-[18px]">
+                <p className="text-[24px] font-medium text-black">
+                  {card.title}
+                </p>
+                <p className="text-[16px] text-[#4C4C4C]">{card.description}</p>
+              </div>
+
+              <div className="flex items-center justify-between w-full p-5">
+                <div className="flex items-center gap-3">
+                  <img
+                    src={card.footerImg}
+                    className="w-[32px] h-[32px] rounded-full"
+                  />
+                  <p className="text-[16px] font-medium text-[#4C4C4C]">
+                    {card.personName}
+                  </p>
+                </div>
+                <p className="text-[14px] text-[#808080]">{card.date}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 my-20">
+          <Button
+          // onClick={() => {
+          //   router.push("https://salesbot.cloud/register");
+          // }}
+          >
+            Experience Now
+          </Button>
+        </div>{" "}
       </div>
     </section>
   );

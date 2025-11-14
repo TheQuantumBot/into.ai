@@ -5,11 +5,17 @@ import Footer from "@/components/Footer";
 import Header from "@/components/header";
 import Heros from "@/components/Heros";
 import OurBlogs from "@/components/OurBlogs";
+
+export const generateSlug = (title: string): string =>
+  title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)+/g, "");
+
 export const blogsData = [
   {
     image: "/cardImage1.svg",
     title: "What Is SalesBot and How It’s Revolutionizing WhatsApp Sales",
-    slug: "what-is-salesbot-and-how-its-revolutionizing-whatsapp-sales",
     description:
       "Ever wished your sales team could reply faster, sell smarter, and close deals around the clock - without hiring....",
     footerImg: "/ProfileImage.svg",
@@ -20,7 +26,6 @@ export const blogsData = [
   {
     image: "/cardImage2.svg",
     title: "Why Businesses Are Switching to AI-Powered Sales Agents",
-    slug: "why-businesses-are-switching-to-ai-powered-sales-agents",
     description:
       "Let’s be honest, customers today don’t wait. They ask, compare, and expect instant responses....",
     footerImg: "/ProfileImage.svg",
@@ -31,7 +36,7 @@ export const blogsData = [
   {
     image: "/cardImage.svg",
     title: "How SalesBot Converts Chats into Paying Customers",
-    slug: "how-salesbot-converts-chats-into-paying-customers",
+
     description:
       "Most businesses believe that sales start the moment a rep steps in, but in reality, it starts way before when....",
     footerImg: "/ProfileImage.svg",
@@ -42,7 +47,7 @@ export const blogsData = [
   {
     image: "/cardImage3.svg",
     title: "The Secret behind Salesbot’s Humanised Conversations",
-    slug: "the-secret-behind-salesbots-humanised-conversations",
+
     description:
       "Ever chatted with a bot and forgot it wasn't a person? If you have there's a good chance you....",
     footerImg: "/ProfileImage.svg",
@@ -54,7 +59,7 @@ export const blogsData = [
     image: "/cardImage4.svg",
     title:
       "The Science Behind SalesBot: How It Understands and Sells Like a Human",
-    slug: "the-science-behind-salesbot-how-it-understands-and-sells-like-a-human",
+
     description:
       "You’ve probably chatted with a bot before the kind that repeats your question, gives a wrong answer....",
     footerImg: "/ProfileImage.svg",
@@ -66,7 +71,7 @@ export const blogsData = [
     image: "/cardImage5.svg",
     title:
       "How SalesBot Helps Businesses Scale Without Hiring More Salespeople",
-    slug: "how-salesbot-helps-businesses-scale-without-hiring-more-salespeople",
+
     description:
       "Every business hits that moment leads are pouring in, inboxes are exploding, and your sales team....",
     footerImg: "/ProfileImage.svg",
@@ -77,7 +82,7 @@ export const blogsData = [
   {
     image: "/cardImage6.svg",
     title: "The Rise of Agentic AI: Why It’s the Future of Sales Conversations",
-    slug: "the-rise-of-agentic-ai-why-its-the-future-of-sales-conversations",
+
     description:
       "There was a time when businesses thought “AI in sales” just meant having a chatbot that could answer FAQs.",
     footerImg: "/ProfileImage.svg",
@@ -89,7 +94,7 @@ export const blogsData = [
     image: "/cardImage7.svg",
     title:
       "From Inquiry to Closure: How SalesBot Handles the Entire Sales Funnel",
-    slug: "from-inquiry-to-closure-how-salesbot-handles-the-entire-sales-funnel",
+
     description:
       "Every business gets inquiries but not every business turns them into paying customers.",
     footerImg: "/ProfileImage.svg",
@@ -100,7 +105,7 @@ export const blogsData = [
   {
     image: "/cardImage8.svg",
     title: "Behind the Scenes: How SalesBot’s Agentic AI Actually Works",
-    slug: "behind-the-scenes-how-salesbots-agentic-ai-actually-works",
+
     description:
       "Ever wondered what’s happening inside SalesBot while it’s chatting with your customers? How it always....",
     footerImg: "/ProfileImage.svg",

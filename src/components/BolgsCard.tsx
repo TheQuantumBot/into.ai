@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Button from "./Button";
-import { blogsData } from "@/app/blogs/page";
+import { blogsData, generateSlug } from "@/app/blogs/page";
 
 export const BolgsCard = () => {
   const [activeTab, setActiveTab] = useState("All");
@@ -42,41 +42,47 @@ export const BolgsCard = () => {
 
       {/* Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 max-w-[80%] mx-auto">
-        {filteredCards.map((card, i) => (
-          <Link key={i} href={`/blogs/${card.slug}`}>
-            <div className="bg-white flex flex-col rounded-[24px] p-[8px]">
-              <div className="rounded-[16px] relative">
-                <img
-                  src={card.image}
-                  className="w-full h-full object-cover rounded-[24px]"
-                />
-                <p className="absolute top-3 right-3 bg-white px-4 py-1 rounded-[10px] shadow-md text-[rgba(76,76,76,1)]">
-                  {card.category}
-                </p>
-              </div>
+        {filteredCards.map((card, i) => {
+          const slug = generateSlug(card.title);
 
-              <div className="flex flex-col gap-[6px] px-5 border-b border-dashed pb-5 pt-[18px]">
-                <p className="text-[24px] font-medium text-black">
-                  {card.title}
-                </p>
-                <p className="text-[16px] text-[#4C4C4C]">{card.description}</p>
-              </div>
-
-              <div className="flex items-center justify-between w-full p-5">
-                <div className="flex items-center gap-3">
+          return (
+            <Link key={i} href={`/blogs/${slug}`}>
+              <div className="bg-white flex flex-col rounded-[24px] p-[8px]">
+                <div className="rounded-[16px] relative">
                   <img
-                    src={card.footerImg}
-                    className="w-[32px] h-[32px] rounded-full"
+                    src={card.image}
+                    className="w-full h-full object-cover rounded-[24px]"
                   />
-                  <p className="text-[16px] font-medium text-[#4C4C4C]">
-                    {card.personName}
+                  <p className="absolute top-3 right-3 bg-white px-4 py-1 rounded-[10px] shadow-md text-[rgba(76,76,76,1)]">
+                    {card.category}
                   </p>
                 </div>
-                <p className="text-[14px] text-[#808080]">{card.date}</p>
+
+                <div className="flex flex-col gap-[6px] px-5 border-b border-dashed pb-5 pt-[18px]">
+                  <p className="text-[24px] font-medium text-black">
+                    {card.title}
+                  </p>
+                  <p className="text-[16px] text-[#4C4C4C]">
+                    {card.description}
+                  </p>
+                </div>
+
+                <div className="flex items-center justify-between w-full p-5">
+                  <div className="flex items-center gap-3">
+                    <img
+                      src={card.footerImg}
+                      className="w-[32px] h-[32px] rounded-full"
+                    />
+                    <p className="text-[16px] font-medium text-[#4C4C4C]">
+                      {card.personName}
+                    </p>
+                  </div>
+                  <p className="text-[14px] text-[#808080]">{card.date}</p>
+                </div>
               </div>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          );
+        })}
       </div>
     </section>
   );

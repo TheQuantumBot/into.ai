@@ -1,11 +1,11 @@
 import BlogData from "@/components/BlogData";
 import Footer from "@/components/Footer";
 import Header from "@/components/header";
-import { blogsData } from "../page";
+import { blogsData, generateSlug } from "../page";
 
 export async function generateStaticParams() {
   return blogsData.map((blog) => ({
-    slug: blog.slug,
+    slug: generateSlug(blog.title),
   }));
 }
 
@@ -14,27 +14,22 @@ export default function BlogCardDetails({
 }: {
   params: { slug: string };
 }) {
-  const blog = blogsData.find((b) => b.slug === params.slug);
+  const blog = blogsData.find((b) => generateSlug(b.title) === params.slug);
 
-  if (!blog) {
-    return <div>Blog not found</div>;
-  }
-  console.log("Slug param:", blog);
+  if (!blog) return <div>Blog not found</div>;
 
   return (
     <main className="min-h-screen bg-[#ECE9E6] relative overflow-hidden">
-      {/* Background Image */}
       <img
         src="/Pricing-Bg.png"
         alt="Background"
-        className="absolute inset-0 w-[-webkit-fill-available] h-[1024px] object-cover"
+        className="absolute inset-0 w-full h-[1024px] object-cover"
       />
 
-      {/* Content */}
       <div className="relative z-10 min-h-screen flex flex-col">
         <Header />
 
-        {/* Pass SLUG to BlogData if needed */}
+        {/* Blog Detail Component */}
         <BlogData blog={blog} />
 
         <Footer />
