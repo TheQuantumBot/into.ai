@@ -114,45 +114,47 @@ const WhatYouGet = () => {
               <Badge text="Powerful Integration" />
             </div>
             <ScrollAnimation>
-              {/* Title */}
-              <h2 className="fade-up text-4xl lg:text-6xl font-bold  leading-[110%] text-center lg:text-left [@media(max-width:375px)]:text-[24px]  [@media(max-width:375px)]:font-[600] [@media(max-width:375px)]:leading-[34px] ">
-                <span className="gradient-text">Tools & Support</span>{" "}
-                <span className="text-black"> to </span>
-                <br></br> <span className="text-black">Help You Win</span>
-              </h2>
+              <div className="flex flex-col gap-6">
+                {/* Title */}
+                <h2 className="fade-up text-4xl lg:text-6xl font-bold  leading-[110%] text-center lg:text-left [@media(max-width:375px)]:text-[24px]  [@media(max-width:375px)]:font-[600] [@media(max-width:375px)]:leading-[34px] ">
+                  <span className="gradient-text">Tools & Support</span>{" "}
+                  <span className="text-black"> to </span>
+                  <br></br> <span className="text-black">Help You Win</span>
+                </h2>
 
-              {/* Checklist */}
-              <div className="fade-up space-y-4 w-full flex flex-col items-start">
-                {[
-                  "Personal partner portal & live dashboards",
-                  "Customer success support",
-                  "Product demos handled by our team",
-                  "Ready-to-use emails, pitch decks, creatives",
-                  "New product access before public release",
-                ].map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex items-start space-x-3 text-left w-full"
-                  >
-                    {/* Gradient Check Icon */}
-                    <div className="flex-shrink-0 w-8 h-8 p-[2px] flex items-center justify-center rounded-[10px] shadow-md bg-[linear-gradient(90deg,#35A1DA_0.24%,#847BBD_25.46%,#E8584B_50.67%,#584F9E_75.88%,#CE4C9B_101.09%)]">
-                      <div className="bg-black rounded-[10px] w-full h-full flex items-center justify-center">
-                        <Image
-                          src="/check.svg"
-                          alt="check"
-                          width={12}
-                          height={12}
-                          className="object-contain"
-                        />
+                {/* Checklist */}
+                <div className="fade-up space-y-4 w-full flex flex-col items-start">
+                  {[
+                    "Personal partner portal & live dashboards",
+                    "Customer success support",
+                    "Product demos handled by our team",
+                    "Ready-to-use emails, pitch decks, creatives",
+                    "New product access before public release",
+                  ].map((item, index) => (
+                    <div
+                      key={index}
+                      className="flex items-start space-x-3 text-left w-full"
+                    >
+                      {/* Gradient Check Icon */}
+                      <div className="flex-shrink-0 w-8 h-8 p-[2px] flex items-center justify-center rounded-[10px] shadow-md bg-[linear-gradient(90deg,#35A1DA_0.24%,#847BBD_25.46%,#E8584B_50.67%,#584F9E_75.88%,#CE4C9B_101.09%)]">
+                        <div className="bg-black rounded-[10px] w-full h-full flex items-center justify-center">
+                          <Image
+                            src="/check.svg"
+                            alt="check"
+                            width={12}
+                            height={12}
+                            className="object-contain"
+                          />
+                        </div>
                       </div>
-                    </div>
 
-                    {/* Checklist Text */}
-                    <span className="text-gray-800 font-medium leading-relaxed flex-1">
-                      {item}
-                    </span>
-                  </div>
-                ))}
+                      {/* Checklist Text */}
+                      <span className="text-gray-800 font-medium leading-relaxed flex-1">
+                        {item}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </ScrollAnimation>
           </div>
