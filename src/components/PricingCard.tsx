@@ -873,123 +873,182 @@
 // }
 "use client";
 
-import { useMemo, useState } from "react";
-import { Check } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
+import { Check, X } from "lucide-react";
 import Button from "./Button";
 import { useRouter } from "next/navigation";
 
 export default function PlanPricing({ isYearly, data }: any) {
+  //   const router = useRouter();
+
+  //   const [activePlan, setActivePlan] = useState<string | null>("Growth");
+  //   // ✅ Map API plan names to your internal plan names
+
+  //   const plans = useMemo(() => {
+  //     if (!data) return [];
+
+  //     // Step 1: Your static plans (base UI data)
+  //     const staticPlans = [
+  //       {
+  //         name: "Trial",
+  //         apiName: "Trial",
+  //         borderColor: "border-[#DED8D3]",
+  //         bgColor: "#E8E4E2",
+  //         credits: "Custom credits",
+  //         originalPrice: "0.00",
+  //         monthlyPrice: "0.00",
+  //         yearlyPrice: "0.00",
+  //         description:
+  //           "For large organizations that need enterprise-grade scale, compliance, and dedicated support.",
+  //         features: [
+  //           "Custom AI solutions",
+  //           "Dedicated account manager",
+  //           "Premium integrations",
+  //         ],
+  //         icon: (
+  //           <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-blue-100">
+  //             🏢
+  //           </div>
+  //         ),
+  //       },
+  //       {
+  //         name: "Growth",
+  //         apiName: "Growth",
+  //         borderColor: "border-[#DED8D3]",
+  //         bgColor: "#E8E4E2",
+  //         isPopular: true,
+  //         credits: "2,777 credits/month (3.4 ₹ /credit)",
+  //         originalPrice: "9,999",
+  //         monthlyPrice: "9,499",
+  //         yearlyPrice: "8,999",
+  //         description:
+  //           "Small to medium businesses who want consistent automation and measurable ROI.",
+  //         features: [
+  //           "No cap on LinkedIn Account",
+  //           "Unlimited Campaigns",
+  //           "Free API Integration",
+  //         ],
+  //         icon: (
+  //           <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-red-100">
+  //             🔰
+  //           </div>
+  //         ),
+  //       },
+  //       {
+  //         name: "Professional",
+  //         apiName: "Professional",
+  //         borderColor: "border-yellow-400",
+  //         isPopular: true,
+  //         credits: "9,722 credits/month (3.2 ₹ /credit)",
+  //         originalPrice: "34,999",
+  //         monthlyPrice: "33,249",
+  //         yearlyPrice: "31,499",
+  //         description: "Scaling businesses handling large lead volumes.",
+  //         features: [
+  //           "Unlimited Campaigns",
+  //           "Full AI Conversation Management",
+  //           "24/7 Support",
+  //         ],
+  //         icon: (
+  //           <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-yellow-100">
+  //             🌟
+  //           </div>
+  //         ),
+  //       },
+  //     ];
+
+  //     // Step 2: Filter active API plans
+  //     const filteredData = data.filter((p: any) => p.is_active);
+
+  //     // Step 3: Merge API data into static plans
+  //     return staticPlans.map((plan) => {
+  //       const apiPlan = filteredData.find(
+  //         (item: any) => item.name?.toLowerCase() === plan.apiName?.toLowerCase()
+  //       );
+
+  //       if (!apiPlan) return plan; // Fallback to static
+
+  //       const apiFeatures =
+  //         apiPlan.plan_features
+  //           ?.filter((f: any) => f.is_included)
+  //           ?.map((f: any) => f.feature_name_limit.trim()) || [];
+
+  //       return {
+  //         ...plan,
+  //         name: apiPlan.name ?? plan.name,
+  //         isPopular: apiPlan.is_popular ?? plan.isPopular,
+  //         description: apiPlan.description?.trim() || plan.description,
+  //         credits: apiPlan.message_credits_included
+  //           ? `${apiPlan.message_credits_included} credits/month`
+  //           : plan.credits,
+  //         monthlyPrice: apiPlan.total_price
+  //           ? parseFloat(apiPlan.total_price).toFixed(2)
+  //           : plan.monthlyPrice,
+  //         yearlyPrice: plan.yearlyPrice,
+  //         features: apiFeatures.length ? apiFeatures : plan.features,
+  //         id: apiPlan?.id,
+  //       };
+  //     });
+  //   }, [data]);
+
+  //   function handleGetStarted(plan: any): void {
+  //     router.push(`${process.env.NEXT_PUBLIC_PLAN_REDIRECT_URI}${plan.id}`);
+  //   }
+
+  //   useEffect(() => {
+  //     if(isYearly){
+  //       s
+  //     }
+  //   },[])
   const router = useRouter();
+  const [plans, setPlans] = useState<any[]>([]);
+  const [activePlan, setActivePlan] = useState<string | null>("");
 
-  const [activePlan, setActivePlan] = useState<string | null>("Growth");
-  // ✅ Map API plan names to your internal plan names
-
-  const plans = useMemo(() => {
+  // ✅ Step 1: Use only API data (filter active plans)
+  const apiPlans = useMemo(() => {
     if (!data) return [];
-
-    // Step 1: Your static plans (base UI data)
-    const staticPlans = [
-      {
-        name: "Trial",
-        apiName: "Trial",
-        borderColor: "border-[#DED8D3]",
-        bgColor: "#E8E4E2",
-        credits: "Custom credits",
-        originalPrice: "0.00",
-        monthlyPrice: "0.00",
-        yearlyPrice: "0.00",
-        description:
-          "For large organizations that need enterprise-grade scale, compliance, and dedicated support.",
-        features: [
-          "Custom AI solutions",
-          "Dedicated account manager",
-          "Premium integrations",
-        ],
-        icon: (
-          <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-blue-100">
-            🏢
-          </div>
-        ),
-      },
-      {
-        name: "Growth",
-        apiName: "Growth",
-        borderColor: "border-[#DED8D3]",
-        bgColor: "#E8E4E2",
-        isPopular: true,
-        credits: "2,777 credits/month (3.4 ₹ /credit)",
-        originalPrice: "9,999",
-        monthlyPrice: "9,499",
-        yearlyPrice: "8,999",
-        description:
-          "Small to medium businesses who want consistent automation and measurable ROI.",
-        features: [
-          "No cap on LinkedIn Account",
-          "Unlimited Campaigns",
-          "Free API Integration",
-        ],
-        icon: (
-          <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-red-100">
-            🔰
-          </div>
-        ),
-      },
-      {
-        name: "Professional",
-        apiName: "Professional",
-        borderColor: "border-yellow-400",
-        isPopular: true,
-        credits: "9,722 credits/month (3.2 ₹ /credit)",
-        originalPrice: "34,999",
-        monthlyPrice: "33,249",
-        yearlyPrice: "31,499",
-        description: "Scaling businesses handling large lead volumes.",
-        features: [
-          "Unlimited Campaigns",
-          "Full AI Conversation Management",
-          "24/7 Support",
-        ],
-        icon: (
-          <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-yellow-100">
-            🌟
-          </div>
-        ),
-      },
-    ];
-
-    // Step 2: Filter active API plans
-    const filteredData = data.filter((p: any) => p.is_active);
-
-    // Step 3: Merge API data into static plans
-    return staticPlans.map((plan) => {
-      const apiPlan = filteredData.find(
-        (item: any) => item.name?.toLowerCase() === plan.apiName?.toLowerCase()
-      );
-
-      if (!apiPlan) return plan; // Fallback to static
-
-      const apiFeatures =
-        apiPlan.plan_features
-          ?.filter((f: any) => f.is_included)
-          ?.map((f: any) => f.feature_name_limit.trim()) || [];
-
-      return {
-        ...plan,
-        name: apiPlan.name ?? plan.name,
-        isPopular: apiPlan.is_popular ?? plan.isPopular,
-        description: apiPlan.description?.trim() || plan.description,
-        credits: apiPlan.message_credits_included
-          ? `${apiPlan.message_credits_included} credits/month`
-          : plan.credits,
-        monthlyPrice: apiPlan.total_price
-          ? parseFloat(apiPlan.total_price).toFixed(2)
-          : plan.monthlyPrice,
-        yearlyPrice: plan.yearlyPrice,
-        features: apiFeatures.length ? apiFeatures : plan.features,
-        id: apiPlan?.id,
-      };
-    });
+    return data
+      .filter((plan: any) => plan.is_active)
+      .map((plan: any) => ({
+        id: plan.id,
+        name: plan.name,
+        description: plan.description?.trim() || "No description available.",
+        credits: plan.message_credits_included
+          ? `${plan.message_credits_included} credits/month`
+          : "—",
+        isPopular: plan.is_popular || false,
+        monthlyPrice: plan.total_price,
+        yearlyPrice: plan.total_price,
+        features: plan.plan_features || [],
+        // ?.filter((f: any) => f.is_included)
+        // ?.map((f: any) => f.feature_name_limit.trim()) || [],
+        borderColor: plan.is_popular ? "border-yellow-400" : "border-[#DED8D3]",
+        bgColor: plan.is_popular ? "#FFFBEA" : "#E8E4E2",
+      }))
+      .reverse();
   }, [data]);
+
+  // ✅ Step 2: Remove or add “Trial” plan based on `isYearly`
+  useEffect(() => {
+    if (isYearly) {
+      // remove Trial
+      setPlans(apiPlans.filter((p: any) => p.name?.toLowerCase() !== "trial"));
+    } else {
+      // include all active plans
+      setPlans(apiPlans);
+    }
+  }, [isYearly, apiPlans]);
+
+  useEffect(() => {
+    if (apiPlans.length === 0) return;
+
+    // if isYearly is true → activate first plan
+    // if isYearly is false → activate second plan (index 1)
+    const defaultPlanIndex = isYearly ? 0 : 1;
+    const selectedPlan = apiPlans[defaultPlanIndex] || apiPlans[0];
+
+    setActivePlan(selectedPlan.name);
+  }, [isYearly, apiPlans]);
 
   function handleGetStarted(plan: any): void {
     router.push(`${process.env.NEXT_PUBLIC_PLAN_REDIRECT_URI}${plan.id}`);
@@ -1102,9 +1161,14 @@ export default function PlanPricing({ isYearly, data }: any) {
                         key={idx}
                         className="flex items-center gap-3 relative group"
                       >
-                        <Check className="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-gray-700">{feature}</span>
-
+                        {feature?.is_included ? (
+                          <Check className="w-5 h-5 text-gray-900 flex-shrink-0 mt-0.5" />
+                        ) : (
+                          <X className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+                        )}
+                        <span className="text-sm text-gray-700">
+                          {feature?.feature_name}
+                        </span>
                         {/* Info Icon */}
                         <div className="relative">
                           <span className="text-gray-500 cursor-pointer group-hover:text-gray-800">
@@ -1127,7 +1191,7 @@ export default function PlanPricing({ isYearly, data }: any) {
 
                           {/* Tooltip */}
                           <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block w-max max-w-xs text-xs text-white bg-gray-800 rounded-lg py-1 px-2 shadow-lg z-10">
-                            {feature}
+                            {feature?.feature_name}
                           </div>
                         </div>
                       </div>
